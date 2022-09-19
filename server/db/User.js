@@ -1,5 +1,6 @@
 const conn = require("./conn");
-import { Sequelize } from "sequelize";
+const Sequelize = require('sequelize');
+
 const User = conn.define("user", {
 	username: {
 		type: Sequelize.STRING,

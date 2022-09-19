@@ -1,5 +1,6 @@
 const conn = require("./conn");
-import { Sequelize } from "sequelize";
+const Sequelize = require("sequelize")
+
 const Order = conn.define("order", {
 	status: {
 		type: Sequelize.ENUM("ACTIVE", "PROCESSED", "CANCELED", "COMPLETED"),
