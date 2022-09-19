@@ -1,11 +1,15 @@
-const Sequelize = require('sequelize');
+const Sequelize = require("sequelize");
+const dbName = "shopper";
 
 const config = {};
 
-if(process.env.QUIET){
-  config.logging = false;
+if (process.env.QUIET) {
+	config.logging = false;
 }
-
-const conn = new Sequelize(process.env.DATABASE_URL || 'postgres://localhost/acme_db', config);
+console.log(process.env);
+const conn = new Sequelize(
+	process.env.DATABASE_URL || `postgres://localhost:5432/${dbName}`,
+	config
+);
 
 module.exports = conn;
