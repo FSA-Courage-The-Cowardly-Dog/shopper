@@ -3,7 +3,7 @@ const db = require("./db");
 console.log("running nodemon?");
 const port = process.env.PORT || 5000;
 async function init() {
-	await db.conn.sync({ force: true });
+	await db.conn.syncAndSeed();
 	console.log(`Seeding? successful!`);
 
 	app.listen(port, () =>
