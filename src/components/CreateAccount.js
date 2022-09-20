@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { createUser } from "../store/userReducer";
 
 const CreateAccount = () => {
     const user = useSelector(state => state.user)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const [form, setForm] = useState({
         username: '',
         password: '',
@@ -23,7 +25,7 @@ const CreateAccount = () => {
     const handleSubmit = async event => {
         event.preventDefault();
         await dispatch(createUser(form));
-        // maybe after this, navigate to account page? or home page?
+        navigate('/account')
     }
 
     const checkDisabled = () => {

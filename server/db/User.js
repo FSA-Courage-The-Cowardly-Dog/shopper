@@ -3,9 +3,7 @@ const Sequelize = require("sequelize");
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const jwtStr = process.env.JWT;
-//maybe can look into moving this const into process.env variable
 const saltRounds = Number(process.env.SALT);
-// const saltRounds = 10;
 
 const User = conn.define("user", {
 	username: {
@@ -51,7 +49,13 @@ const User = conn.define("user", {
 		type: Sequelize.BOOLEAN,
 		defaultValue: false,
 	},
+	address: {
+		type: Sequelize.STRING,
+		defaultValue: ''
+	}
 });
+// may want an address field here for users; don't need one to sign up, default value can be '', but should be able to update in account page;
+// otherwise, users would need to enter address every time they want to place an order; not efficient
 
 //authentication
 User.byToken = async(token) => {
