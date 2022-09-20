@@ -25,7 +25,7 @@
 	},
 	"scripts": {
 		"start": "node server",
-		"start:dev": "npm run build-watch & npm run start-server ",
+		"start:dev": "npm run build-watch & npm run start-server",
 		"build-watch": "webpack -w",
 		"start-server": "nodemon --watch server -e js,html server/index.js",
 		"seed": "node server/db/seed.js"
@@ -47,5 +47,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"webpack-cli": "^4.10.0"
 	}
 }
