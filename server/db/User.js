@@ -53,4 +53,6 @@ User.prototype.removeFromCart = () => {};
 User.prototype.createOrder = () => {};
 User.prototype.cancelOrder = () => {};
 
+// will probably want a method to get current cart?
+
 module.exports = User;
