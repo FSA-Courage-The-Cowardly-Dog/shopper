@@ -1,5 +1,11 @@
 const conn = require("./conn");
 const Sequelize = require("sequelize");
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const jwtStr = process.env.JWT;
+//maybe can look into moving this const into process.env variable
+const saltRounds = Number(process.env.SALT);
+// const saltRounds = 10;
 
 const User = conn.define("user", {
 	username: {
@@ -48,6 +54,47 @@ const User = conn.define("user", {
 });
 
 //authentication
+User.byToken = async(token) => {
+    try {
+        jwt.verify(token,jwtStr);
+        const user = await User.findByPk(jwt.decode(token).userId, {
+            // include: {
+            //     model: Order
+            // }
+			// may want to add in Order model later; would be useful for displaying old orders, getting current cart, etc.
+			
+        })
+        if (user) {
+            return user;
+        }
+        const error = Error('bad credentials');
+        error.status = 401;
+        throw error;
+    } catch (err) {
+        const error = Error('bad credentials');
+        error.status = 401;
+        throw error;
+    }
+}
+User.beforeCreate(async (user, options) => {
+    const hashedPassword = await bcrypt.hash(user.password,saltRounds)
+    user.password = hashedPassword;
+})
+User.authenticate = async({ username, password }) => {
+    const user = await User.findOne({
+        where: {
+            username
+        }
+    });
+    if (user && await bcrypt.compare(password, user.password)) {
+        var temp = jwt.sign({userId: user.id},jwtStr)
+        return temp;
+    }
+    const error = Error('bad credentials');
+    error.status = 401;
+    throw error;
+}
+
 User.prototype.addToCart = () => {};
 User.prototype.removeFromCart = () => {};
 User.prototype.createOrder = () => {};

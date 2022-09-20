@@ -3,8 +3,8 @@ const router = require('express').Router();
 
 router.post('/', async (req, res, next) => {
     try {
-        // make User.authenticate method on model
-        // res.send token returned from that method
+        const token = await User.authenticate(req.body);
+        res.send(token);
     } catch(err) {
         next(err)
     }
@@ -12,7 +12,8 @@ router.post('/', async (req, res, next) => {
 
 router.get('/', async (req, res, next) => {
     try {
-
+        const user = await User.byToken(req.headers.authorization);
+        res.send(user)
     } catch (err) {
         next(err)
     }

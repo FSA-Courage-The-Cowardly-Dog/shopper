@@ -22,12 +22,10 @@
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"server": "JWT=courage QUIET=true nodemon server",
-		"startall": "npm run server & npm run start"
+		"start": "node server",
+		"start:dev": "npm run build-watch & npm run start-server ",
+		"build-watch": "webpack -w",
+		"start-server": "JWT=courage SALT=10 QUIET=true nodemon --watch server -e js,html server/index.js"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -48,6 +46,7 @@
 		]
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.20"
+		"nodemon": "^2.0.20",
+		"webpack-cli": "^4.10.0"
 	}
 }
