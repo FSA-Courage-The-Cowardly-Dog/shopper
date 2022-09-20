@@ -19,7 +19,11 @@ export const { login } = userSlice.actions;
 export const attemptTokenLogin = () => async (dispatch) => {
 	const token = window.localStorage.getItem("token");
 	if (token) {
-		const { data: userInfo } = await axios.get("/api/user");
+		const { data: userInfo } = await axios.get("/api/auth", {
+			headers: {
+				authorization: token,
+			},
+		});
 		dispatch(login(userInfo));
 	}
 	return false;
@@ -32,4 +36,10 @@ export const attemptPssWordLogin = (loginInfo) => async (dispatch) => {
 	} catch (error) {
 		return error;
 	}
+};
+export const logoutUser = () => {
+	return (dispatch) => {
+		dispatch(logout());
+		window.localStorage.setItem("token", "");
+	};
 };

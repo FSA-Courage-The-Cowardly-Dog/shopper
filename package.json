@@ -27,7 +27,11 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"server": "JWT=courage QUIET=true nodemon server",
-		"startall": "npm run start& npm run server"
+		"startall": "npm run start& npm run server",
+
+		"start:dev": "npm run build-watch & npm run start-server ",
+		"build-watch": "webpack -w",
+		"start-server": "JWT=courage SALT=10 QUIET=true nodemon --watch server -e js,html server/index.js"
 	},
 	"proxy": "http://localhost:5000",
 	"eslintConfig": {
@@ -50,6 +54,7 @@
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.20",
-		"redux-logger": "^3.0.6"
+		"redux-logger": "^3.0.6",
+		"webpack-cli": "^4.10.0"
 	}
 }
