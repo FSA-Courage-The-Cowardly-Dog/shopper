@@ -27,7 +27,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"server": "JWT=courage QUIET=true nodemon server",
-		"startall": "npm run server & npm run start"
+		"startall": "npm run start& npm run server"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -48,6 +48,7 @@
 		]
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.20"
+		"nodemon": "^2.0.20",
+		"redux-logger": "^3.0.6"
 	}
 }
