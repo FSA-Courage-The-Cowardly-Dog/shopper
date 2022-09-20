@@ -8,8 +8,8 @@ const LineItem = require("./LineItem");
 User.hasMany(Order);
 Order.belongsTo(User);
 
-Tag.hasMany(Product, { through: "ProductTag" });
-Product.hasMany(Tag, { through: "ProductTag" });
+Tag.belongsToMany(Product, { through: "ProductTag" });
+Product.belongsToMany(Tag, { through: "ProductTag" });
 
 LineItem.belongsTo(Product);
 Order.hasMany(LineItem);

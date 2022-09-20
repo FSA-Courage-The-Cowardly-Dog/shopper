@@ -1,8 +1,9 @@
 const conn = require("./conn");
-import { Sequelize } from "sequelize";
+const Sequelize = require("sequelize");
+
 const LineItem = conn.define("lineItem", {
 	quantity: {
-		type: Sequelize.Integer,
+		type: Sequelize.INTEGER,
 		allowNull: false,
 		defaultValue: 1,
 	},

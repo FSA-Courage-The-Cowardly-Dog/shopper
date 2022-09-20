@@ -22,10 +22,12 @@
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
-		"start": "react-scripts start nodemon server",
+		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"server": "JWT=courage QUIET=true nodemon server",
+		"startall": "npm run server & npm run start"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -44,5 +46,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.20"
 	}
 }

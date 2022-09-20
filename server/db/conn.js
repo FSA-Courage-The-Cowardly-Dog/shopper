@@ -6,7 +6,6 @@ const config = {};
 if (process.env.QUIET) {
 	config.logging = false;
 }
-console.log(process.env);
 const conn = new Sequelize(
 	process.env.DATABASE_URL || `postgres://localhost:5432/${dbName}`,
 	config

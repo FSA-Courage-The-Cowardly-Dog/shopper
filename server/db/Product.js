@@ -1,5 +1,5 @@
+const Sequelize = require("sequelize");
 const conn = require("./conn");
-import { Sequelize } from "sequelize";
 const Product = conn.define("product", {
 	name: {
 		type: Sequelize.STRING,
