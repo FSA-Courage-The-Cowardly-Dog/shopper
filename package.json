@@ -29,6 +29,7 @@
 		"server": "JWT=courage QUIET=true nodemon server",
 		"startall": "npm run start& npm run server"
 	},
+	"proxy": "http://localhost:5000",
 	"eslintConfig": {
 		"extends": [
 			"react-app",
