@@ -7,8 +7,8 @@ import userReducer from "./userReducer";
 export default configureStore({
 	reducer: {
 		user: userReducer,
-		product: productReducer,
-		cart: cartReducer,
+		// product: productReducer,
+		// cart: cartReducer,
 	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware().concat(loggerMiddleware),
