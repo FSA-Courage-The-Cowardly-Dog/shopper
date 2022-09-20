@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../store/userReducer";
+import CreateAccount from "./CreateAccount";
 import SignIn from "./SignIn";
 
 const Userbar = ({ attemptTokenLogin }) => {
@@ -13,7 +14,11 @@ const Userbar = ({ attemptTokenLogin }) => {
             <button onClick={() => dispatch(logoutUser())}>Sign Out</button>
         </div>
         :
-        <SignIn attemptTokenLogin={attemptTokenLogin}/>
+        <div className="testing-div">
+            <SignIn attemptTokenLogin={attemptTokenLogin}/>
+            <CreateAccount/>
+        </div>
+       
     )
 }
 

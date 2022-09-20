@@ -21,15 +21,21 @@ export const fetchUserByToken = token => {
 export const logoutUser = () => {
     return dispatch => {
         dispatch(_setUser({}))
-        // set token null here?
         window.localStorage.setItem("token", '')
     }
 }
 export const attemptSetToken = (username, password) => {
     return async () => {
         const {data: token} = await axios.post('/api/auth', {username,password});
-        // does setting here make sense?
         window.localStorage.setItem("token", token);
+    }
+}
+export const createUser = (userDetails, isAdmin=false) => {
+    return async (dispatch) => {
+        const {data: user} = await axios.post('/api/users', {...userDetails,isAdmin})
+        const {data: token} = await axios.post('/api/auth', {username: userDetails.username,password: userDetails.password})
+        window.localStorage.setItem("token",token)
+        dispatch(_setUser(user))
     }
 }
 
