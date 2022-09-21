@@ -48,32 +48,33 @@ router.post('/add-product', requireToken, isAdmin, (req, res, next) => {
 });
 
 // get single product
-router.get("/:id",(req,res,next) => {
+router.get('/:id', (req, res, next) => {
   return Product.findByPk(req.params.id)
-    .then(product => res.json(product))
-    .catch(next)
-})
+    .then((product) => res.json(product))
+    .catch(next);
+});
 
-// delete product 
-  router.delete("/:id",  (req, res, next) => {
-    return Product.findByPk(req.params.id)
-      .then(product => {
-        if (product) {
-          return Product.destroy({ where: { id: req.params.id } }).then(() => res.sendStatus(200))
-        } else res.sendStatus(404);
-      })
-      .catch(next);
-  });
-
-  // edit product
-  router.put("/:id", (req, res, next) => {
-    return Product.update(req.body, {
-      where: {
-        id: req.params.id
-      },
-      returning: true
+// delete product
+router.delete('/:id', (req, res, next) => {
+  return Product.findByPk(req.params.id)
+    .then((product) => {
+      if (product) {
+        return Product.destroy({ where: { id: req.params.id } }).then(() =>
+          res.sendStatus(200)
+        );
+      } else res.sendStatus(404);
     })
     .catch(next);
+});
+
+// edit product
+router.put('/:id', (req, res, next) => {
+  return Product.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+    returning: true,
+  }).catch(next);
 });
 
 module.exports = router;
