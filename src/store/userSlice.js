@@ -54,7 +54,6 @@ export const createUser = (userDetails, isAdmin = false) => {
 				...userDetails,
 				isAdmin,
 			});
-            console.log(user)
 			if (user) {
                 attemptPsswordLogin({username: userDetails.username, password: userDetails.password})(dispatch);
 			}
@@ -63,3 +62,11 @@ export const createUser = (userDetails, isAdmin = false) => {
 		}
 	};
 };
+export const updateUser = (userDetails, userId) =>  async (dispatch) => {
+        try {
+            const { data: user} = await axios.put(`/api/users/${userId}`, userDetails)
+            dispatch(login(user));
+        } catch (error) {
+            console.log(error)
+        }
+    }
