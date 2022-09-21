@@ -54,8 +54,6 @@ const User = conn.define("user", {
 		defaultValue: ''
 	}
 });
-// may want an address field here for users; don't need one to sign up, default value can be '', but should be able to update in account page;
-// otherwise, users would need to enter address every time they want to place an order; not efficient
 
 //authentication
 User.byToken = async(token) => {
