@@ -1,7 +1,9 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import AccountPage from "./components/AccountPage";
+import AdminPortal from "./components/admin/AdminPortal";
+import AllUsersAdminView from "./components/admin/AllUsersAdminView";
 import CreateAccount from "./components/CreateAccount";
 import EditAccountPage from "./components/EditAccountPage";
 import OrderHistory from "./components/OrderHistory";
@@ -12,7 +14,6 @@ import { attemptTokenLogin } from "./store/userSlice";
 
 function App() {
 	const dispatch = useDispatch();
-	// const user = useSelector(state => state.user)
 
 	React.useEffect(() => {
 		dispatch(attemptTokenLogin());
@@ -30,6 +31,8 @@ function App() {
 				<Route path="/account" element={<AccountPage />} />
 				<Route path="/account/editinfo" element={<EditAccountPage />} />
 				<Route path="/account/orderhistory" element={<OrderHistory />} />
+				<Route path="/adminportal" element={<AdminPortal/>}/>
+				<Route path="/adminportal/allusers" element={<AllUsersAdminView/>}/>
 			</Routes>
 		</div>
 	);

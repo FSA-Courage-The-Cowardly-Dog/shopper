@@ -1,0 +1,38 @@
+/* may later put inside a navbar component*/
+
+header {
+    background-color: gray;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.welcome-user {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.username, .create-account-link {
+    color: blue
+}
+.username:hover,.create-account-link:hover {
+    color: white
+}
+
+/* SignIn component */
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+.login-line {
+    display: flex;
+    flex-direction: row;
+    margin: .1em;
+    justify-content: space-between;
+}
+.login-input {
+    max-width: 100px;
+    min-width: 50px;
+}

@@ -1,0 +1,24 @@
+#create-account-container, #edit-account-form-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 20px
+}
+#create-account-form, #edit-account-form {
+    display: flex;
+    flex-direction: column;
+}
+.form-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    margin: 5px;
+}
+#create-account-form > button, #edit-account-form > button {
+    width: auto;
+    margin: auto;
+    margin-top: 10px;
+}
