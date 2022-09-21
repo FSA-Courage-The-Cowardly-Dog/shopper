@@ -20,9 +20,10 @@ const productSlice = createSlice({
 });
 export default productSlice.reducer;
 export const { getProductList, getSingleProduct, createNewProduct } = productSlice.actions;
-export const attemptGetProductList = (tag) => async (dispatch) => {
+export const attemptGetProductList = () => async (dispatch) => {
 	try {
-		const { data: productlist } = await axios.get("/api/product");
+		const { data: productlist } = await axios.get("/api/products");
+		console.log(productlist)
 		dispatch(getProductList(productlist));
 	} catch (error) {
 		return error;

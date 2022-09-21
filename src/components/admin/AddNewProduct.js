@@ -33,7 +33,7 @@ const AddNewProduct = () => {
         product.price = Number(product.price)
         product.inventory = Number(product.inventory)
         dispatch(attemptCreateNewProduct(product,user))
-        // if product successfully completed, may want to navigate to single product view page or something
+        // if product successfully completed, may want to navigate to single product view page or admin all products view
     }
     
     const checkDisabled = () => {
@@ -67,6 +67,11 @@ const AddNewProduct = () => {
                 <div className="form-line">
                     <label htmlFor="description">Description: </label>
                     <input name="description" value={form.description} onChange={handleChange('description')}/>
+                </div>
+                <div className="form-line">
+                    <label htmlFor="categories">Categories: </label>
+                    {/* <input name="categories" value={form.categories} onChange={handleChange('categories')}/> */}
+                    <div>Placeholder for adding tag</div>
                 </div>
                 <button type="submit" disabled={checkDisabled()}>Create Product</button>
             </form>

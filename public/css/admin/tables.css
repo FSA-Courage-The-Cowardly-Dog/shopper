@@ -1,0 +1,12 @@
+table, th, td {
+    border: 1px solid;
+}
+
+td {
+    min-width: 50px;
+    max-width: 150px;
+    overflow: scroll;
+    height: 50px;
+    white-space: nowrap;
+    padding: 5px
+}
