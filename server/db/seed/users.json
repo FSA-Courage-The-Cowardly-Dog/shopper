@@ -1,6 +1,24 @@
 {
 	"users": [
 		{
+			"id": 1,
+			"username": "test",
+			"email": "test@apple.com",
+			"password": "password",
+			"firstName": "test first name",
+			"lastName": "test last name",
+			"isAdmin": false
+		},
+		{
+			"id": 2,
+			"username": "admin",
+			"email": "admin@apple.com",
+			"password": "password",
+			"firstName": "admin first name",
+			"lastName": "admin last name",
+			"isAdmin": true
+		},
+		{
 			"username": "RobertU2001",
 			"email": "Robert@apple.com",
 			"password": "kittens123",
@@ -23,14 +41,6 @@
 			"firstName": "Cody",
 			"lastName": "Chan",
 			"isAdmin": true
-		},
-		{
-			"username": "test",
-			"email": "test@apple.com",
-			"password": "password",
-			"firstName": "test first name",
-			"lastName": "test last name",
-			"isAdmin": false
 		}
 	]
 }
