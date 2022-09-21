@@ -54,15 +54,20 @@ export const logoutUser = () => {
 export const createUser = (userDetails) => {
 	return async (dispatch) => {
 		try {
-			const { data: user } = await axios.post("/api/users", userDetails);
+			const { data: user } = await axios.post("/api/users", {
+				...userDetails,
+			});
 			if (user) {
-                attemptPsswordLogin({username: userDetails.username, password: userDetails.password})(dispatch);
+				attemptPsswordLogin({
+					username: userDetails.username,
+					password: userDetails.password,
+				})(dispatch);
 			}
 		} catch (error) {
 			console.log(error);
 		}
-	};
-};
+	}
+}
 export const updateUser = (userDetails, userId) =>  async (dispatch) => {
         try {
             const { data: user} = await axios.put(`/api/users/${userId}`, userDetails)
