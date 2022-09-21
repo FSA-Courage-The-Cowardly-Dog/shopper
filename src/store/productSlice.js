@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 const productSlice = createSlice({
 	name: "product",
 	initialState: {productList: [], singleProduct: {}},
@@ -46,18 +46,24 @@ export const attemptGetSingleProduct = (productId) => async (dispatch) => {
 		return error;
 	}
 };
-export const attemptCreateNewProduct = (productDetails, user) => async (dispatch) => {
-	try {
-		if (!user.isAdmin) {
-			throw new Error("Unauthorized access: do not have permission to add new products");
-		}
-		const { data: singleProduct } = await axios.post('/api/products/add-product', productDetails);
-		dispatch(createNewProduct(singleProduct));
-		dispatch(attemptGetProductList())
-	} catch (err) {
-		return err;
-	}
-}
+export const attemptCreateNewProduct =
+  (productDetails, user) => async (dispatch) => {
+    try {
+      const token = window.localStorage.getItem('token');
+      const { data: singleProduct } = await axios.post(
+        '/api/products/add-product',
+        productDetails,
+        {
+          headers: {
+            authorization: token,
+          },
+        }
+      );
+      dispatch(createNewProduct(singleProduct));
+    } catch (err) {
+      return err;
+    }
+  };
 export const attemptUpdateProduct = (productDetails, productId, user) => async (dispatch) => {
 	try {
 		if (!user.isAdmin) {
@@ -88,3 +94,4 @@ export const attemptUnmountSingleProduct = () => dispatch => {
 
 	}
 }
+
