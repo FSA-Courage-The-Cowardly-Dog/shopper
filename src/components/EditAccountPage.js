@@ -33,7 +33,6 @@ const EditAccountPage = () => {
     }
     const handleSubmit = (event) => {
         event.preventDefault();
-        // need to write update method in userSlice; also express route
         dispatch(updateUser(form, user.id))
         navigate('/account')
     }

@@ -15,6 +15,10 @@ const AccountPage = () => {
             <h3>Placeholder for now: below are links to edit user info and view order history</h3>
             <Link to='/account/orderhistory'>Order History</Link>
             <Link to='/account/editinfo'>Edit Info</Link>
+            {user.isAdmin ?
+                <div>Placedholder for admin portal link; will be able to add/edit/delete items, see all users and user information</div>
+                : <></>
+            }
         </div>
         : <div>Must be logged in to view account page</div>
     )
