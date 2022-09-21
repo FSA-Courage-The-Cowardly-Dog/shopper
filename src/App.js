@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import AccountPage from "./components/AccountPage";
+import AddNewProduct from "./components/admin/AddNewProduct";
 import AdminPortal from "./components/admin/AdminPortal";
 import AllUsersAdminView from "./components/admin/AllUsersAdminView";
 import CreateAccount from "./components/CreateAccount";
@@ -24,7 +25,6 @@ function App() {
 			<header>
 				<Userbar attemptTokenLogin={attemptTokenLogin} />
 			</header>
-			{/* <Welcome /> */}
 			<Routes>
 				<Route index element={<Welcome />} />
 				<Route path="/createaccount" element={<CreateAccount />} />
@@ -33,6 +33,7 @@ function App() {
 				<Route path="/account/orderhistory" element={<OrderHistory />} />
 				<Route path="/adminportal" element={<AdminPortal/>}/>
 				<Route path="/adminportal/allusers" element={<AllUsersAdminView/>}/>
+				<Route path="/adminportal/addproduct" element={<AddNewProduct/>}/>
 			</Routes>
 		</div>
 	);
