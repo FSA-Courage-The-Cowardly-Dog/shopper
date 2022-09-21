@@ -49,15 +49,17 @@ export const logoutUser = () => {
 		window.localStorage.removeItem("token");
 	};
 };
-export const createUser = (userDetails, isAdmin = false) => {
+export const createUser = (userDetails) => {
 	return async (dispatch) => {
 		try {
 			const { data: user } = await axios.post("/api/users", {
 				...userDetails,
-				isAdmin,
 			});
 			if (user) {
-				attemptPsswordLogin(user)(dispatch);
+				attemptPsswordLogin({
+					username: userDetails.username,
+					password: userDetails.password,
+				})(dispatch);
 			}
 		} catch (error) {
 			console.log(error);
