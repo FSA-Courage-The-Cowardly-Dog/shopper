@@ -22,4 +22,19 @@ router.put('/:id', async (req,res,next) => {
     }
 })
 
+router.get('/', async (req,res,next) => {
+    try {
+        if (req.headers.admin === 'true') {
+            const users = await User.findAll();
+            res.send(users)
+        }
+        // sending empty array for now if not admin; may want to later throw an error or unauthorized req response.
+        else {
+            res.send([])
+        }
+    } catch (err) {
+        next(err)
+    }
+})
+
 module.exports = router;
