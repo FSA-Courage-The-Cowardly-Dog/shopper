@@ -44,9 +44,16 @@ router.post("/add-product",  (req, res, next) => {
       .catch(next);
   });
 
+// get single product
+router.get("/:id",(req,res,next) => {
+  return Product.findByPk(req.params.id)
+    .then(product => res.json(product))
+    .catch(next)
+})
+
 // delete product 
   router.delete("/:id",  (req, res, next) => {
-    return Product.findById(req.params.id)
+    return Product.findByPk(req.params.id)
       .then(product => {
         if (product) {
           return Product.destroy({ where: { id: req.params.id } }).then(() => res.sendStatus(200))
@@ -56,7 +63,7 @@ router.post("/add-product",  (req, res, next) => {
   });
 
   // edit product
-  router.put("/:id",  (req, res, next) => {
+  router.put("/:id", (req, res, next) => {
     return Product.update(req.body, {
       where: {
         id: req.params.id

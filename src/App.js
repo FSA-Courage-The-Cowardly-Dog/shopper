@@ -6,6 +6,7 @@ import AddNewProduct from "./components/admin/AddNewProduct";
 import AdminPortal from "./components/admin/AdminPortal";
 import AllProductsAdminView from "./components/admin/AllProductsAdminView";
 import AllUsersAdminView from "./components/admin/AllUsersAdminView";
+import ModifySingleProductAdminPage from "./components/admin/ModifySingleProductAdminPage";
 import CreateAccount from "./components/CreateAccount";
 import EditAccountPage from "./components/EditAccountPage";
 import OrderHistory from "./components/OrderHistory";
@@ -36,6 +37,7 @@ function App() {
 				<Route path="/adminportal/allusers" element={<AllUsersAdminView/>}/>
 				<Route path="/adminportal/addproduct" element={<AddNewProduct/>}/>
 				<Route path="/adminportal/allproducts" element={<AllProductsAdminView/>}/>
+				<Route path="/adminportal/modifyproduct/:id" element={<ModifySingleProductAdminPage/>}/>
 			</Routes>
 		</div>
 	);

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import { attemptCreateNewProduct } from "../../store/productSlice";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { attemptGetSingleProduct, attemptUnmountSingleProduct, attemptUpdateProduct } from "../../store/productSlice";
 
-const AddNewProduct = () => {
+const ModifySingleProductAdminPage = () => {
     const user = useSelector(state => state.user)
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+    const product = useSelector(state => state.product.singleProduct)
     const [form, setForm] = useState({
         name: '',
         price: '',
@@ -14,12 +13,30 @@ const AddNewProduct = () => {
         img: '',
         description: ''
     })
+    const [isLoaded, setIsLoaded] = useState(false)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const params = useParams()
+
+    React.useEffect(() => {
+        async function loadProduct() {
+            await dispatch(attemptGetSingleProduct(params.id))
+            setIsLoaded(true);
+        }
+        loadProduct()
+        return () => {
+            dispatch(attemptUnmountSingleProduct())
+        }
+    },[])
 
     React.useEffect(() => {
         if (!user.isAdmin) {
             navigate('/')
         }
-    },[])
+        if (isLoaded) {
+            setForm(product)
+        }
+    },[isLoaded])
 
     const handleChange = props => event => {
         setForm({
@@ -29,22 +46,27 @@ const AddNewProduct = () => {
     }
     const handleSubmit = (event) => {
         event.preventDefault();
-        let product = {...form};
-        product.price = Number(product.price)
-        product.inventory = Number(product.inventory)
-        dispatch(attemptCreateNewProduct(product,user))
-        navigate('/adminportal/allproducts')
+        // form currently includes id, createdAt, updatedAt; want to prune those
+        let productDetails = {
+            name: form.name,
+            price: Number(form.price),
+            inventory: Number(form.inventory),
+            img: form.img,
+            description: form.description
+        }
+        dispatch(attemptUpdateProduct(productDetails,params.id, user))
+        // can either navigate back to allproducts, or display a message that product has been updated
     }
-    
+
     const checkDisabled = () => {
         return (
             !form.name.length ||
-            !form.price.length ||
-            !form.inventory.length 
+            !form.price.toString().length ||
+            !form.inventory.toString().length 
         )
     }
 
-    return(
+    return( form ?
         <div id="new-product-form-container">
             <form id="new-product-form" onSubmit={handleSubmit}>
                 <h2>New Product Form</h2>
@@ -73,11 +95,12 @@ const AddNewProduct = () => {
                     {/* <input name="categories" value={form.categories} onChange={handleChange('categories')}/> */}
                     <div>Placeholder for adding tag</div>
                 </div>
-                <button type="submit" disabled={checkDisabled()}>Create Product</button>
+                <button type="submit" disabled={checkDisabled()}>Update Product</button>
             </form>
-            <Link to="/adminportal">Back to portal</Link>
+            <Link to="/adminportal/allproducts">Back to all products</Link>
         </div>
+        : <></>
     )
 }
 
-export default AddNewProduct;
+export default ModifySingleProductAdminPage

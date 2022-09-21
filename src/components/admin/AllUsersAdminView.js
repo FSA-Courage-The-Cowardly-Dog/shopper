@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { fetchAllUsers, unsetAllUsers } from "../../store/allUsersSlice";
 
 const AllUsersAdminView = () => {
@@ -51,6 +51,7 @@ const AllUsersAdminView = () => {
                     })}
                 </tbody>
             </table>
+            <Link to="/adminportal">Back to portal</Link>
         </div>
     )
 }

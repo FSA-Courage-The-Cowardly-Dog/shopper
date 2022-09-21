@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { attemptGetProductList } from "../../store/productSlice";
 
 const AllProductsAdminView = () => {
@@ -13,7 +13,6 @@ const AllProductsAdminView = () => {
         if (!user.isAdmin) {
             navigate('/')
         }
-        console.log('dispatching attempt to get product list')
         dispatch(attemptGetProductList())
     },[])
 
@@ -36,7 +35,7 @@ const AllProductsAdminView = () => {
                     {products.map((product,idx) => {
                         return(
                             <tr key={idx}>
-                                <td>{product.id}</td>
+                                <td><Link to={`/adminportal/modifyproduct/${product.id}`}>{product.id}</Link></td>
                                 <td>{product.name}</td>
                                 <td>{product.price}</td>
                                 <td>{product.inventory}</td>
@@ -48,6 +47,7 @@ const AllProductsAdminView = () => {
                     })}
                 </tbody>
             </table>
+            <Link to="/adminportal">Back to portal</Link>
         </div>
         : <></>
     )
