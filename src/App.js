@@ -8,36 +8,28 @@ import OrderHistory from "./components/OrderHistory";
 // import "./App.css";
 import Userbar from "./components/Userbar";
 import Welcome from "./components/Welcome";
-import { fetchUserByToken } from "./store/userReducer";
+import { attemptTokenLogin } from "./store/userSlice";
 
 function App() {
 	const dispatch = useDispatch();
 	// const user = useSelector(state => state.user)
-	
-	React.useEffect(() => {
-		attemptTokenLogin();
-	},[])
 
-	const attemptTokenLogin = async () => {
-		const token = window.localStorage.getItem("token");
-		if (token) {
-			dispatch(fetchUserByToken(token)) 
-		}
-	};
-	
+	React.useEffect(() => {
+		dispatch(attemptTokenLogin());
+	}, [dispatch]);
 
 	return (
 		<div className="App">
 			<header>
-				<Userbar attemptTokenLogin={attemptTokenLogin}/>
+				<Userbar attemptTokenLogin={attemptTokenLogin} />
 			</header>
 			{/* <Welcome /> */}
 			<Routes>
-				<Route index element={<Welcome/>}/>
-				<Route path='/createaccount' element={<CreateAccount/>}/>
-				<Route path='/account' element={<AccountPage/>}/>
-				<Route path='/account/editinfo' element={<EditAccountPage/>}/>
-				<Route path='/account/orderhistory' element={<OrderHistory/>}/>
+				<Route index element={<Welcome />} />
+				<Route path="/createaccount" element={<CreateAccount />} />
+				<Route path="/account" element={<AccountPage />} />
+				<Route path="/account/editinfo" element={<EditAccountPage />} />
+				<Route path="/account/orderhistory" element={<OrderHistory />} />
 			</Routes>
 		</div>
 	);

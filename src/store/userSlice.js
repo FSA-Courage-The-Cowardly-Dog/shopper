@@ -15,24 +15,28 @@ const userSlice = createSlice({
 	},
 });
 export default userSlice.reducer;
-export const { login } = userSlice.actions;
+export const { login, logout } = userSlice.actions;
+
 export const attemptTokenLogin = () => async (dispatch) => {
 	const token = window.localStorage.getItem("token");
 	if (token) {
-		const { data: userInfo } = await axios.get("/api/auth", {
-			headers: {
-				authorization: token,
-			},
-		});
+		const { data: userInfo } = await axios.post(
+			"/api/auth",
+			{},
+			{
+				headers: {
+					authorization: token,
+				},
+			}
+		);
 		dispatch(login(userInfo));
 	}
-	return false;
 };
-export const attemptPssWordLogin = (loginInfo) => async (dispatch) => {
+export const attemptPsswordLogin = (loginInfo) => async (dispatch) => {
 	try {
-		const { data: token } = await axios.post("/api/user/login", loginInfo);
+		const { data: token } = await axios.post("/api/auth/login", loginInfo);
 		window.localStorage.setItem("token", token);
-		attemptTokenLogin()(dispatch);
+		dispatch(attemptTokenLogin());
 	} catch (error) {
 		return error;
 	}
@@ -40,6 +44,22 @@ export const attemptPssWordLogin = (loginInfo) => async (dispatch) => {
 export const logoutUser = () => {
 	return (dispatch) => {
 		dispatch(logout());
-		window.localStorage.setItem("token", "");
+		window.localStorage.removeItem("token");
+	};
+};
+export const createUser = (userDetails, isAdmin = false) => {
+	return async (dispatch) => {
+		try {
+			const { data: user } = await axios.post("/api/users", {
+				...userDetails,
+				isAdmin,
+			});
+            console.log(user)
+			if (user) {
+                attemptPsswordLogin({username: userDetails.username, password: userDetails.password})(dispatch);
+			}
+		} catch (error) {
+			console.log(error);
+		}
 	};
 };
