@@ -1,28 +1,46 @@
 {
-    "users" :[
-        {
-         "username" : "RobertU2001",
-         "email" : "Robert@apple.com",
-         "password" : "kittens123",
-         "firstName": "Robert",
-         "lastName": "Ulrich",
-         "isAdmin": true
-        },
-        {
-            "username" : "LukeM142",
-            "email" : "Luke@apple.com",
-            "password" : "Dogs321",
-            "firstName": "Luke",
-            "lastName": "Multanen",
-            "isAdmin": true
-        },
-        {
-            "username" : "CodyC182",
-            "email" : "Cody@apple.com",
-            "password" : "Cars1412",
-            "firstName": "Cody",
-            "lastName": "Chan",
-            "isAdmin": true
-        }
-    ]
+	"users": [
+		{
+			"id": 1,
+			"username": "test",
+			"email": "test@apple.com",
+			"password": "password",
+			"firstName": "test first name",
+			"lastName": "test last name",
+			"isAdmin": false
+		},
+		{
+			"id": 2,
+			"username": "admin",
+			"email": "admin@apple.com",
+			"password": "password",
+			"firstName": "admin first name",
+			"lastName": "admin last name",
+			"isAdmin": true
+		},
+		{
+			"username": "RobertU2001",
+			"email": "Robert@apple.com",
+			"password": "kittens123",
+			"firstName": "Robert",
+			"lastName": "Ulrich",
+			"isAdmin": true
+		},
+		{
+			"username": "LukeM142",
+			"email": "Luke@apple.com",
+			"password": "Dogs321",
+			"firstName": "Luke",
+			"lastName": "Multanen",
+			"isAdmin": true
+		},
+		{
+			"username": "CodyC182",
+			"email": "Cody@apple.com",
+			"password": "Cars1412",
+			"firstName": "Cody",
+			"lastName": "Chan",
+			"isAdmin": true
+		}
+	]
 }
