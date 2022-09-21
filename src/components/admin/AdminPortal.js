@@ -1,26 +1,32 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AdminPortal = () => {
-    const user = useSelector(state => state.user)
-    const navigate = useNavigate()
+  const user = useSelector((state) => state.user);
+  const navigate = useNavigate();
 
-    React.useEffect(() => {
-        // navigate back to home page if user is not admin
-        if (!user.isAdmin) {
-            navigate('/')
-        }
-    },[])
+  React.useEffect(() => {
+    // navigate back to home page if user is not admin
+    if (!user.isAdmin) {
+      navigate('/');
+    }
+  }, []);
 
-    return(
-        <div id="admin-links">
-            <div id="all-users"><Link to="/adminportal/allusers">All Users Table</Link></div>
-            <div id="add-item"><Link to="/adminportal/addproduct">Add Product</Link></div>
-            <div id="modify-delete-item"><Link to="/adminportal/allproducts">All Products Table</Link></div>
-        </div>
-    )
-}
+  return (
+    <div id="admin-links">
+      <div id="all-users">
+        <Link to="/adminportal/allusers">All Users Table</Link>
+      </div>
+      <div id="add-item">
+        <Link to="/adminportal/addproduct">Add Product</Link>
+      </div>
+      <div id="modify-delete-item">
+        <Link to="/adminportal/allproducts">All Products Table</Link>
+      </div>
+    </div>
+  );
+};
 
 export default AdminPortal;
 

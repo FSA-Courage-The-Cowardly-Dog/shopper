@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 function Welcome() {
-	return (
-		<div className="welcome">
-			<p>Welcome</p>
-		</div>
-	);
+  return (
+    <div className="welcome">
+      <p>Welcome</p>
+    </div>
+  );
 }
 
 export default Welcome;
