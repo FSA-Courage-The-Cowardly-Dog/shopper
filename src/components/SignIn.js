@@ -47,11 +47,8 @@ const SignIn = () => {
 					onChange={handleChange("password")}
 				/>
 			</div>
-			<div className="log-in-line">
-				{/* should make this a Link later */}
-				{/* <Link id='create-account' to='/createaccount'>Create Account?</Link> */}
-				{/* <div>Create account?</div> */}
-				<Link to="/createaccount">Create account?</Link>
+			<div className="login-line">
+				<Link to="/createaccount" className="create-account-link">Create account?</Link>
 				<button type="submit">Sign In</button>
 			</div>
 		</form>

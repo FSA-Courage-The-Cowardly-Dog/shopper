@@ -2,7 +2,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logoutUser } from "../store/userSlice";
-import CreateAccount from "./CreateAccount";
 import SignIn from "./SignIn";
 
 const Userbar = () => {
@@ -17,16 +16,11 @@ const Userbar = () => {
 
 	return user.id ? (
 		<div className="welcome-user">
-			{`Welcome back, `} <Link to="/account">{user.username}</Link>
-			<button onClick={logout}>Sign Out</button>
+			<span>{`Welcome back, `} <Link to="/account" className="username">{user.username}</Link></span>
+			<button onClick={logout} className="sign-out-button">Sign Out</button>
 		</div>
-	) : (
-		<div className="testing-div">
-			<SignIn />
-			{/* <CreateAccount/> */}
-			{/* this div just for testing purposes since no routing in place yet; will likely only have SignIn component in here */}
-		</div>
-	);
+	) : <SignIn />
+	;
 };
 
 export default Userbar;
