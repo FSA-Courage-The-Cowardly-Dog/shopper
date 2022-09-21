@@ -12,6 +12,7 @@
 /build
 bundle.js
 bundle.js.map
+/dist
 
 # misc
 .DS_Store
