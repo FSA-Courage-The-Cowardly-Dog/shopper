@@ -16,7 +16,7 @@ const AdminPortal = () => {
     return(
         <div id="admin-links">
             <div id="all-users"><Link to="/adminportal/allusers">All User Information</Link></div>
-            <div id="add-item">Placeholder for link adding new item</div>
+            <div id="add-item"><Link to="/adminportal/addproduct">Add Product</Link></div>
             <div id="modify-delete-item">Placeholder for link to modify/delete existing items; another thought could be to give admins modify/delete privileges on singleProduct components</div>
         </div>
     )
