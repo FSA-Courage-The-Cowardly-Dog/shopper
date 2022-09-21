@@ -12,10 +12,14 @@ const userSlice = createSlice({
 			state = {};
 			return state;
 		},
+		update: (state, action) => {
+			state = action.payload;
+			return state;
+		},
 	},
 });
 export default userSlice.reducer;
-export const { login, logout } = userSlice.actions;
+export const { login, logout, update } = userSlice.actions;
 
 export const attemptTokenLogin = () => async (dispatch) => {
 	const token = window.localStorage.getItem("token");
@@ -62,7 +66,7 @@ export const createUser = (userDetails) => {
 export const updateUser = (userDetails, userId) =>  async (dispatch) => {
         try {
             const { data: user} = await axios.put(`/api/users/${userId}`, userDetails)
-            dispatch(login(user));
+            dispatch(update(user));
         } catch (error) {
             console.log(error)
         }
