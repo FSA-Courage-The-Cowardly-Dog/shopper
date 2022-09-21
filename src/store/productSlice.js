@@ -24,7 +24,6 @@ const productSlice = createSlice({
 			state.singleProduct = action.payload;
 			return state;
 		}
-		// delete: may want to set state of new product list
 	},
 });
 export default productSlice.reducer;
