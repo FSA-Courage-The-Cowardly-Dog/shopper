@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { attemptGetSingleProduct, attemptUnmountSingleProduct, attemptUpdateProduct } from "../../store/productSlice";
+import { attemptDeleteProduct, attemptGetSingleProduct, attemptUnmountSingleProduct, attemptUpdateProduct } from "../../store/productSlice";
 
 const ModifySingleProductAdminPage = () => {
     const user = useSelector(state => state.user)
@@ -66,6 +66,11 @@ const ModifySingleProductAdminPage = () => {
         )
     }
 
+    const handleDelete = () => {
+        dispatch(attemptDeleteProduct(params.id,user))
+        navigate('/adminportal/allproducts')
+    }
+
     return( form ?
         <div id="new-product-form-container">
             <form id="new-product-form" onSubmit={handleSubmit}>
@@ -95,7 +100,10 @@ const ModifySingleProductAdminPage = () => {
                     {/* <input name="categories" value={form.categories} onChange={handleChange('categories')}/> */}
                     <div>Placeholder for adding tag</div>
                 </div>
-                <button type="submit" disabled={checkDisabled()}>Update Product</button>
+                <div className="form-line">
+                    <button type="submit" disabled={checkDisabled()}>Update Product</button>
+                    <button type="click" onClick={handleDelete}>Delete Product</button>
+                </div>
             </form>
             <Link to="/adminportal/allproducts">Back to all products</Link>
         </div>

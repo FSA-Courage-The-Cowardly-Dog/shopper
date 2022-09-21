@@ -54,6 +54,7 @@ export const attemptCreateNewProduct = (productDetails, user) => async (dispatch
 		}
 		const { data: singleProduct } = await axios.post('/api/products/add-product', productDetails);
 		dispatch(createNewProduct(singleProduct));
+		dispatch(attemptGetProductList())
 	} catch (err) {
 		return err;
 	}
@@ -65,6 +66,17 @@ export const attemptUpdateProduct = (productDetails, productId, user) => async (
 		}
 		const { data: singleProduct } = await axios.put(`/api/products/${productId}`, {...productDetails});
 		dispatch(updateProduct(singleProduct))
+	} catch (err) {
+		return err;
+	}
+}
+export const attemptDeleteProduct = (productId, user) => async dispatch => {
+	try {
+		if (!user.isAdmin) {
+			throw new Error("Unauthorized access: do not have permission to add new products");
+		}
+		await axios.delete(`/api/products/${productId}`);
+		dispatch(attemptGetProductList())
 	} catch (err) {
 		return err;
 	}
