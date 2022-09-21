@@ -17,6 +17,10 @@ const EditAccountPage = () => {
     // may want a different component to be able to change/reset password
     
     React.useEffect(() => {
+        // quick fix for edgecase when reloading on edit page
+        if(!user.username) {
+            navigate('/account')
+        }
         setForm({
             username: user.username,
             email: user.email,
@@ -38,28 +42,38 @@ const EditAccountPage = () => {
     }
 
     const checkDisabled = () => {
-		return (
-			!form.username.length ||
-			!form.email.length ||
-			!form.firstName.length ||
-			!form.lastName.length
-		);
+        return (
+            !form.username.length ||
+            !form.email.length ||
+            !form.firstName.length ||
+            !form.lastName.length
+        );	
 	};
 
     return( user.username ?
         <div id="edit-account-form-container">
             <form id="edit-account-form" onSubmit={handleSubmit}>
-                <label htmlFor="username">Username: </label>
-                <input name="username" value={form.username} onChange={handleChange('username')}/>
-                <label htmlFor="email">Email: </label>
-                <input name="email" type="email" value={form.email} onChange={handleChange('email')}/>
-                <label htmlFor="firstName">First Name: </label>
-                <input name="firstName" value={form.firstName} onChange={handleChange('firstName')}/>
-                <label htmlFor="lastName">Last Name: </label>
-                <input name="lastName" value={form.lastName} onChange={handleChange('lastName')}/>
-                <label htmlFor="address">Address: </label>
-                <input name="address" value={form.address} onChange={handleChange('address')}/>
-
+                <h2>Edit Account Information</h2>
+                <div className="form-line">
+                    <label htmlFor="username">Username: </label>
+                    <input name="username" value={form.username} onChange={handleChange('username')}/>
+                </div>    
+                <div className="form-line">
+                    <label htmlFor="email">Email: </label>
+                    <input name="email" type="email" value={form.email} onChange={handleChange('email')}/>
+                </div>
+                <div className="form-line">
+                    <label htmlFor="firstName">First Name: </label>
+                    <input name="firstName" value={form.firstName} onChange={handleChange('firstName')}/>
+                </div>
+                <div className="form-line">
+                    <label htmlFor="lastName">Last Name: </label>
+                    <input name="lastName" value={form.lastName} onChange={handleChange('lastName')}/>
+                </div>
+                <div className="form-line">
+                    <label htmlFor="address">Address: </label>
+                    <input name="address" value={form.address} onChange={handleChange('address')}/>
+                </div>
                 <button type="submit" disabled={checkDisabled()}>Save Changes</button>
             </form>
         </div> 
