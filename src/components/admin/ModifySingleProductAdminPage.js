@@ -79,7 +79,7 @@ const ModifySingleProductAdminPage = () => {
   return form ? (
     <div id="new-product-form-container">
       <form id="new-product-form" onSubmit={handleSubmit}>
-        <h2>New Product Form</h2>
+        <h2>Update Product Form</h2>
         <div className="form-line">
           <label htmlFor="name">Name: </label>
           <input
