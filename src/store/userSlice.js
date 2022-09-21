@@ -34,9 +34,7 @@ export const attemptTokenLogin = () => async (dispatch) => {
 };
 export const attemptPsswordLogin = (loginInfo) => async (dispatch) => {
 	try {
-		console.log("slice", loginInfo);
 		const { data: token } = await axios.post("/api/auth/login", loginInfo);
-		console.log(token);
 		window.localStorage.setItem("token", token);
 		dispatch(attemptTokenLogin());
 	} catch (error) {
@@ -64,5 +62,11 @@ export const createUser = (userDetails) => {
 		} catch (error) {
 			console.log(error);
 		}
-	};
-};
+export const updateUser = (userDetails, userId) =>  async (dispatch) => {
+        try {
+            const { data: user} = await axios.put(`/api/users/${userId}`, userDetails)
+            dispatch(login(user));
+        } catch (error) {
+            console.log(error)
+        }
+    }
