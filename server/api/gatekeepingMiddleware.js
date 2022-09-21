@@ -1,4 +1,4 @@
-const User = require('../User');
+const { User } = require('../db');
 const requireToken = async (req, res, next) => {
   try {
     const user = await User.byToken(req.headers.authorization);
@@ -11,6 +11,7 @@ const requireToken = async (req, res, next) => {
 const isAdmin = async (req, res, next) => {
   try {
     if (!req.user.isAdmin) {
+      console.log('not an admin');
       return res.status(403).send('not an admin');
     }
     next();
