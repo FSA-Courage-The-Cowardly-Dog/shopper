@@ -37,8 +37,8 @@ function App() {
       </header>
       <Routes>
         <Route index element={<Welcome />} />
-		<Route path="/cart" element={<Cart/>}/>
-		<Route path="/singleproduct" element={<SingleProduct />}/>
+		    <Route path="/cart" element={<Cart/>}/>
+		    <Route path="/singleproduct/:id" element={<SingleProduct />}/>
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/account/editinfo" element={<EditAccountPage />} />
