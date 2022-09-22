@@ -145,7 +145,6 @@ User.prototype.updateQuantityInCart = async function(lineItemId, qty) {
 User.prototype.createOrder = async function (address = this.address) {
   const order = await this.getCart();
   await order.update({status: 'PROCESSED'});
-  // unsure if this will work until testing; may need to create and then associate after
   await Order.create({userId: this.id})
 
   //returning processed cart by default; can think about if we even need a return function or not later
@@ -154,8 +153,6 @@ User.prototype.createOrder = async function (address = this.address) {
   //may later need to iterate through cart and decrement LineItem qty from respective Product
   //also will need to validate that enough Product in stock for each LineItem; could be a front-end validator check as well
 };
-
-// thoughts for guest cart: if no user logged in, could create a new Order model without any userId; then, save the Order.id in localStorage
 
 // will write this later; unsure if meant to clear cart, or cancel PROCESSED order
 User.prototype.cancelOrder = async function () {};

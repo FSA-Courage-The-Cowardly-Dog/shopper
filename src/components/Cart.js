@@ -114,9 +114,9 @@ const Cart = () => {
     )
 };
 
-// also, can look into creating a modify button to change the qty of line items, but that can be done later
 // eventually, will want to be able to display product name instead of product id; will have to think about how to do that
 // -- should be relatively straightforward for when user logged in; can modify getCart() method to have lineItems include Product model
-// -- for guest experience, will be a little trickier
+// -- for guest experience, will be a little trickier; will need to fetch product info using productId somehow for each cart element
+// -- alternatively, could save more info in local storage, such as product name at the very least.
 
 export default Cart;
