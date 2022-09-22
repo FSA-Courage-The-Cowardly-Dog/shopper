@@ -15,11 +15,15 @@ const cartSlice = createSlice({
         updateQtyInCart: (state, action) => {
             state = action.payload;
             return state;
+        },
+        addToCart: (state, action) => {
+            state = action.payload;
+            return state;
         }
     }
 })
 export default cartSlice.reducer;
-export const { setCart, removeFromCart, updateQtyInCart } = cartSlice.actions;
+export const { setCart, addToCart, removeFromCart, updateQtyInCart } = cartSlice.actions;
 
 export const attemptGetUserCart = () => async (dispatch) => {
     const token = window.localStorage.getItem('token');
@@ -59,6 +63,20 @@ export const attemptUpdateQtyInCart = (lineItemId, qty) => async (dispatch) => {
         }
     );
     dispatch(updateQtyInCart(userCart))
+}
+
+export const attemptAddToCart = (productId, qty) => async (dispatch) => {
+    const token = window.localStorage.getItem('token');
+    const { data: userCart } = await axios.post(
+        `/api/auth/usercart`,
+        {productId, qty}, 
+        {
+            headers: {
+            authorization: token,
+            }
+        }
+    );
+    dispatch(addToCart(userCart))
 }
 
 // thunks for adding items to cart; may want to do similar way as above

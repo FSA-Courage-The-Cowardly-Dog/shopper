@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { attemptGetUserCart, attemptRemoveFromCart, attemptUpdateQtyInCart } from "../store/cartSlice";
 
 const Cart = () => {
@@ -33,6 +34,9 @@ const Cart = () => {
             setIsLoaded(true)
         }
         updateCart()
+        // noticed that when deleting, quantity inputs aren't updating; refresh is workaround for now
+        // ideally do not want to refresh when removing items; will look into how to change that later
+        window.location.reload(false)
     }
 
     const removeFromLocalCart = (productId) => {
@@ -71,7 +75,7 @@ const Cart = () => {
                             {cart.lineItems.map((lineItem,idx) => {
                                 return(
                                     <li key={idx}>
-                                        <span>{`Product Id: ${lineItem.productId}, Qty: `} <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/></span>
+                                        <span>Product Id: <Link to={`/singleproduct/${lineItem.productId}`}>{lineItem.productId}</Link>, Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/></span>
                                         <button 
                                             className='delete-from-cart' 
                                             type='click'
@@ -97,7 +101,7 @@ const Cart = () => {
                                             Ideally, will only update cart quantity if user hits a 'save change' button
                                             Will look into adding that functionality later
                                         */}
-                                        <span>{`Product Id: ${pair[0]}, Qty: `}<input type='number' defaultValue={pair[1]} min='1' onChange={updateQtyForLocalCart(pair[0])}/></span>
+                                        <span>Product Id: <Link to={`/singleproduct/${pair[0]}`}>{pair[0]}</Link>, Qty:  <input type='number' defaultValue={pair[1]} min='1' onChange={updateQtyForLocalCart(pair[0])}/></span>
                                         <button 
                                             className='delete-from-cart' 
                                             type='click' 

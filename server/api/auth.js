@@ -10,17 +10,6 @@ router.post('/login', async (req, res, next) => {
   }
 });
 
-router.get('/usercart', async (req, res, next) => {
-  try {
-    // const user = await User.findByPk(Number(req.params.id))
-    const user = await User.byToken(req.headers.authorization);
-    const cart = await user.getCart()
-    res.send(cart)
-  } catch (err) {
-    next(err)
-  }
-})
-
 router.post('/', async (req, res, next) => {
   try {
     const user = await User.byToken(req.headers.authorization);
@@ -29,6 +18,27 @@ router.post('/', async (req, res, next) => {
     next(err);
   }
 });
+
+router.get('/usercart', async (req, res, next) => {
+  try {
+    const user = await User.byToken(req.headers.authorization);
+    const cart = await user.getCart()
+    res.send(cart)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.post('/usercart', async (req, res, next) => {
+  try {
+    const user = await User.byToken(req.headers.authorization);
+    await user.addToCart(req.body.productId,req.body.qty)
+    const cart = await user.getCart()
+    res.send(cart)
+  } catch (err) {
+    next(err)
+  }
+})
 
 router.put('/usercart/:lineItemId', async (req, res, next) => {
   try {

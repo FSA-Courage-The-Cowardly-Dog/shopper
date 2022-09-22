@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom';
+import { attemptAddToCart } from '../store/cartSlice';
 import { attemptGetSingleProduct, attemptUnmountSingleProduct } from "../store/productSlice";
 import '../styling/SingleProduct.css'
 
@@ -19,7 +20,7 @@ function SingleProduct() {
   const addToCartHandler = (productId) => {
     const token = window.localStorage.getItem('token');
     if (token) {
-      // write out thunk for cartSlice here
+      dispatch(attemptAddToCart(productId,Number(qty)))
     } else {
       const localCart = JSON.parse(window.localStorage.getItem('cart'));
       if (localCart[productId]) {
