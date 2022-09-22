@@ -29,9 +29,11 @@
     "server": "JWT=courage SALT=10 QUIET=true nodemon server",
     "startall": "npm run server & npm run start",
     "seed": "QUIET=true node server/seedsync.js",
-    "start:pro": "QUIET=true NODE_ENV=production npm run server"
+    "start:pro": "QUIET=true NODE_ENV=production npm run server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install ==prefix client"
   },
   "proxy": "http://localhost:5000/",
+  "homepage": ".",
   "eslintConfig": {
     "extends": [
       "react-app",

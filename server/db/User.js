@@ -2,8 +2,8 @@ const conn = require('./conn');
 const Sequelize = require('sequelize');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const jwtStr = process.env.JWT;
-const saltRounds = Number(process.env.SALT);
+const jwtStr = process.env.JWT || 'courage';
+const saltRounds = Number(process.env.SALT || 9);
 
 const User = conn.define('user', {
   username: {
