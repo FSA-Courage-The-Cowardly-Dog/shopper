@@ -10,6 +10,7 @@ import ModifySingleProductAdminPage from './components/admin/ModifySingleProduct
 import CreateAccount from './components/CreateAccount';
 import EditAccountPage from './components/EditAccountPage';
 import OrderHistory from './components/OrderHistory';
+import SingleProduct from './components/SingleProduct';
 // import "./App.css";
 import Userbar from './components/Userbar';
 import Welcome from './components/Welcome';
@@ -29,6 +30,7 @@ function App() {
       </header>
       <Routes>
         <Route index element={<Welcome />} />
+		<Route path="/singleproduct" element={<SingleProduct />}/>
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/account/editinfo" element={<EditAccountPage />} />
