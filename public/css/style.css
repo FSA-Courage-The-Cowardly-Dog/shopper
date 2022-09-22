@@ -1,6 +1,7 @@
 @import "userbar.css";
 @import "accountform.css";
 @import "admin/index.css";
+@import "cart.css";
 
 * {
     margin: 0

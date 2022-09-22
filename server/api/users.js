@@ -32,15 +32,6 @@ router.get('/', requireToken, isAdmin, async (req, res, next) => {
   }
 });
 
-router.get('/:id/cart', requireToken, async (req, res, next) => {
-  try {
-    const user = await User.findByPk(Number(req.params.id))
-    const cart = await user.getCart()
-    res.send(cart)
-  } catch (err) {
-    next(err)
-  }
-})
 router.put('/:id/cart', requireToken, async (req, res, next) => {
   try {
     const user = await User.findByPk(Number(req.params.id))

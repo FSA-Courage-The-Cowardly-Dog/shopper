@@ -10,7 +10,7 @@ function SingleProduct() {
       React.useEffect(() => {
           dispatch(attemptGetProductList());
         }, []);
-
+        // try to wire this up after cart functionality built out
         
 
   return (

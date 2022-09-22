@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { attemptGetUserCart } from "../store/cartSlice";
+import { attemptGetUserCart, attemptRemoveFromCart, attemptUpdateQtyInCart } from "../store/cartSlice";
 
 const Cart = () => {
-    const user = useSelector(state => state.user);
     const userCart = useSelector(state => state.cart)
     const [isLoaded, setIsLoaded] = useState(false);
     const [cart, setCart] = useState(JSON.parse(window.localStorage.getItem('cart')));
@@ -11,10 +10,11 @@ const Cart = () => {
 
     React.useEffect(() => {
         async function loadUserCart() {
-            await dispatch(attemptGetUserCart(user.id))
+            await dispatch(attemptGetUserCart())
             setIsLoaded(true);
         }
-        if (user.id) {
+        const token = window.localStorage.getItem('token');
+        if (token) {
             loadUserCart()
         }
     },[])
@@ -23,39 +23,100 @@ const Cart = () => {
             setCart(userCart)
         }
     },[isLoaded])
-    // not refreshing on cart page, but works when toggling away then back
-    // something finicky when logging in when on cart page; also refreshing when logged in on cart page... will debug later
+    // something finicky when logging in when on cart page; need to refresh page to see updated cart
+
+    const removeFromUserCart = (lineItemId) => {
+        async function updateCart() {
+            // workaround for how to update component without refreshing
+            setIsLoaded(false)
+            await dispatch(attemptRemoveFromCart(lineItemId))
+            setIsLoaded(true)
+        }
+        updateCart()
+    }
+
+    const removeFromLocalCart = (productId) => {
+        const localCart = JSON.parse(window.localStorage.getItem('cart'));
+        delete localCart[productId];
+        window.localStorage.setItem('cart', JSON.stringify(localCart))
+        setCart(localCart)
+    }
+
+    // don't love this implementation, but works for now
+    const updateQtyForUserCart = (lineItemId) => (event) => {
+        async function updateCart() {
+            // workaround for how to update component without refreshing
+            setIsLoaded(false)
+            await dispatch(attemptUpdateQtyInCart(lineItemId,event.target.value))
+            setIsLoaded(true)
+        }
+        updateCart()
+    }
+
+    // non-elegant way to update, but functionality should work for skeleton framework for site
+    const updateQtyForLocalCart = (productId) => (event) => {
+        const localCart = JSON.parse(window.localStorage.getItem('cart'));
+        localCart[productId] = event.target.value;
+        window.localStorage.setItem('cart', JSON.stringify(localCart))
+        setCart(localCart)
+    }
 
     return(
-        // <div>
-        //     <div>Placeholder for cart</div>
-        //     <div>Will probably want to have App.js or Userbar.js have a reference to cart</div>
-        //     <div>That way, can display num of line items next to cart Link</div>
-        // </div>
-        cart.listItems ? 
+        cart.lineItems ? 
             (
-                cart.listItems.length ?
-                    <div>map through list items here</div>
+                cart.lineItems.length ?
+                    <div className='cart-display'>
+                        <h3>Items:</h3>
+                        <ul>
+                            {cart.lineItems.map((lineItem,idx) => {
+                                return(
+                                    <li key={idx}>
+                                        <span>{`Product Id: ${lineItem.productId}, Qty: `} <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/></span>
+                                        <button 
+                                            className='delete-from-cart' 
+                                            type='click'
+                                            onClick={() => removeFromUserCart(lineItem.id)}>
+                                                X
+                                        </button>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
                     : <div>no items in cart</div>
             )
             : (
                 Object.entries(cart).length ?
-                    <div>map through list items here</div>
+                    <div className='cart-display'>
+                        <h3>Items:</h3>
+                        <ul>
+                            {Object.entries(cart).map((pair,idx) => {
+                                return(
+                                    <li key={idx}>
+                                        {/* for now, can just update cart quantity whenever number is changed
+                                            Ideally, will only update cart quantity if user hits a 'save change' button
+                                            Will look into adding that functionality later
+                                        */}
+                                        <span>{`Product Id: ${pair[0]}, Qty: `}<input type='number' defaultValue={pair[1]} min='1' onChange={updateQtyForLocalCart(pair[0])}/></span>
+                                        <button 
+                                            className='delete-from-cart' 
+                                            type='click' 
+                                            onClick={() => removeFromLocalCart(pair[0])}>
+                                                X
+                                        </button>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
                     : <div>no items in cart</div>
             )
     )
 };
 
-// for now, save localstorage cart as an object: {productId: qty}; will have multiple productIds as keys
-
-// functionality as guest should be:
-// - check if user logged in; if not, let cart window.localstorage.getItem('cart')
-// - when adding item, if not logged in, add productId and qty to the local storage cart; make sure to setItem after
-// - when user logs in, check if localstorage.getItem("cart") has keys; if yes, then for each key, user.addToCart with productId, qty
-// - after localstorage cart items added to user's cart, clear out localstorage cart; setItem("cart",{})
-
-// make test file to test out methods; then, work on cartSlice.js file
-// once cart working for users, work on localstorage cart
-// one localstorage cart working, work on merging localstorage cart with user cart when logging in
+// also, can look into creating a modify button to change the qty of line items, but that can be done later
+// eventually, will want to be able to display product name instead of product id; will have to think about how to do that
+// -- should be relatively straightforward for when user logged in; can modify getCart() method to have lineItems include Product model
+// -- for guest experience, will be a little trickier
 
 export default Cart;

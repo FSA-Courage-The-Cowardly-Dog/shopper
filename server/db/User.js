@@ -76,6 +76,16 @@ User.byToken = async (token) => {
     throw error;
   }
 };
+User.decodeToken =  async (token) => {
+  try {
+    jwt.verify(token, jwtStr);
+    return jwt.decode(token).userId
+  } catch (err) {
+    const error = Error('bad credentials');
+    error.status = 401;
+    throw error;
+  }
+}
 User.beforeCreate(async (user, options) => {
   const hashedPassword = await bcrypt.hash(user.password, saltRounds);
   user.password = hashedPassword;
@@ -101,8 +111,10 @@ User.prototype.getCart = async function () {
       userId: this.id,
       status: 'ACTIVE'
     }, include: {
-      model: LineItem
-    }
+      model: LineItem,
+    }, order: [
+      [{model: LineItem},'id','asc']
+    ]
   });
   return cart;
 };
