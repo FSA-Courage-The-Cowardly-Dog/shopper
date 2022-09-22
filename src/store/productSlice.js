@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+
 const userSlice = createSlice({
 	name: "product",
-	initialState: {},
+	initialState: { productList: [], singleProduct: {} },
 	reducers: {
 		getProductList: (state, action) => {
 			state.productList = action.payload;
@@ -18,8 +19,8 @@ export default userSlice.reducer;
 export const { getProductList, getSingleProduct } = userSlice.actions;
 export const attemptGetProductList = (tag) => async (dispatch) => {
 	try {
-		const { data: productlist } = await axios.get("/api/user");
-		dispatch(getList(productlist));
+		const { data: productlist } = await axios.get("/api/products");
+		dispatch(getProductList(productlist));
 	} catch (error) {}
 };
 export const attemptGetSingleProduct = (productId) => async (dispatch) => {

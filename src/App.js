@@ -29,7 +29,7 @@ function App() {
 	return (
 		<div className="App">
 			<header>
-				<Userbar attemptTokenLogin={attemptTokenLogin}/>
+				{/* <Userbar attemptTokenLogin={attemptTokenLogin}/> */}
 			</header>
 			{/* <Welcome /> */}
 			<Routes>
