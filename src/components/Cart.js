@@ -24,6 +24,7 @@ const Cart = () => {
         }
     },[isLoaded])
     // not refreshing on cart page, but works when toggling away then back
+    // something finicky when logging in when on cart page; also refreshing when logged in on cart page... will debug later
 
     return(
         // <div>

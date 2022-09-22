@@ -49,7 +49,7 @@ router.put('/:id/cart', requireToken, async (req, res, next) => {
     req.body.forEach(async element => {
       await user.addToCart(Number(element[0]), Number(element[1]));
     })
-    res.send('test')
+    res.send(user)
   } catch (err) {
     next(err)
   }

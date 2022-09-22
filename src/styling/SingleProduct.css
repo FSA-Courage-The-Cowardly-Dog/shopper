@@ -1,0 +1,47 @@
+.productInfo {
+    padding: 10px;
+}
+
+.cart {
+    background-color: rgb(53, 207, 53);
+}
+
+.addToCart {
+    border: none;
+    width: 75%;
+    background-color: rgb(53, 207, 53);
+    border-radius: 8px;
+}
+ .prodInfoBlock{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-left: 50%;
+    margin-right: 5%;
+ }
+
+ .counter {
+    margin-top: 5%;
+    margin-bottom: 5%;
+ }
+
+ .imageContainer {
+    margin-top: 5%;
+ }
+
+ .prodImg {
+    margin-left: 15%;
+    margin-top: 10%;
+ }
+
+ .sizeSelector {
+    margin-top: 10%
+ }
+
+ .counterLabel {
+    margin-bottom: 3%;
+ }
+
+ .description {
+    margin-top: 10%;
+ }
