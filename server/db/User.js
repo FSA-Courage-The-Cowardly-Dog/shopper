@@ -50,7 +50,7 @@ const User = conn.define('user', {
     defaultValue: false,
   },
   address: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     defaultValue: '',
   },
 });
