@@ -1,14 +1,14 @@
-const app = require("./app");
-const db = require("./db");
-console.log("running nodemon?");
+const app = require('./app');
+const db = require('./db');
+console.log('running nodemon?');
 const port = process.env.PORT || 5000;
 async function init() {
-	await db.syncAndSeed();
-	console.log(`Seeding? successful!`);
+  await db.syncAndSeed();
+  console.log(`Seeding? successful!`);
 
-	app.listen(port, () =>
-		console.log(`listening on http://localhost:${port}\n`)
-	);
+  app.listen(port, () =>
+    console.log(`listening on http://localhost:${port}\n`)
+  );
 }
 
 init();

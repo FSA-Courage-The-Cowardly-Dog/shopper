@@ -1,0 +1,11 @@
+{
+  "tags": [
+    { "name": "adult" },
+    { "name": "child" },
+    { "name": "girl" },
+    { "name": "boy" },
+    { "name": "women" },
+    { "name": "men" },
+    { "name": "toy story" }
+  ]
+}
