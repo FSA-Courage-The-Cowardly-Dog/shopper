@@ -21,6 +21,10 @@ function App() {
 
   React.useEffect(() => {
     dispatch(attemptTokenLogin());
+	const localCart = JSON.parse(window.localStorage.getItem('cart'));
+	if (!localCart) {
+		window.localStorage.setItem('cart',JSON.stringify({}))
+	}
   }, [dispatch]);
 
   return (

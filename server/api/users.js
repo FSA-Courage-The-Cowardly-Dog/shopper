@@ -32,4 +32,22 @@ router.get('/', requireToken, isAdmin, async (req, res, next) => {
   }
 });
 
+router.get('/:id/cart', requireToken, async (req, res, next) => {
+  try {
+    const user = await User.findByPk(Number(req.params.id))
+    res.send(await user.getCart())
+  } catch (err) {
+    next(err)
+  }
+})
+router.put('/:id/cart', requireToken, async (req, res, next) => {
+  try {
+    const user = await User.findByPk(Number(req.params.id))
+    console.log(req.body)
+    res.send('test')
+  } catch (err) {
+    next(err)
+  }
+})
+
 module.exports = router;

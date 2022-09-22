@@ -95,29 +95,43 @@ User.authenticate = async ({ username, password }) => {
   throw error;
 };
 
-User.prototype.getCart = async () => {
+User.prototype.getCart = async function () {
   const [cart, created] = await Order.findOrCreate({
     where: {
       userId: this.id,
       status: 'ACTIVE'
+    }, include: {
+      model: LineItem
     }
   });
   return cart;
 };
 
-User.prototype.addToCart = async (product, qty) => {
+User.prototype.addToCart = async function (productId, qty) {
   const cart = await this.getCart();
-  await LineItem.create({quantity: qty, productId: product.id, orderId: cart.id})
+  const lineItem = cart.lineItems.find(lineItem => lineItem.productId === productId)
+  if (lineItem) {
+    console.log('line item already exists')
+    await lineItem.update({quantity: (lineItem.quantity+qty)})
+  } else {
+    await LineItem.create({quantity: qty, productId, orderId: cart.id})
+  }
 };
 
-User.prototype.removeFromCart = async (lineItemId) => {
+User.prototype.removeFromCart = async function (lineItemId) {
   const lineItem = await LineItem.findByPk(lineItemId);
   const cart = await this.getCart();
   await cart.removeLineItem(lineItem);
   await lineItem.destroy();
 };
 
-User.prototype.createOrder = async () => {
+User.prototype.updateQuantityInCart = async function(lineItemId, qty) {
+  const lineItem = await LineItem.findByPk(lineItemId);
+  await lineItem.update({quantity: qty})
+}
+
+// default using user address; when checking out on site, can give option to use different address, which can be inputted as param
+User.prototype.createOrder = async function (address = this.address) {
   const order = await this.getCart();
   await order.update({status: 'PROCESSED'});
   // unsure if this will work until testing; may need to create and then associate after
@@ -133,6 +147,6 @@ User.prototype.createOrder = async () => {
 // thoughts for guest cart: if no user logged in, could create a new Order model without any userId; then, save the Order.id in localStorage
 
 // will write this later; unsure if meant to clear cart, or cancel PROCESSED order
-User.prototype.cancelOrder = () => {};
+User.prototype.cancelOrder = async function () {};
 
 module.exports = User;
