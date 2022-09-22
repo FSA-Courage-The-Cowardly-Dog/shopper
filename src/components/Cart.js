@@ -14,12 +14,6 @@ const Cart = () => {
     )
 };
 
-// in another file, likely App.js, will want to set localstorage variable for cart
-// can make a couple checks: if !user, set cart to localstorage cart, will need to stringify and parse to/from json
-// if user is logged in, check if local storage cart has items; then, add those items
-
-// another idea: can just save Order model id of unassigned instance
-// then, if no user logged in, can fetched cart using that order id
-// if user then logs in, can check if local instance has items, then move those over. then, remove all items from local instance
+// for now, save localstorage cart as an object: {productId: qty}; will have multiple productIds as keys
 
 export default Cart;
