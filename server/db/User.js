@@ -2,6 +2,8 @@ const conn = require('./conn');
 const Sequelize = require('sequelize');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const Order = require('./Order')
+const LineItem = require('./LineItem');
 const jwtStr = process.env.JWT;
 const saltRounds = Number(process.env.SALT);
 
@@ -60,10 +62,7 @@ User.byToken = async (token) => {
   try {
     jwt.verify(token, jwtStr);
     const user = await User.findByPk(jwt.decode(token).userId, {
-      // include: {
-      //     model: Order
-      // }
-      // may want to add in Order model later; would be useful for displaying old orders, getting current cart, etc.
+      // may want to include Order model; could be useful for displaying order history
     });
     if (user) {
       return user;
@@ -96,11 +95,44 @@ User.authenticate = async ({ username, password }) => {
   throw error;
 };
 
-User.prototype.addToCart = () => {};
-User.prototype.removeFromCart = () => {};
-User.prototype.createOrder = () => {};
-User.prototype.cancelOrder = () => {};
+User.prototype.getCart = async () => {
+  const [cart, created] = await Order.findOrCreate({
+    where: {
+      userId: this.id,
+      status: 'ACTIVE'
+    }
+  });
+  return cart;
+};
 
-// will probably want a method to get current cart?
+User.prototype.addToCart = async (product, qty) => {
+  const cart = await this.getCart();
+  await LineItem.create({quantity: qty, productId: product.id, orderId: cart.id})
+};
+
+User.prototype.removeFromCart = async (lineItemId) => {
+  const lineItem = await LineItem.findByPk(lineItemId);
+  const cart = await this.getCart();
+  await cart.removeLineItem(lineItem);
+  await lineItem.destroy();
+};
+
+User.prototype.createOrder = async () => {
+  const order = await this.getCart();
+  await order.update({status: 'PROCESSED'});
+  // unsure if this will work until testing; may need to create and then associate after
+  await Order.create({userId: this.id})
+
+  //returning processed cart by default; can think about if we even need a return function or not later
+  return order;
+
+  //may later need to iterate through cart and decrement LineItem qty from respective Product
+  //also will need to validate that enough Product in stock for each LineItem; could be a front-end validator check as well
+};
+
+// thoughts for guest cart: if no user logged in, could create a new Order model without any userId; then, save the Order.id in localStorage
+
+// will write this later; unsure if meant to clear cart, or cancel PROCESSED order
+User.prototype.cancelOrder = () => {};
 
 module.exports = User;
