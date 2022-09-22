@@ -33,7 +33,9 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install ==prefix client"
   },
   "proxy": "http://localhost:5000/",
-  "homepage": ".",
+  "engines": {
+    "node": "16.16.0"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
