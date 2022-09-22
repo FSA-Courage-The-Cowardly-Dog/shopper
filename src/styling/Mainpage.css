@@ -5,3 +5,20 @@
 .App{
  display: flex;
 }
+.categoryImg {
+    max-width: 28%;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container {
+    margin-top: 10%;
+}
+
+.login-form {
+    max-width: 100%;
+}

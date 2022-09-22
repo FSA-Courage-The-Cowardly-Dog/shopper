@@ -14,7 +14,9 @@ import SingleProduct from './components/SingleProduct';
 // import "./App.css";
 import Userbar from './components/Userbar';
 import Welcome from './components/Welcome';
+import Category from './components/Category';
 import { attemptTokenLogin } from './store/userSlice';
+import './styling/Mainpage.css'
 
 function App() {
   const dispatch = useDispatch();
@@ -25,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header >
         <Userbar attemptTokenLogin={attemptTokenLogin} />
       </header>
       <Routes>
@@ -38,6 +40,7 @@ function App() {
         <Route path="/adminportal" element={<AdminPortal />} />
         <Route path="/adminportal/allusers" element={<AllUsersAdminView />} />
         <Route path="/adminportal/addproduct" element={<AddNewProduct />} />
+		<Route path="/:categories" element={<Category />} />
         <Route
           path="/adminportal/allproducts"
           element={<AllProductsAdminView />}

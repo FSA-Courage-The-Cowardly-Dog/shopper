@@ -25,6 +25,7 @@ header {
 #login-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .login-line {
     display: flex;

@@ -28,6 +28,7 @@ router.get('/price/:price', (req, res, next) => {
 
 // get product by tag
 router.get('/tag/:tag', (req, res, next) => {
+  console.log(req.params.tag);
   return Product.findAll({
     where: {
       tags: {
