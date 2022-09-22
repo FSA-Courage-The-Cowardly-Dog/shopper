@@ -44,7 +44,7 @@ const AllUsersAdminView = () => {
                 <td>{user.firstName}</td>
                 <td>{user.lastName}</td>
                 <td>{user.email}</td>
-                <td>{user.Address}</td>
+                <td>{user.address}</td>
                 <td>{user.isAdmin ? 'Yes' : 'No'}</td>
               </tr>
             );

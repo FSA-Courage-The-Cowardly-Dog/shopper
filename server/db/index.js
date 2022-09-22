@@ -48,8 +48,6 @@ const syncAndSeed = async () => {
         }
       })
     );
-
-    //use this area to sync your database
     console.log(`Seeding successful!`);
   } catch (err) {
     console.error(err);
