@@ -111,7 +111,6 @@ User.prototype.addToCart = async function (productId, qty) {
   const cart = await this.getCart();
   const lineItem = cart.lineItems.find(lineItem => lineItem.productId === productId)
   if (lineItem) {
-    console.log('line item already exists')
     await lineItem.update({quantity: (lineItem.quantity+qty)})
   } else {
     await LineItem.create({quantity: qty, productId, orderId: cart.id})

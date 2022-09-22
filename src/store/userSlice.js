@@ -33,7 +33,7 @@ export const attemptTokenLogin = () => async (dispatch) => {
         },
       }
     );
-    await _mergeLocalCartWithUserCart(userInfo)
+    await _mergeLocalCartWithUserCart(userInfo.id, token)
     dispatch(login(userInfo));
   }
 };
@@ -87,7 +87,7 @@ export const updateUser = (userDetails, userId) => async (dispatch) => {
   }
 };
 const _mergeLocalCartWithUserCart = async (userId, token) => {
-  let localCart = window.localStorage.getItem('cart');
+  let localCart = JSON.parse(window.localStorage.getItem('cart'));
   let lineItems = Object.entries(localCart);
   // lineItems.forEach(async idQtyPair => {
   //   await user.addToCart(idQtyPair[0],idQtyPair[1])
