@@ -3,7 +3,7 @@ import axios from 'axios';
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {},
-    reducuers: {
+    reducers: {
         setCart: (state, action) => {
             state = action.payload;
             return state;
@@ -25,13 +25,13 @@ export const attemptGetUserCart = (userId) => async (dispatch) => {
               authorization: token,
             }
         });
+        console.log(userCart)
         dispatch(setCart(userCart))
     } 
     else {
         // will need to make sure to setItem cart elsewhere; likely in App.js useEffect function
         // first try to getItem('cart'); if doesn't exist, then setItem('cart','{}')
         const localCart = await JSON.parse(window.localStorage.getItem('cart'));
-        console.log('logging local cart in cartSlice',localCart)
         // dispatch(setCart(localCart))
         dispatch(setCart(localCart))
     }   

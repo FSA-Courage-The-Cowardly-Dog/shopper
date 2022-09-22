@@ -22,14 +22,26 @@ const Cart = () => {
         if (isLoaded) {
             setCart(userCart)
         }
-    },[])
+    },[isLoaded])
+    // not refreshing on cart page, but works when toggling away then back
 
     return(
-        <div>
-            <div>Placeholder for cart</div>
-            <div>Will probably want to have App.js or Userbar.js have a reference to cart</div>
-            <div>That way, can display num of line items next to cart Link</div>
-        </div>
+        // <div>
+        //     <div>Placeholder for cart</div>
+        //     <div>Will probably want to have App.js or Userbar.js have a reference to cart</div>
+        //     <div>That way, can display num of line items next to cart Link</div>
+        // </div>
+        cart.listItems ? 
+            (
+                cart.listItems.length ?
+                    <div>map through list items here</div>
+                    : <div>no items in cart</div>
+            )
+            : (
+                Object.entries(cart).length ?
+                    <div>map through list items here</div>
+                    : <div>no items in cart</div>
+            )
     )
 };
 
