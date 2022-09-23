@@ -19,11 +19,19 @@ const cartSlice = createSlice({
         addToCart: (state, action) => {
             state = action.payload;
             return state;
+        },
+        updateAddress: (state, action) => {
+            state = action.payload;
+            return state;
+        },
+        checkout: (state, action) => {
+            state = action.payload;
+            return state;
         }
     }
 })
 export default cartSlice.reducer;
-export const { setCart, addToCart, removeFromCart, updateQtyInCart } = cartSlice.actions;
+export const { setCart, addToCart, removeFromCart, updateQtyInCart, updateAddress, checkout } = cartSlice.actions;
 
 export const attemptGetUserCart = () => async (dispatch) => {
     const token = window.localStorage.getItem('token');
@@ -77,6 +85,32 @@ export const attemptAddToCart = (productId, qty) => async (dispatch) => {
         }
     );
     dispatch(addToCart(userCart))
+}
+export const attemptUpdateOrderAddress = (address) => async (dispatch) => {
+    const token = window.localStorage.getItem('token');
+    const { data: userCart } = await axios.put(
+        `/api/auth/usercart`,
+        {address}, 
+        {
+            headers: {
+            authorization: token,
+            }
+        }
+    );
+    dispatch(updateAddress(userCart))
+}
+export const attemptCheckout = (total) => async (dispatch) => {
+    const token = window.localStorage.getItem('token');
+    const { data: order } = await axios.put(
+        `/api/auth/usercart/checkout`,
+        {total}, 
+        {
+            headers: {
+            authorization: token,
+            }
+        }
+    );
+    dispatch(checkout(order))
 }
 
 // thunks for adding items to cart; may want to do similar way as above

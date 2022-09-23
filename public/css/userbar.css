@@ -5,6 +5,8 @@ header {
     height: 80px;
     width: 100%;
     position: relative;
+    display: flex;
+    justify-content: flex-end;
 }
 /* temp styling for nav bar links for now */
 .temp-link {
@@ -30,13 +32,14 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-
+    align-items: flex-end;
 }
 .login-line {
     display: flex;
     flex-direction: row;
     margin: .1em;
     justify-content: space-between;
+    max-width: 200px;
 }
 .login-input {
     max-width: 100px;
