@@ -24,14 +24,14 @@
   "scripts": {
     "start": "node server",
     "react:start": "react-scripts start",
-    "build": "react-scripts build",
+    "react:build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "JWT=courage SALT=10 QUIET=true nodemon server",
     "startall": "npm run server & npm run start",
     "seed": "QUIET=true node server/seedsync.js",
     "start:pro": "QUIET=true NODE_ENV=production npm run server",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build & npm run seed"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run react:build && npm run seed"
   },
   "proxy": "http://localhost:5000/",
   "engines": {
