@@ -150,7 +150,8 @@ User.prototype.updateQuantityInCart = async function(lineItemId, qty) {
 
 User.prototype.createOrder = async function () {
   const order = await this.getCart();
-  await order.update({status: 'PROCESSED'});
+  // making all checked-out orders completed for now; if time, will later change to processed, and give user time to cancel before admin changes status to completed
+  await order.update({status: 'COMPLETED'});
   await this.getCart()
 
   return order;
