@@ -31,7 +31,7 @@
     "startall": "npm run server & npm run start",
     "seed": "QUIET=true node server/seedsync.js",
     "start:pro": "QUIET=true NODE_ENV=production npm run server",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build & npm run seed"
   },
   "proxy": "http://localhost:5000/",
   "engines": {
