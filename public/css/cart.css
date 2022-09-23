@@ -1,0 +1,10 @@
+.delete-from-cart {
+    margin: 10px;
+    font-weight: bolder;
+    color: red;
+    border: none;
+    background-color: none;
+}
+.delete-from-cart:hover {
+    cursor: pointer;
+}

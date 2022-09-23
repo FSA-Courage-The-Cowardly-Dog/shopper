@@ -17,10 +17,8 @@ app.use((err, req, res, next) => {
 });
 app.get('/*', (req, res) => {
   if (process.env.NODE_ENV === 'production') {
-    console.log('yo');
     res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
   } else {
-    console.log('no');
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
   }
 });

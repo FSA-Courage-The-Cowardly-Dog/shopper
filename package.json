@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "JWT=courage SALT=10 QUIET=true nodemon --watch server",
-    "startall": "npm run server & npm run start",
+    "startall": "npm run server & npm run react:start",
     "seed": "QUIET=true node server/seedsync.js",
     "seedmini": "QUIET=true node server/seedsyncmini.js",
     "start:pro": "QUIET=true NODE_ENV=production npm run server",

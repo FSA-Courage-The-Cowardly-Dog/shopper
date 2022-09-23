@@ -2,6 +2,8 @@ const conn = require('./conn');
 const Sequelize = require('sequelize');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const Order = require('./Order')
+const LineItem = require('./LineItem');
 const jwtStr = process.env.JWT || 'courage';
 const saltRounds = Number(process.env.SALT || 9);
 
@@ -60,10 +62,7 @@ User.byToken = async (token) => {
   try {
     jwt.verify(token, jwtStr);
     const user = await User.findByPk(jwt.decode(token).userId, {
-      // include: {
-      //     model: Order
-      // }
-      // may want to add in Order model later; would be useful for displaying old orders, getting current cart, etc.
+      // may want to include Order model; could be useful for displaying order history
     });
     if (user) {
       return user;
@@ -77,6 +76,16 @@ User.byToken = async (token) => {
     throw error;
   }
 };
+User.decodeToken =  async (token) => {
+  try {
+    jwt.verify(token, jwtStr);
+    return jwt.decode(token).userId
+  } catch (err) {
+    const error = Error('bad credentials');
+    error.status = 401;
+    throw error;
+  }
+}
 User.beforeCreate(async (user, options) => {
   const hashedPassword = await bcrypt.hash(user.password, saltRounds);
   user.password = hashedPassword;
@@ -96,11 +105,56 @@ User.authenticate = async ({ username, password }) => {
   throw error;
 };
 
-User.prototype.addToCart = () => {};
-User.prototype.removeFromCart = () => {};
-User.prototype.createOrder = () => {};
-User.prototype.cancelOrder = () => {};
+User.prototype.getCart = async function () {
+  const [cart, created] = await Order.findOrCreate({
+    where: {
+      userId: this.id,
+      status: 'ACTIVE'
+    }, include: {
+      model: LineItem,
+    }, order: [
+      [{model: LineItem},'id','asc']
+    ]
+  });
+  return cart;
+};
 
-// will probably want a method to get current cart?
+User.prototype.addToCart = async function (productId, qty) {
+  const cart = await this.getCart();
+  const lineItem = cart.lineItems.find(lineItem => lineItem.productId === productId)
+  if (lineItem) {
+    await lineItem.update({quantity: (lineItem.quantity+qty)})
+  } else {
+    await LineItem.create({quantity: qty, productId, orderId: cart.id})
+  }
+};
+
+User.prototype.removeFromCart = async function (lineItemId) {
+  const lineItem = await LineItem.findByPk(lineItemId);
+  const cart = await this.getCart();
+  await cart.removeLineItem(lineItem);
+  await lineItem.destroy();
+};
+
+User.prototype.updateQuantityInCart = async function(lineItemId, qty) {
+  const lineItem = await LineItem.findByPk(lineItemId);
+  await lineItem.update({quantity: qty})
+}
+
+// default using user address; when checking out on site, can give option to use different address, which can be inputted as param
+User.prototype.createOrder = async function (address = this.address) {
+  const order = await this.getCart();
+  await order.update({status: 'PROCESSED'});
+  await Order.create({userId: this.id})
+
+  //returning processed cart by default; can think about if we even need a return function or not later
+  return order;
+
+  //may later need to iterate through cart and decrement LineItem qty from respective Product
+  //also will need to validate that enough Product in stock for each LineItem; could be a front-end validator check as well
+};
+
+// will write this later; unsure if meant to clear cart, or cancel PROCESSED order
+User.prototype.cancelOrder = async function () {};
 
 module.exports = User;

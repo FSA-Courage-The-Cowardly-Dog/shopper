@@ -1,12 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import AccountPage from './components/AccountPage';
 import AddNewProduct from './components/admin/AddNewProduct';
 import AdminPortal from './components/admin/AdminPortal';
 import AllProductsAdminView from './components/admin/AllProductsAdminView';
 import AllUsersAdminView from './components/admin/AllUsersAdminView';
 import ModifySingleProductAdminPage from './components/admin/ModifySingleProductAdminPage';
+import Cart from './components/Cart';
 import CreateAccount from './components/CreateAccount';
 import EditAccountPage from './components/EditAccountPage';
 import OrderHistory from './components/OrderHistory';
@@ -21,16 +22,23 @@ function App() {
 
   React.useEffect(() => {
     dispatch(attemptTokenLogin());
+	const localCart = JSON.parse(window.localStorage.getItem('cart'));
+	if (!localCart) {
+		window.localStorage.setItem('cart',JSON.stringify({}))
+	}
   }, [dispatch]);
 
   return (
     <div className="App">
       <header>
+		<Link to="/" className='temp-link'>Home</Link>
+		<Link to="/cart" className='temp-link'>Cart</Link>
         <Userbar attemptTokenLogin={attemptTokenLogin} />
       </header>
       <Routes>
         <Route index element={<Welcome />} />
-		<Route path="/singleproduct" element={<SingleProduct />}/>
+		    <Route path="/cart" element={<Cart/>}/>
+		    <Route path="/singleproduct/:id" element={<SingleProduct />}/>
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/account/editinfo" element={<EditAccountPage />} />

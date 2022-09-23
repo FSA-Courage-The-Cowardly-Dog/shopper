@@ -19,4 +19,47 @@ router.post('/', async (req, res, next) => {
   }
 });
 
+router.get('/usercart', async (req, res, next) => {
+  try {
+    const user = await User.byToken(req.headers.authorization);
+    const cart = await user.getCart()
+    res.send(cart)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.post('/usercart', async (req, res, next) => {
+  try {
+    const user = await User.byToken(req.headers.authorization);
+    await user.addToCart(req.body.productId,req.body.qty)
+    const cart = await user.getCart()
+    res.send(cart)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.put('/usercart/:lineItemId', async (req, res, next) => {
+  try {
+    const user = await User.byToken(req.headers.authorization);
+    await user.updateQuantityInCart(req.params.lineItemId, Number(req.body.qty))
+    const userCart = await user.getCart();
+    res.send(userCart);
+  } catch (err) {
+    next(err);
+  }
+})
+
+router.delete('/usercart/:lineItemId', async (req, res, next) => {
+  try {
+    const user = await User.byToken(req.headers.authorization);
+    await user.removeFromCart(req.params.lineItemId)
+    const userCart = await user.getCart();
+    res.send(userCart);
+  } catch (err) {
+    next(err);
+  }
+})
+
 module.exports = router;
