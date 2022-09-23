@@ -25,6 +25,10 @@ const SignIn = () => {
         password: state.password,
       })
     );
+    // adding for now for edge case when user logs in on cart page
+    // still doesn't properly load all items if there were local cart items as well;
+    // requires a second manual refresh
+    window.location.reload(false)
   };
 
   return (

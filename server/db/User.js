@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const Order = require('./Order')
 const LineItem = require('./LineItem');
+const Product = require('./Product');
 const jwtStr = process.env.JWT || 'courage';
 const saltRounds = Number(process.env.SALT || 9);
 
@@ -112,10 +113,16 @@ User.prototype.getCart = async function () {
       status: 'ACTIVE'
     }, include: {
       model: LineItem,
+      include: {
+        model: Product
+      }
     }, order: [
       [{model: LineItem},'id','asc']
     ]
   });
+  if (!cart.address) {
+    await cart.update({address: this.address})
+  }
   return cart;
 };
 
@@ -141,13 +148,12 @@ User.prototype.updateQuantityInCart = async function(lineItemId, qty) {
   await lineItem.update({quantity: qty})
 }
 
-// default using user address; when checking out on site, can give option to use different address, which can be inputted as param
-User.prototype.createOrder = async function (address = this.address) {
+User.prototype.createOrder = async function () {
   const order = await this.getCart();
-  await order.update({status: 'PROCESSED'});
-  await Order.create({userId: this.id})
+  // making all checked-out orders completed for now; if time, will later change to processed, and give user time to cancel before admin changes status to completed
+  await order.update({status: 'COMPLETED'});
+  await this.getCart()
 
-  //returning processed cart by default; can think about if we even need a return function or not later
   return order;
 
   //may later need to iterate through cart and decrement LineItem qty from respective Product

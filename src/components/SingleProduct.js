@@ -24,9 +24,9 @@ function SingleProduct() {
     } else {
       const localCart = JSON.parse(window.localStorage.getItem('cart'));
       if (localCart[productId]) {
-        localCart[productId] = Number(localCart[productId]) + Number(qty);
+        localCart[productId].qty = Number(localCart[productId].qty) + Number(qty);
       } else {
-        localCart[productId] = qty;
+        localCart[productId] = {qty, name: product.name, price: product.price};
       }
       window.localStorage.setItem('cart', JSON.stringify(localCart))
     }

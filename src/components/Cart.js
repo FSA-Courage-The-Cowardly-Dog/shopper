@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { attemptGetUserCart, attemptRemoveFromCart, attemptUpdateQtyInCart } from "../store/cartSlice";
 
 const Cart = () => {
+    const user = useSelector(state => state.user)
     const userCart = useSelector(state => state.cart)
     const [isLoaded, setIsLoaded] = useState(false);
     const [cart, setCart] = useState(JSON.parse(window.localStorage.getItem('cart')));
@@ -22,6 +23,7 @@ const Cart = () => {
     React.useEffect(() => {
         if (isLoaded) {
             setCart(userCart)
+            // window.location.reload(false)
         }
     },[isLoaded])
     // something finicky when logging in when on cart page; need to refresh page to see updated cart
@@ -60,7 +62,7 @@ const Cart = () => {
     // non-elegant way to update, but functionality should work for skeleton framework for site
     const updateQtyForLocalCart = (productId) => (event) => {
         const localCart = JSON.parse(window.localStorage.getItem('cart'));
-        localCart[productId] = event.target.value;
+        localCart[productId].qty = event.target.value;
         window.localStorage.setItem('cart', JSON.stringify(localCart))
         setCart(localCart)
     }
@@ -75,7 +77,7 @@ const Cart = () => {
                             {cart.lineItems.map((lineItem,idx) => {
                                 return(
                                     <li key={idx}>
-                                        <span>Product Id: <Link to={`/singleproduct/${lineItem.productId}`}>{lineItem.productId}</Link>, Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/></span>
+                                        <span><Link to={`/singleproduct/${lineItem.productId}`}>{lineItem.product.name}</Link>, Unit Price: {lineItem.product.price/100}, Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/></span>
                                         <button 
                                             className='delete-from-cart' 
                                             type='click'
@@ -86,6 +88,7 @@ const Cart = () => {
                                 )
                             })}
                         </ul>
+                        <Link to="/cart/checkout" className="checkout-link">Checkout</Link>
                     </div>
                     : <div>no items in cart</div>
             )
@@ -101,7 +104,7 @@ const Cart = () => {
                                             Ideally, will only update cart quantity if user hits a 'save change' button
                                             Will look into adding that functionality later
                                         */}
-                                        <span>Product Id: <Link to={`/singleproduct/${pair[0]}`}>{pair[0]}</Link>, Qty:  <input type='number' defaultValue={pair[1]} min='1' onChange={updateQtyForLocalCart(pair[0])}/></span>
+                                        <span><Link to={`/singleproduct/${pair[0]}`}>{pair[1].name}</Link>, Unit Price: {pair[1].price/100} Qty:  <input type='number' defaultValue={pair[1].qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/></span>
                                         <button 
                                             className='delete-from-cart' 
                                             type='click' 
@@ -112,6 +115,7 @@ const Cart = () => {
                                 )
                             })}
                         </ul>
+                        <div>Create account or sign in to existing account to checkout</div>
                     </div>
                     : <div>no items in cart</div>
             )

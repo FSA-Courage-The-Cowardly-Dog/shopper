@@ -8,6 +8,7 @@ import AllProductsAdminView from './components/admin/AllProductsAdminView';
 import AllUsersAdminView from './components/admin/AllUsersAdminView';
 import ModifySingleProductAdminPage from './components/admin/ModifySingleProductAdminPage';
 import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 import CreateAccount from './components/CreateAccount';
 import EditAccountPage from './components/EditAccountPage';
 import OrderHistory from './components/OrderHistory';
@@ -40,6 +41,7 @@ function App() {
       <Routes>
         <Route index element={<Welcome />} />
 		    <Route path="/cart" element={<Cart/>}/>
+        <Route path="/cart/checkout" element={<Checkout/>}/>
 		    <Route path="/singleproduct/:id" element={<SingleProduct />}/>
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/account" element={<AccountPage />} />
