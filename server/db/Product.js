@@ -7,7 +7,7 @@ const Product = conn.define('product', {
     validate: { notEmpty: true },
   },
   price: {
-    type: Sequelize.DECIMAL(13, 2),
+    type: Sequelize.INTEGER,
     allowNull: false,
     validate: { notEmpty: true },
   },

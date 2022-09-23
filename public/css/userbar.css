@@ -6,6 +6,10 @@ header {
     width: 100%;
     position: relative;
 }
+/* temp styling for nav bar links for now */
+.temp-link {
+    margin: 10px;
+}
 
 .welcome-user {
     display: flex;

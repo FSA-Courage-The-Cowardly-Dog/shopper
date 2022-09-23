@@ -32,4 +32,18 @@ router.get('/', requireToken, isAdmin, async (req, res, next) => {
   }
 });
 
+router.put('/:id/cart', requireToken, async (req, res, next) => {
+  try {
+    const user = await User.findByPk(Number(req.params.id))
+    // making sure user has a cart initialized before adding to it
+    await user.getCart();
+    req.body.forEach(async element => {
+      await user.addToCart(Number(element[0]), Number(element[1]));
+    })
+    res.send(user)
+  } catch (err) {
+    next(err)
+  }
+})
+
 module.exports = router;
