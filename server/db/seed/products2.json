@@ -1,0 +1,7004 @@
+{
+  "products2": [
+    {
+      "name": "suave criminal in a fedora",
+      "price": 23539,
+      "inventory": 49,
+      "description": "suave criminal in a fedora",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Vladimir Putin",
+      "price": 7140,
+      "inventory": 78,
+      "description": "Vladimir Putin",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Arcadian Devil",
+      "price": 17567,
+      "inventory": 55,
+      "description": "Arcadian Devil",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Count Drag-Ula",
+      "price": 8849,
+      "inventory": 24,
+      "description": "Count Drag-Ula",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Starfleet Captain",
+      "price": 5856,
+      "inventory": 2,
+      "description": "Starfleet Captain",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "White Stag",
+      "price": 9564,
+      "inventory": 97,
+      "description": "White Stag",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Frankensteins Daughter",
+      "price": 17812,
+      "inventory": 73,
+      "description": "Frankensteins Daughter",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Toki Wartooth",
+      "price": 12131,
+      "inventory": 59,
+      "description": "Toki Wartooth",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pilot",
+      "price": 5929,
+      "inventory": 17,
+      "description": "Pilot",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Witch",
+      "price": 28453,
+      "inventory": 98,
+      "description": "Witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "A vulcan",
+      "price": 21647,
+      "inventory": 54,
+      "description": "A vulcan",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bluth Bader Ginsburg",
+      "price": 6054,
+      "inventory": 74,
+      "description": "Bluth Bader Ginsburg",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Obi Wan Kenobi",
+      "price": 11407,
+      "inventory": 43,
+      "description": "Obi Wan Kenobi",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "two butts",
+      "price": 26670,
+      "inventory": 99,
+      "description": "two butts",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "My own ugly face",
+      "price": 10338,
+      "inventory": 76,
+      "description": "My own ugly face",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Jedi",
+      "price": 1216,
+      "inventory": 84,
+      "description": "Jedi",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Charlie Chaplin",
+      "price": 20167,
+      "inventory": 5,
+      "description": "Charlie Chaplin",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Princess Peach",
+      "price": 11395,
+      "inventory": 39,
+      "description": "Princess Peach",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Lynx",
+      "price": 17979,
+      "inventory": 3,
+      "description": "Lynx",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "frustrated leading tone",
+      "price": 25282,
+      "inventory": 13,
+      "description": "frustrated leading tone",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Clock",
+      "price": 21439,
+      "inventory": 58,
+      "description": "Clock",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy ear of corn",
+      "price": 29629,
+      "inventory": 57,
+      "description": "Sexy ear of corn",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Dorothy",
+      "price": 17066,
+      "inventory": 42,
+      "description": "Dorothy",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Dorothy Gale",
+      "price": 24275,
+      "inventory": 20,
+      "description": "Dorothy Gale",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Leprechaun",
+      "price": 7701,
+      "inventory": 52,
+      "description": "Leprechaun",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mrs. Frizzle",
+      "price": 2800,
+      "inventory": 48,
+      "description": "Mrs. Frizzle",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "rabbit",
+      "price": 9244,
+      "inventory": 94,
+      "description": "rabbit",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Computer That Constantly Mentions Saisons",
+      "price": 20012,
+      "inventory": 97,
+      "description": "Computer That Constantly Mentions Saisons",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Cow",
+      "price": 18909,
+      "inventory": 52,
+      "description": "Cow",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ancient Greek",
+      "price": 10684,
+      "inventory": 41,
+      "description": "Ancient Greek",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Witch",
+      "price": 23696,
+      "inventory": 86,
+      "description": "Witch",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Bear",
+      "price": 17175,
+      "inventory": 57,
+      "description": "Bear",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A chaos demon sorcerer",
+      "price": 18768,
+      "inventory": 83,
+      "description": "A chaos demon sorcerer",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Scarecrow",
+      "price": 4080,
+      "inventory": 67,
+      "description": "Scarecrow",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Slutty nurse",
+      "price": 14524,
+      "inventory": 26,
+      "description": "Slutty nurse",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The Iron Throne",
+      "price": 27918,
+      "inventory": 64,
+      "description": "The Iron Throne",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Petyr Baelish",
+      "price": 12185,
+      "inventory": 78,
+      "description": "Petyr Baelish",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Night Vale Eternal Scout",
+      "price": 8526,
+      "inventory": 5,
+      "description": "Night Vale Eternal Scout",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Nemo",
+      "price": 12550,
+      "inventory": 37,
+      "description": "Nemo",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "slutty nurse",
+      "price": 23016,
+      "inventory": 33,
+      "description": "slutty nurse",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Gumby",
+      "price": 13614,
+      "inventory": 32,
+      "description": "Gumby",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "dick",
+      "price": 21474,
+      "inventory": 17,
+      "description": "dick",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Shepherd Book",
+      "price": 29957,
+      "inventory": 48,
+      "description": "Shepherd Book",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "pizza",
+      "price": 18352,
+      "inventory": 37,
+      "description": "pizza",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "My Drunk Dad",
+      "price": 8825,
+      "inventory": 3,
+      "description": "My Drunk Dad",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Enriched Beer",
+      "price": 3131,
+      "inventory": 37,
+      "description": "Enriched Beer",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Tamagotchi",
+      "price": 21435,
+      "inventory": 88,
+      "description": "Tamagotchi",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Princess",
+      "price": 14112,
+      "inventory": 32,
+      "description": "Princess",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Wicked Witch of the West",
+      "price": 14886,
+      "inventory": 69,
+      "description": "Wicked Witch of the West",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Starscream",
+      "price": 16670,
+      "inventory": 47,
+      "description": "Starscream",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Batman",
+      "price": 25924,
+      "inventory": 19,
+      "description": "Batman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Scooby Doo",
+      "price": 19222,
+      "inventory": 63,
+      "description": "Scooby Doo",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Night Vale Eternal Scout",
+      "price": 26821,
+      "inventory": 11,
+      "description": "Night Vale Eternal Scout",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adjective Noun",
+      "price": 4671,
+      "inventory": 29,
+      "description": "Adjective Noun",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "princess",
+      "price": 19257,
+      "inventory": 98,
+      "description": "princess",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Zombie OId Taylor Swift",
+      "price": 20843,
+      "inventory": 17,
+      "description": "Zombie OId Taylor Swift",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "sexy nurse",
+      "price": 4203,
+      "inventory": 31,
+      "description": "sexy nurse",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Diego Armando (Ace Attorney)",
+      "price": 13367,
+      "inventory": 82,
+      "description": "Diego Armando (Ace Attorney)",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "the dudeliest bro-man in all of Britannia",
+      "price": 16001,
+      "inventory": 97,
+      "description": "the dudeliest bro-man in all of Britannia",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sollux Captor",
+      "price": 15818,
+      "inventory": 33,
+      "description": "Sollux Captor",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Statue of Liberty",
+      "price": 18902,
+      "inventory": 37,
+      "description": "Statue of Liberty",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Rolf harris",
+      "price": 1444,
+      "inventory": 25,
+      "description": "Rolf harris",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Captain Obvious",
+      "price": 14419,
+      "inventory": 25,
+      "description": "Captain Obvious",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Girl Scout",
+      "price": 17859,
+      "inventory": 62,
+      "description": "Girl Scout",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Headless ghost",
+      "price": 10250,
+      "inventory": 66,
+      "description": "Headless ghost",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Frog",
+      "price": 19015,
+      "inventory": 2,
+      "description": "Frog",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Lo Pan",
+      "price": 16154,
+      "inventory": 18,
+      "description": "Lo Pan",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "IRS man",
+      "price": 22835,
+      "inventory": 42,
+      "description": "IRS man",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Man in Gold Suit",
+      "price": 20033,
+      "inventory": 33,
+      "description": "Man in Gold Suit",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Annabeth Chase",
+      "price": 21235,
+      "inventory": 21,
+      "description": "Annabeth Chase",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "the Truly Outrageous",
+      "price": 2176,
+      "inventory": 55,
+      "description": "the Truly Outrageous",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Witch",
+      "price": 11915,
+      "inventory": 35,
+      "description": "Witch",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "General Ursus",
+      "price": 15775,
+      "inventory": 45,
+      "description": "General Ursus",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Buffy the Vampire Slayer",
+      "price": 16405,
+      "inventory": 97,
+      "description": "Buffy the Vampire Slayer",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Retro Pineapple",
+      "price": 11588,
+      "inventory": 6,
+      "description": "Retro Pineapple",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "harley quinn",
+      "price": 25873,
+      "inventory": 14,
+      "description": "harley quinn",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Police Officer",
+      "price": 16251,
+      "inventory": 85,
+      "description": "Police Officer",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Jem",
+      "price": 4740,
+      "inventory": 84,
+      "description": "Jem",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "A possessed spirit",
+      "price": 20480,
+      "inventory": 39,
+      "description": "A possessed spirit",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "gumball machine",
+      "price": 18420,
+      "inventory": 64,
+      "description": "gumball machine",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The Cowardly Lion",
+      "price": 5561,
+      "inventory": 58,
+      "description": "The Cowardly Lion",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "L",
+      "price": 17898,
+      "inventory": 38,
+      "description": "L",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "wizard",
+      "price": 29749,
+      "inventory": 23,
+      "description": "wizard",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pirate",
+      "price": 28401,
+      "inventory": 1,
+      "description": "Pirate",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Madonna",
+      "price": 818,
+      "inventory": 22,
+      "description": "Madonna",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Chewbacca",
+      "price": 7521,
+      "inventory": 21,
+      "description": "Chewbacca",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Batgirl",
+      "price": 5575,
+      "inventory": 56,
+      "description": "Batgirl",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Vampire old lady",
+      "price": 10416,
+      "inventory": 1,
+      "description": "Vampire old lady",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Fidget Spinner",
+      "price": 25776,
+      "inventory": 24,
+      "description": "Fidget Spinner",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Chicken and waffles",
+      "price": 7884,
+      "inventory": 73,
+      "description": "Chicken and waffles",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sylvester the Cat",
+      "price": 26299,
+      "inventory": 24,
+      "description": "Sylvester the Cat",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Bee movie",
+      "price": 14384,
+      "inventory": 92,
+      "description": "Bee movie",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Dracula",
+      "price": 23758,
+      "inventory": 34,
+      "description": "Dracula",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Totoro",
+      "price": 21003,
+      "inventory": 64,
+      "description": "Totoro",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Garbage",
+      "price": 25706,
+      "inventory": 4,
+      "description": "Garbage",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Dwarf",
+      "price": 8369,
+      "inventory": 86,
+      "description": "Dwarf",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Lady of Lorien",
+      "price": 6203,
+      "inventory": 84,
+      "description": "Lady of Lorien",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Minion",
+      "price": 1615,
+      "inventory": 86,
+      "description": "Sexy Minion",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ms. Frizzle",
+      "price": 28553,
+      "inventory": 76,
+      "description": "Ms. Frizzle",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "College student",
+      "price": 8827,
+      "inventory": 43,
+      "description": "College student",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bland Emoji",
+      "price": 20591,
+      "inventory": 78,
+      "description": "Bland Emoji",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Wendigo",
+      "price": 21953,
+      "inventory": 21,
+      "description": "Wendigo",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "cat síth",
+      "price": 19195,
+      "inventory": 50,
+      "description": "cat síth",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "minion",
+      "price": 11659,
+      "inventory": 53,
+      "description": "minion",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Panda",
+      "price": 26130,
+      "inventory": 18,
+      "description": "Panda",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Masquerade Courtier",
+      "price": 8970,
+      "inventory": 42,
+      "description": "Masquerade Courtier",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Egg",
+      "price": 11638,
+      "inventory": 91,
+      "description": "Egg",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A Hedgehog",
+      "price": 9005,
+      "inventory": 53,
+      "description": "A Hedgehog",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Marvin the Paranoid Android",
+      "price": 25890,
+      "inventory": 60,
+      "description": "Marvin the Paranoid Android",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hobbes",
+      "price": 23968,
+      "inventory": 35,
+      "description": "Hobbes",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Windows 8",
+      "price": 875,
+      "inventory": 92,
+      "description": "Windows 8",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Harley Quinn",
+      "price": 19515,
+      "inventory": 20,
+      "description": "Sexy Harley Quinn",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Wonder Woman",
+      "price": 27571,
+      "inventory": 80,
+      "description": "Wonder Woman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "the skunk from “Bambi”",
+      "price": 11342,
+      "inventory": 87,
+      "description": "the skunk from “Bambi”",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Maleficent",
+      "price": 26361,
+      "inventory": 88,
+      "description": "Maleficent",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Wonder Woman",
+      "price": 24544,
+      "inventory": 55,
+      "description": "Wonder Woman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "pirate",
+      "price": 11617,
+      "inventory": 73,
+      "description": "pirate",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Albus Dumbledore",
+      "price": 4318,
+      "inventory": 36,
+      "description": "Albus Dumbledore",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Alexander Hamilton",
+      "price": 28237,
+      "inventory": 34,
+      "description": "Alexander Hamilton",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Raven",
+      "price": 23867,
+      "inventory": 86,
+      "description": "Raven",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Draco Malfoy",
+      "price": 980,
+      "inventory": 29,
+      "description": "Draco Malfoy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hanging chad",
+      "price": 19381,
+      "inventory": 25,
+      "description": "Hanging chad",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Palm Tree",
+      "price": 25012,
+      "inventory": 52,
+      "description": "Palm Tree",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A bandaged mummy",
+      "price": 29305,
+      "inventory": 57,
+      "description": "A bandaged mummy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Princess",
+      "price": 12681,
+      "inventory": 72,
+      "description": "Princess",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Greek Goddess",
+      "price": 8012,
+      "inventory": 69,
+      "description": "Greek Goddess",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Benis Time Traveler",
+      "price": 10653,
+      "inventory": 61,
+      "description": "Benis Time Traveler",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Baby pumpkin",
+      "price": 20709,
+      "inventory": 99,
+      "description": "Baby pumpkin",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy eyeball",
+      "price": 279,
+      "inventory": 13,
+      "description": "Sexy eyeball",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Twilight vampire",
+      "price": 14701,
+      "inventory": 7,
+      "description": "Twilight vampire",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Artax",
+      "price": 10579,
+      "inventory": 56,
+      "description": "Artax",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mad Hatter",
+      "price": 15876,
+      "inventory": 89,
+      "description": "Mad Hatter",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Grumpy Old Bat",
+      "price": 2820,
+      "inventory": 68,
+      "description": "Grumpy Old Bat",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Steven Universe",
+      "price": 16343,
+      "inventory": 13,
+      "description": "Steven Universe",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Man with Giant Mohawk",
+      "price": 15087,
+      "inventory": 14,
+      "description": "Man with Giant Mohawk",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "sexy Minion",
+      "price": 2572,
+      "inventory": 31,
+      "description": "sexy Minion",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Robot",
+      "price": 18512,
+      "inventory": 92,
+      "description": "Robot",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Classic Space LEGO Astronaut",
+      "price": 9943,
+      "inventory": 13,
+      "description": "Classic Space LEGO Astronaut",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "wednesday addams",
+      "price": 29316,
+      "inventory": 1,
+      "description": "wednesday addams",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "princess",
+      "price": 2717,
+      "inventory": 99,
+      "description": "princess",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Winnie the Pooh",
+      "price": 5141,
+      "inventory": 60,
+      "description": "Winnie the Pooh",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Allosaur",
+      "price": 14970,
+      "inventory": 90,
+      "description": "Allosaur",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hermione Granger",
+      "price": 25745,
+      "inventory": 14,
+      "description": "Hermione Granger",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "David S. Pumpkins",
+      "price": 19175,
+      "inventory": 14,
+      "description": "David S. Pumpkins",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Guy Fieri",
+      "price": 26537,
+      "inventory": 63,
+      "description": "Guy Fieri",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Jon Snow",
+      "price": 276,
+      "inventory": 34,
+      "description": "Jon Snow",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hazmat suit",
+      "price": 663,
+      "inventory": 51,
+      "description": "Hazmat suit",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ghost",
+      "price": 14618,
+      "inventory": 12,
+      "description": "Ghost",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Dr Scott",
+      "price": 15134,
+      "inventory": 76,
+      "description": "Dr Scott",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ewok",
+      "price": 16809,
+      "inventory": 92,
+      "description": "Ewok",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The Liberty Bell",
+      "price": 25827,
+      "inventory": 6,
+      "description": "The Liberty Bell",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Swamp Witch",
+      "price": 25905,
+      "inventory": 50,
+      "description": "Swamp Witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ruth Bader Hindenburg",
+      "price": 18537,
+      "inventory": 50,
+      "description": "Ruth Bader Hindenburg",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "River Song",
+      "price": 13437,
+      "inventory": 41,
+      "description": "River Song",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Charlie and the Chocolate Factory book",
+      "price": 21994,
+      "inventory": 97,
+      "description": "Charlie and the Chocolate Factory book",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "schoolgirl",
+      "price": 852,
+      "inventory": 69,
+      "description": "schoolgirl",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Superman",
+      "price": 18206,
+      "inventory": 100,
+      "description": "Superman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ruth Bueller Ginsburg",
+      "price": 7805,
+      "inventory": 56,
+      "description": "Ruth Bueller Ginsburg",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Doctor Spock",
+      "price": 15301,
+      "inventory": 35,
+      "description": "Doctor Spock",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Knife Dad",
+      "price": 25919,
+      "inventory": 41,
+      "description": "Knife Dad",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Old Lady",
+      "price": 29889,
+      "inventory": 37,
+      "description": "Old Lady",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hippy",
+      "price": 470,
+      "inventory": 34,
+      "description": "Hippy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Fursuit",
+      "price": 9313,
+      "inventory": 33,
+      "description": "Fursuit",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "14 Jake Buseys",
+      "price": 14342,
+      "inventory": 24,
+      "description": "14 Jake Buseys",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Cowboy",
+      "price": 8569,
+      "inventory": 32,
+      "description": "Cowboy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Survivor contestant",
+      "price": 3500,
+      "inventory": 57,
+      "description": "Survivor contestant",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bones of the Church",
+      "price": 5848,
+      "inventory": 94,
+      "description": "Bones of the Church",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Princess Jasmine",
+      "price": 24361,
+      "inventory": 25,
+      "description": "Princess Jasmine",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Rorschach",
+      "price": 27235,
+      "inventory": 30,
+      "description": "Rorschach",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Royal Canadian Mountie",
+      "price": 8419,
+      "inventory": 18,
+      "description": "Royal Canadian Mountie",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Queen Of the Geeks",
+      "price": 3789,
+      "inventory": 39,
+      "description": "Queen Of the Geeks",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Frog-Man",
+      "price": 13309,
+      "inventory": 36,
+      "description": "Frog-Man",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hippie",
+      "price": 2108,
+      "inventory": 56,
+      "description": "Hippie",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "roman emperor",
+      "price": 7258,
+      "inventory": 25,
+      "description": "roman emperor",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Openly Gator",
+      "price": 23832,
+      "inventory": 16,
+      "description": "Openly Gator",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Poop Emoji",
+      "price": 19330,
+      "inventory": 71,
+      "description": "Sexy Poop Emoji",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The spider queen",
+      "price": 10929,
+      "inventory": 22,
+      "description": "The spider queen",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Buck Rogers",
+      "price": 26514,
+      "inventory": 67,
+      "description": "Buck Rogers",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Devil",
+      "price": 9443,
+      "inventory": 74,
+      "description": "Sexy Devil",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Cheese",
+      "price": 17925,
+      "inventory": 34,
+      "description": "Cheese",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pumpkin",
+      "price": 7734,
+      "inventory": 25,
+      "description": "Pumpkin",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Barb",
+      "price": 18545,
+      "inventory": 88,
+      "description": "Barb",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mummy",
+      "price": 25723,
+      "inventory": 24,
+      "description": "Mummy",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The robot devil",
+      "price": 2781,
+      "inventory": 92,
+      "description": "The robot devil",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Weeping Angel",
+      "price": 6730,
+      "inventory": 98,
+      "description": "Weeping Angel",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Survivor contestant",
+      "price": 25207,
+      "inventory": 1,
+      "description": "Survivor contestant",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Zombie",
+      "price": 10495,
+      "inventory": 75,
+      "description": "Zombie",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pumpkin",
+      "price": 22603,
+      "inventory": 24,
+      "description": "Pumpkin",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Thomas Edison",
+      "price": 9025,
+      "inventory": 8,
+      "description": "Thomas Edison",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Tom Scott",
+      "price": 25095,
+      "inventory": 67,
+      "description": "Tom Scott",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Blurryface",
+      "price": 7738,
+      "inventory": 52,
+      "description": "Blurryface",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Kung fu master",
+      "price": 28742,
+      "inventory": 87,
+      "description": "Kung fu master",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Witch",
+      "price": 28285,
+      "inventory": 97,
+      "description": "Witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Superman",
+      "price": 3650,
+      "inventory": 57,
+      "description": "Superman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Egyptian Goddess",
+      "price": 24937,
+      "inventory": 19,
+      "description": "Egyptian Goddess",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Annabeth Chase",
+      "price": 9406,
+      "inventory": 61,
+      "description": "Annabeth Chase",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Andy Warhol",
+      "price": 18199,
+      "inventory": 50,
+      "description": "Andy Warhol",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Devil",
+      "price": 10329,
+      "inventory": 80,
+      "description": "Devil",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pokemon",
+      "price": 28015,
+      "inventory": 77,
+      "description": "Pokemon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Mothra",
+      "price": 7605,
+      "inventory": 12,
+      "description": "Sexy Mothra",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ash Ketchum",
+      "price": 18021,
+      "inventory": 46,
+      "description": "Ash Ketchum",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "April Ludgate",
+      "price": 27984,
+      "inventory": 89,
+      "description": "April Ludgate",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Lumpy Gravy",
+      "price": 13377,
+      "inventory": 54,
+      "description": "Lumpy Gravy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Rubix Cube",
+      "price": 23744,
+      "inventory": 19,
+      "description": "Rubix Cube",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Doritos",
+      "price": 22086,
+      "inventory": 3,
+      "description": "Doritos",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Tweety Bird",
+      "price": 21875,
+      "inventory": 38,
+      "description": "Tweety Bird",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Zombie Prom Queen",
+      "price": 4984,
+      "inventory": 53,
+      "description": "Zombie Prom Queen",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "An elemental genie",
+      "price": 25921,
+      "inventory": 37,
+      "description": "An elemental genie",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Fursuit",
+      "price": 5099,
+      "inventory": 45,
+      "description": "Fursuit",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Spider temptress",
+      "price": 1900,
+      "inventory": 61,
+      "description": "Spider temptress",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Yoshi",
+      "price": 23656,
+      "inventory": 31,
+      "description": "Yoshi",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "A sinister devil",
+      "price": 2418,
+      "inventory": 63,
+      "description": "A sinister devil",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "queen of hearts",
+      "price": 7751,
+      "inventory": 57,
+      "description": "queen of hearts",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Banana",
+      "price": 2680,
+      "inventory": 51,
+      "description": "Banana",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Gothy Teenager",
+      "price": 27138,
+      "inventory": 24,
+      "description": "Gothy Teenager",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "A four-armed alien",
+      "price": 8285,
+      "inventory": 78,
+      "description": "A four-armed alien",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Battle snail",
+      "price": 1394,
+      "inventory": 80,
+      "description": "Battle snail",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Werewolf",
+      "price": 12329,
+      "inventory": 49,
+      "description": "Werewolf",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Fall",
+      "price": 18839,
+      "inventory": 94,
+      "description": "Fall",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Batman",
+      "price": 22129,
+      "inventory": 29,
+      "description": "Batman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Porcupine",
+      "price": 9353,
+      "inventory": 63,
+      "description": "Porcupine",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ludo",
+      "price": 21490,
+      "inventory": 21,
+      "description": "Ludo",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "so many teeth",
+      "price": 10000,
+      "inventory": 82,
+      "description": "so many teeth",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Locomotive Engineer",
+      "price": 12285,
+      "inventory": 41,
+      "description": "Locomotive Engineer",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Captain Jack Sparrow",
+      "price": 5953,
+      "inventory": 13,
+      "description": "Captain Jack Sparrow",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Wonder Woman",
+      "price": 14871,
+      "inventory": 66,
+      "description": "Wonder Woman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Slutty Nun",
+      "price": 18141,
+      "inventory": 53,
+      "description": "Slutty Nun",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Carmen Sandiego",
+      "price": 8800,
+      "inventory": 59,
+      "description": "Carmen Sandiego",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mechanic",
+      "price": 27164,
+      "inventory": 17,
+      "description": "Mechanic",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Demon Wizard",
+      "price": 16895,
+      "inventory": 18,
+      "description": "Demon Wizard",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Touka",
+      "price": 8702,
+      "inventory": 54,
+      "description": "Touka",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Generic Jedi",
+      "price": 5457,
+      "inventory": 88,
+      "description": "Generic Jedi",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Lewis and Clark",
+      "price": 28692,
+      "inventory": 48,
+      "description": "Lewis and Clark",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The invisible man",
+      "price": 19248,
+      "inventory": 84,
+      "description": "The invisible man",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Blue Beard the Pirate",
+      "price": 20227,
+      "inventory": 65,
+      "description": "Blue Beard the Pirate",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Thor",
+      "price": 1041,
+      "inventory": 15,
+      "description": "Thor",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "the scream by edvard munch",
+      "price": 26246,
+      "inventory": 58,
+      "description": "the scream by edvard munch",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "airship pirate",
+      "price": 28616,
+      "inventory": 19,
+      "description": "airship pirate",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mad Hatter",
+      "price": 28276,
+      "inventory": 86,
+      "description": "Mad Hatter",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "a cardboard box",
+      "price": 21771,
+      "inventory": 61,
+      "description": "a cardboard box",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Spotted Salamander",
+      "price": 17023,
+      "inventory": 79,
+      "description": "Spotted Salamander",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Handed lemons by life",
+      "price": 17681,
+      "inventory": 10,
+      "description": "Handed lemons by life",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The Less Impressive French Inquisition",
+      "price": 26876,
+      "inventory": 100,
+      "description": "The Less Impressive French Inquisition",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Unsexy Burrito",
+      "price": 12030,
+      "inventory": 16,
+      "description": "Unsexy Burrito",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Naughty Astronaut",
+      "price": 4357,
+      "inventory": 90,
+      "description": "Naughty Astronaut",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Batman",
+      "price": 6453,
+      "inventory": 81,
+      "description": "Batman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Dark Wizard",
+      "price": 6636,
+      "inventory": 97,
+      "description": "Dark Wizard",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ghost in a sheet",
+      "price": 11342,
+      "inventory": 95,
+      "description": "Ghost in a sheet",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mama bear",
+      "price": 16666,
+      "inventory": 4,
+      "description": "Mama bear",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bob Ross Painting",
+      "price": 18832,
+      "inventory": 19,
+      "description": "Bob Ross Painting",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ruth Bader Gettysburg",
+      "price": 21499,
+      "inventory": 10,
+      "description": "Ruth Bader Gettysburg",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Bluebird",
+      "price": 13771,
+      "inventory": 85,
+      "description": "Bluebird",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ursula",
+      "price": 20936,
+      "inventory": 27,
+      "description": "Ursula",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Cereal killer",
+      "price": 1904,
+      "inventory": 65,
+      "description": "Cereal killer",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hanging chad",
+      "price": 6744,
+      "inventory": 79,
+      "description": "Hanging chad",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Boy Batgirl",
+      "price": 24097,
+      "inventory": 32,
+      "description": "Boy Batgirl",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Cereal killer",
+      "price": 19805,
+      "inventory": 68,
+      "description": "Cereal killer",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A scuba diver",
+      "price": 25137,
+      "inventory": 49,
+      "description": "A scuba diver",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Vampire",
+      "price": 9240,
+      "inventory": 36,
+      "description": "Vampire",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The Elven Wizard",
+      "price": 6984,
+      "inventory": 51,
+      "description": "The Elven Wizard",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Fall Fairy",
+      "price": 14076,
+      "inventory": 54,
+      "description": "Fall Fairy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Doctor Who",
+      "price": 19935,
+      "inventory": 66,
+      "description": "Doctor Who",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Chocolate Bar",
+      "price": 18767,
+      "inventory": 62,
+      "description": "Chocolate Bar",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A satyr",
+      "price": 27302,
+      "inventory": 81,
+      "description": "A satyr",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Medieval king",
+      "price": 11056,
+      "inventory": 76,
+      "description": "Medieval king",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "firefighter",
+      "price": 3539,
+      "inventory": 16,
+      "description": "firefighter",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Touka",
+      "price": 19561,
+      "inventory": 39,
+      "description": "Touka",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ghost of Little Red Riding Hood",
+      "price": 11948,
+      "inventory": 25,
+      "description": "Ghost of Little Red Riding Hood",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Fairy Queen",
+      "price": 2037,
+      "inventory": 63,
+      "description": "Fairy Queen",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Wereworm",
+      "price": 6338,
+      "inventory": 72,
+      "description": "Wereworm",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Rocket Ship",
+      "price": 28337,
+      "inventory": 94,
+      "description": "Rocket Ship",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A chaos demon sorcerer",
+      "price": 8763,
+      "inventory": 94,
+      "description": "A chaos demon sorcerer",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Spelunky Guy",
+      "price": 7826,
+      "inventory": 61,
+      "description": "Spelunky Guy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Naruto",
+      "price": 25093,
+      "inventory": 46,
+      "description": "Naruto",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The Glam Reaper",
+      "price": 11383,
+      "inventory": 62,
+      "description": "The Glam Reaper",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Slytherin wizard",
+      "price": 5098,
+      "inventory": 78,
+      "description": "Slytherin wizard",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Horse",
+      "price": 23025,
+      "inventory": 29,
+      "description": "Horse",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Taco",
+      "price": 9354,
+      "inventory": 8,
+      "description": "Sexy Taco",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The moon",
+      "price": 9267,
+      "inventory": 8,
+      "description": "The moon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Monstre Charmant",
+      "price": 15978,
+      "inventory": 6,
+      "description": "Monstre Charmant",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Dick Cheneys Heart Replacement",
+      "price": 23347,
+      "inventory": 84,
+      "description": "Sexy Dick Cheneys Heart Replacement",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Zombie Bride",
+      "price": 22970,
+      "inventory": 42,
+      "description": "Zombie Bride",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Faceless Clone",
+      "price": 22490,
+      "inventory": 14,
+      "description": "Faceless Clone",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "My Drunk Dad",
+      "price": 20481,
+      "inventory": 59,
+      "description": "My Drunk Dad",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Drunken Santa Claus",
+      "price": 26326,
+      "inventory": 25,
+      "description": "Drunken Santa Claus",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Frog-Woman",
+      "price": 21262,
+      "inventory": 2,
+      "description": "Frog-Woman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Pickle Rick",
+      "price": 26209,
+      "inventory": 24,
+      "description": "Pickle Rick",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sailor Jupiter",
+      "price": 18907,
+      "inventory": 99,
+      "description": "Sailor Jupiter",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Glow Cloud",
+      "price": 18041,
+      "inventory": 19,
+      "description": "Glow Cloud",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Shark-nado",
+      "price": 7100,
+      "inventory": 15,
+      "description": "Shark-nado",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Chewbacca",
+      "price": 21452,
+      "inventory": 44,
+      "description": "Chewbacca",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Chef",
+      "price": 1720,
+      "inventory": 18,
+      "description": "Chef",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mermaid",
+      "price": 26854,
+      "inventory": 39,
+      "description": "Mermaid",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "jesus",
+      "price": 27570,
+      "inventory": 56,
+      "description": "jesus",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mrs. Hudson",
+      "price": 11048,
+      "inventory": 8,
+      "description": "Mrs. Hudson",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Lil’ Stinker the Skunk",
+      "price": 1595,
+      "inventory": 6,
+      "description": "Lil’ Stinker the Skunk",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Zombie pregnant lady",
+      "price": 13230,
+      "inventory": 77,
+      "description": "Zombie pregnant lady",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Egyptian",
+      "price": 18243,
+      "inventory": 15,
+      "description": "Egyptian",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sailor Moon",
+      "price": 26106,
+      "inventory": 96,
+      "description": "Sailor Moon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "sexy nurse",
+      "price": 15377,
+      "inventory": 100,
+      "description": "sexy nurse",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Frog",
+      "price": 1947,
+      "inventory": 62,
+      "description": "Frog",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Cesarean Caterpillar",
+      "price": 24700,
+      "inventory": 25,
+      "description": "Cesarean Caterpillar",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "bat",
+      "price": 21281,
+      "inventory": 48,
+      "description": "bat",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The invisible Man",
+      "price": 25250,
+      "inventory": 7,
+      "description": "The invisible Man",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "PMS Avenger",
+      "price": 7107,
+      "inventory": 96,
+      "description": "PMS Avenger",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "zombie bride",
+      "price": 24058,
+      "inventory": 76,
+      "description": "zombie bride",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Werewolf",
+      "price": 5860,
+      "inventory": 38,
+      "description": "Werewolf",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "schoolgirl",
+      "price": 23989,
+      "inventory": 27,
+      "description": "schoolgirl",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Darth Vader",
+      "price": 20743,
+      "inventory": 96,
+      "description": "Darth Vader",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sassy Scarecrow",
+      "price": 11230,
+      "inventory": 7,
+      "description": "Sassy Scarecrow",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Evil Clown",
+      "price": 16652,
+      "inventory": 45,
+      "description": "Evil Clown",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Tiger",
+      "price": 5406,
+      "inventory": 88,
+      "description": "Tiger",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Rasputin",
+      "price": 15048,
+      "inventory": 6,
+      "description": "Rasputin",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Dracula",
+      "price": 19510,
+      "inventory": 72,
+      "description": "Dracula",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hell hound",
+      "price": 21009,
+      "inventory": 13,
+      "description": "Hell hound",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Deviled eggs",
+      "price": 27442,
+      "inventory": 56,
+      "description": "Deviled eggs",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Harley Quinn",
+      "price": 9906,
+      "inventory": 100,
+      "description": "Harley Quinn",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Spooky skeleton",
+      "price": 23314,
+      "inventory": 60,
+      "description": "Spooky skeleton",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "sexy Beetlejuice",
+      "price": 22181,
+      "inventory": 82,
+      "description": "sexy Beetlejuice",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Batman",
+      "price": 12902,
+      "inventory": 60,
+      "description": "Batman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sorceress",
+      "price": 15740,
+      "inventory": 94,
+      "description": "Sorceress",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Scaramucci",
+      "price": 16402,
+      "inventory": 1,
+      "description": "Scaramucci",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Steampunk mermaid",
+      "price": 27934,
+      "inventory": 99,
+      "description": "Steampunk mermaid",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Shadow Thief",
+      "price": 9106,
+      "inventory": 24,
+      "description": "Shadow Thief",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Miranda Kerr",
+      "price": 183,
+      "inventory": 12,
+      "description": "Miranda Kerr",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Roy Batty",
+      "price": 15272,
+      "inventory": 83,
+      "description": "Roy Batty",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Waitress",
+      "price": 25932,
+      "inventory": 2,
+      "description": "Waitress",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mermaid",
+      "price": 21061,
+      "inventory": 8,
+      "description": "Mermaid",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Loaf of bread",
+      "price": 18385,
+      "inventory": 37,
+      "description": "Loaf of bread",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mr Peanut",
+      "price": 25292,
+      "inventory": 32,
+      "description": "Mr Peanut",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Vogue Magazine",
+      "price": 28456,
+      "inventory": 96,
+      "description": "Vogue Magazine",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Army man",
+      "price": 18067,
+      "inventory": 37,
+      "description": "Army man",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pumpkin Cat",
+      "price": 7030,
+      "inventory": 78,
+      "description": "Pumpkin Cat",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Quantum Mechanic",
+      "price": 13615,
+      "inventory": 56,
+      "description": "Quantum Mechanic",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Dead baby",
+      "price": 13595,
+      "inventory": 79,
+      "description": "Dead baby",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "grapes",
+      "price": 16604,
+      "inventory": 50,
+      "description": "grapes",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy burger",
+      "price": 11893,
+      "inventory": 78,
+      "description": "Sexy burger",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mushroom",
+      "price": 8754,
+      "inventory": 28,
+      "description": "Mushroom",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "College student",
+      "price": 11037,
+      "inventory": 97,
+      "description": "College student",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Link from Zelda",
+      "price": 16705,
+      "inventory": 10,
+      "description": "Link from Zelda",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bojack Horseman",
+      "price": 8231,
+      "inventory": 47,
+      "description": "Bojack Horseman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Doot doot",
+      "price": 26486,
+      "inventory": 76,
+      "description": "Doot doot",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Combat man",
+      "price": 1578,
+      "inventory": 27,
+      "description": "Combat man",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "George R.R. Martian",
+      "price": 4098,
+      "inventory": 74,
+      "description": "George R.R. Martian",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Goku",
+      "price": 430,
+      "inventory": 12,
+      "description": "Goku",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "GNOME 3.0",
+      "price": 1631,
+      "inventory": 60,
+      "description": "GNOME 3.0",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "ninja",
+      "price": 19267,
+      "inventory": 12,
+      "description": "ninja",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A possessed spirit",
+      "price": 27854,
+      "inventory": 32,
+      "description": "A possessed spirit",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hocus pocus witch",
+      "price": 12765,
+      "inventory": 20,
+      "description": "Hocus pocus witch",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Captain of an airship",
+      "price": 8035,
+      "inventory": 56,
+      "description": "Captain of an airship",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Great Pumpkin",
+      "price": 3775,
+      "inventory": 25,
+      "description": "Great Pumpkin",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Dave Strider cosplay",
+      "price": 11283,
+      "inventory": 83,
+      "description": "Dave Strider cosplay",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ninth Doctor",
+      "price": 16219,
+      "inventory": 4,
+      "description": "Ninth Doctor",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "PMS monster",
+      "price": 10855,
+      "inventory": 82,
+      "description": "PMS monster",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Gender-Swapped Celebrity",
+      "price": 22389,
+      "inventory": 48,
+      "description": "Gender-Swapped Celebrity",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Human Dalek",
+      "price": 4716,
+      "inventory": 78,
+      "description": "Human Dalek",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Ghost",
+      "price": 6404,
+      "inventory": 33,
+      "description": "Sexy Ghost",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sarah Manning",
+      "price": 11108,
+      "inventory": 31,
+      "description": "Sarah Manning",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Daphne",
+      "price": 29436,
+      "inventory": 39,
+      "description": "Daphne",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Han Solo",
+      "price": 20913,
+      "inventory": 97,
+      "description": "Han Solo",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Holy nun",
+      "price": 14075,
+      "inventory": 39,
+      "description": "Holy nun",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "An Egyptian king",
+      "price": 28972,
+      "inventory": 44,
+      "description": "An Egyptian king",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Zelda",
+      "price": 141,
+      "inventory": 89,
+      "description": "Zelda",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Silver Cowgirl",
+      "price": 16700,
+      "inventory": 42,
+      "description": "Silver Cowgirl",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Edgar Allen Poe",
+      "price": 1330,
+      "inventory": 42,
+      "description": "Edgar Allen Poe",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy nun",
+      "price": 9162,
+      "inventory": 63,
+      "description": "Sexy nun",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The concept of Racism",
+      "price": 7236,
+      "inventory": 70,
+      "description": "The concept of Racism",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The mad hatter",
+      "price": 21596,
+      "inventory": 77,
+      "description": "The mad hatter",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Witch",
+      "price": 2702,
+      "inventory": 34,
+      "description": "Witch",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Belly dancer",
+      "price": 12834,
+      "inventory": 51,
+      "description": "Belly dancer",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Marvin the Martian",
+      "price": 16960,
+      "inventory": 82,
+      "description": "Marvin the Martian",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Fairy princess",
+      "price": 7216,
+      "inventory": 3,
+      "description": "Fairy princess",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "owelette",
+      "price": 25119,
+      "inventory": 9,
+      "description": "owelette",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Pennywise",
+      "price": 17362,
+      "inventory": 95,
+      "description": "Pennywise",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Cereal Killer",
+      "price": 14873,
+      "inventory": 65,
+      "description": "Cereal Killer",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Statue of Liberty",
+      "price": 4127,
+      "inventory": 23,
+      "description": "Statue of Liberty",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Jem",
+      "price": 18945,
+      "inventory": 27,
+      "description": "Jem",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "vampire",
+      "price": 13803,
+      "inventory": 56,
+      "description": "vampire",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Vampire",
+      "price": 22457,
+      "inventory": 96,
+      "description": "Vampire",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Cat",
+      "price": 7696,
+      "inventory": 55,
+      "description": "Sexy Cat",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Porcupine",
+      "price": 7134,
+      "inventory": 23,
+      "description": "Porcupine",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Winnie the Pooh",
+      "price": 9383,
+      "inventory": 92,
+      "description": "Winnie the Pooh",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Grim Reaper",
+      "price": 7245,
+      "inventory": 66,
+      "description": "Sexy Grim Reaper",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Rosemary from Rosemarys Baby",
+      "price": 23101,
+      "inventory": 50,
+      "description": "Rosemary from Rosemarys Baby",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Owl",
+      "price": 5910,
+      "inventory": 7,
+      "description": "Owl",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ladybug",
+      "price": 15857,
+      "inventory": 43,
+      "description": "Ladybug",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Dead redshirt",
+      "price": 20568,
+      "inventory": 14,
+      "description": "Dead redshirt",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Seven of Nine",
+      "price": 25154,
+      "inventory": 96,
+      "description": "Seven of Nine",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hedonism Bot",
+      "price": 28712,
+      "inventory": 80,
+      "description": "Hedonism Bot",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Standard Klingon",
+      "price": 25496,
+      "inventory": 21,
+      "description": "Standard Klingon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Breakdancer",
+      "price": 11126,
+      "inventory": 53,
+      "description": "Breakdancer",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Wolf Man",
+      "price": 8432,
+      "inventory": 95,
+      "description": "Wolf Man",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ruth Allan Ginsberg",
+      "price": 23479,
+      "inventory": 37,
+      "description": "Ruth Allan Ginsberg",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Power Ranger",
+      "price": 9904,
+      "inventory": 57,
+      "description": "Power Ranger",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Mothra",
+      "price": 16199,
+      "inventory": 47,
+      "description": "Sexy Mothra",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Several Cats in a Trenchcoat",
+      "price": 14674,
+      "inventory": 57,
+      "description": "Several Cats in a Trenchcoat",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Vampire",
+      "price": 22730,
+      "inventory": 65,
+      "description": "Vampire",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mermaid",
+      "price": 16134,
+      "inventory": 86,
+      "description": "Mermaid",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Vampire",
+      "price": 16260,
+      "inventory": 34,
+      "description": "Vampire",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Slutty pumpkin",
+      "price": 8510,
+      "inventory": 24,
+      "description": "Slutty pumpkin",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Dalek",
+      "price": 13857,
+      "inventory": 49,
+      "description": "Dalek",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mega Charizard X",
+      "price": 12696,
+      "inventory": 17,
+      "description": "Mega Charizard X",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ruth Vaper Ginsburg",
+      "price": 6708,
+      "inventory": 30,
+      "description": "Ruth Vaper Ginsburg",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mara Jade",
+      "price": 2948,
+      "inventory": 57,
+      "description": "Mara Jade",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Morally ambiguous soccer player",
+      "price": 18340,
+      "inventory": 100,
+      "description": "Morally ambiguous soccer player",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Tippi Hedren in The Birds",
+      "price": 9539,
+      "inventory": 51,
+      "description": "Tippi Hedren in The Birds",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The Bowler (Mystery Men)",
+      "price": 29012,
+      "inventory": 29,
+      "description": "The Bowler (Mystery Men)",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Leopard",
+      "price": 2069,
+      "inventory": 51,
+      "description": "Leopard",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "spider",
+      "price": 21691,
+      "inventory": 29,
+      "description": "spider",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Captain Jack Sparrow",
+      "price": 8653,
+      "inventory": 27,
+      "description": "Captain Jack Sparrow",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Tapeworm",
+      "price": 16366,
+      "inventory": 98,
+      "description": "Tapeworm",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Zoe",
+      "price": 24617,
+      "inventory": 43,
+      "description": "Zoe",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Spock",
+      "price": 27462,
+      "inventory": 66,
+      "description": "Spock",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "ghastly",
+      "price": 10102,
+      "inventory": 73,
+      "description": "ghastly",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ruth Betazoid Ginsburg",
+      "price": 11070,
+      "inventory": 68,
+      "description": "Ruth Betazoid Ginsburg",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Darth Mader",
+      "price": 8421,
+      "inventory": 1,
+      "description": "Darth Mader",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Temeraire",
+      "price": 7302,
+      "inventory": 68,
+      "description": "Temeraire",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mother",
+      "price": 197,
+      "inventory": 98,
+      "description": "Mother",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Locomotive Engineer",
+      "price": 22672,
+      "inventory": 80,
+      "description": "Locomotive Engineer",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Spiderman",
+      "price": 21230,
+      "inventory": 8,
+      "description": "Spiderman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Army Girl",
+      "price": 22733,
+      "inventory": 69,
+      "description": "Army Girl",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Toucan",
+      "price": 20370,
+      "inventory": 97,
+      "description": "Toucan",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sayri",
+      "price": 5205,
+      "inventory": 35,
+      "description": "Sayri",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Inflatable T-Rex",
+      "price": 26172,
+      "inventory": 64,
+      "description": "Inflatable T-Rex",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "creepy old man",
+      "price": 19440,
+      "inventory": 86,
+      "description": "creepy old man",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The American Idol Judges Table",
+      "price": 27673,
+      "inventory": 81,
+      "description": "The American Idol Judges Table",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "An Egyptian king",
+      "price": 744,
+      "inventory": 22,
+      "description": "An Egyptian king",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Robot Pirate Ninja Zombie",
+      "price": 17580,
+      "inventory": 11,
+      "description": "Robot Pirate Ninja Zombie",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pumpkin",
+      "price": 27761,
+      "inventory": 88,
+      "description": "Pumpkin",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Repunzle",
+      "price": 27564,
+      "inventory": 64,
+      "description": "Repunzle",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ice cream cone",
+      "price": 29841,
+      "inventory": 15,
+      "description": "Ice cream cone",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sarah Manning",
+      "price": 11233,
+      "inventory": 20,
+      "description": "Sarah Manning",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Pinterest",
+      "price": 23877,
+      "inventory": 57,
+      "description": "Pinterest",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Scaramucci",
+      "price": 19506,
+      "inventory": 68,
+      "description": "Scaramucci",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Gambling addict",
+      "price": 19848,
+      "inventory": 24,
+      "description": "Gambling addict",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Suffragette",
+      "price": 13225,
+      "inventory": 70,
+      "description": "Suffragette",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pregnant Nun",
+      "price": 20610,
+      "inventory": 77,
+      "description": "Pregnant Nun",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sailor moon",
+      "price": 19561,
+      "inventory": 22,
+      "description": "Sailor moon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "princess",
+      "price": 20170,
+      "inventory": 93,
+      "description": "princess",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The wicked witch of the west",
+      "price": 2506,
+      "inventory": 31,
+      "description": "The wicked witch of the west",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Grand Admiral Thrawn",
+      "price": 1860,
+      "inventory": 14,
+      "description": "Grand Admiral Thrawn",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Sandwich Artist",
+      "price": 10092,
+      "inventory": 58,
+      "description": "Sexy Sandwich Artist",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Dolphin",
+      "price": 2945,
+      "inventory": 22,
+      "description": "Dolphin",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "binder full of women",
+      "price": 24672,
+      "inventory": 22,
+      "description": "binder full of women",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hobo Clown",
+      "price": 16860,
+      "inventory": 45,
+      "description": "Hobo Clown",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ruth Neighbor Ginsburg",
+      "price": 353,
+      "inventory": 5,
+      "description": "Ruth Neighbor Ginsburg",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Lady of Lorien",
+      "price": 21748,
+      "inventory": 8,
+      "description": "Lady of Lorien",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "steampunk",
+      "price": 6446,
+      "inventory": 79,
+      "description": "steampunk",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Statue of Liberty",
+      "price": 19136,
+      "inventory": 67,
+      "description": "Sexy Statue of Liberty",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Clown",
+      "price": 5621,
+      "inventory": 66,
+      "description": "Clown",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Basketball player",
+      "price": 2821,
+      "inventory": 87,
+      "description": "Basketball player",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Detective",
+      "price": 2277,
+      "inventory": 52,
+      "description": "Detective",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hippies",
+      "price": 16575,
+      "inventory": 55,
+      "description": "Hippies",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "mermaid",
+      "price": 1699,
+      "inventory": 19,
+      "description": "mermaid",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Dracula Vampire",
+      "price": 19109,
+      "inventory": 88,
+      "description": "Dracula Vampire",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Slutty Nurse",
+      "price": 13723,
+      "inventory": 40,
+      "description": "Slutty Nurse",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "King of the underworld",
+      "price": 7177,
+      "inventory": 99,
+      "description": "King of the underworld",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Binder Full Of Women",
+      "price": 5286,
+      "inventory": 9,
+      "description": "Binder Full Of Women",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Michael Jackson",
+      "price": 12999,
+      "inventory": 22,
+      "description": "Michael Jackson",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Spartan",
+      "price": 23251,
+      "inventory": 59,
+      "description": "Spartan",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "doctor",
+      "price": 7453,
+      "inventory": 17,
+      "description": "doctor",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A bowl of ramen noodles",
+      "price": 29529,
+      "inventory": 13,
+      "description": "A bowl of ramen noodles",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Disco Dazzler",
+      "price": 22471,
+      "inventory": 31,
+      "description": "Disco Dazzler",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Witch",
+      "price": 3258,
+      "inventory": 24,
+      "description": "Witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Soul Reaper",
+      "price": 25289,
+      "inventory": 59,
+      "description": "Soul Reaper",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Killer Asteroid",
+      "price": 21970,
+      "inventory": 4,
+      "description": "Killer Asteroid",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "old god",
+      "price": 9019,
+      "inventory": 12,
+      "description": "old god",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Monstre Charmant",
+      "price": 8661,
+      "inventory": 45,
+      "description": "Monstre Charmant",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Cow",
+      "price": 10493,
+      "inventory": 33,
+      "description": "Cow",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "bees",
+      "price": 24431,
+      "inventory": 89,
+      "description": "bees",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Flapper girl",
+      "price": 3749,
+      "inventory": 91,
+      "description": "Flapper girl",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Space Cowboy",
+      "price": 9404,
+      "inventory": 9,
+      "description": "Space Cowboy",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "David S Pumpkins",
+      "price": 24177,
+      "inventory": 74,
+      "description": "David S Pumpkins",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Chucky",
+      "price": 23572,
+      "inventory": 54,
+      "description": "Chucky",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mad bowler",
+      "price": 15967,
+      "inventory": 70,
+      "description": "Mad bowler",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "police dog",
+      "price": 7637,
+      "inventory": 64,
+      "description": "police dog",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "homeless cardboard box hero",
+      "price": 2757,
+      "inventory": 44,
+      "description": "homeless cardboard box hero",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sailor Jupiter",
+      "price": 1249,
+      "inventory": 84,
+      "description": "Sailor Jupiter",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Aluminum Doctor Doom",
+      "price": 27235,
+      "inventory": 24,
+      "description": "Aluminum Doctor Doom",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bg baby",
+      "price": 1126,
+      "inventory": 84,
+      "description": "Bg baby",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "plague doctor",
+      "price": 560,
+      "inventory": 49,
+      "description": "plague doctor",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Mime",
+      "price": 24836,
+      "inventory": 84,
+      "description": "Sexy Mime",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy burger",
+      "price": 15805,
+      "inventory": 22,
+      "description": "Sexy burger",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Frankensteins Monster",
+      "price": 13136,
+      "inventory": 60,
+      "description": "Frankensteins Monster",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Statue",
+      "price": 8371,
+      "inventory": 77,
+      "description": "Statue",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Witch",
+      "price": 1589,
+      "inventory": 68,
+      "description": "Witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy zombie",
+      "price": 4178,
+      "inventory": 20,
+      "description": "Sexy zombie",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Tech Support Devil",
+      "price": 25668,
+      "inventory": 64,
+      "description": "Tech Support Devil",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bride of Donald Trump",
+      "price": 16326,
+      "inventory": 51,
+      "description": "Bride of Donald Trump",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mrs. Lovett",
+      "price": 28069,
+      "inventory": 88,
+      "description": "Mrs. Lovett",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "dinosaur",
+      "price": 20744,
+      "inventory": 58,
+      "description": "dinosaur",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "the girl with a ribbon around her neck",
+      "price": 2548,
+      "inventory": 23,
+      "description": "the girl with a ribbon around her neck",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Pikachu",
+      "price": 23646,
+      "inventory": 45,
+      "description": "Pikachu",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "vampire lolita",
+      "price": 3999,
+      "inventory": 74,
+      "description": "vampire lolita",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hagraven",
+      "price": 10503,
+      "inventory": 82,
+      "description": "Hagraven",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Princess",
+      "price": 4966,
+      "inventory": 31,
+      "description": "Princess",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hulk Hogan",
+      "price": 5833,
+      "inventory": 32,
+      "description": "Hulk Hogan",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Aquabat",
+      "price": 13597,
+      "inventory": 29,
+      "description": "Aquabat",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ninja Turtle",
+      "price": 20416,
+      "inventory": 76,
+      "description": "Ninja Turtle",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Robot",
+      "price": 13516,
+      "inventory": 86,
+      "description": "Robot",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "J. F. Sebastian",
+      "price": 26509,
+      "inventory": 55,
+      "description": "J. F. Sebastian",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Star Trek: The Next Generation Captain (Trill)",
+      "price": 3814,
+      "inventory": 53,
+      "description": "Star Trek: The Next Generation Captain (Trill)",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sweeney Todd",
+      "price": 29252,
+      "inventory": 17,
+      "description": "Sweeney Todd",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Galadriel",
+      "price": 28422,
+      "inventory": 81,
+      "description": "Galadriel",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Penis",
+      "price": 8844,
+      "inventory": 19,
+      "description": "Penis",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Green Witch",
+      "price": 17425,
+      "inventory": 3,
+      "description": "Green Witch",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Cthulhu",
+      "price": 28857,
+      "inventory": 40,
+      "description": "Sexy Cthulhu",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Blacula",
+      "price": 23089,
+      "inventory": 29,
+      "description": "Blacula",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A cheeta in zebras clothing",
+      "price": 2268,
+      "inventory": 56,
+      "description": "A cheeta in zebras clothing",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "swamp witch",
+      "price": 25487,
+      "inventory": 28,
+      "description": "swamp witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "thumb",
+      "price": 8470,
+      "inventory": 46,
+      "description": "thumb",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Aladdin",
+      "price": 11819,
+      "inventory": 8,
+      "description": "Aladdin",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Zombie schoolgirl",
+      "price": 23667,
+      "inventory": 28,
+      "description": "Zombie schoolgirl",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "sexy candystriper",
+      "price": 8384,
+      "inventory": 81,
+      "description": "sexy candystriper",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "roman emperor",
+      "price": 24097,
+      "inventory": 39,
+      "description": "roman emperor",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ruth Betta Ginsburg",
+      "price": 16539,
+      "inventory": 49,
+      "description": "Ruth Betta Ginsburg",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Dancing Roach",
+      "price": 24577,
+      "inventory": 70,
+      "description": "Dancing Roach",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Software Pirate",
+      "price": 4278,
+      "inventory": 52,
+      "description": "Software Pirate",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The Badabook",
+      "price": 8055,
+      "inventory": 45,
+      "description": "The Badabook",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Spike",
+      "price": 813,
+      "inventory": 39,
+      "description": "Spike",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Cheshire Cat",
+      "price": 20232,
+      "inventory": 38,
+      "description": "Cheshire Cat",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Superman",
+      "price": 17714,
+      "inventory": 69,
+      "description": "Superman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "sexy thank you card",
+      "price": 20130,
+      "inventory": 36,
+      "description": "sexy thank you card",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Doctor Moreau",
+      "price": 12865,
+      "inventory": 79,
+      "description": "Doctor Moreau",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sharknado",
+      "price": 6226,
+      "inventory": 46,
+      "description": "Sharknado",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ghost of a Celebrity",
+      "price": 1377,
+      "inventory": 86,
+      "description": "Ghost of a Celebrity",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A List of Neural Network generated Costume Names",
+      "price": 29544,
+      "inventory": 34,
+      "description": "A List of Neural Network generated Costume Names",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ruth Bader Gettysburg",
+      "price": 4336,
+      "inventory": 45,
+      "description": "Ruth Bader Gettysburg",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Razzmatazz Pink Crayon",
+      "price": 22024,
+      "inventory": 37,
+      "description": "Razzmatazz Pink Crayon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "ronald mcdonald",
+      "price": 8841,
+      "inventory": 38,
+      "description": "ronald mcdonald",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Shadow",
+      "price": 9890,
+      "inventory": 71,
+      "description": "Shadow",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Court Jester",
+      "price": 29193,
+      "inventory": 94,
+      "description": "Court Jester",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Fortune Teller",
+      "price": 12162,
+      "inventory": 18,
+      "description": "Fortune Teller",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Steve from Minecraft",
+      "price": 15992,
+      "inventory": 94,
+      "description": "Steve from Minecraft",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Robot Clown",
+      "price": 2376,
+      "inventory": 36,
+      "description": "Robot Clown",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Surgeon",
+      "price": 2605,
+      "inventory": 85,
+      "description": "Surgeon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Griffith",
+      "price": 11999,
+      "inventory": 18,
+      "description": "Griffith",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hippy",
+      "price": 22479,
+      "inventory": 96,
+      "description": "Hippy",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Snow White",
+      "price": 10996,
+      "inventory": 51,
+      "description": "Snow White",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sherlock Holmes",
+      "price": 11295,
+      "inventory": 78,
+      "description": "Sherlock Holmes",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Klingon",
+      "price": 25463,
+      "inventory": 80,
+      "description": "Klingon",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Uncle Pennybags",
+      "price": 23303,
+      "inventory": 1,
+      "description": "Uncle Pennybags",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Demon",
+      "price": 13786,
+      "inventory": 96,
+      "description": "Demon",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ninja",
+      "price": 3391,
+      "inventory": 66,
+      "description": "Ninja",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Loki",
+      "price": 8512,
+      "inventory": 34,
+      "description": "Loki",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Wonder Woman",
+      "price": 4863,
+      "inventory": 49,
+      "description": "Wonder Woman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Lumberjanes",
+      "price": 9558,
+      "inventory": 1,
+      "description": "Lumberjanes",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Jester",
+      "price": 25395,
+      "inventory": 90,
+      "description": "Jester",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "plague doctor",
+      "price": 13303,
+      "inventory": 8,
+      "description": "plague doctor",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Zombie clown",
+      "price": 15936,
+      "inventory": 77,
+      "description": "Zombie clown",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Madonna",
+      "price": 5491,
+      "inventory": 13,
+      "description": "Madonna",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The Lollygagger",
+      "price": 19857,
+      "inventory": 35,
+      "description": "The Lollygagger",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Witch",
+      "price": 3834,
+      "inventory": 6,
+      "description": "Sexy Witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "hit-and-run victim",
+      "price": 7594,
+      "inventory": 11,
+      "description": "hit-and-run victim",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "One night stand",
+      "price": 21764,
+      "inventory": 57,
+      "description": "One night stand",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult costume",
+      "price": 13908,
+      "inventory": 59,
+      "description": "Adult costume",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "peregrine falcon",
+      "price": 21780,
+      "inventory": 54,
+      "description": "peregrine falcon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The Question",
+      "price": 5156,
+      "inventory": 15,
+      "description": "The Question",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hobo",
+      "price": 12481,
+      "inventory": 31,
+      "description": "Hobo",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Pirate",
+      "price": 5280,
+      "inventory": 32,
+      "description": "Pirate",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Frankensteins monster",
+      "price": 23696,
+      "inventory": 72,
+      "description": "Frankensteins monster",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Pugsley Addams",
+      "price": 21027,
+      "inventory": 73,
+      "description": "Pugsley Addams",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Alice in Wonderland",
+      "price": 19896,
+      "inventory": 54,
+      "description": "Alice in Wonderland",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Superman",
+      "price": 21035,
+      "inventory": 36,
+      "description": "Superman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Fairy Elf",
+      "price": 13065,
+      "inventory": 38,
+      "description": "Fairy Elf",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hester Prynne",
+      "price": 28214,
+      "inventory": 9,
+      "description": "Hester Prynne",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Lumberjack",
+      "price": 1055,
+      "inventory": 46,
+      "description": "Lumberjack",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "International Phonetic Alphabet",
+      "price": 19512,
+      "inventory": 31,
+      "description": "International Phonetic Alphabet",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Devils Advocate",
+      "price": 13502,
+      "inventory": 36,
+      "description": "Devils Advocate",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Witch",
+      "price": 1895,
+      "inventory": 6,
+      "description": "Witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Professor Sprout",
+      "price": 6701,
+      "inventory": 87,
+      "description": "Professor Sprout",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Clown",
+      "price": 8096,
+      "inventory": 42,
+      "description": "Clown",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Weremonkey",
+      "price": 27119,
+      "inventory": 8,
+      "description": "Weremonkey",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Gypsy",
+      "price": 20863,
+      "inventory": 77,
+      "description": "Gypsy",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Post-Apocalyptic Lady",
+      "price": 12843,
+      "inventory": 59,
+      "description": "Post-Apocalyptic Lady",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "tennents",
+      "price": 3346,
+      "inventory": 11,
+      "description": "tennents",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Potted mandrake root",
+      "price": 7991,
+      "inventory": 97,
+      "description": "Potted mandrake root",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A butt thats also",
+      "price": 23487,
+      "inventory": 16,
+      "description": "A butt thats also",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ninja",
+      "price": 18940,
+      "inventory": 25,
+      "description": "Ninja",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Susan B Anthony",
+      "price": 14604,
+      "inventory": 78,
+      "description": "Sexy Susan B Anthony",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Cheerleader",
+      "price": 23070,
+      "inventory": 42,
+      "description": "Cheerleader",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hippies",
+      "price": 17007,
+      "inventory": 60,
+      "description": "Hippies",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Quadsuit",
+      "price": 1425,
+      "inventory": 21,
+      "description": "Quadsuit",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Lrrr",
+      "price": 7848,
+      "inventory": 77,
+      "description": "Lrrr",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Bird man",
+      "price": 16329,
+      "inventory": 65,
+      "description": "Bird man",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Harry Potter",
+      "price": 15765,
+      "inventory": 79,
+      "description": "Harry Potter",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Poop Emoji",
+      "price": 2835,
+      "inventory": 59,
+      "description": "Poop Emoji",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hermione Granger",
+      "price": 29147,
+      "inventory": 18,
+      "description": "Hermione Granger",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Princess Leia",
+      "price": 12593,
+      "inventory": 95,
+      "description": "Princess Leia",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Owl",
+      "price": 23553,
+      "inventory": 17,
+      "description": "Owl",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Thomas Edison",
+      "price": 27612,
+      "inventory": 1,
+      "description": "Thomas Edison",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Shepherd Book",
+      "price": 631,
+      "inventory": 50,
+      "description": "Shepherd Book",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Number Two from Austin Powers",
+      "price": 8488,
+      "inventory": 88,
+      "description": "Number Two from Austin Powers",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Rollerskate waitress",
+      "price": 17965,
+      "inventory": 69,
+      "description": "Rollerskate waitress",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "t-rex",
+      "price": 6613,
+      "inventory": 51,
+      "description": "t-rex",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Fursuit",
+      "price": 8937,
+      "inventory": 82,
+      "description": "Fursuit",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "An elemental genie",
+      "price": 25942,
+      "inventory": 73,
+      "description": "An elemental genie",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Politician",
+      "price": 28802,
+      "inventory": 85,
+      "description": "Politician",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mad scientist",
+      "price": 5066,
+      "inventory": 37,
+      "description": "Mad scientist",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Jack Skelington",
+      "price": 10713,
+      "inventory": 52,
+      "description": "Jack Skelington",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Unicorn",
+      "price": 27654,
+      "inventory": 85,
+      "description": "Unicorn",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Gogo girl",
+      "price": 17204,
+      "inventory": 96,
+      "description": "Gogo girl",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Palm Tree",
+      "price": 11920,
+      "inventory": 70,
+      "description": "Palm Tree",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Quiet lady",
+      "price": 4147,
+      "inventory": 66,
+      "description": "Quiet lady",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "4 dozen eggs",
+      "price": 24727,
+      "inventory": 62,
+      "description": "4 dozen eggs",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Grandma",
+      "price": 16121,
+      "inventory": 78,
+      "description": "Sexy Grandma",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hogwarts student",
+      "price": 12826,
+      "inventory": 69,
+      "description": "Hogwarts student",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Death vader",
+      "price": 5460,
+      "inventory": 85,
+      "description": "Death vader",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "crazy cat lady",
+      "price": 1377,
+      "inventory": 46,
+      "description": "crazy cat lady",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Dark Lily from Ridley Scotts Legend",
+      "price": 24672,
+      "inventory": 7,
+      "description": "Dark Lily from Ridley Scotts Legend",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Oogie Boogie",
+      "price": 22237,
+      "inventory": 41,
+      "description": "Oogie Boogie",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mad bowler",
+      "price": 5686,
+      "inventory": 81,
+      "description": "Mad bowler",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Link",
+      "price": 4876,
+      "inventory": 3,
+      "description": "Link",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Horse",
+      "price": 148,
+      "inventory": 25,
+      "description": "Horse",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Werewolf",
+      "price": 9945,
+      "inventory": 30,
+      "description": "Werewolf",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Just goat horns",
+      "price": 2410,
+      "inventory": 30,
+      "description": "Just goat horns",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy totalitarian dictator",
+      "price": 20266,
+      "inventory": 55,
+      "description": "Sexy totalitarian dictator",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hoggle",
+      "price": 18419,
+      "inventory": 88,
+      "description": "Hoggle",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sriracha bottle",
+      "price": 16920,
+      "inventory": 39,
+      "description": "Sriracha bottle",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sheriff of Nottingham",
+      "price": 28913,
+      "inventory": 75,
+      "description": "Sheriff of Nottingham",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "hoodie devil",
+      "price": 26939,
+      "inventory": 10,
+      "description": "hoodie devil",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Robot",
+      "price": 25801,
+      "inventory": 56,
+      "description": "Robot",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The mad hatter",
+      "price": 23480,
+      "inventory": 8,
+      "description": "The mad hatter",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Engineer",
+      "price": 714,
+      "inventory": 16,
+      "description": "Engineer",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Rosie the Riveter",
+      "price": 28326,
+      "inventory": 22,
+      "description": "Rosie the Riveter",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Witch",
+      "price": 2922,
+      "inventory": 42,
+      "description": "Sexy Witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "student debt",
+      "price": 26367,
+      "inventory": 97,
+      "description": "student debt",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Lucy",
+      "price": 10547,
+      "inventory": 91,
+      "description": "Lucy",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Edwardian Ghost Lady",
+      "price": 12333,
+      "inventory": 63,
+      "description": "Edwardian Ghost Lady",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Movie Luigi",
+      "price": 1946,
+      "inventory": 24,
+      "description": "Movie Luigi",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy fidget spinner",
+      "price": 27536,
+      "inventory": 21,
+      "description": "Sexy fidget spinner",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hare patronus",
+      "price": 4878,
+      "inventory": 87,
+      "description": "Hare patronus",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Luna Lovegood",
+      "price": 10872,
+      "inventory": 58,
+      "description": "Luna Lovegood",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bucket of Water",
+      "price": 14918,
+      "inventory": 83,
+      "description": "Bucket of Water",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Aluminum Doctor Doom",
+      "price": 16834,
+      "inventory": 89,
+      "description": "Aluminum Doctor Doom",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Pumpkin",
+      "price": 27175,
+      "inventory": 44,
+      "description": "Pumpkin",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Oscar The Grouch",
+      "price": 28395,
+      "inventory": 39,
+      "description": "Oscar The Grouch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Parasite",
+      "price": 18671,
+      "inventory": 51,
+      "description": "Parasite",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Robin Hood",
+      "price": 10104,
+      "inventory": 42,
+      "description": "Robin Hood",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "zorro",
+      "price": 1659,
+      "inventory": 71,
+      "description": "zorro",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Leftover Costume Pieces Monster",
+      "price": 24962,
+      "inventory": 1,
+      "description": "Leftover Costume Pieces Monster",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Obi-Wan Kenobi",
+      "price": 25427,
+      "inventory": 1,
+      "description": "Obi-Wan Kenobi",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Asteroid belt",
+      "price": 14672,
+      "inventory": 66,
+      "description": "Asteroid belt",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "sexy detective",
+      "price": 24702,
+      "inventory": 89,
+      "description": "sexy detective",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ruth Player Hater Ginsburg",
+      "price": 3057,
+      "inventory": 7,
+      "description": "Ruth Player Hater Ginsburg",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Karl Marxio Brothers",
+      "price": 12821,
+      "inventory": 84,
+      "description": "Karl Marxio Brothers",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Polar Bear",
+      "price": 29582,
+      "inventory": 26,
+      "description": "Polar Bear",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Batman",
+      "price": 14205,
+      "inventory": 2,
+      "description": "Batman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "toaster",
+      "price": 10632,
+      "inventory": 23,
+      "description": "toaster",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Pyramid head",
+      "price": 9150,
+      "inventory": 87,
+      "description": "Pyramid head",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Wednesday Addams",
+      "price": 7134,
+      "inventory": 80,
+      "description": "Wednesday Addams",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Late-stage Marxist",
+      "price": 3758,
+      "inventory": 62,
+      "description": "Late-stage Marxist",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Stock Photograph",
+      "price": 8340,
+      "inventory": 45,
+      "description": "Stock Photograph",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Zombie Stalin",
+      "price": 3024,
+      "inventory": 62,
+      "description": "Zombie Stalin",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Batman",
+      "price": 1175,
+      "inventory": 3,
+      "description": "Batman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Carmen San Diego",
+      "price": 13953,
+      "inventory": 6,
+      "description": "Carmen San Diego",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Dragon",
+      "price": 7788,
+      "inventory": 24,
+      "description": "Dragon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "ghostbuster",
+      "price": 8103,
+      "inventory": 37,
+      "description": "ghostbuster",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Medusa",
+      "price": 22763,
+      "inventory": 9,
+      "description": "Medusa",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ace Cake Dragon",
+      "price": 14364,
+      "inventory": 71,
+      "description": "Ace Cake Dragon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A ritualist mage",
+      "price": 6726,
+      "inventory": 61,
+      "description": "A ritualist mage",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A Gryphon",
+      "price": 14676,
+      "inventory": 11,
+      "description": "A Gryphon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Janice from the Muppets",
+      "price": 25582,
+      "inventory": 99,
+      "description": "Janice from the Muppets",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Black Hole",
+      "price": 18210,
+      "inventory": 29,
+      "description": "Black Hole",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "pigeon",
+      "price": 10766,
+      "inventory": 18,
+      "description": "pigeon",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Rose Quartz",
+      "price": 23406,
+      "inventory": 60,
+      "description": "Rose Quartz",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Death and the Maiden",
+      "price": 5851,
+      "inventory": 86,
+      "description": "Death and the Maiden",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ghost",
+      "price": 19426,
+      "inventory": 5,
+      "description": "Ghost",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "ruler of the planet Omicron Persei 8",
+      "price": 27285,
+      "inventory": 84,
+      "description": "ruler of the planet Omicron Persei 8",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bumblebee",
+      "price": 19138,
+      "inventory": 15,
+      "description": "Bumblebee",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Convict",
+      "price": 9998,
+      "inventory": 36,
+      "description": "Convict",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "cookie monster",
+      "price": 497,
+      "inventory": 57,
+      "description": "cookie monster",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Bowling trophy",
+      "price": 25547,
+      "inventory": 79,
+      "description": "Bowling trophy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A hippy goblin",
+      "price": 8174,
+      "inventory": 17,
+      "description": "A hippy goblin",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Princess",
+      "price": 12705,
+      "inventory": 74,
+      "description": "Princess",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Princess Leia",
+      "price": 20446,
+      "inventory": 84,
+      "description": "Princess Leia",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mime",
+      "price": 21537,
+      "inventory": 100,
+      "description": "Mime",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "peregrine falcon",
+      "price": 27579,
+      "inventory": 39,
+      "description": "peregrine falcon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Gandalf the Gray",
+      "price": 9851,
+      "inventory": 17,
+      "description": "Gandalf the Gray",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Carmen sandiego",
+      "price": 28854,
+      "inventory": 3,
+      "description": "Carmen sandiego",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Snoopy",
+      "price": 20846,
+      "inventory": 34,
+      "description": "Snoopy",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Lumberjanes",
+      "price": 10421,
+      "inventory": 79,
+      "description": "Lumberjanes",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "A hologram",
+      "price": 25327,
+      "inventory": 72,
+      "description": "A hologram",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Diana ross",
+      "price": 15427,
+      "inventory": 49,
+      "description": "Diana ross",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "President Donald Duck",
+      "price": 24555,
+      "inventory": 32,
+      "description": "President Donald Duck",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ice Cat Mario",
+      "price": 25443,
+      "inventory": 79,
+      "description": "Ice Cat Mario",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Potato",
+      "price": 28188,
+      "inventory": 90,
+      "description": "Sexy Potato",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "James Bond",
+      "price": 15725,
+      "inventory": 12,
+      "description": "James Bond",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Robot",
+      "price": 1293,
+      "inventory": 69,
+      "description": "Robot",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Laura Ingalls Wilder",
+      "price": 20817,
+      "inventory": 97,
+      "description": "Laura Ingalls Wilder",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sailor Moon",
+      "price": 12556,
+      "inventory": 24,
+      "description": "Sailor Moon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The Raven",
+      "price": 22441,
+      "inventory": 88,
+      "description": "The Raven",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Polar bear",
+      "price": 20741,
+      "inventory": 84,
+      "description": "Polar bear",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "gay zebra",
+      "price": 4466,
+      "inventory": 69,
+      "description": "gay zebra",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Chicken",
+      "price": 28229,
+      "inventory": 30,
+      "description": "Chicken",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Marty McFly",
+      "price": 23596,
+      "inventory": 19,
+      "description": "Sexy Marty McFly",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Steve Jobs",
+      "price": 14846,
+      "inventory": 35,
+      "description": "Steve Jobs",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mr. Peanut",
+      "price": 17383,
+      "inventory": 39,
+      "description": "Mr. Peanut",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Homeless Person",
+      "price": 7379,
+      "inventory": 3,
+      "description": "Homeless Person",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Witch",
+      "price": 28645,
+      "inventory": 90,
+      "description": "Witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "owelette",
+      "price": 373,
+      "inventory": 77,
+      "description": "owelette",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Dr McNinja",
+      "price": 21696,
+      "inventory": 29,
+      "description": "Dr McNinja",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mortician",
+      "price": 18873,
+      "inventory": 70,
+      "description": "Mortician",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "adult problems",
+      "price": 21546,
+      "inventory": 18,
+      "description": "adult problems",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Penis",
+      "price": 24762,
+      "inventory": 53,
+      "description": "Penis",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Your Drunk Mum",
+      "price": 10463,
+      "inventory": 90,
+      "description": "Your Drunk Mum",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Teenage Mutant Ninja Turtle",
+      "price": 24687,
+      "inventory": 25,
+      "description": "Teenage Mutant Ninja Turtle",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Demon dressed as human",
+      "price": 21462,
+      "inventory": 22,
+      "description": "Demon dressed as human",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "sexy taco",
+      "price": 10727,
+      "inventory": 39,
+      "description": "sexy taco",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Freudian Slip",
+      "price": 19678,
+      "inventory": 68,
+      "description": "Freudian Slip",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ruth Bader Iceberg",
+      "price": 2974,
+      "inventory": 50,
+      "description": "Ruth Bader Iceberg",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Circus strongman",
+      "price": 15389,
+      "inventory": 68,
+      "description": "Circus strongman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Kung fu master",
+      "price": 18949,
+      "inventory": 75,
+      "description": "Kung fu master",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hulk Hogan",
+      "price": 8716,
+      "inventory": 84,
+      "description": "Hulk Hogan",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Zombo the Clown",
+      "price": 25971,
+      "inventory": 97,
+      "description": "Zombo the Clown",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "giant isopod",
+      "price": 18826,
+      "inventory": 37,
+      "description": "giant isopod",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Draco Malfoy",
+      "price": 588,
+      "inventory": 79,
+      "description": "Draco Malfoy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Glow Cloud",
+      "price": 22776,
+      "inventory": 72,
+      "description": "Glow Cloud",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Gay marty mcfly",
+      "price": 29983,
+      "inventory": 86,
+      "description": "Gay marty mcfly",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hippie",
+      "price": 21944,
+      "inventory": 56,
+      "description": "Hippie",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Middle Management Devil",
+      "price": 15642,
+      "inventory": 89,
+      "description": "Middle Management Devil",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Jason",
+      "price": 26461,
+      "inventory": 43,
+      "description": "Jason",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Cheese",
+      "price": 10836,
+      "inventory": 31,
+      "description": "Cheese",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sad Pumpkin",
+      "price": 27543,
+      "inventory": 31,
+      "description": "Sad Pumpkin",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bill Cipher",
+      "price": 28345,
+      "inventory": 92,
+      "description": "Bill Cipher",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy zombie",
+      "price": 4044,
+      "inventory": 12,
+      "description": "Sexy zombie",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Fall Fairy",
+      "price": 12347,
+      "inventory": 73,
+      "description": "Fall Fairy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "With bells on - pics of people named bell stuck to me",
+      "price": 23921,
+      "inventory": 83,
+      "description": "With bells on - pics of people named bell stuck to me",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Poison Ivy",
+      "price": 25713,
+      "inventory": 9,
+      "description": "Poison Ivy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Joy from inside out",
+      "price": 27057,
+      "inventory": 76,
+      "description": "Joy from inside out",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "toaster",
+      "price": 1517,
+      "inventory": 72,
+      "description": "toaster",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "the Roman goddess of Wisdom and War",
+      "price": 15238,
+      "inventory": 47,
+      "description": "the Roman goddess of Wisdom and War",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Creepy Scarecrow",
+      "price": 9740,
+      "inventory": 4,
+      "description": "Creepy Scarecrow",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sailor Jupiter",
+      "price": 4180,
+      "inventory": 49,
+      "description": "Sailor Jupiter",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Twister",
+      "price": 20342,
+      "inventory": 89,
+      "description": "Twister",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Frankensteins Monster",
+      "price": 20590,
+      "inventory": 49,
+      "description": "Frankensteins Monster",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "José Gaspar Rodríguez de Francia",
+      "price": 12009,
+      "inventory": 35,
+      "description": "José Gaspar Rodríguez de Francia",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Garbage",
+      "price": 9113,
+      "inventory": 8,
+      "description": "Sexy Garbage",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "creepy zombie girl",
+      "price": 17009,
+      "inventory": 16,
+      "description": "creepy zombie girl",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Porcupine",
+      "price": 3085,
+      "inventory": 78,
+      "description": "Porcupine",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "BB-8",
+      "price": 18419,
+      "inventory": 67,
+      "description": "BB-8",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Vriska",
+      "price": 25604,
+      "inventory": 70,
+      "description": "Vriska",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Giant Crayon",
+      "price": 19647,
+      "inventory": 97,
+      "description": "Giant Crayon",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Vampire",
+      "price": 441,
+      "inventory": 85,
+      "description": "Vampire",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Vampire in an orange dress",
+      "price": 27887,
+      "inventory": 68,
+      "description": "Vampire in an orange dress",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bike Lane",
+      "price": 11650,
+      "inventory": 96,
+      "description": "Bike Lane",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Zombie geisha",
+      "price": 29827,
+      "inventory": 31,
+      "description": "Zombie geisha",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Siren",
+      "price": 19402,
+      "inventory": 21,
+      "description": "Siren",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "fruit",
+      "price": 2642,
+      "inventory": 95,
+      "description": "fruit",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Dump truck driver",
+      "price": 19877,
+      "inventory": 63,
+      "description": "Dump truck driver",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Bee",
+      "price": 23015,
+      "inventory": 14,
+      "description": "Sexy Bee",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Amelia Earhart",
+      "price": 10048,
+      "inventory": 59,
+      "description": "Amelia Earhart",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "bride",
+      "price": 15785,
+      "inventory": 76,
+      "description": "bride",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The Glam Reaper",
+      "price": 15579,
+      "inventory": 4,
+      "description": "The Glam Reaper",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Convict",
+      "price": 12842,
+      "inventory": 74,
+      "description": "Convict",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Red Riding Hood",
+      "price": 9627,
+      "inventory": 95,
+      "description": "Red Riding Hood",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "President",
+      "price": 3497,
+      "inventory": 35,
+      "description": "President",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pumpkin",
+      "price": 23318,
+      "inventory": 6,
+      "description": "Pumpkin",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Fighter Pilot",
+      "price": 25643,
+      "inventory": 49,
+      "description": "Fighter Pilot",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Voldemort",
+      "price": 20416,
+      "inventory": 56,
+      "description": "Sexy Voldemort",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Gumball machine",
+      "price": 7271,
+      "inventory": 89,
+      "description": "Gumball machine",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "sexy neurosurgeon",
+      "price": 29907,
+      "inventory": 15,
+      "description": "sexy neurosurgeon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Old Captain Kirk",
+      "price": 20826,
+      "inventory": 18,
+      "description": "Old Captain Kirk",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Carmen Sandiego",
+      "price": 3523,
+      "inventory": 21,
+      "description": "Carmen Sandiego",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "cowboy",
+      "price": 14282,
+      "inventory": 93,
+      "description": "cowboy",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Convict",
+      "price": 16001,
+      "inventory": 38,
+      "description": "Convict",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Dog",
+      "price": 18673,
+      "inventory": 64,
+      "description": "Dog",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "batman",
+      "price": 13707,
+      "inventory": 4,
+      "description": "batman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Alton Brown",
+      "price": 9554,
+      "inventory": 60,
+      "description": "Alton Brown",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Slarth the unknowing",
+      "price": 24691,
+      "inventory": 35,
+      "description": "Slarth the unknowing",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bike Lane",
+      "price": 14814,
+      "inventory": 64,
+      "description": "Bike Lane",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Vampire Seductress",
+      "price": 4051,
+      "inventory": 5,
+      "description": "Vampire Seductress",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Glamazon Warrior",
+      "price": 2639,
+      "inventory": 24,
+      "description": "Glamazon Warrior",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "1950s geaser",
+      "price": 8648,
+      "inventory": 68,
+      "description": "1950s geaser",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Snow White",
+      "price": 207,
+      "inventory": 20,
+      "description": "Snow White",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Slandermon",
+      "price": 14684,
+      "inventory": 16,
+      "description": "Slandermon",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Liz",
+      "price": 23823,
+      "inventory": 7,
+      "description": "Liz",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "80s Madonna",
+      "price": 8261,
+      "inventory": 91,
+      "description": "80s Madonna",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Balloons",
+      "price": 17344,
+      "inventory": 15,
+      "description": "Balloons",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Birdperson",
+      "price": 7998,
+      "inventory": 60,
+      "description": "Birdperson",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy MadLibs Pad",
+      "price": 4816,
+      "inventory": 95,
+      "description": "Sexy MadLibs Pad",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Stitch",
+      "price": 23517,
+      "inventory": 63,
+      "description": "Stitch",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Princess",
+      "price": 23058,
+      "inventory": 89,
+      "description": "Princess",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Robot",
+      "price": 14604,
+      "inventory": 15,
+      "description": "Robot",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "One Night Stand",
+      "price": 22396,
+      "inventory": 20,
+      "description": "One Night Stand",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "fortune teller",
+      "price": 21078,
+      "inventory": 69,
+      "description": "fortune teller",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Perkin Warbeck",
+      "price": 13111,
+      "inventory": 49,
+      "description": "Perkin Warbeck",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Luke Skywalker",
+      "price": 25692,
+      "inventory": 31,
+      "description": "Luke Skywalker",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Carl",
+      "price": 24916,
+      "inventory": 87,
+      "description": "Carl",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Nudist on Strike",
+      "price": 23255,
+      "inventory": 5,
+      "description": "Nudist on Strike",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bat",
+      "price": 29041,
+      "inventory": 75,
+      "description": "Bat",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Flower",
+      "price": 1443,
+      "inventory": 39,
+      "description": "Flower",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Rock",
+      "price": 27156,
+      "inventory": 6,
+      "description": "Sexy Rock",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Poison Ivy",
+      "price": 26207,
+      "inventory": 15,
+      "description": "Poison Ivy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "College student who got ran over by a bike",
+      "price": 22989,
+      "inventory": 52,
+      "description": "College student who got ran over by a bike",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Bumblebee",
+      "price": 15912,
+      "inventory": 31,
+      "description": "Bumblebee",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Aphra Behn",
+      "price": 5828,
+      "inventory": 73,
+      "description": "Aphra Behn",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Iron Man",
+      "price": 3203,
+      "inventory": 64,
+      "description": "Iron Man",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Statue of Liberty",
+      "price": 16074,
+      "inventory": 41,
+      "description": "Statue of Liberty",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Edward Scissorhands",
+      "price": 8749,
+      "inventory": 28,
+      "description": "Edward Scissorhands",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Aquabat",
+      "price": 23433,
+      "inventory": 23,
+      "description": "Aquabat",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Chewbacca",
+      "price": 14448,
+      "inventory": 60,
+      "description": "Sexy Chewbacca",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sonny and Cher",
+      "price": 13876,
+      "inventory": 1,
+      "description": "Sonny and Cher",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Nun",
+      "price": 9251,
+      "inventory": 55,
+      "description": "Nun",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Conan",
+      "price": 10067,
+      "inventory": 26,
+      "description": "Conan",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Taco",
+      "price": 21299,
+      "inventory": 22,
+      "description": "Taco",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Cthulhu",
+      "price": 10984,
+      "inventory": 63,
+      "description": "Sexy Cthulhu",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A friends cat",
+      "price": 26129,
+      "inventory": 50,
+      "description": "A friends cat",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Chewbacca",
+      "price": 24745,
+      "inventory": 62,
+      "description": "Sexy Chewbacca",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Cheshire Cat",
+      "price": 10877,
+      "inventory": 44,
+      "description": "Cheshire Cat",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Daria",
+      "price": 20466,
+      "inventory": 14,
+      "description": "Daria",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Macho Man Randy Savage",
+      "price": 90,
+      "inventory": 1,
+      "description": "Macho Man Randy Savage",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Homestar Runner",
+      "price": 20400,
+      "inventory": 45,
+      "description": "Homestar Runner",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mermaid",
+      "price": 14954,
+      "inventory": 72,
+      "description": "Mermaid",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Severus Snape",
+      "price": 9228,
+      "inventory": 53,
+      "description": "Sexy Severus Snape",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Igor",
+      "price": 19691,
+      "inventory": 80,
+      "description": "Igor",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Spiderman",
+      "price": 9670,
+      "inventory": 3,
+      "description": "Spiderman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Grim reaper",
+      "price": 7937,
+      "inventory": 25,
+      "description": "Grim reaper",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "pirate",
+      "price": 8049,
+      "inventory": 98,
+      "description": "pirate",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ellen Pages character in From Rome with Love",
+      "price": 4550,
+      "inventory": 88,
+      "description": "Ellen Pages character in From Rome with Love",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Superman",
+      "price": 10163,
+      "inventory": 36,
+      "description": "Superman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Dawning Realization that Nothing Will Be Okay",
+      "price": 19154,
+      "inventory": 47,
+      "description": "Sexy Dawning Realization that Nothing Will Be Okay",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Fairy Queen",
+      "price": 21260,
+      "inventory": 2,
+      "description": "Fairy Queen",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Black Cat",
+      "price": 8028,
+      "inventory": 94,
+      "description": "Black Cat",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Colonial Americana Costume",
+      "price": 8663,
+      "inventory": 15,
+      "description": "Colonial Americana Costume",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Werewolf",
+      "price": 8761,
+      "inventory": 10,
+      "description": "Werewolf",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "scientist",
+      "price": 12035,
+      "inventory": 62,
+      "description": "scientist",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Glitter Devil",
+      "price": 1231,
+      "inventory": 41,
+      "description": "Glitter Devil",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Big Bird",
+      "price": 19240,
+      "inventory": 84,
+      "description": "Big Bird",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "vampire",
+      "price": 24502,
+      "inventory": 72,
+      "description": "vampire",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Zombie Pirate",
+      "price": 8117,
+      "inventory": 66,
+      "description": "Zombie Pirate",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Tinkerbell",
+      "price": 1914,
+      "inventory": 14,
+      "description": "Tinkerbell",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Lady Gaga",
+      "price": 1768,
+      "inventory": 92,
+      "description": "Lady Gaga",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Christmas Tree",
+      "price": 3979,
+      "inventory": 60,
+      "description": "Christmas Tree",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Punk Rocker",
+      "price": 7448,
+      "inventory": 7,
+      "description": "Punk Rocker",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Robocop",
+      "price": 10659,
+      "inventory": 21,
+      "description": "Robocop",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "werewolf",
+      "price": 25103,
+      "inventory": 93,
+      "description": "werewolf",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Gandalf the Gray",
+      "price": 10135,
+      "inventory": 6,
+      "description": "Gandalf the Gray",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Jaye P. Morgan",
+      "price": 28398,
+      "inventory": 64,
+      "description": "Jaye P. Morgan",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Tree Man",
+      "price": 10322,
+      "inventory": 67,
+      "description": "Tree Man",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mary Poppins",
+      "price": 18470,
+      "inventory": 22,
+      "description": "Mary Poppins",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Baby Groot",
+      "price": 24671,
+      "inventory": 99,
+      "description": "Baby Groot",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Doctor Frankenstein",
+      "price": 27835,
+      "inventory": 79,
+      "description": "Doctor Frankenstein",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bill Cipher",
+      "price": 5075,
+      "inventory": 84,
+      "description": "Bill Cipher",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "sharknado",
+      "price": 21472,
+      "inventory": 3,
+      "description": "sharknado",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Starfleet Officer",
+      "price": 28989,
+      "inventory": 88,
+      "description": "Starfleet Officer",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Princess",
+      "price": 10259,
+      "inventory": 24,
+      "description": "Princess",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "An elemental genie",
+      "price": 15467,
+      "inventory": 46,
+      "description": "An elemental genie",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Train engine",
+      "price": 2264,
+      "inventory": 34,
+      "description": "Train engine",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Attila the Hun",
+      "price": 6503,
+      "inventory": 95,
+      "description": "Attila the Hun",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Jack OLantern",
+      "price": 23492,
+      "inventory": 58,
+      "description": "Jack OLantern",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bourgeoisie Stalin",
+      "price": 14718,
+      "inventory": 98,
+      "description": "Bourgeoisie Stalin",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Abraham Lincoln",
+      "price": 6389,
+      "inventory": 67,
+      "description": "Abraham Lincoln",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Phoenix",
+      "price": 16031,
+      "inventory": 23,
+      "description": "Phoenix",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Lego Minifigure",
+      "price": 284,
+      "inventory": 59,
+      "description": "Lego Minifigure",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Centaur",
+      "price": 7028,
+      "inventory": 85,
+      "description": "Centaur",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "fairy",
+      "price": 25403,
+      "inventory": 84,
+      "description": "fairy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Genie",
+      "price": 3189,
+      "inventory": 18,
+      "description": "Genie",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Zombie",
+      "price": 9399,
+      "inventory": 14,
+      "description": "Zombie",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Calcifer",
+      "price": 17689,
+      "inventory": 58,
+      "description": "Calcifer",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "A bandaged mummy",
+      "price": 8810,
+      "inventory": 6,
+      "description": "A bandaged mummy",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Batman",
+      "price": 9537,
+      "inventory": 91,
+      "description": "Batman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Waldo",
+      "price": 6538,
+      "inventory": 94,
+      "description": "Waldo",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Skeleton",
+      "price": 12522,
+      "inventory": 8,
+      "description": "Skeleton",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "mad surgeon",
+      "price": 6805,
+      "inventory": 38,
+      "description": "mad surgeon",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Mega Man",
+      "price": 29058,
+      "inventory": 97,
+      "description": "Mega Man",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Robot",
+      "price": 14875,
+      "inventory": 15,
+      "description": "Robot",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hamburglar",
+      "price": 2551,
+      "inventory": 86,
+      "description": "Hamburglar",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Vampire Cyborg",
+      "price": 28308,
+      "inventory": 79,
+      "description": "Vampire Cyborg",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Cheshire cat",
+      "price": 24837,
+      "inventory": 16,
+      "description": "Cheshire cat",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "satanic nun",
+      "price": 23685,
+      "inventory": 53,
+      "description": "satanic nun",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Boogeoisie Revolution",
+      "price": 13708,
+      "inventory": 34,
+      "description": "Boogeoisie Revolution",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Don Draper",
+      "price": 10468,
+      "inventory": 41,
+      "description": "Don Draper",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Zombie computer",
+      "price": 20705,
+      "inventory": 60,
+      "description": "Zombie computer",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Maurice meow",
+      "price": 13414,
+      "inventory": 31,
+      "description": "Maurice meow",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Henry viii",
+      "price": 23460,
+      "inventory": 84,
+      "description": "Henry viii",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pirate",
+      "price": 21518,
+      "inventory": 43,
+      "description": "Pirate",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "inflatable tube man",
+      "price": 29549,
+      "inventory": 6,
+      "description": "inflatable tube man",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Attila the Hun",
+      "price": 18128,
+      "inventory": 30,
+      "description": "Attila the Hun",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Queen",
+      "price": 23303,
+      "inventory": 43,
+      "description": "Queen",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Kzin Warrior",
+      "price": 19756,
+      "inventory": 80,
+      "description": "Kzin Warrior",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Scarecrow",
+      "price": 2019,
+      "inventory": 56,
+      "description": "Scarecrow",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "slutty nurse",
+      "price": 1089,
+      "inventory": 90,
+      "description": "slutty nurse",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Spider",
+      "price": 13227,
+      "inventory": 4,
+      "description": "Spider",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "death angel",
+      "price": 3293,
+      "inventory": 46,
+      "description": "death angel",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "A Bucket",
+      "price": 19302,
+      "inventory": 61,
+      "description": "A Bucket",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Wonder Woman",
+      "price": 6181,
+      "inventory": 23,
+      "description": "Wonder Woman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Candy rapper",
+      "price": 9569,
+      "inventory": 89,
+      "description": "Candy rapper",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy scarecrow",
+      "price": 22766,
+      "inventory": 88,
+      "description": "Sexy scarecrow",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Alton Brown",
+      "price": 19385,
+      "inventory": 18,
+      "description": "Sexy Alton Brown",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The Little Mermaid",
+      "price": 15388,
+      "inventory": 76,
+      "description": "The Little Mermaid",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Minion",
+      "price": 13920,
+      "inventory": 32,
+      "description": "Sexy Minion",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Hufflepuff",
+      "price": 18212,
+      "inventory": 81,
+      "description": "Hufflepuff",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Bear",
+      "price": 14618,
+      "inventory": 53,
+      "description": "Bear",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Man Covered in Fake Blood",
+      "price": 25307,
+      "inventory": 61,
+      "description": "Man Covered in Fake Blood",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Computer that tells knock knock jokes",
+      "price": 25809,
+      "inventory": 53,
+      "description": "Computer that tells knock knock jokes",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Team Rocket Grunt",
+      "price": 14051,
+      "inventory": 57,
+      "description": "Team Rocket Grunt",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Optimus Prime Bodysuit Costume",
+      "price": 2897,
+      "inventory": 33,
+      "description": "Optimus Prime Bodysuit Costume",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Anathema Device",
+      "price": 23529,
+      "inventory": 39,
+      "description": "Anathema Device",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ninja Turtle",
+      "price": 9718,
+      "inventory": 9,
+      "description": "Ninja Turtle",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Scrambled Egg Maker Machine",
+      "price": 23524,
+      "inventory": 82,
+      "description": "Scrambled Egg Maker Machine",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "the anthropomorphic personification of the horror of war",
+      "price": 8557,
+      "inventory": 81,
+      "description": "the anthropomorphic personification of the horror of war",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "pajama cardinalfish",
+      "price": 14766,
+      "inventory": 36,
+      "description": "pajama cardinalfish",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Spider-Frog",
+      "price": 29883,
+      "inventory": 76,
+      "description": "Spider-Frog",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "batman",
+      "price": 16464,
+      "inventory": 94,
+      "description": "batman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pirate",
+      "price": 11458,
+      "inventory": 20,
+      "description": "Pirate",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Nurse",
+      "price": 28568,
+      "inventory": 55,
+      "description": "Sexy Nurse",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy ghost",
+      "price": 27120,
+      "inventory": 25,
+      "description": "Sexy ghost",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Werewolf",
+      "price": 5037,
+      "inventory": 37,
+      "description": "Werewolf",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ada Lovelace",
+      "price": 589,
+      "inventory": 44,
+      "description": "Ada Lovelace",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Policeman",
+      "price": 17674,
+      "inventory": 62,
+      "description": "Sexy Policeman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Captain Zapp Brannigan",
+      "price": 18,
+      "inventory": 72,
+      "description": "Captain Zapp Brannigan",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Delirium from Sandman",
+      "price": 18527,
+      "inventory": 79,
+      "description": "Delirium from Sandman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Van Goh",
+      "price": 24718,
+      "inventory": 66,
+      "description": "Van Goh",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Wonder Woman",
+      "price": 16508,
+      "inventory": 4,
+      "description": "Wonder Woman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Jumbo Shrimp",
+      "price": 6720,
+      "inventory": 45,
+      "description": "Jumbo Shrimp",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The Guilty Remnant",
+      "price": 10830,
+      "inventory": 18,
+      "description": "The Guilty Remnant",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Frankenstein",
+      "price": 340,
+      "inventory": 89,
+      "description": "Frankenstein",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy monster",
+      "price": 15038,
+      "inventory": 63,
+      "description": "Sexy monster",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Flapper girl",
+      "price": 17531,
+      "inventory": 16,
+      "description": "Flapper girl",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Flower",
+      "price": 3307,
+      "inventory": 59,
+      "description": "Flower",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Netflix and Chill",
+      "price": 8356,
+      "inventory": 3,
+      "description": "Netflix and Chill",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Lady Gaga",
+      "price": 369,
+      "inventory": 58,
+      "description": "Lady Gaga",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "witch",
+      "price": 5806,
+      "inventory": 4,
+      "description": "witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "retro batman",
+      "price": 11452,
+      "inventory": 1,
+      "description": "retro batman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Gay marty mcfly",
+      "price": 4926,
+      "inventory": 15,
+      "description": "Gay marty mcfly",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The fall of Communism",
+      "price": 18520,
+      "inventory": 1,
+      "description": "The fall of Communism",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Jester",
+      "price": 17261,
+      "inventory": 10,
+      "description": "Jester",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Abraham Lincoln",
+      "price": 14664,
+      "inventory": 56,
+      "description": "Abraham Lincoln",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ghost",
+      "price": 13026,
+      "inventory": 84,
+      "description": "Ghost",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Marvin the Paranoid Android",
+      "price": 25240,
+      "inventory": 76,
+      "description": "Marvin the Paranoid Android",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Princess",
+      "price": 6193,
+      "inventory": 42,
+      "description": "Princess",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Washerwoman",
+      "price": 12486,
+      "inventory": 100,
+      "description": "Washerwoman",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "giraffe",
+      "price": 7832,
+      "inventory": 65,
+      "description": "giraffe",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Mustard bottle",
+      "price": 15634,
+      "inventory": 92,
+      "description": "Mustard bottle",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Witch",
+      "price": 2991,
+      "inventory": 43,
+      "description": "Witch",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Flapper Girl",
+      "price": 19802,
+      "inventory": 30,
+      "description": "Flapper Girl",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Cobra Commander",
+      "price": 17902,
+      "inventory": 92,
+      "description": "Cobra Commander",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Undead Bagpiper",
+      "price": 23812,
+      "inventory": 96,
+      "description": "Undead Bagpiper",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy sexy",
+      "price": 23849,
+      "inventory": 3,
+      "description": "Sexy sexy",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Corpse",
+      "price": 8361,
+      "inventory": 9,
+      "description": "Corpse",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Psychiatrist",
+      "price": 18494,
+      "inventory": 13,
+      "description": "Psychiatrist",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Space Marine",
+      "price": 10854,
+      "inventory": 40,
+      "description": "Space Marine",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Kuzco",
+      "price": 6887,
+      "inventory": 37,
+      "description": "Kuzco",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Paul Atreides",
+      "price": 22502,
+      "inventory": 15,
+      "description": "Paul Atreides",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Gladriel",
+      "price": 25647,
+      "inventory": 11,
+      "description": "Gladriel",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Internet Meme",
+      "price": 25595,
+      "inventory": 13,
+      "description": "Internet Meme",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Cleopatras mummy",
+      "price": 14476,
+      "inventory": 99,
+      "description": "Cleopatras mummy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Buck Rogers",
+      "price": 17627,
+      "inventory": 3,
+      "description": "Buck Rogers",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Butterfly",
+      "price": 19447,
+      "inventory": 91,
+      "description": "Butterfly",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Jar Jar Binks",
+      "price": 7770,
+      "inventory": 98,
+      "description": "Jar Jar Binks",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Panda",
+      "price": 17333,
+      "inventory": 64,
+      "description": "Sexy Panda",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy Robot",
+      "price": 7342,
+      "inventory": 79,
+      "description": "Sexy Robot",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Nun",
+      "price": 10542,
+      "inventory": 8,
+      "description": "Nun",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Vampire",
+      "price": 13699,
+      "inventory": 44,
+      "description": "Vampire",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Hanging Chad",
+      "price": 9380,
+      "inventory": 19,
+      "description": "Hanging Chad",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Pumpkin",
+      "price": 14777,
+      "inventory": 54,
+      "description": "Pumpkin",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Fish",
+      "price": 8579,
+      "inventory": 89,
+      "description": "Fish",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Princess Fairy Batgirl Witch",
+      "price": 28330,
+      "inventory": 23,
+      "description": "Princess Fairy Batgirl Witch",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "One of Sapphos poems",
+      "price": 8864,
+      "inventory": 57,
+      "description": "One of Sapphos poems",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Sexy Grim Reaper",
+      "price": 26464,
+      "inventory": 47,
+      "description": "Sexy Grim Reaper",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Pirate",
+      "price": 4871,
+      "inventory": 4,
+      "description": "Pirate",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy TARDIS",
+      "price": 8131,
+      "inventory": 72,
+      "description": "Sexy TARDIS",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "sexy thank you card",
+      "price": 18709,
+      "inventory": 35,
+      "description": "sexy thank you card",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "slutty nurse",
+      "price": 11030,
+      "inventory": 48,
+      "description": "slutty nurse",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Grandmama Addams",
+      "price": 4657,
+      "inventory": 53,
+      "description": "Grandmama Addams",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Merida",
+      "price": 21318,
+      "inventory": 55,
+      "description": "Merida",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Italian Dancer",
+      "price": 18849,
+      "inventory": 40,
+      "description": "Italian Dancer",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Lion",
+      "price": 7990,
+      "inventory": 83,
+      "description": "Lion",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Shark Suit",
+      "price": 2557,
+      "inventory": 48,
+      "description": "Shark Suit",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "The pumpkin king",
+      "price": 28462,
+      "inventory": 73,
+      "description": "The pumpkin king",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Zombie",
+      "price": 19231,
+      "inventory": 32,
+      "description": "Zombie",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "A spaceship crewman",
+      "price": 11485,
+      "inventory": 63,
+      "description": "A spaceship crewman",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "A muscular red demon",
+      "price": 9257,
+      "inventory": 41,
+      "description": "A muscular red demon",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Sexy zombie",
+      "price": 1112,
+      "inventory": 89,
+      "description": "Sexy zombie",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "A butt thats also",
+      "price": 29369,
+      "inventory": 32,
+      "description": "A butt thats also",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Carrie",
+      "price": 14659,
+      "inventory": 90,
+      "description": "Carrie",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Chel",
+      "price": 23442,
+      "inventory": 95,
+      "description": "Chel",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Princess Leia",
+      "price": 5680,
+      "inventory": 17,
+      "description": "Princess Leia",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "black cat",
+      "price": 23793,
+      "inventory": 39,
+      "description": "black cat",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Piglet",
+      "price": 23678,
+      "inventory": 73,
+      "description": "Piglet",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Dr. Jekyll and Mr. Hyde",
+      "price": 2142,
+      "inventory": 48,
+      "description": "Dr. Jekyll and Mr. Hyde",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Ice Bucket Challenge",
+      "price": 19386,
+      "inventory": 45,
+      "description": "Ice Bucket Challenge",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "blind date",
+      "price": 26888,
+      "inventory": 54,
+      "description": "blind date",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Aardvark",
+      "price": 7351,
+      "inventory": 77,
+      "description": "Aardvark",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Quidditch Player",
+      "price": 1264,
+      "inventory": 91,
+      "description": "Quidditch Player",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Witch",
+      "price": 16779,
+      "inventory": 88,
+      "description": "Witch",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "turtle",
+      "price": 12587,
+      "inventory": 38,
+      "description": "turtle",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Elf (LOTR)",
+      "price": 19226,
+      "inventory": 47,
+      "description": "Elf (LOTR)",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Ghost",
+      "price": 16070,
+      "inventory": 30,
+      "description": "Ghost",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "a tornado",
+      "price": 26630,
+      "inventory": 59,
+      "description": "a tornado",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Candy Wrapper",
+      "price": 20932,
+      "inventory": 56,
+      "description": "Candy Wrapper",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Puppy",
+      "price": 8886,
+      "inventory": 7,
+      "description": "Puppy",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "toaster",
+      "price": 1935,
+      "inventory": 41,
+      "description": "toaster",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Santa Claus",
+      "price": 8192,
+      "inventory": 28,
+      "description": "Santa Claus",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "The American Idol Judges Table",
+      "price": 1225,
+      "inventory": 27,
+      "description": "The American Idol Judges Table",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "ghastly",
+      "price": 18326,
+      "inventory": 63,
+      "description": "ghastly",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Serbian vacuum merchant",
+      "price": 21253,
+      "inventory": 94,
+      "description": "Serbian vacuum merchant",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Disco Dazzler",
+      "price": 25967,
+      "inventory": 21,
+      "description": "Disco Dazzler",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    },
+    {
+      "name": "Gatsby glasses",
+      "price": 16598,
+      "inventory": 19,
+      "description": "Gatsby glasses",
+      "tags": [{ "name": "men" }, { "name": "women" }]
+    }
+  ]
+}
