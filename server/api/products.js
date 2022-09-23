@@ -1,8 +1,7 @@
 const router = require('express').Router();
-
 const { Product, Tag } = require('../db');
 const { isAdmin, requireToken } = require('./gatekeepingMiddleware');
-
+const { Op } = require('sequelize');
 // get All products
 router.get('/', (req, res, next) => {
   return Product.findAll()
@@ -30,11 +29,21 @@ router.get('/price/:price', (req, res, next) => {
 router.get('/tag/:tag', async (req, res, next) => {
   console.log(req.params.tag);
   try {
-    const productList = await Tag.findOne({
-      where: { name: req.params.tag },
-      include: { model: Product },
+    const productList = await Product.findAll({
+      include: {
+        model: Tag,
+        where: {
+          name: ['girl'],
+        },
+      },
     });
+
     res.send(productList);
+    // const productList = await Tag.findOne({
+    //   where: { name: req.params.tag },
+    //   include: { model: Product },
+    // });
+    // res.send(productList);
   } catch (error) {
     next(error);
   }
