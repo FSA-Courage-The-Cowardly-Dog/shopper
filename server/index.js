@@ -10,7 +10,7 @@ async function init() {
   }
 
   app.listen(port, () =>
-    console.log(`listening on http://localhost:${port}\n`)
+    console.log(`listening on http://localhost:${port}/\n`)
   );
 }
 
