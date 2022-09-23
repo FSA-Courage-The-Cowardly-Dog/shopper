@@ -43,7 +43,7 @@ const Checkout = () => {
                         })}
                     </tbody>
                 </table>
-                <div>Total: (sum up subtotals)</div>
+                <div>Total: {cart.lineItems.reduce((previous, current) => previous.product.price*previous.quantity + current.product.price*current.quantity)}</div>
                 <div className="order-address">
                     Shipping Address: (input for user address here; cannot purchase if address blank)
                 </div>
