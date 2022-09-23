@@ -4,8 +4,8 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const Order = require('./Order')
 const LineItem = require('./LineItem');
-const jwtStr = process.env.JWT;
-const saltRounds = Number(process.env.SALT);
+const jwtStr = process.env.JWT || 'courage';
+const saltRounds = Number(process.env.SALT || 9);
 
 const User = conn.define('user', {
   username: {
