@@ -36,18 +36,15 @@ const Checkout = () => {
         }
     },[isLoaded])
 
-    // make clickHandler for 'Purchase' button
-    // dispatch a thunk to call user.checkout()
-    // then, redirect to an order confirmation page
-    // something to think about: may want to move unitPrice into LineItem model
-    // - otherwise, if product price changed at a later date order history wouldn't reflect accurate prices paid
     const handlePurchase = () => {
         if (address !== cart.address) {
             dispatch(attemptUpdateOrderAddress(address))
         }
-        // change below to just total when product model changed.
-        dispatch(attemptCheckout(total));
-        navigate('/account/orderhistory')
+        async function checkout () {
+            await dispatch(attemptCheckout(total));
+            navigate('/account/orderhistory')
+        }
+        checkout();
     }
 
     const checkDisabled = () => {
@@ -86,7 +83,6 @@ const Checkout = () => {
                         })}
                     </tbody>
                 </table>
-                {/* <div>Total: {cart.lineItems.reduce((previous, current) => (previous.product.price * previous.quantity) + (current.product.price * current.quantity),0)}</div> */}
                 <div>Total: {total/100}</div>
                 <div className="order-address">
                     Shipping Address: <input id="order-address" name="address" type='text' value={address} onChange={handleChange}/>

@@ -19,6 +19,7 @@ import Welcome from './components/Welcome';
 import Category from './components/Category';
 import { attemptTokenLogin } from './store/userSlice';
 import './styling/Mainpage.css'
+import OrderConfirmationPage from './components/OrderConfirmationPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -42,6 +43,7 @@ function App() {
         <Route index element={<Welcome />} />
 		    <Route path="/cart" element={<Cart/>}/>
         <Route path="/cart/checkout" element={<Checkout/>}/>
+        <Route path="/cart/orderconfirmation" element={<OrderConfirmationPage/>}/>
 		    <Route path="/singleproduct/:id" element={<SingleProduct />}/>
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/account" element={<AccountPage />} />

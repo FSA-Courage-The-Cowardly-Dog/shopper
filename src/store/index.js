@@ -4,12 +4,14 @@ import userReducer from './userSlice';
 import allUsersReducer from './allUsersSlice';
 import productReducer from './productSlice';
 import cartReducer from './cartSlice'
+import orderHistoryReducer from './orderHistorySlice'
 export default configureStore({
   reducer: {
     user: userReducer,
     product: productReducer,
     allUsers: allUsersReducer,
     cart: cartReducer,
+    orderHistory: orderHistoryReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(loggerMiddleware),
