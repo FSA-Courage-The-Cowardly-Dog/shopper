@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { Product } = require('../db');
+const { Product, Tag } = require('../db');
 const { isAdmin, requireToken } = require('./gatekeepingMiddleware');
 
 // get All products
@@ -27,16 +27,17 @@ router.get('/price/:price', (req, res, next) => {
 });
 
 // get product by tag
-router.get('/tag/:tag', (req, res, next) => {
-  return Product.findAll({
-    where: {
-      tags: {
-        $contains: [req.params.tag],
-      },
-    },
-  })
-    .then((product) => res.json(product))
-    .catch(next);
+router.get('/tag/:tag', async (req, res, next) => {
+  console.log(req.params.tag);
+  try {
+    const productList = await Tag.findOne({
+      where: { name: req.params.tag },
+      include: { model: Product },
+    });
+    res.send(productList);
+  } catch (error) {
+    next(error);
+  }
 });
 
 //create new product

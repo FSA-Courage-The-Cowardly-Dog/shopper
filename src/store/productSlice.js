@@ -106,3 +106,14 @@ export const attemptUnmountSingleProduct = () => (dispatch) => {
     dispatch(unsetSingleProduct());
   } catch (err) {}
 };
+
+export const attemptGetTagList = (tag) => async (dispatch) => {
+  try {
+    const { data: tagobj } = await axios.get(`/api/products/tag/${tag}`);
+    console.log(tagobj);
+    console.log(tagobj);
+    dispatch(getProductList(tagobj.products));
+  } catch (error) {
+    return error;
+  }
+};
