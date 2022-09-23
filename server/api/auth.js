@@ -29,6 +29,27 @@ router.get('/usercart', async (req, res, next) => {
   }
 })
 
+router.put('/usercart', async (req, res, next) => {
+  try {
+    const user = await User.byToken(req.headers.authorization);
+    const cart = await user.getCart()
+    await cart.update(req.body)
+    res.send(cart)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.put('/usercart/checkout', async (req, res, next) => {
+  try {
+    const user = await User.byToken(req.headers.authorization);
+    const order = await user.createOrder()
+    res.send(order)
+  } catch (err) {
+    next(err)
+  }
+})
+
 router.post('/usercart', async (req, res, next) => {
   try {
     const user = await User.byToken(req.headers.authorization);
