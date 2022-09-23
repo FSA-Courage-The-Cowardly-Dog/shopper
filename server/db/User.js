@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const Order = require('./Order')
 const LineItem = require('./LineItem');
+const Product = require('./Product');
 const jwtStr = process.env.JWT;
 const saltRounds = Number(process.env.SALT);
 
@@ -112,6 +113,9 @@ User.prototype.getCart = async function () {
       status: 'ACTIVE'
     }, include: {
       model: LineItem,
+      include: {
+        model: Product
+      }
     }, order: [
       [{model: LineItem},'id','asc']
     ]
