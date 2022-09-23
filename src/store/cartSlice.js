@@ -99,11 +99,11 @@ export const attemptUpdateOrderAddress = (address) => async (dispatch) => {
     );
     dispatch(updateAddress(userCart))
 }
-export const attemptCheckout = () => async (dispatch) => {
+export const attemptCheckout = (total) => async (dispatch) => {
     const token = window.localStorage.getItem('token');
     const { data: order } = await axios.put(
         `/api/auth/usercart/checkout`,
-        {}, 
+        {total}, 
         {
             headers: {
             authorization: token,

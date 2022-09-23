@@ -45,7 +45,7 @@ const Checkout = () => {
         if (address !== cart.address) {
             dispatch(attemptUpdateOrderAddress(address))
         }
-        dispatch(attemptCheckout());
+        dispatch(attemptCheckout(total));
         navigate('/account/orderhistory')
     }
 

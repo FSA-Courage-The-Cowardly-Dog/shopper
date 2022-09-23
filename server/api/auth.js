@@ -44,6 +44,7 @@ router.put('/usercart/checkout', async (req, res, next) => {
   try {
     const user = await User.byToken(req.headers.authorization);
     const order = await user.createOrder()
+    await order.update({checkoutPrice: req.body.total})
     res.send(order)
   } catch (err) {
     next(err)
