@@ -46,7 +46,7 @@ const Checkout = () => {
             dispatch(attemptUpdateOrderAddress(address))
         }
         // change below to just total when product model changed.
-        dispatch(attemptCheckout(Math.floor(total*100)));
+        dispatch(attemptCheckout(total));
         navigate('/account/orderhistory')
     }
 
