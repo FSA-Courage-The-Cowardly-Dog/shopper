@@ -1,7 +1,9 @@
 const Sequelize = require('sequelize');
 const dbName = 'shopper';
 
-const config = {};
+const config = {
+  dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
+};
 
 if (process.env.QUIET) {
   config.logging = false;
