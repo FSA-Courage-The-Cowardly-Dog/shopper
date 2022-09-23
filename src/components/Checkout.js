@@ -78,16 +78,16 @@ const Checkout = () => {
                             return(
                                 <tr key={idx}>
                                     <td>{lineItem.product.name}</td>
-                                    <td>{lineItem.product.price}</td>
+                                    <td>{lineItem.product.price/100}</td>
                                     <td>{lineItem.quantity}</td>
-                                    <td>{lineItem.quantity*lineItem.product.price}</td>
+                                    <td>{lineItem.quantity*lineItem.product.price/100}</td>
                                 </tr>
                             )
                         })}
                     </tbody>
                 </table>
                 {/* <div>Total: {cart.lineItems.reduce((previous, current) => (previous.product.price * previous.quantity) + (current.product.price * current.quantity),0)}</div> */}
-                <div>Total: {total}</div>
+                <div>Total: {total/100}</div>
                 <div className="order-address">
                     Shipping Address: <input id="order-address" name="address" type='text' value={address} onChange={handleChange}/>
                 </div>

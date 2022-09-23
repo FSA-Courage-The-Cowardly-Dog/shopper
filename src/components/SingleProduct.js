@@ -47,7 +47,7 @@ function SingleProduct() {
         <h2>{product.name}</h2>
          <div className="infoBlock">
             <div className="productPrice">
-               <h3>{product.price}</h3>
+               <h3>${product.price/100}</h3>
             </div>
          </div>
     </div>

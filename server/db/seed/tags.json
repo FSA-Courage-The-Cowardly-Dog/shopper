@@ -6,8 +6,8 @@
     { "name": "boy" },
     { "name": "women" },
     { "name": "men" },
-    { "name": "toy story" },
-    { "name": "baby"},
-    {"name": "toddler" }
+    { "name": "baby" },
+    { "name": "toddler" },
+    { "name": "toy story" }
   ]
 }
