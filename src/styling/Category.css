@@ -1,0 +1,31 @@
+.displayCostumes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 7%;
+}
+
+.costume {
+    height: 300px;
+    width: 200px;
+    align-content: space-between;
+    padding: 20px;
+    border: 5px solid white;
+    text-decoration: none;
+}
+
+.image {
+    width: 100%;
+    height: 225px;
+    display: block;
+    margin: 0;
+}
+
+.costumeName {
+    color: black;
+    margin-bottom: 8%;
+}
+
+.costumePrice {
+    color: orange;
+}
