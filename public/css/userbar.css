@@ -3,8 +3,8 @@
 header {
     background-color: gray;
     height: 80px;
-    display: flex;
-    justify-content: flex-end;
+    width: 100%;
+    position: relative;
 }
 /* temp styling for nav bar links for now */
 .temp-link {
@@ -29,6 +29,8 @@ header {
 #login-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+
 }
 .login-line {
     display: flex;
