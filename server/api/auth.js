@@ -19,6 +19,16 @@ router.post('/', async (req, res, next) => {
   }
 });
 
+router.get('/orderhistory', async (req, res, next) => {
+  try {
+    const user = await User.byToken(req.headers.authorization);
+    const orders = await user.getOrderHistory();
+    res.send(orders)
+  } catch (err) {
+    next(err)
+  }
+})
+
 router.get('/usercart', async (req, res, next) => {
   try {
     const user = await User.byToken(req.headers.authorization);

@@ -2,6 +2,7 @@
 @import "accountform.css";
 @import "admin/index.css";
 @import "cart.css";
+@import "orderhistory.css";
 
 * {
     margin: 0
