@@ -13,7 +13,7 @@ function Welcome() {
 
 	return (
 			<div className="categorySection">
-				<h1>Halloween Costumes</h1>
+				<h1 className="maintitle">Costume Categories</h1>
 
 				 <section className="categories">
 					<Link to='/men' className="category" title="Mens Costumes">
