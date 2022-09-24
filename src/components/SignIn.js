@@ -32,11 +32,15 @@ const SignIn = () => {
   };
 
   return (
+   
+  <div className="signinContainer">
+
     <form  id="login-form" onSubmit={handleSubmit}>
+    <h1 className='signinTitle'>SIGN IN</h1>
       <div className="login-line">
-        <label htmlFor="username">Username: </label>
         <input
           className="login-input"
+          placeholder='Email or Username'
           name="username"
           value={state.username}
           autoComplete="userName"
@@ -44,8 +48,8 @@ const SignIn = () => {
         />
       </div>
       <div className="login-line">
-        <label htmlFor="password">Password: </label>
         <input
+        placeholder='Password'
           className="login-input"
           name="password"
           type="password"
@@ -54,13 +58,14 @@ const SignIn = () => {
           onChange={handleChange('password')}
         />
       </div>
-      <div className="login-line">
+      <div className="createAccount">
+        <button className='signinBtn' type="submit">Sign In</button>
         <Link to="/createaccount" className="create-account-link">
-          Create account?
+          <button className='accountBtn'>Create account?</button>
         </Link>
-        <button type="submit">Sign In</button>
       </div>
     </form>
+  </div>
   );
 };
 
