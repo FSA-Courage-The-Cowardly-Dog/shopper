@@ -7,10 +7,6 @@
     cursor: pointer;
 }
 
-.cart-display, .checkout-item-details {
-    color: white;
-}
-
 .cart-item-display {
     background-color: white;
     padding: 10px;

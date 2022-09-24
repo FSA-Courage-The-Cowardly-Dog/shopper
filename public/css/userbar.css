@@ -29,20 +29,63 @@ header {
 }
 
 /* SignIn component */
-#login-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: flex-end;
+
+.signinContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
 }
 .login-line {
-    display: flex;
-    flex-direction: row;
-    margin: .1em;
-    justify-content: space-between;
-    max-width: 200px;
+    height: 24px;
+    width: 270px;
+    padding: 30px;
+    margin-right: 270px;
 }
 .login-input {
-    max-width: 100px;
-    min-width: 50px;
+   height: 44px;
+   width: 550px;
+   border: 1px solid black;
+}
+.signinTitle {
+   text-align: center;
+   font: 34px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-weight: 300;
+}
+
+.createAccount {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+::placeholder {
+    color: black;
+}
+
+.signinBtn {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(255, 131, 0);
+    font: 18px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    border: none;
+}
+
+.signinBtn:hover {
+    border: 2px solid rgb(28, 27, 27);
+}
+
+.accountBtn {
+    height: 50px;
+    width: 100%;
+    margin-top: 8%;
+    background-color: rgb(255, 131, 0);
+    font: 18px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+}
+
+.accountBtn:hover {
+    border: 2px solid rgb(28, 27, 27);
 }
