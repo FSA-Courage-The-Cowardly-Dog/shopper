@@ -13,6 +13,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: 100px;
 }
 
 .container {
@@ -27,7 +29,6 @@
     width: 250px;
     align-content: space-between;
     padding: 20px;
-    border: 5px solid white;
     text-decoration: none;
     color: black;
 }
@@ -40,9 +41,14 @@
     height: 40px;
     padding: 0 8px;
     border-top: 1px solid #d0d1d5;
-    background: #e9e9e9;
+    background: rgb(255, 131, 0);
     box-sizing: border-box;
     text-decoration: none;
+    border-radius: 0px 0px 128px 128px;
+    border: none;
+    text-align: center;
+    font: 16px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
 }
 
 .image {
@@ -50,4 +56,102 @@
     height: 225px;
     display: block;
     margin: 0;
+    border-radius: 74px 74px 0px 0px;
+}
+
+.headerLogo {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 200px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    width: 100%;
+}
+
+.headerLeft {
+   display: flex;
+   flex-direction: row;
+   height: 150px;
+   width: 100%;
+}
+
+.headerRight {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10%;
+}
+
+.search {
+    color:rgb(255, 131, 0);
+    margin-top: 34px;
+    margin-right: 40px;
+}
+
+.temp-link {
+    display: flex;
+   justify-content: center;
+   height: 150px;
+}
+
+.searchBar {
+    margin-top: 30px;
+    background-color: #d0d1d5;
+    border-radius: 8px;
+    height: 35px;
+    width: 300%;
+    margin-left: 250%;
+}
+
+
+.carticon {
+    color: rgb(255, 131, 0);
+    margin-left: 90px;
+    margin-top: 30px;
+}
+
+.maintitle {
+    padding: 15px;
+    font: 28px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: .03rem;
+    text-transform: uppercase;
+    color: rgb(212, 208, 208);
+    text-align: center
+}
+
+.categorySection {
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/images4/Scary-Halloween-Background-1-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.temp {
+     margin-left: 200px;
+}
+
+.signIn {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    color: rgb(255, 131, 0);
+}
+
+.loginLink {
+    margin-left: 5px;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 40px;
+    font-weight: 200;
+    font: 16px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.accounticon {
+    margin-top: 30px;
+    margin-left: 25px;
+    color: rgb(255, 131, 0);
+
 }

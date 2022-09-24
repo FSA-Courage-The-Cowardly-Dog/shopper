@@ -19,6 +19,9 @@ function Category() {
   return (
 
     <div>
+      <div className="categoryHeader">
+        
+      </div>
       <section className='displayCostumes'>
       {products.map((product) => (
         <Link to={`/singleproduct/${product.id}`} className='costume'>

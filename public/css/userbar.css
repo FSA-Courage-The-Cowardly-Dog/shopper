@@ -1,17 +1,15 @@
 /* may later put inside a navbar component*/
 
 header {
-    background-color: gray;
-    height: 80px;
+    background-color: black;
+    opacity: 0.75;
+    height: 90px;
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 /* temp styling for nav bar links for now */
-.temp-link {
-    margin: 10px;
-}
 
 .welcome-user {
     display: flex;
@@ -20,9 +18,11 @@ header {
     align-items: flex-end;
     justify-content: space-between;
 }
+
 .username, .create-account-link {
     color: blue
 }
+
 .username:hover,.create-account-link:hover {
     color: white
 }
