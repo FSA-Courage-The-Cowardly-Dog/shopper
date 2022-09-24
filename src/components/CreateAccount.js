@@ -41,48 +41,53 @@ const CreateAccount = () => {
   return !user.id ? (
     <form id="create-account-container" onSubmit={handleSubmit}>
       <div id="create-account-form">
-        <h2>New Account Information</h2>
+        <h1 className='createAccounttitle'>Create New Account</h1>
         <div className="form-line">
-          <label htmlFor="username">Username: </label>
           <input
+          className='login-input'
+          placeholder='Username'
             type="text"
             value={form.username}
             onChange={handleChange('username')}
           />
         </div>
         <div className="form-line">
-          <label htmlFor="password">Password: </label>
           <input
+          className='login-input'
+          placeholder='Password'
             type="password"
             value={form.password}
             onChange={handleChange('password')}
           />
         </div>
         <div className="form-line">
-          <label htmlFor="email">Email: </label>
           <input
+          className='login-input'
+            placeholder='Email address'
             type="email"
             value={form.email}
             onChange={handleChange('email')}
           />
         </div>
         <div className="form-line">
-          <label htmlFor="firstName">First Name: </label>
           <input
+          className='login-input'
+          placeholder='First name'
             type="text"
             value={form.firstName}
             onChange={handleChange('firstName')}
           />
         </div>
         <div className="form-line">
-          <label htmlFor="lastName">Last Name: </label>
           <input
+          className='login-input'
+          placeholder='Last name'
             type="text"
             value={form.lastName}
             onChange={handleChange('lastName')}
           />
         </div>
-        <button type="submit" disabled={checkDisabled()}>
+        <button className='createAccountBtn' type="submit" disabled={checkDisabled()}>
           Create Account
         </button>
       </div>
