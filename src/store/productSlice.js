@@ -76,30 +76,32 @@ export const attemptCreateNewProduct =
     }
   };
 export const attemptUpdateProduct =
-  (productDetails, productId, user) => async (dispatch) => {
+  (productDetails, productId, newTag) => async (dispatch) => {
     try {
-      if (!user.isAdmin) {
-        throw new Error(
-          'Unauthorized access: do not have permission to add new products'
-        );
-      }
+      const token = window.localStorage.getItem('token');
       const { data: singleProduct } = await axios.put(
         `/api/products/${productId}`,
-        { ...productDetails }
+        { productDetails, newTag },
+        {
+          headers: {
+            authorization: token,
+          },
+        }
       );
       dispatch(updateProduct(singleProduct));
     } catch (err) {
       return err;
     }
   };
-export const attemptDeleteProduct = (productId, user) => async (dispatch) => {
+export const attemptDeleteProduct = (productId) => async (dispatch) => {
   try {
-    if (!user.isAdmin) {
-      throw new Error(
-        'Unauthorized access: do not have permission to add new products'
-      );
-    }
-    await axios.delete(`/api/products/${productId}`);
+    const token = window.localStorage.getItem('token');
+    await axios.delete(`/api/products/${productId}`,
+      {
+        headers: {
+          authorization: token,
+        },
+      });
     dispatch(attemptGetProductList());
   } catch (err) {
     return err;

@@ -5,7 +5,7 @@ const { isAdmin, requireToken } = require('./gatekeepingMiddleware');
 
 // get All products
 router.get('/', (req, res, next) => {
-  return Product.findAll()
+  return Product.findAll({order: [['id','asc']], include: {model: Tag}})
     .then((product) => {
       res.json(product);
       return null;
@@ -63,13 +63,13 @@ router.post('/add-product', requireToken, isAdmin, async (req, res, next) => {
 
 // get single product
 router.get('/:id', (req, res, next) => {
-  return Product.findByPk(req.params.id)
+  return Product.findByPk(req.params.id, {include: {model: Tag}})
     .then((product) => res.json(product))
     .catch(next);
 });
 
 // delete product
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', requireToken, isAdmin, (req, res, next) => {
   return Product.findByPk(req.params.id)
     .then((product) => {
       if (product) {
@@ -82,13 +82,18 @@ router.delete('/:id', (req, res, next) => {
 });
 
 // edit product
-router.put('/:id', (req, res, next) => {
-  return Product.update(req.body, {
-    where: {
-      id: req.params.id,
-    },
-    returning: true,
-  }).catch(next);
+router.put('/:id', requireToken, isAdmin, async (req, res, next) => {
+  try {
+    const product = await Product.findByPk(req.params.id, {include: {model: Tag}});
+    await product.update(req.body.productDetails);
+    if (req.body.newTag.length) {
+      const newTag = await Tag.findOne({where: {name: req.body.newTag}})
+      await product.addTag(newTag);
+    }
+    res.send(product)
+  } catch (error){
+    next(error)
+  }
 });
 
 module.exports = router;
