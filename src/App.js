@@ -14,6 +14,7 @@ import EditAccountPage from './components/EditAccountPage';
 import OrderHistory from './components/OrderHistory';
 import SingleProduct from './components/SingleProduct';
 // import "./App.css";
+import SignIn from './components/SignIn';
 import Userbar from './components/Userbar';
 import Header from './components/Header';
 import Welcome from './components/Welcome';
@@ -50,6 +51,7 @@ function App() {
         <Route path="/adminportal" element={<AdminPortal />} />
         <Route path="/adminportal/allusers" element={<AllUsersAdminView />} />
         <Route path="/adminportal/addproduct" element={<AddNewProduct />} />
+        <Route path="/signin" element={<SignIn />} />
 		<Route path="/:categories" element={<Category />} />
         <Route
           path="/adminportal/allproducts"

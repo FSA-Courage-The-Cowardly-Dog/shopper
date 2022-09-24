@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { logoutUser } from '../store/userSlice';
-import SignIn from './SignIn';
+import '../styling/Mainpage.css'
 
 const Userbar = () => {
   const user = useSelector((state) => state.user);
@@ -27,7 +27,10 @@ const Userbar = () => {
       </button>
     </div>
   ) : (
-    <SignIn />
+    'hu'
+    // <Link className='signIn' to='/signin'>
+    //   <p className='loginLink'>Sign In</p>
+    //   </Link>
   );
 };
 
