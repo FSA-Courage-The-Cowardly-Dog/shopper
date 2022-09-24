@@ -30,6 +30,10 @@ const productSlice = createSlice({
       state.category = action.payload.categories;
       return state;
     },
+    getTagsList: (state, action) => {
+      state.tagsList = action.payload;
+      return state;
+    },
   },
 });
 export default productSlice.reducer;
@@ -40,6 +44,7 @@ export const {
   unsetSingleProduct,
   updateProduct,
   setPageinfo,
+  getTagsList,
 } = productSlice.actions;
 export const attemptGetProductList = () => async (dispatch) => {
   try {
@@ -60,12 +65,12 @@ export const attemptGetSingleProduct = (productId) => async (dispatch) => {
   }
 };
 export const attemptCreateNewProduct =
-  (productDetails, user) => async (dispatch) => {
+  (productDetails, tag) => async (dispatch) => {
     try {
       const token = window.localStorage.getItem('token');
       const { data: singleProduct } = await axios.post(
         '/api/products/add-product',
-        productDetails,
+        { productDetails, tag },
         {
           headers: {
             authorization: token,
@@ -78,30 +83,67 @@ export const attemptCreateNewProduct =
     }
   };
 export const attemptUpdateProduct =
-  (productDetails, productId, user) => async (dispatch) => {
+  (productDetails, productId, newTag) => async (dispatch) => {
     try {
-      if (!user.isAdmin) {
-        throw new Error(
-          'Unauthorized access: do not have permission to add new products'
-        );
-      }
+      const token = window.localStorage.getItem('token');
       const { data: singleProduct } = await axios.put(
         `/api/products/${productId}`,
-        { ...productDetails }
+        { action: 'update-product-details', productDetails, newTag },
+        {
+          headers: {
+            authorization: token,
+          },
+        }
       );
       dispatch(updateProduct(singleProduct));
     } catch (err) {
       return err;
     }
   };
-export const attemptDeleteProduct = (productId, user) => async (dispatch) => {
-  try {
-    if (!user.isAdmin) {
-      throw new Error(
-        'Unauthorized access: do not have permission to add new products'
+export const attemptRemoveTagFromProduct =
+  (productId, tagName) => async (dispatch) => {
+    try {
+      const token = window.localStorage.getItem('token');
+      const { data: singleProduct } = await axios.put(
+        `/api/products/${productId}`,
+        { action: 'remove-tag', tagName },
+        {
+          headers: {
+            authorization: token,
+          },
+        }
       );
+      dispatch(updateProduct(singleProduct));
+    } catch (err) {
+      return err;
     }
-    await axios.delete(`/api/products/${productId}`);
+  };
+export const attemptChangeProductTag =
+  (productId, prevName, newName) => async (dispatch) => {
+    try {
+      const token = window.localStorage.getItem('token');
+      const { data: singleProduct } = await axios.put(
+        `/api/products/${productId}`,
+        { action: 'change-tag', prevName, newName },
+        {
+          headers: {
+            authorization: token,
+          },
+        }
+      );
+      dispatch(updateProduct(singleProduct));
+    } catch (err) {
+      return err;
+    }
+  };
+export const attemptDeleteProduct = (productId) => async (dispatch) => {
+  try {
+    const token = window.localStorage.getItem('token');
+    await axios.delete(`/api/products/${productId}`, {
+      headers: {
+        authorization: token,
+      },
+    });
     dispatch(attemptGetProductList());
   } catch (err) {
     return err;
@@ -127,6 +169,15 @@ export const attemptGetTagList = (params) => async (dispatch) => {
         category: params.categories,
       })
     );
+  } catch (error) {
+    return error;
+  }
+};
+
+export const attemptGetAllTags = () => async (dispatch) => {
+  try {
+    const { data: tags } = await axios.get('/api/products/tags');
+    dispatch(getTagsList(tags));
   } catch (error) {
     return error;
   }

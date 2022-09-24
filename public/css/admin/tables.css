@@ -1,5 +1,10 @@
 table, th, td {
+    color: white;
     border: 1px solid;
+}
+
+#all-products-table, #all-users-table {
+    margin-top: 50px;
 }
 
 td {
