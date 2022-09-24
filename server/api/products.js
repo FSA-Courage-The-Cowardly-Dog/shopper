@@ -28,7 +28,6 @@ router.get('/price/:price', (req, res, next) => {
 
 // get product by tag
 router.get('/tag/:tag', async (req, res, next) => {
-  console.log(req.params.tag);
   try {
     const productList = await Tag.findOne({
       where: { name: req.params.tag },
@@ -40,12 +39,26 @@ router.get('/tag/:tag', async (req, res, next) => {
   }
 });
 
+// get list of all tags
+router.get('/tags', async (req, res, next) => {
+  try {
+    const tagsList = await Tag.findAll();
+    res.send(tagsList)
+  } catch (error) {
+    next(error)
+  }
+})
+
 //create new product
-router.post('/add-product', requireToken, isAdmin, (req, res, next) => {
-  console.log('papi', req.user.isAdmin);
-  return Product.create(req.body)
-    .then((product) => res.status(201).send(product))
-    .catch(next);
+router.post('/add-product', requireToken, isAdmin, async (req, res, next) => {
+  try {
+    const product = await Product.create(req.body.productDetails)
+    const tag = await Tag.findOne({where: {name: req.body.tag}})
+    await product.addTag(tag);
+    res.send(product)
+  } catch (error){
+    next(error)
+  }
 });
 
 // get single product

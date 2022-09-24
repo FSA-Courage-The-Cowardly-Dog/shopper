@@ -24,6 +24,10 @@ const productSlice = createSlice({
       state.singleProduct = action.payload;
       return state;
     },
+    getTagsList: (state, action) => {
+      state.tagsList = action.payload;
+      return state;
+    }
   },
 });
 export default productSlice.reducer;
@@ -33,6 +37,7 @@ export const {
   createNewProduct,
   unsetSingleProduct,
   updateProduct,
+  getTagsList
 } = productSlice.actions;
 export const attemptGetProductList = () => async (dispatch) => {
   try {
@@ -53,12 +58,12 @@ export const attemptGetSingleProduct = (productId) => async (dispatch) => {
   }
 };
 export const attemptCreateNewProduct =
-  (productDetails, user) => async (dispatch) => {
+  (productDetails, tag) => async (dispatch) => {
     try {
       const token = window.localStorage.getItem('token');
       const { data: singleProduct } = await axios.post(
         '/api/products/add-product',
-        productDetails,
+        {productDetails, tag},
         {
           headers: {
             authorization: token,
@@ -110,10 +115,17 @@ export const attemptUnmountSingleProduct = () => (dispatch) => {
 export const attemptGetTagList = (tag) => async (dispatch) => {
   try {
     const { data: tagobj } = await axios.get(`/api/products/tag/${tag}`);
-    console.log(tagobj);
-    console.log(tagobj);
     dispatch(getProductList(tagobj.products));
   } catch (error) {
     return error;
   }
 };
+
+export const attemptGetAllTags = () => async (dispatch) => {
+  try {
+    const { data: tags } = await axios.get('/api/products/tags');
+    dispatch(getTagsList(tags))
+  } catch (error) {
+    return error
+  }
+}
