@@ -55,7 +55,8 @@ router.post('/add-product', requireToken, isAdmin, async (req, res, next) => {
     const product = await Product.create(req.body.productDetails)
     const tag = await Tag.findOne({where: {name: req.body.tag}})
     await product.addTag(tag);
-    res.send(product)
+    const updated = await Product.findByPk(product.id, {include: {model: Tag}})
+    res.send(updated)
   } catch (error){
     next(error)
   }
