@@ -15,6 +15,8 @@ const AdminPortal = () => {
 
   return (
     <div id="admin-links">
+      <h1>Welcome back to the Admin Portal</h1>
+      <h3>Use below links to perform admin functions</h3>
       <div id="all-users">
         <Link to="/adminportal/allusers">All Users Table</Link>
       </div>

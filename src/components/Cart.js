@@ -77,7 +77,7 @@ const Cart = () => {
                             {cart.lineItems.map((lineItem,idx) => {
                                 return(
                                     <li key={idx}>
-                                        <span><Link to={`/singleproduct/${lineItem.productId}`}>{lineItem.product.name}</Link>, Unit Price: {lineItem.product.price/100}, Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/></span>
+                                        <span><Link to={`/singleproduct/${lineItem.productId}`}>{lineItem.product.name}</Link>, Unit Price: ${(lineItem.product.price/100).toFixed(2)}, Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/></span>
                                         <button 
                                             className='delete-from-cart' 
                                             type='click'
@@ -104,7 +104,7 @@ const Cart = () => {
                                             Ideally, will only update cart quantity if user hits a 'save change' button
                                             Will look into adding that functionality later
                                         */}
-                                        <span><Link to={`/singleproduct/${pair[0]}`}>{pair[1].name}</Link>, Unit Price: {pair[1].price/100} Qty:  <input type='number' defaultValue={pair[1].qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/></span>
+                                        <span><Link to={`/singleproduct/${pair[0]}`}>{pair[1].name}</Link>, Unit Price: ${(pair[1].price/100).toFixed(2)} Qty:  <input type='number' defaultValue={pair[1].qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/></span>
                                         <button 
                                             className='delete-from-cart' 
                                             type='click' 

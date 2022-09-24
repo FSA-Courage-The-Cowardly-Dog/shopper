@@ -22,16 +22,19 @@ import Category from './components/Category';
 import { attemptTokenLogin } from './store/userSlice';
 import './styling/Mainpage.css'
 import OrderConfirmationPage from './components/OrderConfirmationPage';
+import { attemptGetAllTags } from './store/productSlice';
 
 function App() {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
     dispatch(attemptTokenLogin());
-	const localCart = JSON.parse(window.localStorage.getItem('cart'));
-	if (!localCart) {
-		window.localStorage.setItem('cart',JSON.stringify({}))
-	}
+    //loading tags here so only have to do once
+    dispatch(attemptGetAllTags());
+    const localCart = JSON.parse(window.localStorage.getItem('cart'));
+    if (!localCart) {
+      window.localStorage.setItem('cart',JSON.stringify({}))
+    }
   }, [dispatch]);
 
   return (

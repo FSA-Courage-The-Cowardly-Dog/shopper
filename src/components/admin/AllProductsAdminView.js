@@ -10,6 +10,8 @@ const AllProductsAdminView = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
+    // refactor below to check token, get user by token, and check isAdmin status that way
+    // user state doesn't load automatically, so refreshing page auto-navigates to home
     if (!user.isAdmin) {
       navigate('/');
     }
@@ -17,6 +19,7 @@ const AllProductsAdminView = () => {
   }, []);
 
   // want to add pagination functionality
+  // may also want ability to filter products displayed by tag
   return products ? (
     <div id="all-products-table-container">
       <table id="all-products-table">
@@ -41,11 +44,11 @@ const AllProductsAdminView = () => {
                   </Link>
                 </td>
                 <td>{product.name}</td>
-                <td>{product.price}</td>
+                <td>{(product.price/100).toFixed(2)}</td>
                 <td>{product.inventory}</td>
                 <td className="product-imgUrl">{product.img}</td>
                 <td className="product-desc">{product.description}</td>
-                <td>(Placeholder)</td>
+                <td>{product.tags.length ? product.tags.map(tag => tag.name.toUpperCase()).join(', ') : 'NO TAG'}</td>
               </tr>
             );
           })}

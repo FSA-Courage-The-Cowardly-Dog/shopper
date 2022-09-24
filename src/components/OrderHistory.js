@@ -41,7 +41,7 @@ const OrderHistory = () => {
                 })}  
                 </tbody>
               </table>
-              <div className='order-total'>{`Total: $${order.checkoutPrice/100}`}</div>
+              <div className='order-total'>{`Total: $${((order.checkoutPrice)/100).toFixed(2)}`}</div>
             </div>
           )
         })}
