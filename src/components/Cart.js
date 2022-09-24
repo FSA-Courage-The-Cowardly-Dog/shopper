@@ -77,13 +77,27 @@ const Cart = () => {
                             {cart.lineItems.map((lineItem,idx) => {
                                 return(
                                     <li key={idx}>
-                                        <span><Link to={`/singleproduct/${lineItem.productId}`}>{lineItem.product.name}</Link>, Unit Price: ${(lineItem.product.price/100).toFixed(2)}, Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/></span>
-                                        <button 
-                                            className='delete-from-cart' 
-                                            type='click'
-                                            onClick={() => removeFromUserCart(lineItem.id)}>
-                                                X
-                                        </button>
+                                        <div className="cart-item-display">
+                                            <img src={lineItem.product.img} height='150px' width='150px'/>
+                                            <div className="cart-item-details">
+                                                <Link to={`/singleproduct/${lineItem.productId}`}>{lineItem.product.name}</Link>
+                                                <div>
+                                                    Unit Price: ${(lineItem.product.price/100).toFixed(2)}
+                                                </div>
+                                                <div>
+                                                    (PLACEHOLDER FOR SIZE)
+                                                </div>
+                                                <div>
+                                                    Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/>
+                                                </div>
+                                                <button 
+                                                    className='delete-from-cart' 
+                                                    type='click'
+                                                    onClick={() => removeFromUserCart(lineItem.id)}>
+                                                        Remove from cart
+                                                </button>
+                                            </div>
+                                        </div>
                                     </li>
                                 )
                             })}
@@ -100,17 +114,27 @@ const Cart = () => {
                             {Object.entries(cart).map((pair,idx) => {
                                 return(
                                     <li key={idx}>
-                                        {/* for now, can just update cart quantity whenever number is changed
-                                            Ideally, will only update cart quantity if user hits a 'save change' button
-                                            Will look into adding that functionality later
-                                        */}
-                                        <span><Link to={`/singleproduct/${pair[0]}`}>{pair[1].name}</Link>, Unit Price: ${(pair[1].price/100).toFixed(2)} Qty:  <input type='number' defaultValue={pair[1].qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/></span>
-                                        <button 
-                                            className='delete-from-cart' 
-                                            type='click' 
-                                            onClick={() => removeFromLocalCart(pair[0])}>
-                                                X
-                                        </button>
+                                        <div className="cart-item-display">
+                                            <img src={pair[1].img} height='150px' width='150px'/>
+                                            <div className="cart-item-details">  
+                                                <Link to={`/singleproduct/${pair[0]}`}>{pair[1].name}</Link>
+                                                <div>
+                                                    Unit Price: ${(pair[1].price/100).toFixed(2)}
+                                                </div>
+                                                <div>
+                                                    (PLACEHOLDER FOR SIZE)
+                                                </div>
+                                                <div>
+                                                    Qty:  <input type='number' defaultValue={pair[1].qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/>
+                                                </div>
+                                                <button 
+                                                    className='delete-from-cart' 
+                                                    type='click' 
+                                                    onClick={() => removeFromLocalCart(pair[0])}>
+                                                        Remove from cart
+                                                </button>
+                                            </div>
+                                        </div>
                                     </li>
                                 )
                             })}

@@ -26,7 +26,7 @@ function SingleProduct() {
       if (localCart[productId]) {
         localCart[productId].qty = Number(localCart[productId].qty) + Number(qty);
       } else {
-        localCart[productId] = {qty, name: product.name, price: product.price};
+        localCart[productId] = {qty, name: product.name, price: product.price, img: product.img};
       }
       window.localStorage.setItem('cart', JSON.stringify(localCart))
     }
@@ -41,7 +41,7 @@ function SingleProduct() {
   }
 
   return ( product ?
-    <div >
+    <div className='single-product-container'>
       <div className='prodInfoBlock'>
     <div className='productInfo'>
         <h2>{product.name}</h2>
