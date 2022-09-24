@@ -75,15 +75,15 @@ const Checkout = () => {
                             return(
                                 <tr key={idx}>
                                     <td>{lineItem.product.name}</td>
-                                    <td>{lineItem.product.price/100}</td>
+                                    <td>${(lineItem.product.price/100).toFixed(2)}</td>
                                     <td>{lineItem.quantity}</td>
-                                    <td>{lineItem.quantity*lineItem.product.price/100}</td>
+                                    <td>${(lineItem.quantity*lineItem.product.price/100).toFixed(2)}</td>
                                 </tr>
                             )
                         })}
                     </tbody>
                 </table>
-                <div>Total: {total/100}</div>
+                <div>Total: ${(total/100).toFixed(2)}</div>
                 <div className="order-address">
                     Shipping Address: <input id="order-address" name="address" type='text' value={address} onChange={handleChange}/>
                 </div>
