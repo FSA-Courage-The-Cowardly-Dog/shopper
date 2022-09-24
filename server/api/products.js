@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Product, Tag } = require('../db');
 const { isAdmin, requireToken } = require('./gatekeepingMiddleware');
-const { Op } = require('sequelize');
+// const { Op } = require('sequelize');
 // get All products
 router.get('/', (req, res, next) => {
   return Product.findAll()
@@ -27,8 +27,6 @@ router.get('/price/:price', (req, res, next) => {
 
 // get product by tag
 router.get('/:tag/:page', async (req, res, next) => {
-  console.log(req.params.tag);
-  console.log(req.params.page);
   try {
     const { count, rows } = await Product.findAndCountAll({
       include: {
@@ -37,7 +35,7 @@ router.get('/:tag/:page', async (req, res, next) => {
           name: [req.params.tag],
         },
       },
-      offset: 10,
+      offset: (req.params.page - 1) * 10,
       limit: 10,
     });
     res.send({ rows, count });

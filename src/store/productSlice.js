@@ -24,6 +24,12 @@ const productSlice = createSlice({
       state.singleProduct = action.payload;
       return state;
     },
+    setPageinfo: (state, action) => {
+      state.count = action.payload.count;
+      state.page = action.payload.page;
+      state.category = action.payload.categories;
+      return state;
+    },
   },
 });
 export default productSlice.reducer;
@@ -33,6 +39,7 @@ export const {
   createNewProduct,
   unsetSingleProduct,
   updateProduct,
+  setPageinfo,
 } = productSlice.actions;
 export const attemptGetProductList = () => async (dispatch) => {
   try {
@@ -112,8 +119,14 @@ export const attemptGetTagList = (params) => async (dispatch) => {
     const { data: tagobj } = await axios.get(
       `/api/products/${params.categories}/${params.page}`
     );
-    // tagobj.count = number of products that match out querry ie:263 men products
     dispatch(getProductList(tagobj.rows));
+    dispatch(
+      setPageinfo({
+        count: tagobj.count,
+        page: params.page,
+        category: params.categories,
+      })
+    );
   } catch (error) {
     return error;
   }
