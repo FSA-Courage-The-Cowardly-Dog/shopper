@@ -13,7 +13,10 @@ import CreateAccount from './components/CreateAccount';
 import EditAccountPage from './components/EditAccountPage';
 import OrderHistory from './components/OrderHistory';
 import SingleProduct from './components/SingleProduct';
+// import "./App.css";
+import SignIn from './components/SignIn';
 import Userbar from './components/Userbar';
+import Header from './components/Header';
 import Welcome from './components/Welcome';
 import Category from './components/Category';
 import { attemptTokenLogin } from './store/userSlice';
@@ -37,8 +40,7 @@ function App() {
   return (
     <div className="App">
       <header>
-		<Link to="/" className='temp-link'>Home</Link>
-		<Link to="/cart" className='temp-link'>Cart</Link>
+       < Header />
         <Userbar attemptTokenLogin={attemptTokenLogin} />
       </header>
       <Routes>
@@ -54,6 +56,7 @@ function App() {
         <Route path="/adminportal" element={<AdminPortal />} />
         <Route path="/adminportal/allusers" element={<AllUsersAdminView />} />
         <Route path="/adminportal/addproduct" element={<AddNewProduct />} />
+        <Route path="/signin" element={<SignIn />} />
 		<Route path="/:categories" element={<Category />} />
         <Route
           path="/adminportal/allproducts"

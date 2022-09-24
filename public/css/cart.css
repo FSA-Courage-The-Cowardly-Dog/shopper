@@ -8,3 +8,7 @@
 .delete-from-cart:hover {
     cursor: pointer;
 }
+
+.cart-display, .checkout-item-details {
+    color: white;
+}

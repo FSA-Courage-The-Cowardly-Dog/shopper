@@ -1,1 +1,10 @@
 @import "tables.css";
+
+#new-product-form {
+    color: white
+}
+
+#admin-links > div {
+    margin: 20px;
+    color: white;
+}

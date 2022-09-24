@@ -22,3 +22,6 @@
     margin: auto;
     margin-top: 10px;
 }
+.user-details, #edit-account-form {
+    color: white
+}
