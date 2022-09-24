@@ -17,8 +17,8 @@ function Category() {
 
   return (
     <div>
-      <PageNavigation />
       <section className="displayCostumes">
+        <PageNavigation />
         {products.map((product) => (
           <Link to={`/singleproduct/${product.id}`} className="costume">
             <img className="image" src={product.img} />

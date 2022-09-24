@@ -26,14 +26,21 @@ export default function PageNavigation({ navTo }) {
       }
     }
     pageNumbersTemp = pageNumbersTemp.filter(
-      (num) => (num > 0) & (num < numberOfPages)
+      (num) => (num > 0) & (num <= numberOfPages)
     );
     setPageNumbers(pageNumbersTemp);
   }, [count, page]);
 
   return (
     <div className="pageNav">
-      {pageNumbers[0] === currentPage ? (
+      {currentPage === 1 ? (
+        <></>
+      ) : (
+        <Link className="pageNavA" to={`../${categories}/1`}>
+          first
+        </Link>
+      )}
+      {pageNumbers[0] === currentPage || currentPage === 2 ? (
         <></>
       ) : (
         <Link className="pageNavA" to={`../${categories}/${currentPage - 1}`}>
@@ -57,6 +64,11 @@ export default function PageNavigation({ navTo }) {
         <></>
       ) : (
         <Link to={`../${categories}/${currentPage + 1}`}>next</Link>
+      )}
+      {pageNumbers[pageNumbers.length - 1] === numberOfPages ? (
+        <></>
+      ) : (
+        <Link to={`../${categories}/${numberOfPages}`}>last</Link>
       )}
     </div>
   );
