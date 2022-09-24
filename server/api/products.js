@@ -26,24 +26,21 @@ router.get('/price/:price', (req, res, next) => {
 });
 
 // get product by tag
-router.get('/tag/:tag', async (req, res, next) => {
+router.get('/:tag/:page', async (req, res, next) => {
   console.log(req.params.tag);
+  console.log(req.params.page);
   try {
-    const productList = await Product.findAll({
+    const { count, rows } = await Product.findAndCountAll({
       include: {
         model: Tag,
         where: {
-          name: ['girl'],
+          name: [req.params.tag],
         },
       },
+      offset: 10,
+      limit: 10,
     });
-
-    res.send(productList);
-    // const productList = await Tag.findOne({
-    //   where: { name: req.params.tag },
-    //   include: { model: Product },
-    // });
-    // res.send(productList);
+    res.send({ rows, count });
   } catch (error) {
     next(error);
   }

@@ -7,9 +7,8 @@ function Category() {
   const dispatch = useDispatch();
   const params = useParams();
   console.log(params);
-
   React.useEffect(() => {
-    dispatch(attemptGetTagList(params.categories));
+    dispatch(attemptGetTagList(params));
   }, []);
 
   const products = useSelector((state) => state.product.productList);

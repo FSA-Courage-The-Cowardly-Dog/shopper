@@ -107,12 +107,13 @@ export const attemptUnmountSingleProduct = () => (dispatch) => {
   } catch (err) {}
 };
 
-export const attemptGetTagList = (tag) => async (dispatch) => {
+export const attemptGetTagList = (params) => async (dispatch) => {
   try {
-    const { data: tagobj } = await axios.get(`/api/products/tag/${tag}`);
-    console.log('>>>>>>>>>>>>>>>>>>');
-    console.log(tagobj);
-    // dispatch(getProductList(tagobj.products));
+    const { data: tagobj } = await axios.get(
+      `/api/products/${params.categories}/${params.page}`
+    );
+    // tagobj.count = number of products that match out querry ie:263 men products
+    dispatch(getProductList(tagobj.rows));
   } catch (error) {
     return error;
   }
