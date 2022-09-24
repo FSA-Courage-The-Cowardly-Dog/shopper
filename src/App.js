@@ -21,16 +21,20 @@ import Welcome from './components/Welcome';
 import Category from './components/Category';
 import { attemptTokenLogin } from './store/userSlice';
 import './styling/Mainpage.css'
+import OrderConfirmationPage from './components/OrderConfirmationPage';
+import { attemptGetAllTags } from './store/productSlice';
 
 function App() {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
     dispatch(attemptTokenLogin());
-	const localCart = JSON.parse(window.localStorage.getItem('cart'));
-	if (!localCart) {
-		window.localStorage.setItem('cart',JSON.stringify({}))
-	}
+    //loading tags here so only have to do once
+    dispatch(attemptGetAllTags());
+    const localCart = JSON.parse(window.localStorage.getItem('cart'));
+    if (!localCart) {
+      window.localStorage.setItem('cart',JSON.stringify({}))
+    }
   }, [dispatch]);
 
   return (
@@ -43,6 +47,7 @@ function App() {
         <Route index element={<Welcome />} />
 		    <Route path="/cart" element={<Cart/>}/>
         <Route path="/cart/checkout" element={<Checkout/>}/>
+        <Route path="/cart/orderconfirmation" element={<OrderConfirmationPage/>}/>
 		    <Route path="/singleproduct/:id" element={<SingleProduct />}/>
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/account" element={<AccountPage />} />

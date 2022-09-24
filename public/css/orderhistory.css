@@ -1,0 +1,26 @@
+.order-product-name {
+    width: 150px;
+    max-width: 300px;
+    text-align: center;
+}
+.order-quantity {
+    text-align: center;
+    width: 50px;
+}
+
+.order-history-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: white
+}
+
+.order-display-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+#order-history-header {
+    text-align: center;
+}

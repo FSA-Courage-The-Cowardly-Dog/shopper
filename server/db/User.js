@@ -106,6 +106,27 @@ User.authenticate = async ({ username, password }) => {
   throw error;
 };
 
+User.prototype.getOrderHistory = async function () {
+  const orders = await Order.findAll({
+    where: {
+      userId: this.id,
+      status: {
+        [Sequelize.Op.ne]: 'ACTIVE'
+      } 
+    }, 
+    order: [
+      ['id', 'desc']
+    ],
+    include: {
+      model: LineItem,
+      include: {
+        model: Product
+      }
+    }, 
+  })
+  return orders;
+}
+
 User.prototype.getCart = async function () {
   const [cart, created] = await Order.findOrCreate({
     where: {
