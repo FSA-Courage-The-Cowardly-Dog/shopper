@@ -10,6 +10,8 @@ const AllProductsAdminView = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
+    // refactor below to check token, get user by token, and check isAdmin status that way
+    // user state doesn't load automatically, so refreshing page auto-navigates to home
     if (!user.isAdmin) {
       navigate('/');
     }

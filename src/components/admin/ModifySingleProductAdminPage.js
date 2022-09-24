@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import {
+  attemptChangeProductTag,
   attemptDeleteProduct,
   attemptGetSingleProduct,
+  attemptRemoveTagFromProduct,
   attemptUnmountSingleProduct,
   attemptUpdateProduct,
 } from '../../store/productSlice';
@@ -66,6 +68,8 @@ const ModifySingleProductAdminPage = () => {
       description: form.description,
     };
     dispatch(attemptUpdateProduct(productDetails, params.id, newTag));
+    // window.location.reload(false)
+    // in order to refresh, need to refactor the !isAdmin check in useEffect
     // can either navigate back to allproducts, or display a message that product has been updated
   };
 
@@ -79,7 +83,14 @@ const ModifySingleProductAdminPage = () => {
   };
 
   const removeTagHandler = (name) => {
-    // dispatch method to attemptRemoveTag
+    dispatch(attemptRemoveTagFromProduct(params.id, name))
+    // works properly, but visually if deleting from middle of list funky;
+    // ideally want to force a page refresh on deletion; need to refactor the routing this first though
+  }
+
+  const changeTagHandler = (prevName, newName) => {
+    dispatch(attemptChangeProductTag(params.id, prevName, newName))
+    // updates appropriately
   }
 
   const handleDelete = () => {
@@ -143,7 +154,7 @@ const ModifySingleProductAdminPage = () => {
               <div key={idx} className="form-line">
                 <label htmlFor="categories">{`Category ${idx+1}`}</label>
                 <div>
-                  <select defaultValue={tag.name} className='tag-selector'>
+                  <select defaultValue={tag.name} className='tag-selector' onChange={(event) => changeTagHandler(tag.name, event.target.value)}>
                   {tags ? tags.map((tag,idx)=> <option key={idx}>{tag.name}</option>) : <></>}
                   </select>
                   {/* add remove tag handle method; write remove tag thunk */}

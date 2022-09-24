@@ -81,7 +81,7 @@ export const attemptUpdateProduct =
       const token = window.localStorage.getItem('token');
       const { data: singleProduct } = await axios.put(
         `/api/products/${productId}`,
-        { productDetails, newTag },
+        { action: 'update-product-details', productDetails, newTag },
         {
           headers: {
             authorization: token,
@@ -93,6 +93,40 @@ export const attemptUpdateProduct =
       return err;
     }
   };
+export const attemptRemoveTagFromProduct = (productId, tagName) => async (dispatch) => {
+  try {
+    const token = window.localStorage.getItem('token');
+    const { data: singleProduct } = await axios.put(
+      `/api/products/${productId}`,
+      { action: 'remove-tag', tagName },
+      {
+        headers: {
+          authorization: token,
+        },
+      }
+    );
+    dispatch(updateProduct(singleProduct));
+  } catch (err) {
+    return err;
+  }
+}
+export const attemptChangeProductTag = (productId, prevName, newName) => async (dispatch) => {
+  try {
+    const token = window.localStorage.getItem('token');
+    const { data: singleProduct } = await axios.put(
+      `/api/products/${productId}`,
+      { action: 'change-tag', prevName, newName },
+      {
+        headers: {
+          authorization: token,
+        },
+      }
+    );
+    dispatch(updateProduct(singleProduct));
+  } catch (err) {
+    return err;
+  }
+}
 export const attemptDeleteProduct = (productId) => async (dispatch) => {
   try {
     const token = window.localStorage.getItem('token');

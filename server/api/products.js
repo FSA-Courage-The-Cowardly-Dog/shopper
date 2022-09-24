@@ -85,12 +85,29 @@ router.delete('/:id', requireToken, isAdmin, (req, res, next) => {
 router.put('/:id', requireToken, isAdmin, async (req, res, next) => {
   try {
     const product = await Product.findByPk(req.params.id, {include: {model: Tag}});
-    await product.update(req.body.productDetails);
-    if (req.body.newTag.length) {
-      const newTag = await Tag.findOne({where: {name: req.body.newTag}})
-      await product.addTag(newTag);
+    if (req.body.action === 'remove-tag') {
+      const tag = await Tag.findOne({where: {name: req.body.tagName}})
+      await product.removeTag(tag)
+      const updated = await Product.findByPk(req.params.id, {include: {model: Tag}});
+      res.send(updated)
+    } else if (req.body.action === 'change-tag') {
+      const oldTag = await Tag.findOne({where: {name: req.body.prevName}})
+      const newTag = await Tag.findOne({where: {name: req.body.newName}})
+      await product.removeTag(oldTag)
+      await product.addTag(newTag)
+      const updated = await Product.findByPk(req.params.id, {include: {model: Tag}});
+      res.send(updated)
+    }else if (req.body.action === 'update-product-details') {
+      await product.update(req.body.productDetails);
+      if (req.body.newTag.length) {
+        const newTag = await Tag.findOne({where: {name: req.body.newTag}})
+        await product.addTag(newTag);
+        const updated = await Product.findByPk(req.params.id, {include: {model: Tag}});
+        res.send(updated)
+      }
+    } else {
+      res.send(product)
     }
-    res.send(product)
   } catch (error){
     next(error)
   }
