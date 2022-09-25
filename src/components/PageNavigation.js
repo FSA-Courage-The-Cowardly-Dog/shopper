@@ -70,6 +70,14 @@ export default function PageNavigation({ navTo }) {
       ) : (
         <Link to={`../${categories}/${numberOfPages}`}>last</Link>
       )}
+      <label>
+        items per page<input list="items" name="browser" id="browser"></input>
+      </label>
+      <datalist id="items">
+        <option>10</option>
+        <option>20</option>
+        <option>40</option>
+      </datalist>
     </div>
   );
 }
