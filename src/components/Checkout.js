@@ -44,7 +44,7 @@ const Checkout = () => {
         async function checkout () {
             await dispatch(attemptCheckout(total));
             navigate('/cart/orderconfirmation')
-            Toastify({text: "Order processed!", duration:2000 ,gravity: "bottom", position: "right", backgroundColor: "DogderBlue"}).showToast();
+            Toastify({text: "Order processed!", duration:2000 ,gravity: "bottom", position: "right", backgroundColor: "#ff8300"}).showToast();
         }
         checkout();
     }

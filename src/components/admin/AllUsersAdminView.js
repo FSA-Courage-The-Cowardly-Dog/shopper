@@ -23,7 +23,7 @@ const AllUsersAdminView = () => {
   }, [user.id]);
 
   // will likely want to add pagination functionality later when enough users
-  return (
+  return ( users.length ?
     <div id="all-users-table-container">
       <table id="all-users-table">
         <thead>
@@ -55,7 +55,11 @@ const AllUsersAdminView = () => {
         </tbody>
       </table>
       <Link to="/adminportal">Back to portal</Link>
+      
     </div>
+    
+    : <div>Loading...</div>
+    
   );
 };
 

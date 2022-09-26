@@ -13,7 +13,7 @@ const Userbar = () => {
   const logout = () => {
     dispatch(logoutUser());
     navigate('/');
-    Toastify({text: "Hope to see you again soon!", duration:2000 ,gravity: "top", position: "right", backgroundColor: "orange"}).showToast();
+    Toastify({text: "Hope to see you again soon!", duration:2000 ,gravity: "top", position: "right", backgroundColor: "#ff8300"}).showToast();
   };
 
   return user.id ? (

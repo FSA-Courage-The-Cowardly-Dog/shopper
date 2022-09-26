@@ -21,7 +21,7 @@ const AllProductsAdminView = () => {
 
   // want to add pagination functionality
   // may also want ability to filter products displayed by tag
-  return products ? (
+  return products.length ? (
     <div id="all-products-table-container">
       <table id="all-products-table">
         <thead>
@@ -58,7 +58,7 @@ const AllProductsAdminView = () => {
       <Link to="/adminportal">Back to portal</Link>
     </div>
   ) : (
-    <></>
+    <div>Loading...</div>
   );
 };
 

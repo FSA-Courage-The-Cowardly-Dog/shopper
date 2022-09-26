@@ -31,9 +31,14 @@ const ModifySingleProductAdminPage = () => {
 
   React.useEffect(() => {
     async function loadProduct() {
-      await dispatch(attemptGetAllTags());
-      await dispatch(attemptGetSingleProduct(params.id));
-      setIsLoaded(true);
+      try {
+        await dispatch(attemptGetAllTags());
+        await dispatch(attemptGetSingleProduct(params.id));
+        setIsLoaded(true);
+      } catch (error) {
+        navigate('/adminportal');
+        Toastify({text: "Hmm... That product page doesn't exist.", duration:2000 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
+      }  
     }
     loadProduct();
     return () => {
@@ -75,7 +80,7 @@ const ModifySingleProductAdminPage = () => {
     if (newTag.length) {
       window.location.reload(false)
     }
-    Toastify({text: `Product changes saved!`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "DodgerBlue"}).showToast();
+    Toastify({text: `Product changes saved!`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "#ff8300"}).showToast();
   };
 
   const checkDisabled = () => {

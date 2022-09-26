@@ -23,6 +23,7 @@ import { attemptTokenLogin } from './store/userSlice';
 import './styling/Mainpage.css';
 import OrderConfirmationPage from './components/OrderConfirmationPage';
 import { attemptGetAllTags } from './store/productSlice';
+import RerouteHome from './components/RerouteHome';
 
 function App() {
   const dispatch = useDispatch();
@@ -67,6 +68,13 @@ function App() {
           path="/adminportal/modifyproduct/:id"
           element={<ModifySingleProductAdminPage />}
         />
+        {/* basic route error handling; adding more into individual components */}
+        <Route path='/adminportal/*' element={<RerouteHome/>}/>
+        <Route path='/account/*' element={<RerouteHome/>}/>
+        <Route path='/createaccount/*' element={<RerouteHome/>}/>
+        <Route path='/cart/*' element={<RerouteHome/>}/>
+        <Route path='/signin/*' element={<RerouteHome/>}/>
+        <Route path='*' element={<RerouteHome/>}/>
       </Routes>
     </div>
   );

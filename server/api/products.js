@@ -73,7 +73,7 @@ router.post('/add-product', requireToken, isAdmin, async (req, res, next) => {
 router.get('/:id', (req, res, next) => {
   return Product.findByPk(req.params.id, { include: { model: Tag } })
     .then((product) => res.json(product))
-    .catch(next);
+    .catch(error => next(error));
 });
 
 // delete product

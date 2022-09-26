@@ -42,7 +42,7 @@ const EditAccountPage = () => {
     try {
       await dispatch(updateUser(form, user.id));
       navigate('/account');
-      Toastify({text: 'Account changes saved!', duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "DodgerBlue"}).showToast();
+      Toastify({text: 'Account changes saved!', duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "#ff8300"}).showToast();
     } catch (error) {
       Toastify({text: 'Username and/or email already registered', duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "red"}).showToast();
     }

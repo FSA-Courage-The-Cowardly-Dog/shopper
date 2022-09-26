@@ -35,7 +35,7 @@ const SignIn = () => {
         })
       );
       navigate('/')
-      Toastify({text: `Welcome back, ${state.username}`, duration:2000 ,gravity: "top", position: "right", backgroundColor: "orange"}).showToast();
+      Toastify({text: `Welcome back, ${state.username}`, duration:2000 ,gravity: "top", position: "right", backgroundColor: "#ff8300"}).showToast();
     } catch (error) {
       Toastify({text: "Invalid username/password", duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "red"}).showToast();
     }

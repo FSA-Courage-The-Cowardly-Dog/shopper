@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { attemptAddToCart } from '../store/cartSlice';
 import { attemptGetSingleProduct, attemptUnmountSingleProduct } from "../store/productSlice";
 import Toastify from 'toastify-js'
@@ -9,9 +9,18 @@ import '../styling/SingleProduct.css'
 function SingleProduct() {
   const params = useParams();
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const product = useSelector((state) => state.product.singleProduct)
   React.useEffect(() => {
-    dispatch(attemptGetSingleProduct(params.id))
+    async function loadProduct() {
+      try {
+        await dispatch(attemptGetSingleProduct(params.id))
+      } catch (error) {
+        navigate('/');
+        Toastify({text: "Hmm... That product page doesn't exist.", duration:2500 ,gravity: "top", position: "left", backgroundColor: "red"}).showToast();
+      }
+    }
+    loadProduct()
     return () => {
       dispatch(attemptUnmountSingleProduct());
     };
@@ -37,7 +46,7 @@ function SingleProduct() {
       }
       window.localStorage.setItem('cart', JSON.stringify(localCart))
     }
-    Toastify({text: "Added to cart!", duration:1500 ,gravity: "bottom", position: "right", backgroundColor: "green"}).showToast();
+    Toastify({text: "Added to cart!", duration:1500 ,gravity: "bottom", position: "right", backgroundColor: "#ff8300"}).showToast();
   }
   const num = document.getElementById('counternum')
 

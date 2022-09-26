@@ -44,7 +44,7 @@ const AddNewProduct = () => {
     product.inventory = Number(product.inventory);
     await dispatch(attemptCreateNewProduct(product, tag));
     navigate('/adminportal');
-    Toastify({text: `New product created: ${form.name}!`, duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "DodgerBlue"}).showToast();
+    Toastify({text: `New product created: ${form.name}!`, duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "#ff8300"}).showToast();
   };
 
   const checkDisabled = () => {
