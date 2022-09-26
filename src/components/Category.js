@@ -23,8 +23,8 @@ function Category() {
         
       </div>
       <section className='displayCostumes'>
-      {products.map((product) => (
-        <Link to={`/singleproduct/${product.id}`} className='costume'>
+      {products.map((product,idx) => (
+        <Link to={`/singleproduct/${product.id}`} className='costume' key={idx}>
           <img className="image" src={product.img}/>
           <p className='costumeName'>{product.name}</p>
           <span className='costumePrice'>${product.price/100}</span>

@@ -73,11 +73,11 @@ export const attemptUpdateQtyInCart = (lineItemId, qty) => async (dispatch) => {
     dispatch(updateQtyInCart(userCart))
 }
 
-export const attemptAddToCart = (productId, qty) => async (dispatch) => {
+export const attemptAddToCart = (productId, qty, size) => async (dispatch) => {
     const token = window.localStorage.getItem('token');
     const { data: userCart } = await axios.post(
         `/api/auth/usercart`,
-        {productId, qty}, 
+        {productId, qty, size}, 
         {
             headers: {
             authorization: token,
@@ -112,7 +112,3 @@ export const attemptCheckout = (total) => async (dispatch) => {
     );
     dispatch(checkout(order))
 }
-
-// thunks for adding items to cart; may want to do similar way as above
-// first check if token exists, then use axios cart route
-// if doesn't exist, update the localStorage cart
