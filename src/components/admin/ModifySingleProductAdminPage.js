@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import {
   attemptChangeProductTag,
   attemptDeleteProduct,
+  attemptGetAllTags,
   attemptGetSingleProduct,
   attemptRemoveTagFromProduct,
   attemptUnmountSingleProduct,
@@ -29,6 +30,7 @@ const ModifySingleProductAdminPage = () => {
 
   React.useEffect(() => {
     async function loadProduct() {
+      await dispatch(attemptGetAllTags());
       await dispatch(attemptGetSingleProduct(params.id));
       setIsLoaded(true);
     }
@@ -60,7 +62,6 @@ const ModifySingleProductAdminPage = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    // form currently includes id, createdAt, updatedAt; want to prune those
     let productDetails = {
       name: form.name,
       price: Number(form.price),
@@ -69,9 +70,9 @@ const ModifySingleProductAdminPage = () => {
       description: form.description,
     };
     dispatch(attemptUpdateProduct(productDetails, params.id, newTag));
-    // window.location.reload(false)
-    // in order to refresh, need to refactor the !isAdmin check in useEffect
-    // can either navigate back to allproducts, or display a message that product has been updated
+    if (newTag.length) {
+      window.location.reload(false)
+    }
   };
 
   const checkDisabled = () => {
@@ -85,13 +86,11 @@ const ModifySingleProductAdminPage = () => {
 
   const removeTagHandler = (name) => {
     dispatch(attemptRemoveTagFromProduct(params.id, name))
-    // works properly, but visually if deleting from middle of list funky;
-    // ideally want to force a page refresh on deletion; need to refactor the routing this first though
+    window.location.reload(false)
   }
 
   const changeTagHandler = (prevName, newName) => {
     dispatch(attemptChangeProductTag(params.id, prevName, newName))
-    // updates appropriately
   }
 
   const handleDelete = () => {
@@ -99,7 +98,7 @@ const ModifySingleProductAdminPage = () => {
     navigate('/adminportal/allproducts');
   };
 
-  return product.name ? (
+  return isLoaded ? (
     <div id="new-product-form-container">
       <form id="new-product-form" onSubmit={handleSubmit}>
         <h2>Update Product Form</h2>
@@ -158,7 +157,6 @@ const ModifySingleProductAdminPage = () => {
                   <select defaultValue={tag.name} className='tag-selector' onChange={(event) => changeTagHandler(tag.name, event.target.value)}>
                   {tags ? tags.map((tag,idx)=> <option key={idx}>{tag.name}</option>) : <></>}
                   </select>
-                  {/* add remove tag handle method; write remove tag thunk */}
                   {idx > 0 ? <button className='remove-tag' onClick={() => removeTagHandler(tag.name)}>X</button> : <></>}
                 </div>
               </div>
@@ -171,7 +169,6 @@ const ModifySingleProductAdminPage = () => {
               {tags ? tags.map((tag,idx)=> <option key={idx}>{tag.name}</option>) : <></>}
             </select>
           </div>
-        {/* work on changing tags; then work on deleting tags */}
         <div className="form-line">
           <button type="submit" disabled={checkDisabled()}>
             Update Product
@@ -184,7 +181,7 @@ const ModifySingleProductAdminPage = () => {
       <Link to="/adminportal/allproducts">Back to all products</Link>
     </div>
   ) : (
-    <></>
+    <div>Loading...</div>
   );
 };
 
