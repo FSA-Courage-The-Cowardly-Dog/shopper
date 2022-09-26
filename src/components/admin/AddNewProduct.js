@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { attemptCreateNewProduct } from '../../store/productSlice';
+import { attemptCreateNewProduct, attemptGetAllTags } from '../../store/productSlice';
+import Toastify from 'toastify-js';
 
 const AddNewProduct = () => {
   const user = useSelector((state) => state.user);
@@ -21,7 +22,9 @@ const AddNewProduct = () => {
     const token = window.localStorage.getItem('token');
     if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
+      Toastify({text: `Not authorized for admin portal`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
     }
+    dispatch(attemptGetAllTags());
   }, [user.id]);
 
   const handleChange = (props) => (event) => {
@@ -34,13 +37,14 @@ const AddNewProduct = () => {
     event.target.value === '<select category>' ? setTag('') : setTag(event.target.value);
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     let product = { ...form };
     product.price = Number(product.price);
     product.inventory = Number(product.inventory);
-    dispatch(attemptCreateNewProduct(product, tag));
-    navigate('/adminportal/allproducts');
+    await dispatch(attemptCreateNewProduct(product, tag));
+    navigate('/adminportal');
+    Toastify({text: `New product created: ${form.name}!`, duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "#ff8300"}).showToast();
   };
 
   const checkDisabled = () => {
@@ -52,16 +56,18 @@ const AddNewProduct = () => {
       <form id="new-product-form" onSubmit={handleSubmit}>
         <h2>New Product Form</h2>
         <div className="form-line">
-          <label htmlFor="name">Name: </label>
+          
           <input
+          placeholder='Name'
             name="name"
             value={form.name}
             onChange={handleChange('name')}
           />
         </div>
         <div className="form-line">
-          <label htmlFor="price">Price (in cents): </label>
+          
           <input
+          placeholder='Price (in cents)'
             name="price"
             type="number"
             value={form.price}
@@ -69,8 +75,9 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="form-line">
-          <label htmlFor="inventory">Inventory: </label>
+      
           <input
+          placeholder='Inventory'
             name="inventory"
             type="number"
             value={form.inventory}
@@ -78,8 +85,9 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="form-line">
-          <label htmlFor="img">Image Link: </label>
+          
           <input
+          placeholder='Image Link'
             name="img"
             type="url"
             value={form.img}
@@ -87,8 +95,9 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="form-line">
-          <label htmlFor="description">Description: </label>
+          
           <input
+          placeholder='Description'
             name="description"
             value={form.description}
             onChange={handleChange('description')}

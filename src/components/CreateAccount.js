@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { createUser } from '../store/userSlice';
+import Toastify from 'toastify-js'
 
 const CreateAccount = () => {
   const user = useSelector((state) => state.user);
@@ -24,8 +25,13 @@ const CreateAccount = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await dispatch(createUser(form));
-    navigate('/account');
+    try {
+      await dispatch(createUser(form));
+      navigate('/account');
+      Toastify({text: `Account created. Welcome ${form.username}`, duration:2500 ,gravity: "top", position: "right", backgroundColor: "orange"}).showToast();
+    } catch (error) {
+      Toastify({text: 'Username and/or email already registered', duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "red"}).showToast();
+    }
   };
 
   const checkDisabled = () => {

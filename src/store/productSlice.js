@@ -56,7 +56,7 @@ export const attemptGetProductList = () => async (dispatch) => {
     const { data: productlist } = await axios.get('/api/products');
     dispatch(getProductList(productlist));
   } catch (error) {
-    return error;
+    throw error;
   }
 };
 export const attemptGetSingleProduct = (productId) => async (dispatch) => {
@@ -64,9 +64,12 @@ export const attemptGetSingleProduct = (productId) => async (dispatch) => {
     const { data: singleProduct } = await axios.get(
       `/api/products/${productId}`
     );
+    if (singleProduct === null) {
+      throw new Error('Product does not exist');
+    }
     dispatch(getSingleProduct(singleProduct));
   } catch (error) {
-    return error;
+    throw error;
   }
 };
 export const attemptCreateNewProduct =
@@ -84,7 +87,7 @@ export const attemptCreateNewProduct =
       );
       dispatch(createNewProduct(singleProduct));
     } catch (err) {
-      return err;
+      throw err;
     }
   };
 export const attemptUpdateProduct =
@@ -102,7 +105,7 @@ export const attemptUpdateProduct =
       );
       dispatch(updateProduct(singleProduct));
     } catch (err) {
-      return err;
+      throw err;
     }
   };
 export const attemptRemoveTagFromProduct =
@@ -120,7 +123,7 @@ export const attemptRemoveTagFromProduct =
       );
       dispatch(updateProduct(singleProduct));
     } catch (err) {
-      return err;
+      throw err;
     }
   };
 export const attemptChangeProductTag =
@@ -138,7 +141,7 @@ export const attemptChangeProductTag =
       );
       dispatch(updateProduct(singleProduct));
     } catch (err) {
-      return err;
+      throw err;
     }
   };
 export const attemptDeleteProduct = (productId) => async (dispatch) => {
@@ -151,7 +154,7 @@ export const attemptDeleteProduct = (productId) => async (dispatch) => {
     });
     dispatch(attemptGetProductList());
   } catch (err) {
-    return err;
+    throw err;
   }
 };
 
@@ -187,6 +190,6 @@ export const attemptGetAllTags = () => async (dispatch) => {
     const { data: tags } = await axios.get('/api/products/tags');
     dispatch(getTagsList(tags));
   } catch (error) {
-    return error;
+    throw error;
   }
 };
