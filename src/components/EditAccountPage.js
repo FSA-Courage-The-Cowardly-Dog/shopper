@@ -53,18 +53,21 @@ const EditAccountPage = () => {
   return user.username ? (
     <div id="edit-account-form-container">
       <form id="edit-account-form" onSubmit={handleSubmit}>
-        <h2>Edit Account Information</h2>
+        <h2 className='editTitle'>Edit Account Information</h2>
         <div className="form-line">
-          <label htmlFor="username">Username: </label>
           <input
+          className='editInput'
+          placeholder='Username'
             name="username"
             value={form.username}
             onChange={handleChange('username')}
           />
         </div>
         <div className="form-line">
-          <label htmlFor="email">Email: </label>
+          
           <input
+          className='editInput'
+          placeholder='Email address'
             name="email"
             type="email"
             value={form.email}
@@ -72,30 +75,36 @@ const EditAccountPage = () => {
           />
         </div>
         <div className="form-line">
-          <label htmlFor="firstName">First Name: </label>
+      
           <input
+          className='editInput'
+          placeholder='FirstName'
             name="firstName"
             value={form.firstName}
             onChange={handleChange('firstName')}
           />
         </div>
         <div className="form-line">
-          <label htmlFor="lastName">Last Name: </label>
+         
           <input
+          className='editInput'
+          placeholder='LastName'
             name="lastName"
             value={form.lastName}
             onChange={handleChange('lastName')}
           />
         </div>
         <div className="form-line">
-          <label htmlFor="address">Address: </label>
+          
           <input
+          className='editInput'
+            placeholder='Address'
             name="address"
             value={form.address}
             onChange={handleChange('address')}
           />
         </div>
-        <button type="submit" disabled={checkDisabled()}>
+        <button className='editButton' type="submit" disabled={checkDisabled()}>
           Save Changes
         </button>
       </form>
