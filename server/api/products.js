@@ -27,7 +27,7 @@ router.get('/price/:price', (req, res, next) => {
 
 // get product by tag
 router.get('/:tag/:page', async (req, res, next) => {
-  console.log(req.params);
+  // console.log(req.params);
   try {
     const { count, rows } = await Product.findAndCountAll({
       include: {
@@ -39,7 +39,7 @@ router.get('/:tag/:page', async (req, res, next) => {
       offset: (req.params.page - 1) * 10,
       limit: 10,
     });
-    console.log(count);
+    // console.log(count);
     res.send({ rows, count });
   } catch (error) {
     next(error);
