@@ -2,7 +2,16 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 7%;
+    background-color: white;
+}
+
+.categoryHeader {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    background-color:black;
+    opacity: 0.85;
+    border-top: 3px solid rgb(255, 131, 0);
 }
 
 .costume {
@@ -12,6 +21,8 @@
     padding: 20px;
     border: 5px solid white;
     text-decoration: none;
+    background-color: white;
+    font-weight: 530;
 }
 
 .image {
@@ -21,11 +32,43 @@
     margin: 0;
 }
 
+.sortbylabel {
+    color: rgb(255, 131, 0);
+    margin-right: 5px;
+}
+
 .costumeName {
     color: black;
     margin-bottom: 8%;
 }
 
 .costumePrice {
-    color: orange;
+    color: black;
 }
+
+.categoryHeaderLeft {
+    padding: 20px;
+}
+
+.categoryHeaderMiddle {
+    padding: 20px;
+    margin-left: 25%;
+    display: flex;
+    flex-direction: row;
+}
+
+.viewlabel {
+    color: rgb(255, 131, 0);
+    margin-right: 5px;
+}
+
+.pagenumber{
+    margin-left: 100%;
+}
+
+.categoryHeaderRight {
+    padding:20px;
+}
+
+
+

@@ -17,8 +17,37 @@ function Category() {
 
   return (
     <div>
+      <div className="categoryHeader">
+          <div className="categoryHeaderLeft">
+              <div className="sortby">
+                <label className="sortbylabel">Sort by:</label>
+                <select className='sortbymenu'>
+                  <option value='SortByDefault' selected='selected'>Choose one</option>
+                  <option value='SortByPriceAscending'>Price - Low to High </option>
+                  <option value="SortByPriceDescending">Price - High to Low </option>
+                </select>
+              </div>
+          </div>
+
+          <div className="categoryHeaderMiddle">
+              <div className="pageview">
+                  <label  className='viewlabel'>View:</label>
+                  <select className='viewmenu'>
+                    <option value='24perpage'>24 per page</option>
+                    <option value='48perpage'>48 per page</option>
+                    <option value='72perpage'>72 per page</option>
+                  </select>
+              </div>
+
+          </div>
+
+          <div className="categoryHeaderRight">
+             <div className="pagenumber">
+             <PageNavigation />
+             </div>
+          </div>
+      </div>
       <section className="displayCostumes">
-        <PageNavigation />
         {products.map((product) => (
           <Link to={`/singleproduct/${product.id}`} className="costume">
             <img className="image" src={product.img} />
