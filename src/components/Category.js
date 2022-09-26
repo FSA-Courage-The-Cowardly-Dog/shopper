@@ -9,7 +9,6 @@ function Category() {
   const dispatch = useDispatch();
   const params = useParams();
   let itemsperpage = useSelector((state) => state.product.itemsPerPage);
-  console.log('12', itemsperpage);
   React.useEffect(() => {
     dispatch(attemptGetTagList(params, itemsperpage));
   }, [params, dispatch, itemsperpage]);

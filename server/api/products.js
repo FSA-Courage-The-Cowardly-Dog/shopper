@@ -27,7 +27,6 @@ router.get('/price/:price', (req, res, next) => {
 
 // get product by tag
 router.get('/:tag/:page', async (req, res, next) => {
-  console.log('30', req.query);
   let itemsPerPage = req.query.items || 24;
   try {
     const { count, rows } = await Product.findAndCountAll({

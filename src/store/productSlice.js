@@ -164,8 +164,6 @@ export const attemptUnmountSingleProduct = () => (dispatch) => {
 export const attemptGetTagList =
   (params, itemsPerPage = 24) =>
   async (dispatch) => {
-    console.log(params);
-    console.log(itemsPerPage);
     try {
       const { data: tagobj } = await axios.get(
         `/api/products/${params.categories}/${params.page}?items=${itemsPerPage}`,
