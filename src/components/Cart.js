@@ -38,6 +38,13 @@ const Cart = () => {
         return !boolArr.reduce((prev,next) => prev && next,true)
     }
 
+    const validatedLineItem = (productId) => {
+        let count = 0;
+        const filtered = cart.lineItems.filter(lineItem => lineItem.productId === productId)
+        filtered.forEach(lineItem => count += lineItem.quantity)
+        return count <= filtered[0].product.inventory;
+    }
+
     const removeFromUserCart = (lineItemId) => {
         async function updateCart() {
             setIsLoaded(false)
@@ -100,8 +107,8 @@ const Cart = () => {
                                                 <div>
                                                     Size: {lineItem.size}
                                                 </div>
-                                                <div>
-                                                    Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/>
+                                                <div className={validatedLineItem(lineItem.productId) ? "" : "inventory-item-warning"}>
+                                                    Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)} className={validatedLineItem(lineItem.productId) ? "" : "inventory-item-warning"}/>
                                                 </div>
                                                 <button 
                                                     className='delete-from-cart' 
