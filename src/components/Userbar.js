@@ -22,9 +22,11 @@ const Userbar = () => {
           {user.username}
         </Link>
       </span>
-      <button onClick={logout} className="sign-out-button">
-        Sign Out
-      </button>
+      <div className="signoutbtn">
+        <button onClick={logout} className="sign-out-button">
+           Sign Out
+        </button>
+      </div>
     </div>
   ) : (
     'hu'

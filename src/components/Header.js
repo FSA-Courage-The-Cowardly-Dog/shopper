@@ -4,10 +4,10 @@ import '../styling/Mainpage.css'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useSelector } from 'react-redux';
 
 function Header() {
-
-   const token = window.localStorage.getItem('token');
+  const user = useSelector(state => state.user);
 
   return (
    <div className="header">
@@ -15,20 +15,19 @@ function Header() {
           <Link  to="/" className='temp-link'>
                <img className='headerLogo' src ='https://downtownjacksonville.org/wp-content/uploads/2020/10/jackolanding-06.png'/>
          </Link>
-
          <div className="searchbar">
-              <input className='searchBar' placeholder='Search' />
+              <input className={user.id ? 'signedInSearch' :'searchBar'} placeholder='Search' />
            </div>
           
-            {token ? <div></div> :
-           <Link className='signIn' to='/signin'>
-             < AccountCircleIcon className='accounticon' fontSize='large'/>
-              <p className='loginLink'>Sign In</p>
-           </Link>
-               }                 
+            {user.id ? <></> :
+               <Link className='signIn' to='/signin'>
+                  < AccountCircleIcon className='accounticon' fontSize='large'/>
+                  <p className='loginLink'>Sign In</p>
+               </Link>
+            }
         </div>
 
-      <div className="headerRight">
+      <div className={user.id ? "headerRight" : 'headerright'}>
       <SearchIcon className='search' fontSize='large' />
          <Link to="/cart" className='temp'>
             <ShoppingCartIcon className='carticon' fontSize='large' />

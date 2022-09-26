@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { attemptPsswordLogin } from '../store/userSlice';
-import { useNavigate } from 'react-router-dom';
 
 
 const SignIn = () => {
@@ -11,6 +10,14 @@ const SignIn = () => {
     password: '',
   });
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    const token = window.localStorage.getItem('token');
+    if (token) {
+      navigate('/');
+    }
+  })
 
   const handleChange = (props) => (event) => {
     setState({
@@ -29,7 +36,6 @@ const SignIn = () => {
     navigate('/')
   };
 
-  const navigate = useNavigate()
 
   return (
    
