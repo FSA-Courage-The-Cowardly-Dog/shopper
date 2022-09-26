@@ -22,11 +22,16 @@ const OrderHistory = () => {
           return(
             // <div key={idx}>Order Id number: {order.id}</div>
             <div className='order-display-container' key={idx}>
-              <h3>{`Invoice number: ${order.id}`}</h3>
+              <div className='order-invoice-date-line'>
+                <h3>{`Invoice number: ${order.id}`}</h3>
+                <span className='order-date'>Date: {order.updatedAt.slice(0,10)}</span>
+              </div>
+              <div>Shipping address: {order.address}</div>
               <table>
                 <thead>
                   <tr>
                     <th>Product</th>
+                    <th>Size</th>
                     <th>Qty</th>
                   </tr>
                 </thead>
@@ -35,6 +40,7 @@ const OrderHistory = () => {
                   return(
                     <tr key={idx}>
                       <td className='order-product-name'><Link to={`/singleproduct/${lineItem.product.id}`}>{lineItem.product.name}</Link></td>
+                      <td className='order-size'>{lineItem.size}</td>
                       <td className='order-quantity'>{lineItem.quantity}</td>
                     </tr>
                   )

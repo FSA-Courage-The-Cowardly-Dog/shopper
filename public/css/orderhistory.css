@@ -23,3 +23,8 @@
 #order-history-header {
     text-align: center;
 }
+.order-invoice-date-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
