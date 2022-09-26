@@ -27,7 +27,7 @@ router.get('/price/:price', (req, res, next) => {
 
 // get product by tag
 router.get('/:tag/:page', async (req, res, next) => {
-  console.log(req.params);
+  // console.log(req.params);
   try {
     const { count, rows } = await Product.findAndCountAll({
       include: {
@@ -39,7 +39,7 @@ router.get('/:tag/:page', async (req, res, next) => {
       offset: (req.params.page - 1) * 10,
       limit: 10,
     });
-    console.log(count);
+    // console.log(count);
     res.send({ rows, count });
   } catch (error) {
     next(error);
@@ -62,9 +62,10 @@ router.post('/add-product', requireToken, isAdmin, async (req, res, next) => {
     const product = await Product.create(req.body.productDetails);
     const tag = await Tag.findOne({ where: { name: req.body.tag } });
     await product.addTag(tag);
-    res.send(product);
-  } catch (error) {
-    next(error);
+    const updated = await Product.findByPk(product.id, {include: {model: Tag}})
+    res.send(updated)
+  } catch (error){
+    next(error)
   }
 });
 
@@ -115,11 +116,9 @@ router.put('/:id', requireToken, isAdmin, async (req, res, next) => {
       if (req.body.newTag.length) {
         const newTag = await Tag.findOne({ where: { name: req.body.newTag } });
         await product.addTag(newTag);
-        const updated = await Product.findByPk(req.params.id, {
-          include: { model: Tag },
-        });
-        res.send(updated);
       }
+      const updated = await Product.findByPk(req.params.id, {include: {model: Tag}});
+      res.send(updated)
     } else {
       res.send(product);
     }

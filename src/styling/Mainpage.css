@@ -3,7 +3,7 @@
 }
 
 .App{
-    
+    background-color: white;
 }
 .categoryImg {
     max-width: 28%;
@@ -44,11 +44,11 @@
     background: rgb(255, 131, 0);
     box-sizing: border-box;
     text-decoration: none;
-    border-radius: 0px 0px 128px 128px;
+    border-radius: 0px 0px 64px 64px;
     border: none;
     text-align: center;
-    font: 16px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 500;
+    font: 18px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
 }
 
 .image {
@@ -56,13 +56,12 @@
     height: 225px;
     display: block;
     margin: 0;
-    border-radius: 74px 74px 0px 0px;
+    border-radius: 44px 44px 0px 0px;
 }
 
 .headerLogo {
     height: 100px;
     width: 100px;
-    margin-bottom: 200px;
 }
 
 .header {
@@ -82,19 +81,24 @@
 .headerRight {
     display: flex;
     flex-direction: row;
-    margin-right: 10%;
+}
+
+.headerright {
+    display: flex;
+    flex-direction: row;
+    margin-right: 12%;
 }
 
 .search {
     color:rgb(255, 131, 0);
-    margin-top: 34px;
+    margin-top: 32px;
     margin-right: 40px;
 }
 
 .temp-link {
     display: flex;
    justify-content: center;
-   height: 150px;
+   max-height: 90px;
 }
 
 .searchBar {
@@ -104,6 +108,7 @@
     height: 35px;
     width: 300%;
     margin-left: 250%;
+    border: none;
 }
 
 
@@ -154,4 +159,14 @@
     margin-left: 25px;
     color: rgb(255, 131, 0);
 
+}
+
+.signedInSearch {
+    margin-top: 30px;
+    background-color: #d0d1d5;
+    border-radius: 8px;
+    height: 35px;
+    width: 270%;
+    margin-left: 305%;
+    border: none;
 }

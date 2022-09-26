@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { attemptGetUserCart, attemptRemoveFromCart, attemptUpdateQtyInCart } from "../store/cartSlice";
 
 const Cart = () => {
@@ -9,6 +9,7 @@ const Cart = () => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [cart, setCart] = useState(JSON.parse(window.localStorage.getItem('cart')));
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     React.useEffect(() => {
         async function loadUserCart() {
@@ -23,35 +24,54 @@ const Cart = () => {
     React.useEffect(() => {
         if (isLoaded) {
             setCart(userCart)
-            // window.location.reload(false)
         }
     },[isLoaded])
-    // something finicky when logging in when on cart page; need to refresh page to see updated cart
+
+    const validateInventory = () => {
+        const boolArr = [];
+        cart.lineItems.forEach(lineItem => {
+            let singleProductItems = cart.lineItems.filter(item => item.productId === lineItem.productId)
+            let count = 0;
+            singleProductItems.forEach(item => count += item.quantity);
+            boolArr.push(count <= lineItem.product.inventory)
+        })
+        return !boolArr.reduce((prev,next) => prev && next,true)
+    }
+
+    const validatedLineItem = (productId) => {
+        let count = 0;
+        const filtered = cart.lineItems.filter(lineItem => lineItem.productId === productId)
+        filtered.forEach(lineItem => count += lineItem.quantity)
+        return count <= filtered[0].product.inventory;
+    }
 
     const removeFromUserCart = (lineItemId) => {
         async function updateCart() {
-            // workaround for how to update component without refreshing
             setIsLoaded(false)
             await dispatch(attemptRemoveFromCart(lineItemId))
             setIsLoaded(true)
         }
         updateCart()
-        // noticed that when deleting, quantity inputs aren't updating; refresh is workaround for now
-        // ideally do not want to refresh when removing items; will look into how to change that later
         window.location.reload(false)
     }
 
-    const removeFromLocalCart = (productId) => {
+    const removeFromLocalCart = (productId, size) => {
         const localCart = JSON.parse(window.localStorage.getItem('cart'));
-        delete localCart[productId];
+        let instance = localCart[productId].find(item => item.size === size)
+        let index = localCart[productId].indexOf(instance)
+        localCart[productId].splice(index, 1)
         window.localStorage.setItem('cart', JSON.stringify(localCart))
         setCart(localCart)
+        window.location.reload(false)
+    }
+
+    const checkoutClickHandler = () => {
+        navigate('/cart/checkout')
     }
 
     // don't love this implementation, but works for now
     const updateQtyForUserCart = (lineItemId) => (event) => {
         async function updateCart() {
-            // workaround for how to update component without refreshing
             setIsLoaded(false)
             await dispatch(attemptUpdateQtyInCart(lineItemId,event.target.value))
             setIsLoaded(true)
@@ -77,18 +97,34 @@ const Cart = () => {
                             {cart.lineItems.map((lineItem,idx) => {
                                 return(
                                     <li key={idx}>
-                                        <span><Link to={`/singleproduct/${lineItem.productId}`}>{lineItem.product.name}</Link>, Unit Price: ${(lineItem.product.price/100).toFixed(2)}, Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/></span>
-                                        <button 
-                                            className='delete-from-cart' 
-                                            type='click'
-                                            onClick={() => removeFromUserCart(lineItem.id)}>
-                                                X
-                                        </button>
+                                        <div className="cart-item-display">
+                                            <img src={lineItem.product.img} height='150px' width='150px'/>
+                                            <div className="cart-item-details">
+                                                <Link to={`/singleproduct/${lineItem.productId}`}>{lineItem.product.name}</Link>
+                                                <div>
+                                                    Unit Price: ${(lineItem.product.price/100).toFixed(2)}
+                                                </div>
+                                                <div>
+                                                    Size: {lineItem.size}
+                                                </div>
+                                                <div className={validatedLineItem(lineItem.productId) ? "" : "inventory-item-warning"}>
+                                                    Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)} className={validatedLineItem(lineItem.productId) ? "" : "inventory-item-warning"}/>
+                                                </div>
+                                                <button 
+                                                    className='delete-from-cart' 
+                                                    type='click'
+                                                    onClick={() => removeFromUserCart(lineItem.id)}>
+                                                        Remove from cart
+                                                </button>
+                                            </div>
+                                        </div>
                                     </li>
                                 )
                             })}
                         </ul>
-                        <Link to="/cart/checkout" className="checkout-link">Checkout</Link>
+                        {/* <Link to="/cart/checkout" className="checkout-link">Checkout</Link> */}
+                        <button disabled={validateInventory()} onClick={()=> checkoutClickHandler()}>Go to Checkout</button>
+                        <p className="inventory-item-warning">{!validateInventory() ? '' : 'Some item(s) quantity in cart exceed total product inventory'}</p>
                     </div>
                     : <div>no items in cart</div>
             )
@@ -97,21 +133,34 @@ const Cart = () => {
                     <div className='cart-display'>
                         <h3>Items:</h3>
                         <ul>
-                            {Object.entries(cart).map((pair,idx) => {
+                            {Object.entries(cart).map((pair,prodIdx) => {
                                 return(
-                                    <li key={idx}>
-                                        {/* for now, can just update cart quantity whenever number is changed
-                                            Ideally, will only update cart quantity if user hits a 'save change' button
-                                            Will look into adding that functionality later
-                                        */}
-                                        <span><Link to={`/singleproduct/${pair[0]}`}>{pair[1].name}</Link>, Unit Price: ${(pair[1].price/100).toFixed(2)} Qty:  <input type='number' defaultValue={pair[1].qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/></span>
-                                        <button 
-                                            className='delete-from-cart' 
-                                            type='click' 
-                                            onClick={() => removeFromLocalCart(pair[0])}>
-                                                X
-                                        </button>
+                                    pair[1].map((item,idx) => 
+                                    // <li key={idx}>
+                                    <li key={Number(prodIdx.toString()+idx.toString())}>
+                                        <div className="cart-item-display">
+                                            <img src={item.img} height='150px' width='150px'/>
+                                            <div className="cart-item-details">  
+                                                <Link to={`/singleproduct/${pair[0]}`}>{item.name}</Link>
+                                                <div>
+                                                    Unit Price: ${(item.price/100).toFixed(2)}
+                                                </div>
+                                                <div>
+                                                    Size: {item.size}
+                                                </div>
+                                                <div>
+                                                    Qty:  <input type='number' defaultValue={item.qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/>
+                                                </div>
+                                                <button 
+                                                    className='delete-from-cart' 
+                                                    type='click' 
+                                                    onClick={() => removeFromLocalCart(pair[0], item.size)}>
+                                                        Remove from cart
+                                                </button>
+                                            </div>
+                                        </div>
                                     </li>
+                                    )
                                 )
                             })}
                         </ul>
@@ -122,9 +171,9 @@ const Cart = () => {
     )
 };
 
-// eventually, will want to be able to display product name instead of product id; will have to think about how to do that
-// -- should be relatively straightforward for when user logged in; can modify getCart() method to have lineItems include Product model
-// -- for guest experience, will be a little trickier; will need to fetch product info using productId somehow for each cart element
-// -- alternatively, could save more info in local storage, such as product name at the very least.
+// add in validation to make sure that lineItem total quantities do not exceed product quantity
+// could write methods for both local and user cart; user cart will be easier;
+// honestly, maybe only need to add for user cart since not allowing local cart checkout anyways
+// if time, could go back and add in local user validation as well;
 
 export default Cart;

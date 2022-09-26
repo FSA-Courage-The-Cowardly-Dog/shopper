@@ -42,14 +42,25 @@ const Checkout = () => {
         }
         async function checkout () {
             await dispatch(attemptCheckout(total));
-            navigate('/account/orderhistory')
+            navigate('/cart/orderconfirmation')
         }
         checkout();
     }
 
+    const validateInventory = () => {
+        const boolArr = [];
+        cart.lineItems.forEach(lineItem => {
+            let singleProductItems = cart.lineItems.filter(item => item.productId === lineItem.productId)
+            let count = 0;
+            singleProductItems.forEach(item => count += item.quantity);
+            boolArr.push(count <= lineItem.product.inventory)
+        })
+        return !boolArr.reduce((prev,next) => prev && next,true)
+    }
+
     const checkDisabled = () => {
         if (address) {
-            return !address.length;
+            return !address.length || validateInventory();
         }
         return true;
     }
@@ -92,6 +103,9 @@ const Checkout = () => {
                     <button className="complete-purchase" onClick={()=>handlePurchase()} disabled={checkDisabled()}>Purchase</button>
                 </div>
 
+                <div className='inventory-item-warning'>
+                <p className="inventory-item-warning">{!validateInventory() ? '' : 'Some item(s) quantity exceeds total product inventory. Checkout disabled until item(s) updated with valid quantity. Please return to cart to fix.'}</p>
+                </div>
             </div>
             : <></>
     )

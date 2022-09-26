@@ -15,46 +15,79 @@ function SingleProduct() {
       dispatch(attemptUnmountSingleProduct());
     };
   }, []);
-  const [qty, setQty] = useState(0)
+  const [qty, setQty] = useState(1)
+  const [size, setSize] = useState('')
 
   const addToCartHandler = (productId) => {
     const token = window.localStorage.getItem('token');
     if (token) {
-      dispatch(attemptAddToCart(productId,Number(qty)))
+      dispatch(attemptAddToCart(productId,Number(qty),size))
     } else {
       const localCart = JSON.parse(window.localStorage.getItem('cart'));
       if (localCart[productId]) {
-        localCart[productId].qty = Number(localCart[productId].qty) + Number(qty);
+        let containsSize = localCart[productId].find(item => item.size === size)
+        if (containsSize) {
+          containsSize.qty = Number(containsSize.qty) + Number(qty)
+        } else {
+          localCart[productId].push({qty, name: product.name, price: product.price, img: product.img, size})
+        }
       } else {
-        localCart[productId] = {qty, name: product.name, price: product.price};
+        localCart[productId] = [{qty, name: product.name, price: product.price, img: product.img, size}];
       }
       window.localStorage.setItem('cart', JSON.stringify(localCart))
     }
   }
-  // could probably write increment/decrement for +/- buttons
-  // or, just look into styling the number input like that
-  const qtyChangeHandler = (event) => {
-    setQty(event.target.value)
+  const num = document.getElementById('counternum')
+
+
+  
+  function plus() {
+    let a = +num.innerHTML
+    a++
+    setQty(a)
+    num.innerHTML = a
+  }
+
+  function minus() {
+    let a = +num.innerHTML
+    if (a > 1) {
+      a--
+      setQty(a)
+      num.innerHTML = a
+    }
+  }
+
+  const sizeChangeHandler = (event) => {
+    if (event.target.value === 'Select Size:') {
+      setSize('')
+    } else {
+      setSize(event.target.value)
+    }
   }
   const checkDisabled = () => {
-    return Number(qty) === 0;
+    return !size.length || (Number(qty) > product.inventory);
   }
 
   return ( product ?
-    <div >
+    <div className='single-product-container'>
+      <div className="imageContainer">
+      <img className='prodImg' src={product.img} style={{maxHeight: '500px',maxWidth: '500px'}}/>
+    </div>
       <div className='prodInfoBlock'>
     <div className='productInfo'>
         <h2>{product.name}</h2>
-         <div className="infoBlock">
-            <div className="productPrice">
-               <h3>${((product.price)/100).toFixed(2)}</h3>
-            </div>
-         </div>
+            <div >
+               <h3 className="productPrice">${((product.price)/100).toFixed(2)}</h3>
+            </div> 
+    </div>
+
+    <div className='productInfo inventory'>
+      <h4 className={product.inventory ? '' : 'out-of-stock'}>{product.inventory ? `${product.inventory} in stock!` : 'Out of stock'}</h4>
     </div>
     
     <div className="productInfo sizeSelector">
         <form action="#">
-          <select name="languages" id="lang">
+          <select className='sizeselector' name="languages" id="lang" onChange={sizeChangeHandler}>
             <option value="select">Select Size:</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
@@ -64,16 +97,13 @@ function SingleProduct() {
         </form>
     </div>
 
-    <div className="productInfo counter">
-      <form id='myform' method='POST' className='quantity' action='#'>
-        <p className='counterLabel'>Quantity</p>
-        <input type='button' value='-' className='qtyminus minus' field='quantity' />
-        <input id='single-product-qty' type='number' name='quantity' defaultValue='0' min='0' onChange={qtyChangeHandler}/>
-        <input type='button' value='+' className='qtyplus plus' field='quantity' />
-        {/* changed input type to number from text; didn't hook up buttons, but able to toggle in input itself */}
-      </form>
+    <div className="productInfocounter">
+      <span onClick={minus} className='minus'>-</span>
+      <span id='counternum'>1</span>
+      <span onClick={plus} className='plus'>+</span>
     </div>
 
+    <p className='product-quantity-warning'>{(Number(qty) > product.inventory) && product.inventory ? 'Not enough product in stock; reduce quantity to be able to add to cart' : ''}</p>
     <div className="productInfo addToCart">
         <button className='addToCart' disabled={checkDisabled()} onClick={() => addToCartHandler(product.id)}>
           <div className="cart">Add To Cart</div>
@@ -86,11 +116,7 @@ function SingleProduct() {
     </div>
 
     </div>
-
-    <div className="imageContainer">
-      <img className='prodImg' src={product.img} style={{maxHeight: '300px',maxWidth: '300px'}}/>
-    </div>
-
+  
   </div>
   : <></>
   )
