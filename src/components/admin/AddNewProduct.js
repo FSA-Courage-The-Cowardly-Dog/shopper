@@ -100,7 +100,6 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="form-line">
-          <label htmlFor="categories">Categories: </label>
           <select defaultValue='<select category>' id='tag-selector' onChange={handleTagChange}>
             <option>{'<select category>'}</option>
             {tags ? tags.map((tag,idx)=> <option key={idx}>{tag.name}</option>) : <></>}
