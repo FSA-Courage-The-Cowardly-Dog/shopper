@@ -115,11 +115,11 @@ const Cart = () => {
                     <div className='cart-display'>
                         <h3>Items:</h3>
                         <ul>
-                            {Object.entries(cart).map((pair,idx) => {
+                            {Object.entries(cart).map((pair,prodIdx) => {
                                 return(
-                                    pair[1].map(item => 
+                                    pair[1].map((item,idx) => 
                                     // <li key={idx}>
-                                    <li>
+                                    <li key={Number(prodIdx.toString()+idx.toString())}>
                                         <div className="cart-item-display">
                                             <img src={item.img} height='150px' width='150px'/>
                                             <div className="cart-item-details">  
