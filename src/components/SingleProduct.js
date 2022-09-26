@@ -50,7 +50,7 @@ function SingleProduct() {
     }
   }
   const checkDisabled = () => {
-    return Number(qty) === 0 || !size.length;
+    return Number(qty) === 0 || !size.length || (Number(qty) > product.inventory);
   }
 
   return ( product ?
@@ -63,6 +63,10 @@ function SingleProduct() {
                <h3>${((product.price)/100).toFixed(2)}</h3>
             </div>
          </div>
+    </div>
+
+    <div className='productInfo inventory'>
+      <h4 className={product.inventory ? '' : 'out-of-stock'}>{product.inventory ? `${product.inventory} in stock!` : 'Out of stock'}</h4>
     </div>
     
     <div className="productInfo sizeSelector">
@@ -87,6 +91,7 @@ function SingleProduct() {
       </form>
     </div>
 
+    <p className='product-quantity-warning'>{(Number(qty) > product.inventory) && product.inventory ? 'Not enough product in stock; reduce quantity to be able to add to cart' : ''}</p>
     <div className="productInfo addToCart">
         <button className='addToCart' disabled={checkDisabled()} onClick={() => addToCartHandler(product.id)}>
           <div className="cart">Add To Cart</div>

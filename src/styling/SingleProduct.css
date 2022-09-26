@@ -48,3 +48,7 @@
  .description {
     margin-top: 10%;
  }
+
+ .product-quantity-warning, .out-of-stock {
+   color: red;
+ }
