@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import './Admin.css'
 
 const AdminPortal = () => {
   const user = useSelector((state) => state.user);
@@ -14,17 +15,19 @@ const AdminPortal = () => {
   }, [user.id]);
 
   return (
-    <div id="admin-links">
-      <h1>Welcome back to the Admin Portal</h1>
-      <h3>Use below links to perform admin functions</h3>
-      <div id="all-users">
-        <Link to="/adminportal/allusers">All Users Table</Link>
-      </div>
-      <div id="add-item">
-        <Link to="/adminportal/addproduct">Add Product</Link>
-      </div>
-      <div id="modify-delete-item">
-        <Link to="/adminportal/allproducts">All Products Table</Link>
+    <div className="admin-links">
+      <h1 className='adminTitle'>Welcome back to the Admin Portal</h1>
+
+      <div className="adminLinks">
+         <div id="all-users">
+            <Link className='links' to="/adminportal/allusers">All Users Table</Link>
+         </div>
+          <div id="add-item">
+           <Link className='links' to="/adminportal/addproduct">Add Product</Link>
+         </div>
+          <div id="modify-delete-item">
+           <Link className='links' to="/adminportal/allproducts">All Products Table</Link>
+         </div>
       </div>
     </div>
   );

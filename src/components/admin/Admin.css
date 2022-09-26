@@ -1,0 +1,32 @@
+.admin-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    row-gap: 30px;
+}
+
+.adminLinks {
+    display: flex;
+    flex: row;
+    column-gap: 50px;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 1.5px solid black;
+    background-color: rgb(255, 131, 0);
+    font: 18px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.links:hover {
+    color:  rgb(255, 131, 0);
+    background-color: black;
+}
+
+.adminTitle {
+    font: 28px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 5%;
+}
