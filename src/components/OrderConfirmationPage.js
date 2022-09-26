@@ -43,6 +43,9 @@ const OrderConfirmationPage = () => {
                 })}  
                 </tbody>
               </table>
+              <div>
+                Total: ${(order.checkoutPrice/100).toFixed(2)}
+              </div>
              </div>   
              : <></>}
              <div>
