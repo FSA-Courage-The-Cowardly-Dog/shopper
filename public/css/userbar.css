@@ -16,12 +16,27 @@ header {
     flex-direction: column;
     margin: 5px;
     align-items: flex-end;
-    justify-content: space-between;
-    color: white
+    justify-content: center;
+    color: white;
+    font-weight: 200;
+    font: 14px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
 }
 
 .username, .create-account-link {
-    color: blue
+    color: rgb(255, 131, 0);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.signoutbtn{
+   margin-right: 25%;
+}
+
+.sign-out-button {
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 195;
 }
 
 .username:hover,.create-account-link:hover {

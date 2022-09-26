@@ -39,8 +39,26 @@
     border: 2px solid rgb(28, 27, 27);
 }
 
-#create-account-form > button, #edit-account-form > button {
-    width: auto;
-    margin: auto;
-    margin-top: 10px;
+.editInput {
+    width: 100%;
+}
+
+.editTitle {
+    font: 34px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 15%;
+}
+
+.editButton {
+    height: 40px;
+     width: 100%;
+     margin-top: 10px;
+     color: black;
+     background-color: rgb(255, 131, 0);
+     border: 1.5px solid black; 
+     font: 18px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.editButton:hover {
+    color:  rgb(255, 131, 0);
+    background-color: black;
 }

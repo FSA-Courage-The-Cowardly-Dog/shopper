@@ -16,7 +16,7 @@ function Header() {
                <img className='headerLogo' src ='https://downtownjacksonville.org/wp-content/uploads/2020/10/jackolanding-06.png'/>
          </Link>
          <div className="searchbar">
-              <input className='searchBar' placeholder='Search' />
+              <input className={user.id ? 'signedInSearch' :'searchBar'} placeholder='Search' />
            </div>
           
             {user.id ? <></> :
@@ -27,7 +27,7 @@ function Header() {
             }
         </div>
 
-      <div className="headerRight">
+      <div className={user.id ? "headerRight" : 'headerright'}>
       <SearchIcon className='search' fontSize='large' />
          <Link to="/cart" className='temp'>
             <ShoppingCartIcon className='carticon' fontSize='large' />
