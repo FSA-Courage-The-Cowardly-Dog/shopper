@@ -171,7 +171,9 @@ User.prototype.updateQuantityInCart = async function (lineItemId, qty) {
 
 User.prototype.createOrder = async function () {
   const order = await this.getCart();
-  order.lineItems.forEach(async lineItem => await lineItem.decrementInventory())
+  for (const lineItem of order.lineItems) {
+    await lineItem.decrementInventory();
+  }
   await order.update({ status: 'COMPLETED' });
   await this.getCart();
   return order;

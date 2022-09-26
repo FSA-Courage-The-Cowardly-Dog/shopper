@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { attemptGetUserCart, attemptRemoveFromCart, attemptUpdateQtyInCart } from "../store/cartSlice";
 
 const Cart = () => {
@@ -9,6 +9,7 @@ const Cart = () => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [cart, setCart] = useState(JSON.parse(window.localStorage.getItem('cart')));
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     React.useEffect(() => {
         async function loadUserCart() {
@@ -23,21 +24,27 @@ const Cart = () => {
     React.useEffect(() => {
         if (isLoaded) {
             setCart(userCart)
-            // window.location.reload(false)
         }
     },[isLoaded])
-    // something finicky when logging in when on cart page; need to refresh page to see updated cart
+
+    const validateInventory = () => {
+        const boolArr = [];
+        cart.lineItems.forEach(lineItem => {
+            let singleProductItems = cart.lineItems.filter(item => item.productId === lineItem.productId)
+            let count = 0;
+            singleProductItems.forEach(item => count += item.quantity);
+            boolArr.push(count <= lineItem.product.inventory)
+        })
+        return !boolArr.reduce((prev,next) => prev && next,true)
+    }
 
     const removeFromUserCart = (lineItemId) => {
         async function updateCart() {
-            // workaround for how to update component without refreshing
             setIsLoaded(false)
             await dispatch(attemptRemoveFromCart(lineItemId))
             setIsLoaded(true)
         }
         updateCart()
-        // noticed that when deleting, quantity inputs aren't updating; refresh is workaround for now
-        // ideally do not want to refresh when removing items; will look into how to change that later
         window.location.reload(false)
     }
 
@@ -45,17 +52,19 @@ const Cart = () => {
         const localCart = JSON.parse(window.localStorage.getItem('cart'));
         let instance = localCart[productId].find(item => item.size === size)
         let index = localCart[productId].indexOf(instance)
-        // delete localCart[productId];
         localCart[productId].splice(index, 1)
         window.localStorage.setItem('cart', JSON.stringify(localCart))
         setCart(localCart)
         window.location.reload(false)
     }
 
+    const checkoutClickHandler = () => {
+        navigate('/cart/checkout')
+    }
+
     // don't love this implementation, but works for now
     const updateQtyForUserCart = (lineItemId) => (event) => {
         async function updateCart() {
-            // workaround for how to update component without refreshing
             setIsLoaded(false)
             await dispatch(attemptUpdateQtyInCart(lineItemId,event.target.value))
             setIsLoaded(true)
@@ -106,7 +115,9 @@ const Cart = () => {
                                 )
                             })}
                         </ul>
-                        <Link to="/cart/checkout" className="checkout-link">Checkout</Link>
+                        {/* <Link to="/cart/checkout" className="checkout-link">Checkout</Link> */}
+                        <button disabled={validateInventory()} onClick={()=> checkoutClickHandler()}>Go to Checkout</button>
+                        <p className="inventory-item-warning">{!validateInventory() ? '' : 'Some item(s) quantity in cart exceed total product inventory'}</p>
                     </div>
                     : <div>no items in cart</div>
             )
@@ -153,9 +164,9 @@ const Cart = () => {
     )
 };
 
-// eventually, will want to be able to display product name instead of product id; will have to think about how to do that
-// -- should be relatively straightforward for when user logged in; can modify getCart() method to have lineItems include Product model
-// -- for guest experience, will be a little trickier; will need to fetch product info using productId somehow for each cart element
-// -- alternatively, could save more info in local storage, such as product name at the very least.
+// add in validation to make sure that lineItem total quantities do not exceed product quantity
+// could write methods for both local and user cart; user cart will be easier;
+// honestly, maybe only need to add for user cart since not allowing local cart checkout anyways
+// if time, could go back and add in local user validation as well;
 
 export default Cart;
