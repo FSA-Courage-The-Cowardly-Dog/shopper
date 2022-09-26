@@ -7,6 +7,10 @@ const LineItem = conn.define('lineItem', {
     allowNull: false,
     defaultValue: 1,
   },
+  size: {
+    type: Sequelize.STRING,
+    defaultValue: ''
+  }
 });
 //authentication
 

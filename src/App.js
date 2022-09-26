@@ -29,8 +29,6 @@ function App() {
 
   React.useEffect(() => {
     dispatch(attemptTokenLogin());
-    //loading tags here so only have to do once
-    dispatch(attemptGetAllTags());
     const localCart = JSON.parse(window.localStorage.getItem('cart'));
     if (!localCart) {
       window.localStorage.setItem('cart', JSON.stringify({}));

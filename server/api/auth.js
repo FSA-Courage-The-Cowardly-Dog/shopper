@@ -64,7 +64,7 @@ router.put('/usercart/checkout', async (req, res, next) => {
 router.post('/usercart', async (req, res, next) => {
   try {
     const user = await User.byToken(req.headers.authorization);
-    await user.addToCart(req.body.productId,req.body.qty)
+    await user.addToCart(req.body.productId,req.body.qty,req.body.size)
     const cart = await user.getCart()
     res.send(cart)
   } catch (err) {
