@@ -70,14 +70,15 @@ function SingleProduct() {
 
   return ( product ?
     <div className='single-product-container'>
+      <div className="imageContainer">
+      <img className='prodImg' src={product.img} style={{maxHeight: '500px',maxWidth: '500px'}}/>
+    </div>
       <div className='prodInfoBlock'>
     <div className='productInfo'>
         <h2>{product.name}</h2>
-         <div className="infoBlock">
-            <div className="productPrice">
-               <h3>${((product.price)/100).toFixed(2)}</h3>
-            </div>
-         </div>
+            <div >
+               <h3 className="productPrice">${((product.price)/100).toFixed(2)}</h3>
+            </div> 
     </div>
     
     <div className="productInfo sizeSelector">
@@ -110,11 +111,7 @@ function SingleProduct() {
     </div>
 
     </div>
-
-    <div className="imageContainer">
-      <img className='prodImg' src={product.img} style={{maxHeight: '500px',maxWidth: '500px'}}/>
-    </div>
-
+  
   </div>
   : <></>
   )
