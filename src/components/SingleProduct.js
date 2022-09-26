@@ -37,10 +37,19 @@ function SingleProduct() {
       window.localStorage.setItem('cart', JSON.stringify(localCart))
     }
   }
-  // could probably write increment/decrement for +/- buttons
-  // or, just look into styling the number input like that
   const qtyChangeHandler = (event) => {
     setQty(event.target.value)
+  }
+  const incrementQty = () => {
+    console.log('in incrememnt')
+    document.getElementById('single-product-qty').value = +qty + 1
+    setQty(+qty+1)
+  }
+  const decrementQty = () => {
+    if (Number(qty)) {
+      document.getElementById('single-product-qty').value = +qty-1
+      setQty(+qty-1)
+    }
   }
   const sizeChangeHandler = (event) => {
     if (event.target.value === 'Select Size:') {
@@ -84,9 +93,9 @@ function SingleProduct() {
     <div className="productInfo counter">
       <form id='myform' method='POST' className='quantity' action='#'>
         <p className='counterLabel'>Quantity</p>
-        <input type='button' value='-' className='qtyminus minus' field='quantity' />
+        <input type='button' value='-' className='qtyminus minus' field='quantity' onClick={()=>decrementQty()}/>
         <input id='single-product-qty' type='number' name='quantity' defaultValue='0' min='0' onChange={qtyChangeHandler}/>
-        <input type='button' value='+' className='qtyplus plus' field='quantity' />
+        <input type='button' value='+' className='qtyplus plus' field='quantity' onClick={() => incrementQty()}/>
         {/* changed input type to number from text; didn't hook up buttons, but able to toggle in input itself */}
       </form>
     </div>
