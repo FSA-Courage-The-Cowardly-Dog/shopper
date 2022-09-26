@@ -7,14 +7,16 @@ const AdminPortal = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    // navigate back to home page if user is not admin
-    if (!user.isAdmin) {
+    const token = window.localStorage.getItem('token');
+    if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
     }
-  }, []);
+  }, [user.id]);
 
   return (
     <div id="admin-links">
+      <h1>Welcome back to the Admin Portal</h1>
+      <h3>Use below links to perform admin functions</h3>
       <div id="all-users">
         <Link to="/adminportal/allusers">All Users Table</Link>
       </div>

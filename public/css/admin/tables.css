@@ -2,6 +2,10 @@ table, th, td {
     border: 1px solid;
 }
 
+#all-products-table, #all-users-table {
+    margin-top: 50px;
+}
+
 td {
     min-width: 50px;
     max-width: 150px;

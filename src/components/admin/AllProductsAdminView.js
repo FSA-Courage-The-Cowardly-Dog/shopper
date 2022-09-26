@@ -10,13 +10,15 @@ const AllProductsAdminView = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    if (!user.isAdmin) {
+    const token = window.localStorage.getItem('token');
+    if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
     }
     dispatch(attemptGetProductList());
-  }, []);
+  }, [user.id]);
 
   // want to add pagination functionality
+  // may also want ability to filter products displayed by tag
   return products ? (
     <div id="all-products-table-container">
       <table id="all-products-table">
@@ -41,11 +43,11 @@ const AllProductsAdminView = () => {
                   </Link>
                 </td>
                 <td>{product.name}</td>
-                <td>{product.price}</td>
+                <td>{(product.price/100).toFixed(2)}</td>
                 <td>{product.inventory}</td>
                 <td className="product-imgUrl">{product.img}</td>
                 <td className="product-desc">{product.description}</td>
-                <td>(Placeholder)</td>
+                <td>{product.tags.length ? product.tags.map(tag => tag.name.toUpperCase()).join(', ') : 'NO TAG'}</td>
               </tr>
             );
           })}

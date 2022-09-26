@@ -1,1 +1,6 @@
 @import "tables.css";
+
+
+#admin-links > div {
+    margin: 20px;
+}

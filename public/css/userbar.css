@@ -17,6 +17,7 @@ header {
     margin: 5px;
     align-items: flex-end;
     justify-content: space-between;
+    color: white
 }
 
 .username, .create-account-link {

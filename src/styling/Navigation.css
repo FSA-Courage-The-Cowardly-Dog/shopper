@@ -1,0 +1,12 @@
+.pageNav {
+  width: 100%;
+  margin-left: auto;
+  justify-items: end;
+}
+.pageNav > a {
+  padding-right: 0.2em;
+  text-decoration: none;
+}
+.activePage {
+  font-weight: 700;
+}

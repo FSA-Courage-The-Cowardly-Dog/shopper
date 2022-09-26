@@ -5,6 +5,7 @@ import { attemptCreateNewProduct } from '../../store/productSlice';
 
 const AddNewProduct = () => {
   const user = useSelector((state) => state.user);
+  const tags = useSelector((state) => state.product.tagsList)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -14,12 +15,14 @@ const AddNewProduct = () => {
     img: '',
     description: '',
   });
+  const [tag, setTag] = useState('')
 
   React.useEffect(() => {
-    if (!user.isAdmin) {
+    const token = window.localStorage.getItem('token');
+    if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
     }
-  }, []);
+  }, [user.id]);
 
   const handleChange = (props) => (event) => {
     setForm({
@@ -27,17 +30,21 @@ const AddNewProduct = () => {
       [props]: event.target.value,
     });
   };
+  const handleTagChange = (event) => {
+    event.target.value === '<select category>' ? setTag('') : setTag(event.target.value);
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     let product = { ...form };
     product.price = Number(product.price);
     product.inventory = Number(product.inventory);
-    dispatch(attemptCreateNewProduct(product, user));
+    dispatch(attemptCreateNewProduct(product, tag));
     navigate('/adminportal/allproducts');
   };
 
   const checkDisabled = () => {
-    return !form.name.length || !form.price.length || !form.inventory.length;
+    return !form.name.length || !form.price.length || !form.inventory.length || !tag.length;
   };
 
   return (
@@ -53,7 +60,7 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="form-line">
-          <label htmlFor="price">Price: </label>
+          <label htmlFor="price">Price (in cents): </label>
           <input
             name="price"
             type="number"
@@ -89,8 +96,10 @@ const AddNewProduct = () => {
         </div>
         <div className="form-line">
           <label htmlFor="categories">Categories: </label>
-          {/* <input name="categories" value={form.categories} onChange={handleChange('categories')}/> */}
-          <div>Placeholder for adding tag</div>
+          <select defaultValue='<select category>' id='tag-selector' onChange={handleTagChange}>
+            <option>{'<select category>'}</option>
+            {tags ? tags.map((tag,idx)=> <option key={idx}>{tag.name}</option>) : <></>}
+          </select>
         </div>
         <button type="submit" disabled={checkDisabled()}>
           Create Product

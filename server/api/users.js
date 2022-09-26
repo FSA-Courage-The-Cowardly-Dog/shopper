@@ -38,7 +38,9 @@ router.put('/:id/cart', requireToken, async (req, res, next) => {
     // making sure user has a cart initialized before adding to it
     await user.getCart();
     req.body.forEach(async element => {
-      await user.addToCart(Number(element[0]), Number(element[1].qty));
+      element[1].forEach(async item => 
+        await user.addToCart(Number(element[0]), Number(item.qty), item.size)
+      )
     })
     res.send(user)
   } catch (err) {

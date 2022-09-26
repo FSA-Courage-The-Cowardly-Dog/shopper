@@ -39,3 +39,8 @@
     border: 2px solid rgb(28, 27, 27);
 }
 
+#create-account-form > button, #edit-account-form > button {
+    width: auto;
+    margin: auto;
+    margin-top: 10px;
+}
