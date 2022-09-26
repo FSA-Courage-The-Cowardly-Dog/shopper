@@ -39,9 +39,24 @@ function SingleProduct() {
   }
   // could probably write increment/decrement for +/- buttons
   // or, just look into styling the number input like that
-  const qtyChangeHandler = (event) => {
-    setQty(event.target.value)
+  const num = document.getElementById('counternum')
+
+
+  
+  function plus() {
+    let a = +num.innerHTML
+    a++
+    num.innerHTML = a
   }
+
+  function minus() {
+    let a = +num.innerHTML
+    if (a > 1) {
+      a--
+      num.innerHTML = a
+    }
+  }
+
   const sizeChangeHandler = (event) => {
     if (event.target.value === 'Select Size:') {
       setSize('')
@@ -67,7 +82,7 @@ function SingleProduct() {
     
     <div className="productInfo sizeSelector">
         <form action="#">
-          <select name="languages" id="lang" onChange={sizeChangeHandler}>
+          <select className='sizeselector' name="languages" id="lang" onChange={sizeChangeHandler}>
             <option value="select">Select Size:</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
@@ -77,14 +92,10 @@ function SingleProduct() {
         </form>
     </div>
 
-    <div className="productInfo counter">
-      <form id='myform' method='POST' className='quantity' action='#'>
-        <p className='counterLabel'>Quantity</p>
-        <input type='button' value='-' className='qtyminus minus' field='quantity' />
-        <input id='single-product-qty' type='number' name='quantity' defaultValue='0' min='0' onChange={qtyChangeHandler}/>
-        <input type='button' value='+' className='qtyplus plus' field='quantity' />
-        {/* changed input type to number from text; didn't hook up buttons, but able to toggle in input itself */}
-      </form>
+    <div className="productInfocounter">
+      <span onClick={minus} className='minus'>-</span>
+      <span id='counternum'>1</span>
+      <span onClick={plus} className='plus'>+</span>
     </div>
 
     <div className="productInfo addToCart">
@@ -101,7 +112,7 @@ function SingleProduct() {
     </div>
 
     <div className="imageContainer">
-      <img className='prodImg' src={product.img} style={{maxHeight: '300px',maxWidth: '300px'}}/>
+      <img className='prodImg' src={product.img} style={{maxHeight: '500px',maxWidth: '500px'}}/>
     </div>
 
   </div>

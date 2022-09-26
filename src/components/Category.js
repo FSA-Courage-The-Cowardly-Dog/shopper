@@ -41,15 +41,12 @@ function Category() {
 
               <div className="pagenumber">
                   <div className="pagemenu">
-                    <select className='pagenumber'>
-                      <option>page 1</option>
-                    </select>
+                  <PageNavigation />
                   </div>
               </div>
           </div>
       </div>
       <section className="displayCostumes">
-        <PageNavigation />
         {products.map((product) => (
           <Link to={`/singleproduct/${product.id}`} className="costume">
             <img className="image" src={product.img} />
