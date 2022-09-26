@@ -7,11 +7,11 @@ const AdminPortal = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    // navigate back to home page if user is not admin
-    if (!user.isAdmin) {
+    const token = window.localStorage.getItem('token');
+    if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
     }
-  }, []);
+  }, [user.id]);
 
   return (
     <div id="admin-links">

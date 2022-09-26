@@ -18,10 +18,11 @@ const AddNewProduct = () => {
   const [tag, setTag] = useState('')
 
   React.useEffect(() => {
-    if (!user.isAdmin) {
+    const token = window.localStorage.getItem('token');
+    if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
     }
-  }, []);
+  }, [user.id]);
 
   const handleChange = (props) => (event) => {
     setForm({

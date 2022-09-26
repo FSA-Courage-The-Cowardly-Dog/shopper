@@ -10,14 +10,15 @@ const AllUsersAdminView = () => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    if (!user.isAdmin) {
+    const token = window.localStorage.getItem('token');
+    if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
     }
     dispatch(fetchAllUsers(user));
     return () => {
       dispatch(unsetAllUsers());
     };
-  }, []);
+  }, [user.id]);
 
   // will likely want to add pagination functionality later when enough users
   return (
