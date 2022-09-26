@@ -16,17 +16,23 @@ function SingleProduct() {
     };
   }, []);
   const [qty, setQty] = useState(0)
+  const [size, setSize] = useState('')
 
   const addToCartHandler = (productId) => {
     const token = window.localStorage.getItem('token');
     if (token) {
-      dispatch(attemptAddToCart(productId,Number(qty)))
+      dispatch(attemptAddToCart(productId,Number(qty),size))
     } else {
       const localCart = JSON.parse(window.localStorage.getItem('cart'));
       if (localCart[productId]) {
-        localCart[productId].qty = Number(localCart[productId].qty) + Number(qty);
+        let containsSize = localCart[productId].find(item => item.size === size)
+        if (containsSize) {
+          containsSize.qty = Number(containsSize.qty) + Number(qty)
+        } else {
+          localCart[productId].push({qty, name: product.name, price: product.price, img: product.img, size})
+        }
       } else {
-        localCart[productId] = {qty, name: product.name, price: product.price, img: product.img};
+        localCart[productId] = [{qty, name: product.name, price: product.price, img: product.img, size}];
       }
       window.localStorage.setItem('cart', JSON.stringify(localCart))
     }
@@ -36,8 +42,15 @@ function SingleProduct() {
   const qtyChangeHandler = (event) => {
     setQty(event.target.value)
   }
+  const sizeChangeHandler = (event) => {
+    if (event.target.value === 'Select Size:') {
+      setSize('')
+    } else {
+      setSize(event.target.value)
+    }
+  }
   const checkDisabled = () => {
-    return Number(qty) === 0;
+    return Number(qty) === 0 || !size.length;
   }
 
   return ( product ?
@@ -54,7 +67,7 @@ function SingleProduct() {
     
     <div className="productInfo sizeSelector">
         <form action="#">
-          <select name="languages" id="lang">
+          <select name="languages" id="lang" onChange={sizeChangeHandler}>
             <option value="select">Select Size:</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>

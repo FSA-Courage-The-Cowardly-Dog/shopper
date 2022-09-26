@@ -147,13 +147,13 @@ User.prototype.getCart = async function () {
   return cart;
 };
 
-User.prototype.addToCart = async function (productId, qty) {
+User.prototype.addToCart = async function (productId, qty, size) {
   const cart = await this.getCart();
-  const lineItem = cart.lineItems.find(lineItem => lineItem.productId === productId)
+  const lineItem = cart.lineItems.find(lineItem => (lineItem.productId === productId)&&(lineItem.size === size))
   if (lineItem) {
     await lineItem.update({quantity: (lineItem.quantity+qty)})
   } else {
-    await LineItem.create({quantity: qty, productId, orderId: cart.id})
+    await LineItem.create({quantity: qty, productId, size, orderId: cart.id})
   }
 };
 

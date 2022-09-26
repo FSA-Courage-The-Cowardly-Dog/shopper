@@ -41,11 +41,15 @@ const Cart = () => {
         window.location.reload(false)
     }
 
-    const removeFromLocalCart = (productId) => {
+    const removeFromLocalCart = (productId, size) => {
         const localCart = JSON.parse(window.localStorage.getItem('cart'));
-        delete localCart[productId];
+        let instance = localCart[productId].find(item => item.size === size)
+        let index = localCart[productId].indexOf(instance)
+        // delete localCart[productId];
+        localCart[productId].splice(index, 1)
         window.localStorage.setItem('cart', JSON.stringify(localCart))
         setCart(localCart)
+        window.location.reload(false)
     }
 
     // don't love this implementation, but works for now
@@ -85,7 +89,7 @@ const Cart = () => {
                                                     Unit Price: ${(lineItem.product.price/100).toFixed(2)}
                                                 </div>
                                                 <div>
-                                                    (PLACEHOLDER FOR SIZE)
+                                                    Size: {lineItem.size}
                                                 </div>
                                                 <div>
                                                     Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)}/>
@@ -113,29 +117,32 @@ const Cart = () => {
                         <ul>
                             {Object.entries(cart).map((pair,idx) => {
                                 return(
-                                    <li key={idx}>
+                                    pair[1].map(item => 
+                                    // <li key={idx}>
+                                    <li>
                                         <div className="cart-item-display">
-                                            <img src={pair[1].img} height='150px' width='150px'/>
+                                            <img src={item.img} height='150px' width='150px'/>
                                             <div className="cart-item-details">  
-                                                <Link to={`/singleproduct/${pair[0]}`}>{pair[1].name}</Link>
+                                                <Link to={`/singleproduct/${pair[0]}`}>{item.name}</Link>
                                                 <div>
-                                                    Unit Price: ${(pair[1].price/100).toFixed(2)}
+                                                    Unit Price: ${(item.price/100).toFixed(2)}
                                                 </div>
                                                 <div>
-                                                    (PLACEHOLDER FOR SIZE)
+                                                    Size: {item.size}
                                                 </div>
                                                 <div>
-                                                    Qty:  <input type='number' defaultValue={pair[1].qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/>
+                                                    Qty:  <input type='number' defaultValue={item.qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/>
                                                 </div>
                                                 <button 
                                                     className='delete-from-cart' 
                                                     type='click' 
-                                                    onClick={() => removeFromLocalCart(pair[0])}>
+                                                    onClick={() => removeFromLocalCart(pair[0], item.size)}>
                                                         Remove from cart
                                                 </button>
                                             </div>
                                         </div>
                                     </li>
+                                    )
                                 )
                             })}
                         </ul>
