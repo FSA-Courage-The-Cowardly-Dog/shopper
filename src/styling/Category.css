@@ -50,7 +50,7 @@
     padding: 20px;
 }
 
-.categoryHeaderRight {
+.categoryHeaderMiddle {
     padding: 20px;
     margin-left: 25%;
     display: flex;
@@ -62,8 +62,12 @@
     margin-right: 5px;
 }
 
-.pagemenu {
-    margin-left: 500%;
+.pagenumber{
+    margin-left: 100%;
+}
+
+.categoryHeaderRight {
+    padding:20px;
 }
 
 

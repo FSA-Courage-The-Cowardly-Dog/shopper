@@ -29,7 +29,7 @@ function Category() {
               </div>
           </div>
 
-          <div className="categoryHeaderRight">
+          <div className="categoryHeaderMiddle">
               <div className="pageview">
                   <label  className='viewlabel'>View:</label>
                   <select className='viewmenu'>
@@ -39,11 +39,12 @@ function Category() {
                   </select>
               </div>
 
-              <div className="pagenumber">
-                  <div className="pagemenu">
-                  <PageNavigation />
-                  </div>
-              </div>
+          </div>
+
+          <div className="categoryHeaderRight">
+             <div className="pagenumber">
+             <PageNavigation />
+             </div>
           </div>
       </div>
       <section className="displayCostumes">
