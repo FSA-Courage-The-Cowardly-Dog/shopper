@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import AccountPage from './components/AccountPage';
 import AddNewProduct from './components/admin/AddNewProduct';
 import AdminPortal from './components/admin/AdminPortal';
@@ -20,7 +20,7 @@ import Header from './components/Header';
 import Welcome from './components/Welcome';
 import Category from './components/Category';
 import { attemptTokenLogin } from './store/userSlice';
-import './styling/Mainpage.css'
+import './styling/Mainpage.css';
 import OrderConfirmationPage from './components/OrderConfirmationPage';
 import { attemptGetAllTags } from './store/productSlice';
 
@@ -31,22 +31,25 @@ function App() {
     dispatch(attemptTokenLogin());
     const localCart = JSON.parse(window.localStorage.getItem('cart'));
     if (!localCart) {
-      window.localStorage.setItem('cart',JSON.stringify({}))
+      window.localStorage.setItem('cart', JSON.stringify({}));
     }
   }, [dispatch]);
 
   return (
     <div className="App">
       <header>
-       < Header />
+        <Header />
         <Userbar attemptTokenLogin={attemptTokenLogin} />
       </header>
       <Routes>
         <Route index element={<Welcome />} />
-		    <Route path="/cart" element={<Cart/>}/>
-        <Route path="/cart/checkout" element={<Checkout/>}/>
-        <Route path="/cart/orderconfirmation" element={<OrderConfirmationPage/>}/>
-		    <Route path="/singleproduct/:id" element={<SingleProduct />}/>
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart/checkout" element={<Checkout />} />
+        <Route
+          path="/cart/orderconfirmation"
+          element={<OrderConfirmationPage />}
+        />
+        <Route path="/singleproduct/:id" element={<SingleProduct />} />
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/account/editinfo" element={<EditAccountPage />} />
@@ -54,8 +57,8 @@ function App() {
         <Route path="/adminportal" element={<AdminPortal />} />
         <Route path="/adminportal/allusers" element={<AllUsersAdminView />} />
         <Route path="/adminportal/addproduct" element={<AddNewProduct />} />
-        <Route path="/signin" element={<SignIn />} />
-		<Route path="/:categories" element={<Category />} />
+        <Route path="/signin" element={<SignIn />} />{' '}
+        <Route path="/:categories/:page" element={<Category />} />
         <Route
           path="/adminportal/allproducts"
           element={<AllProductsAdminView />}
