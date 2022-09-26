@@ -171,15 +171,14 @@ User.prototype.updateQuantityInCart = async function (lineItemId, qty) {
 
 User.prototype.createOrder = async function () {
   const order = await this.getCart();
-  // making all checked-out orders completed for now; if time, will later change to processed, and give user time to cancel before admin changes status to completed
+  for (const lineItem of order.lineItems) {
+    await lineItem.decrementInventory();
+  }
   await order.update({ status: 'COMPLETED' });
   await this.getCart();
-
   return order;
-
-  //may later need to iterate through cart and decrement LineItem qty from respective Product
-  //also will need to validate that enough Product in stock for each LineItem; could be a front-end validator check as well
 };
+// making all checked-out orders completed for now; if time, will later change to processed, and give user time to cancel before admin changes status to completed
 
 // will write this later; unsure if meant to clear cart, or cancel PROCESSED order
 User.prototype.cancelOrder = async function () {};

@@ -19,3 +19,6 @@
     color: black;
     margin: 10px
 }
+.inventory-item-warning {
+    color: red;
+}

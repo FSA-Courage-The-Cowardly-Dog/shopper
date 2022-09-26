@@ -15,7 +15,7 @@ function SingleProduct() {
       dispatch(attemptUnmountSingleProduct());
     };
   }, []);
-  const [qty, setQty] = useState(0)
+  const [qty, setQty] = useState(1)
   const [size, setSize] = useState('')
 
   const addToCartHandler = (productId) => {
@@ -37,8 +37,6 @@ function SingleProduct() {
       window.localStorage.setItem('cart', JSON.stringify(localCart))
     }
   }
-  // could probably write increment/decrement for +/- buttons
-  // or, just look into styling the number input like that
   const num = document.getElementById('counternum')
 
 
@@ -46,6 +44,7 @@ function SingleProduct() {
   function plus() {
     let a = +num.innerHTML
     a++
+    setQty(a)
     num.innerHTML = a
   }
 
@@ -53,6 +52,7 @@ function SingleProduct() {
     let a = +num.innerHTML
     if (a > 1) {
       a--
+      setQty(a)
       num.innerHTML = a
     }
   }
@@ -65,7 +65,7 @@ function SingleProduct() {
     }
   }
   const checkDisabled = () => {
-    return Number(qty) === 0 || !size.length;
+    return !size.length || (Number(qty) > product.inventory);
   }
 
   return ( product ?
@@ -79,6 +79,10 @@ function SingleProduct() {
             <div >
                <h3 className="productPrice">${((product.price)/100).toFixed(2)}</h3>
             </div> 
+    </div>
+
+    <div className='productInfo inventory'>
+      <h4 className={product.inventory ? '' : 'out-of-stock'}>{product.inventory ? `${product.inventory} in stock!` : 'Out of stock'}</h4>
     </div>
     
     <div className="productInfo sizeSelector">
@@ -99,6 +103,7 @@ function SingleProduct() {
       <span onClick={plus} className='plus'>+</span>
     </div>
 
+    <p className='product-quantity-warning'>{(Number(qty) > product.inventory) && product.inventory ? 'Not enough product in stock; reduce quantity to be able to add to cart' : ''}</p>
     <div className="productInfo addToCart">
         <button className='addToCart' disabled={checkDisabled()} onClick={() => addToCartHandler(product.id)}>
           <div className="cart">Add To Cart</div>
