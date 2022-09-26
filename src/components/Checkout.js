@@ -42,7 +42,7 @@ const Checkout = () => {
         }
         async function checkout () {
             await dispatch(attemptCheckout(total));
-            navigate('/account/orderhistory')
+            navigate('/cart/orderconfirmation')
         }
         checkout();
     }
