@@ -39,13 +39,14 @@ const ModifySingleProductAdminPage = () => {
   }, []);
 
   React.useEffect(() => {
-    if (!user.isAdmin) {
+    const token = window.localStorage.getItem('token');
+    if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
     }
     if (isLoaded) {
       setForm(product);
     }
-  }, [isLoaded]);
+  }, [user.id, isLoaded]);
 
   const handleNewTagChange = (event) => {
     event.target.value === '<select category>' ? setNewTag('') : setNewTag(event.target.value);
