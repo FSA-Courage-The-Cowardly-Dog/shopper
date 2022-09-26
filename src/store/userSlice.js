@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+
 const userSlice = createSlice({
   name: 'user',
   initialState: {},
@@ -43,7 +44,7 @@ export const attemptPsswordLogin = (loginInfo) => async (dispatch) => {
     window.localStorage.setItem('token', token);
     dispatch(attemptTokenLogin());
   } catch (error) {
-    return error;
+    throw error;
   }
 };
 export const logoutUser = () => {
@@ -65,7 +66,7 @@ export const createUser = (userDetails) => {
         })(dispatch);
       }
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   };
 };
@@ -83,7 +84,7 @@ export const updateUser = (userDetails, userId) => async (dispatch) => {
     );
     dispatch(update(user));
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
 const _mergeLocalCartWithUserCart = async (userId, token) => {

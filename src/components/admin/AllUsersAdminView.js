@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { fetchAllUsers, unsetAllUsers } from '../../store/allUsersSlice';
+import Toastify from 'toastify-js'
 
 const AllUsersAdminView = () => {
   const user = useSelector((state) => state.user);
@@ -13,6 +14,7 @@ const AllUsersAdminView = () => {
     const token = window.localStorage.getItem('token');
     if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
+      Toastify({text: `Not authorized for admin portal`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
     }
     dispatch(fetchAllUsers(user));
     return () => {

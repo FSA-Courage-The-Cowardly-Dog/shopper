@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { attemptCheckout, attemptGetUserCart, attemptUpdateOrderAddress } from "../store/cartSlice";
+import Toastify from 'toastify-js'
 
 const Checkout = () => {
     const cart = useSelector(state => state.cart)
@@ -43,6 +44,7 @@ const Checkout = () => {
         async function checkout () {
             await dispatch(attemptCheckout(total));
             navigate('/cart/orderconfirmation')
+            Toastify({text: "Order processed!", duration:2000 ,gravity: "bottom", position: "right", backgroundColor: "DogderBlue"}).showToast();
         }
         checkout();
     }

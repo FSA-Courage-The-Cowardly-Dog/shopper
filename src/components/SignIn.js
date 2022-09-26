@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { attemptPsswordLogin } from '../store/userSlice';
-
+import Toastify from 'toastify-js'
 
 const SignIn = () => {
   const [state, setState] = useState({
@@ -27,13 +27,18 @@ const SignIn = () => {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await dispatch(
-      attemptPsswordLogin({
-        username: state.username,
-        password: state.password,
-      })
-    );
-    navigate('/')
+    try {
+      await dispatch(
+        attemptPsswordLogin({
+          username: state.username,
+          password: state.password,
+        })
+      );
+      navigate('/')
+      Toastify({text: `Welcome back, ${state.username}`, duration:2000 ,gravity: "top", position: "right", backgroundColor: "orange"}).showToast();
+    } catch (error) {
+      Toastify({text: "Invalid username/password", duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "red"}).showToast();
+    }
   };
 
   return (

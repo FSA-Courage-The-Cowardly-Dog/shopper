@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom';
 import { attemptAddToCart } from '../store/cartSlice';
 import { attemptGetSingleProduct, attemptUnmountSingleProduct } from "../store/productSlice";
+import Toastify from 'toastify-js'
 import '../styling/SingleProduct.css'
 
 function SingleProduct() {
@@ -36,6 +37,7 @@ function SingleProduct() {
       }
       window.localStorage.setItem('cart', JSON.stringify(localCart))
     }
+    Toastify({text: "Added to cart", duration:1500 ,gravity: "bottom", position: "right", backgroundColor: "green"}).showToast();
   }
   const num = document.getElementById('counternum')
 

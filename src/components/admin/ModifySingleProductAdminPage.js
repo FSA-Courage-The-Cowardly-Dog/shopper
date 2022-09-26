@@ -10,6 +10,7 @@ import {
   attemptUnmountSingleProduct,
   attemptUpdateProduct,
 } from '../../store/productSlice';
+import Toastify from 'toastify-js'
 
 const ModifySingleProductAdminPage = () => {
   const user = useSelector((state) => state.user);
@@ -44,6 +45,7 @@ const ModifySingleProductAdminPage = () => {
     const token = window.localStorage.getItem('token');
     if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
+      Toastify({text: `Not authorized for admin portal`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
     }
     if (isLoaded) {
       setForm(product);
@@ -60,7 +62,7 @@ const ModifySingleProductAdminPage = () => {
       [props]: event.target.value,
     });
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     let productDetails = {
       name: form.name,
@@ -69,10 +71,11 @@ const ModifySingleProductAdminPage = () => {
       img: form.img,
       description: form.description,
     };
-    dispatch(attemptUpdateProduct(productDetails, params.id, newTag));
+    await dispatch(attemptUpdateProduct(productDetails, params.id, newTag));
     if (newTag.length) {
       window.location.reload(false)
     }
+    Toastify({text: `Product changes saved!`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "DodgerBlue"}).showToast();
   };
 
   const checkDisabled = () => {

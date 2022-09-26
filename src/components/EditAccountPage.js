@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { updateUser } from '../store/userSlice';
+import Toastify from 'toastify-js'
 
 const EditAccountPage = () => {
   const user = useSelector((state) => state.user);
@@ -18,6 +19,7 @@ const EditAccountPage = () => {
 
   React.useEffect(() => {
     // quick fix for edgecase when reloading on edit page
+    const token = window.localStorage.getItem('token');
     if (!user.username) {
       navigate('/account');
     }
@@ -35,10 +37,16 @@ const EditAccountPage = () => {
       [props]: event.target.value,
     });
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    dispatch(updateUser(form, user.id));
-    navigate('/account');
+    try {
+      await dispatch(updateUser(form, user.id));
+      navigate('/account');
+      Toastify({text: 'Account changes saved!', duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "DodgerBlue"}).showToast();
+    } catch (error) {
+      Toastify({text: 'Username and/or email already registered', duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "red"}).showToast();
+    }
+    
   };
 
   const checkDisabled = () => {

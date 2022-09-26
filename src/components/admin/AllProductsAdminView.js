@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { attemptGetProductList } from '../../store/productSlice';
+import Toastify from 'toastify-js'
 
 const AllProductsAdminView = () => {
   const user = useSelector((state) => state.user);
@@ -13,6 +14,7 @@ const AllProductsAdminView = () => {
     const token = window.localStorage.getItem('token');
     if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
+      Toastify({text: `Not authorized for admin portal`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
     }
     dispatch(attemptGetProductList());
   }, [user.id]);

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import Toastify from 'toastify-js'
 
 const AdminPortal = () => {
   const user = useSelector((state) => state.user);
@@ -10,6 +11,7 @@ const AdminPortal = () => {
     const token = window.localStorage.getItem('token');
     if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
+      Toastify({text: `Not authorized for admin portal`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
     }
   }, [user.id]);
 
