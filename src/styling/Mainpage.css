@@ -33,6 +33,10 @@
     color: black;
 }
 
+.category:hover {
+    transform: scale(1.05);
+}
+
 .category-name {
     margin: 0;
     font-weight: 700;

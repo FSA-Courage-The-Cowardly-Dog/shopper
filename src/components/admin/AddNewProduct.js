@@ -56,16 +56,18 @@ const AddNewProduct = () => {
       <form id="new-product-form" onSubmit={handleSubmit}>
         <h2>New Product Form</h2>
         <div className="form-line">
-          <label htmlFor="name">Name: </label>
+          
           <input
+          placeholder='Name'
             name="name"
             value={form.name}
             onChange={handleChange('name')}
           />
         </div>
         <div className="form-line">
-          <label htmlFor="price">Price (in cents): </label>
+          
           <input
+          placeholder='Price (in cents)'
             name="price"
             type="number"
             value={form.price}
@@ -73,8 +75,9 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="form-line">
-          <label htmlFor="inventory">Inventory: </label>
+      
           <input
+          placeholder='Inventory'
             name="inventory"
             type="number"
             value={form.inventory}
@@ -82,8 +85,9 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="form-line">
-          <label htmlFor="img">Image Link: </label>
+          
           <input
+          placeholder='Image Link'
             name="img"
             type="url"
             value={form.img}
@@ -91,8 +95,9 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="form-line">
-          <label htmlFor="description">Description: </label>
+          
           <input
+          placeholder='Description'
             name="description"
             value={form.description}
             onChange={handleChange('description')}
