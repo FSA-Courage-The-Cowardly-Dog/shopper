@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { attemptCreateNewProduct } from '../../store/productSlice';
+import { attemptCreateNewProduct, attemptGetAllTags } from '../../store/productSlice';
+import Toastify from 'toastify-js';
 
 const AddNewProduct = () => {
   const user = useSelector((state) => state.user);
@@ -21,7 +22,9 @@ const AddNewProduct = () => {
     const token = window.localStorage.getItem('token');
     if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
+      Toastify({text: `Not authorized for admin portal`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
     }
+    dispatch(attemptGetAllTags());
   }, [user.id]);
 
   const handleChange = (props) => (event) => {
@@ -34,13 +37,14 @@ const AddNewProduct = () => {
     event.target.value === '<select category>' ? setTag('') : setTag(event.target.value);
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     let product = { ...form };
     product.price = Number(product.price);
     product.inventory = Number(product.inventory);
-    dispatch(attemptCreateNewProduct(product, tag));
-    navigate('/adminportal/allproducts');
+    await dispatch(attemptCreateNewProduct(product, tag));
+    navigate('/adminportal');
+    Toastify({text: `New product created: ${form.name}!`, duration:2500 ,gravity: "bottom", position: "left", backgroundColor: "#ff8300"}).showToast();
   };
 
   const checkDisabled = () => {

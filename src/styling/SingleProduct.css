@@ -28,8 +28,9 @@
     display: flex;
     flex-direction: column;
     
-    margin-left: 50%;
-    margin-right: 5%;
+    /* margin-left: 50%;
+    margin-right: 5%; */
+    margin: auto;
     
  }
 
@@ -37,10 +38,10 @@
     margin-top: 5%;
  }
 
- .prodImg {
+ /* .prodImg {
     margin-left: 150%;
     margin-top: 70%;
- }
+ } */
 
  .sizeSelector {
     margin-top: 10%
