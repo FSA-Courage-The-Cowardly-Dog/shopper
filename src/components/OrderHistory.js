@@ -26,6 +26,7 @@ const OrderHistory = () => {
                 <h3>{`Invoice number: ${order.id}`}</h3>
                 <span className='order-date'>Date: {order.updatedAt.slice(0,10)}</span>
               </div>
+              <div className='order-status'>Order status: {order.status}</div>
               <div>Shipping address: {order.address}</div>
               <table>
                 <thead>
