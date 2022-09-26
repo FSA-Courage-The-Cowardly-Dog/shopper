@@ -6,6 +6,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function Header() {
+
+   const token = window.localStorage.getItem('token');
+
   return (
    <div className="header">
       <div className='headerLeft'>
@@ -17,11 +20,12 @@ function Header() {
               <input className='searchBar' placeholder='Search' />
            </div>
           
-      
+            {token ? <div></div> :
            <Link className='signIn' to='/signin'>
              < AccountCircleIcon className='accounticon' fontSize='large'/>
               <p className='loginLink'>Sign In</p>
            </Link>
+               }                 
         </div>
 
       <div className="headerRight">

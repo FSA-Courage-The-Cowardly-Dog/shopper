@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { attemptPsswordLogin } from '../store/userSlice';
+import { useNavigate } from 'react-router-dom';
 
 
 const SignIn = () => {
@@ -25,11 +26,10 @@ const SignIn = () => {
         password: state.password,
       })
     );
-    // adding for now for edge case when user logs in on cart page
-    // still doesn't properly load all items if there were local cart items as well;
-    // requires a second manual refresh
-    window.location.reload(false)
+    navigate('/')
   };
+
+  const navigate = useNavigate()
 
   return (
    
