@@ -34,6 +34,10 @@ const productSlice = createSlice({
       state.tagsList = action.payload;
       return state;
     },
+    setItemsPerPage: (state, action) => {
+      state.itemsPerPage = action.payload;
+      return state;
+    },
   },
 });
 export default productSlice.reducer;
@@ -45,6 +49,7 @@ export const {
   updateProduct,
   setPageinfo,
   getTagsList,
+  setItemsPerPage,
 } = productSlice.actions;
 export const attemptGetProductList = () => async (dispatch) => {
   try {
@@ -156,23 +161,28 @@ export const attemptUnmountSingleProduct = () => (dispatch) => {
   } catch (err) {}
 };
 
-export const attemptGetTagList = (params) => async (dispatch) => {
-  try {
-    const { data: tagobj } = await axios.get(
-      `/api/products/${params.categories}/${params.page}`
-    );
-    dispatch(getProductList(tagobj.rows));
-    dispatch(
-      setPageinfo({
-        count: tagobj.count,
-        page: params.page,
-        category: params.categories,
-      })
-    );
-  } catch (error) {
-    return error;
-  }
-};
+export const attemptGetTagList =
+  (params, itemsPerPage = 24) =>
+  async (dispatch) => {
+    console.log(params);
+    console.log(itemsPerPage);
+    try {
+      const { data: tagobj } = await axios.get(
+        `/api/products/${params.categories}/${params.page}?items=${itemsPerPage}`,
+        { hi: '12' }
+      );
+      dispatch(getProductList(tagobj.rows));
+      dispatch(
+        setPageinfo({
+          count: tagobj.count,
+          page: params.page,
+          category: params.categories,
+        })
+      );
+    } catch (error) {
+      return error;
+    }
+  };
 
 export const attemptGetAllTags = () => async (dispatch) => {
   try {
