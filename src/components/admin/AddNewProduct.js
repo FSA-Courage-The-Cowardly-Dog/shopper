@@ -52,12 +52,13 @@ const AddNewProduct = () => {
   };
 
   return (
-    <div id="new-product-form-container">
+    <div className='newProduct' id="new-product-form-container">
       <form id="new-product-form" onSubmit={handleSubmit}>
-        <h2>New Product Form</h2>
+        <h2 className='newproducttitle'>New Product Form</h2>
         <div className="form-line">
           
           <input
+          className='newproductform'
           placeholder='Name'
             name="name"
             value={form.name}
@@ -67,6 +68,7 @@ const AddNewProduct = () => {
         <div className="form-line">
           
           <input
+          className='newproductform'
           placeholder='Price (in cents)'
             name="price"
             type="number"
@@ -77,6 +79,7 @@ const AddNewProduct = () => {
         <div className="form-line">
       
           <input
+          className='newproductform'
           placeholder='Inventory'
             name="inventory"
             type="number"
@@ -87,6 +90,7 @@ const AddNewProduct = () => {
         <div className="form-line">
           
           <input
+          className='newproductform'
           placeholder='Image Link'
             name="img"
             type="url"
@@ -97,6 +101,7 @@ const AddNewProduct = () => {
         <div className="form-line">
           
           <input
+          className='newproductform'
           placeholder='Description'
             name="description"
             value={form.description}
@@ -104,17 +109,16 @@ const AddNewProduct = () => {
           />
         </div>
         <div className="form-line">
-          <label htmlFor="categories">Categories: </label>
-          <select defaultValue='<select category>' id='tag-selector' onChange={handleTagChange}>
+          <select className='newproductform' defaultValue='<select category>' id='tag-selector' onChange={handleTagChange}>
             <option>{'<select category>'}</option>
             {tags ? tags.map((tag,idx)=> <option key={idx}>{tag.name}</option>) : <></>}
           </select>
         </div>
-        <button type="submit" disabled={checkDisabled()}>
+      </form>
+      <button className='newproductbtn' type="submit" disabled={checkDisabled()}>
           Create Product
         </button>
-      </form>
-      <Link to="/adminportal">Back to portal</Link>
+      <Link className='adminportallink' to="/adminportal">Back to portal</Link>
     </div>
   );
 };

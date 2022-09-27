@@ -108,6 +108,9 @@ function SingleProduct() {
         </form>
     </div>
 
+    <div className="countTitle">
+    <p>Quantity</p>
+    </div>
     <div className="productInfocounter">
       <span onClick={minus} className='minus'>-</span>
       <span id='counternum'>1</span>
