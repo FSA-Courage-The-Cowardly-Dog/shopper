@@ -102,8 +102,8 @@ const Checkout = () => {
                 </div>
                 <div className="cart-link-complete-purchase-line">
                     <Link to="/cart">Back to cart</Link>
-                    <button className="complete-purchase" onClick={()=>handlePurchase()} disabled={checkDisabled()}>Purchase</button>
-                    <button onClick={() => dispatch(attemptStripeCheckout(cart.lineItems))}>Complete Purchase Through Stripe</button>
+                    {/* <button className="complete-purchase" onClick={()=>handlePurchase()} disabled={checkDisabled()}>Purchase</button> */}
+                    <button onClick={() => dispatch(attemptStripeCheckout(cart.lineItems))} disabled={checkDisabled()}>Complete Purchase Through Stripe</button>
                 </div>
 
                 <div className='inventory-item-warning'>
