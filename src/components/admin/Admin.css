@@ -31,6 +31,10 @@
     margin-bottom: 5%;
 }
 
+.disabled {
+    pointer-events: none;
+    color: lightgray;
+}
 .newProduct {
     display: flex;
     flex-direction: column;

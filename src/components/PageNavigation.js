@@ -12,7 +12,7 @@ export default function PageNavigation({ navTo }) {
   let numberOfPages = Math.ceil(count / 10);
 
   React.useEffect(() => {
-    let pagesToShow = 1;
+    let pagesToShow = 3;
     let pageNumbersTemp = [];
     if (numberOfPages < pagesToShow) {
       for (let i = 1; i <= numberOfPages; i++) {

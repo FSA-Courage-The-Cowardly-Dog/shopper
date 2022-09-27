@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const { User, Order } = require('../db');
 const { isAdmin, requireToken } = require('./gatekeepingMiddleware');
+const Sequelize = require('sequelize')
 
 router.post('/', async (req, res, next) => {
   try {
     req.body.isAdmin = false;
     const user = await User.create(req.body);
     res.send(user);
-    // may want to also create a new Order for user here
   } catch (err) {
     next(err);
   }
@@ -25,8 +25,18 @@ router.put('/:id', requireToken, async (req, res, next) => {
 
 router.get('/', requireToken, isAdmin, async (req, res, next) => {
   try {
-    const users = await User.findAll();
-    res.send(users);
+    if (req.query.page) {
+      const orderArr = req.query.sort === 'true' ? [Sequelize.fn('lower',Sequelize.col('lastName')), 'asc'] : ['id','asc']
+      const users = await User.findAll({
+        order: [orderArr],
+        offset: (req.query.page-1)*25,
+        limit: 25
+      })
+      res.send(users)
+    } else {
+      const users = await User.findAll();
+      res.send(users);
+    }
   } catch (err) {
     next(err);
   }

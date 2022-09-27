@@ -1,15 +1,34 @@
 const router = require('express').Router();
+const Sequelize = require('sequelize');
 const { Product, Tag } = require('../db');
 const { isAdmin, requireToken } = require('./gatekeepingMiddleware');
 // const { Op } = require('sequelize');
 // get All products
-router.get('/', (req, res, next) => {
-  return Product.findAll({ order: [['id', 'asc']], include: { model: Tag } })
-    .then((product) => {
-      res.json(product);
-      return null;
-    })
-    .catch(next);
+router.get('/', async (req, res, next) => {
+  try {
+    const includeObj = { model: Tag }
+    if (req.query.page) {
+      if (req.query.tag) {
+        includeObj.where = { name: [req.query.tag]}
+      }
+      const orderArr = req.query.sort === 'true' ? [Sequelize.fn('lower',Sequelize.col('product.name')),'asc'] : ['id','asc']
+      const products = await Product.findAll({
+        order: [orderArr],
+        include: includeObj,
+        offset: (req.query.page-1)*25,
+        limit: 25
+      })
+      res.send(products)
+    } else {
+      if (req.headers.tagfilter.length) {
+        includeObj.where = { name: [req.headers.tagfilter]}
+      }
+      const products = await Product.findAll({ order: [['id', 'asc']], include: includeObj });
+      res.send(products)
+    }
+  } catch (err) {
+    next(err)
+  }
 });
 
 // get product by price
