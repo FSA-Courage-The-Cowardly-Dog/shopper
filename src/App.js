@@ -24,6 +24,12 @@ import './styling/Mainpage.css';
 import OrderConfirmationPage from './components/OrderConfirmationPage';
 import RerouteHome from './components/RerouteHome';
 
+// for stripe integration
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+// stripe publishable test key
+const stripePromise = loadStripe('pk_test_51LmjNEJX4F0kIK6BNSw021mmdUkQXeznZtMIwTQUnsSYRjLaMNWZ2HOaQvCCNAlDfClPj13TImasMXxXKuPIB6M900aqrXvak4')
+
 function App() {
   const dispatch = useDispatch();
 
