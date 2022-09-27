@@ -3,6 +3,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     background-color: white;
+    justify-content: center;
+    column-gap: 40px;
 }
 
 .categoryHeader {
@@ -39,11 +41,14 @@
 
 .costumeName {
     color: black;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    font: 15px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
 }
 
 .costumePrice {
-    color: black;
+    color: orangered;
 }
 
 .categoryHeaderLeft {

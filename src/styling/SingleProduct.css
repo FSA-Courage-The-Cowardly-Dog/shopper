@@ -1,6 +1,6 @@
 .productInfo {
     padding: 10px;
-   
+   width: 80%;
 }
 
 .productPrice {
@@ -14,7 +14,8 @@
 
 .addToCart {
     border: none;
-    width: 75%;
+    width: 85%;
+    height: 34px;
     background-color:  rgb(255, 131, 0);
     border-radius: 8px;
     text-align: center;
@@ -27,10 +28,9 @@
  .prodInfoBlock{
     display: flex;
     flex-direction: column;
-    
-    /* margin-left: 50%;
-    margin-right: 5%; */
+    border-left: 500px solid transparent;
     margin: auto;
+    margin-top: 2%;
     
  }
 
@@ -38,13 +38,12 @@
     margin-top: 5%;
  }
 
- /* .prodImg {
-    margin-left: 150%;
-    margin-top: 70%;
- } */
+ .prodImg {
+    margin-left: 45%;
+ }
 
  .sizeSelector {
-    margin-top: 10%
+    margin-top: 3%
  }
 
  .counterLabel {
@@ -52,7 +51,8 @@
  }
 
  .description {
-    margin-top: 18%;
+    margin-top: 8%;
+    width: 80%;
  }
 
  .single-product-container {
@@ -71,8 +71,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
-    margin-top: 10%;
-    margin-bottom: 17%;
+    margin-bottom: 8%;
     height: 35px;
     width: 110px; 
     background-color:  rgb(255, 131, 0);
@@ -96,4 +95,9 @@
 
  .product-quantity-warning, .out-of-stock {
    color: red;
+ }
+ .countTitle {
+   margin-top: 8%;
+   margin-bottom:1%;
+   font: 14px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
  }

@@ -34,7 +34,7 @@
 }
 
 .category:hover {
-  transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .category-name {
@@ -133,11 +133,10 @@
 }
 
 .categorySection {
-  background-image: url('https://www.pixelstalk.net/wp-content/uploads/images4/Scary-Halloween-Background-1-1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-  height: 100%;
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/images4/Scary-Halloween-Background-1-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 40px solid black;
 }
 
 .temp {
@@ -168,11 +167,24 @@
 }
 
 .signedInSearch {
-  margin-top: 30px;
-  background-color: #d0d1d5;
-  border-radius: 8px;
-  height: 35px;
-  width: 270%;
-  margin-left: 305%;
-  border: none;
+    margin-top: 30px;
+    background-color: #d0d1d5;
+    border-radius: 8px;
+    height: 35px;
+    width: 270%;
+    margin-left: 305%;
+    border: none;
+}
+
+.emptyCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    margin-top: 5%;
+}
+
+.emptyCartTitle {
+    font: 32px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 450;
 }
