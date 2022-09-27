@@ -39,7 +39,6 @@ export const attemptTokenLogin = () => async (dispatch) => {
       dispatch(login(userInfo));
     } catch (err) {
       window.localStorage.removeItem('token');
-      throw err;
     }
   }
 };
