@@ -33,7 +33,6 @@ const AllUsersAdminView = () => {
     };
   }, [user.id, page, sortByLastName]);
 
-  // will likely want to add pagination functionality later when enough users
   return ( users.length ?
     <>
     <div className='allusers-header'>

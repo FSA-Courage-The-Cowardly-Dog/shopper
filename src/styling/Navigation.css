@@ -1,12 +1,16 @@
 .pageNav {
   width: 100%;
+  display: flex;
   margin-left: auto;
-  justify-items: end;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  align-items: center;
 }
 .pageNav > a {
   padding-right: 0.2em;
   text-decoration: none;
 }
 .activePage {
-  font-weight: 700;
+  font-size: 1.2em;
+  font-weight: 800;
 }

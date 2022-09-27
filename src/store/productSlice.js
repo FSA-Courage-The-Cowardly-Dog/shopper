@@ -40,7 +40,15 @@ const productSlice = createSlice({
     setProductsByPage: (state, action) => {
       state.productList = action.payload;
       return state
-    }
+    },
+    setItemsPerPage: (state, action) => {
+      state.itemsPerPage = action.payload;
+      return state;
+    },
+    setPriceOrder: (state, action) => {
+      state.priceOrder = action.payload;
+      return state;
+    },
   },
 });
 export default productSlice.reducer;
@@ -53,6 +61,8 @@ export const {
   setPageinfo,
   getTagsList,
   setProductsByPage,
+  setItemsPerPage,
+  setPriceOrder,
 } = productSlice.actions;
 export const attemptGetProductList = (tag = '') => async (dispatch) => {
   try {
@@ -71,7 +81,7 @@ export const attemptGetSingleProduct = (productId) => async (dispatch) => {
       `/api/products/${productId}`
     );
     if (singleProduct === null) {
-      throw new Error('Product does not exist')
+      throw new Error('Product does not exist');
     }
     dispatch(getSingleProduct(singleProduct));
   } catch (error) {
@@ -170,23 +180,28 @@ export const attemptUnmountSingleProduct = () => (dispatch) => {
   } catch (err) {}
 };
 
-export const attemptGetTagList = (params) => async (dispatch) => {
-  try {
-    const { data: tagobj } = await axios.get(
-      `/api/products/${params.categories}/${params.page}`
-    );
-    dispatch(getProductList({productList: tagobj.rows}));
-    dispatch(
-      setPageinfo({
-        count: tagobj.count,
-        page: params.page,
-        category: params.categories,
-      })
-    );
-  } catch (error) {
-    throw error;
-  }
-};
+export const attemptGetTagList =
+  (params, itemsPerPage = 24, priceOrder = false) =>
+  async (dispatch) => {
+    try {
+      const { data: tagobj } = await axios.get(
+        `/api/products/${params.categories}/${
+          params.page
+        }?items=${itemsPerPage}${priceOrder ? `&price=${priceOrder}` : ''}`,
+        { hi: '12' }
+      );
+      dispatch(getProductList({productList: tagobj.rows}));
+      dispatch(
+        setPageinfo({
+          count: tagobj.count,
+          page: params.page,
+          category: params.categories,
+        })
+      );
+    } catch (error) {
+      return error;
+    }
+  };
 
 export const attemptGetAllTags = () => async (dispatch) => {
   try {

@@ -29,7 +29,7 @@ export default function PageNavigation({ navTo }) {
       (num) => (num > 0) & (num <= numberOfPages)
     );
     setPageNumbers(pageNumbersTemp);
-  }, [count, page]);
+  }, [count, page, currentPage, numberOfPages]);
 
   return (
     <div className="pageNav">
