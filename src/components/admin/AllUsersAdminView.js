@@ -37,10 +37,10 @@ const AllUsersAdminView = () => {
   return ( users.length ?
     <>
     <div className='allusers-header'>
-      <h1>All User Information</h1>
+      <h1>All User Information ({totalUsers})</h1>
       <div>
         <input type='checkbox' name='sort-lastName' defaultChecked={sortByLastName} onChange={() => setSortByLastName(!sortByLastName)}/>
-        <label htmlFor='sort-lastName'>Sort by Last Name</label>
+        <label htmlFor='sort-lastName'>Sort by Last Name (Asc.)</label>
       </div>
       <div className='display-info'>
         <div className='display-text'>Displaying 25 users per page:</div>

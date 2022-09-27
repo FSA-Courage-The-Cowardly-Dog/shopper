@@ -5,7 +5,10 @@ const productSlice = createSlice({
   initialState: { productList: [], singleProduct: {} },
   reducers: {
     getProductList: (state, action) => {
-      state.productList = action.payload;
+      state.productList = action.payload.productList;
+      if (action.payload.count) {
+        state.count = action.payload.count
+      } 
       return state;
     },
     getSingleProduct: (state, action) => {
@@ -34,6 +37,10 @@ const productSlice = createSlice({
       state.tagsList = action.payload;
       return state;
     },
+    setProductsByPage: (state, action) => {
+      state.productList = action.payload;
+      return state
+    }
   },
 });
 export default productSlice.reducer;
@@ -45,11 +52,15 @@ export const {
   updateProduct,
   setPageinfo,
   getTagsList,
+  setProductsByPage,
 } = productSlice.actions;
-export const attemptGetProductList = () => async (dispatch) => {
+export const attemptGetProductList = (tag = '') => async (dispatch) => {
   try {
-    const { data: productlist } = await axios.get('/api/products');
-    dispatch(getProductList(productlist));
+    const { data: productList } = await axios.get('/api/products', {
+      headers: {
+        tagfilter: tag,
+      }});
+    dispatch(getProductList({productList, count: productList.length}));
   } catch (error) {
     throw error;
   }
@@ -164,7 +175,7 @@ export const attemptGetTagList = (params) => async (dispatch) => {
     const { data: tagobj } = await axios.get(
       `/api/products/${params.categories}/${params.page}`
     );
-    dispatch(getProductList(tagobj.rows));
+    dispatch(getProductList({productList: tagobj.rows}));
     dispatch(
       setPageinfo({
         count: tagobj.count,
@@ -185,3 +196,18 @@ export const attemptGetAllTags = () => async (dispatch) => {
     throw error;
   }
 };
+
+export const getProductsByPage = (page, sort=false, tag='') => async (dispatch) => {
+  try {
+    const token = window.localStorage.getItem('token');
+    const urlString = `/api/products?page=${page}` + (sort ? '&sort=true' : '&sort=false') + (tag.length ? `&tag=${tag}` : '')
+    const { data: products } = await axios.get(urlString, {
+      headers: {
+        authorization: token,
+      },
+    });
+    dispatch(setProductsByPage(products));
+  } catch (error) {
+    throw error;
+  }
+}

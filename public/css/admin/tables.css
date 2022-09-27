@@ -19,7 +19,7 @@ td {
     white-space: nowrap;
     padding: 5px
 }
-.allusers-header {
+.allusers-header, .allproducts-header {
     margin-left: auto;
     margin-right: auto;
     display: flex;

@@ -15,7 +15,7 @@ function Category() {
 
   const products = useSelector((state) => state.product.productList);
 
-  return (
+  return ( products ?
     <div>
       <div className="categoryHeader">
           <div className="categoryHeaderLeft">
@@ -56,7 +56,8 @@ function Category() {
           </Link>
         ))}
       </section>
-    </div>
+    </div> 
+    : <div>Loading...</div>
   );
 }
 

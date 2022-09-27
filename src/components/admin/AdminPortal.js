@@ -28,7 +28,7 @@ const AdminPortal = () => {
            <Link className='links' to="/adminportal/addproduct">Add Product</Link>
          </div>
           <div id="modify-delete-item">
-           <Link className='links' to="/adminportal/allproducts">All Products Table</Link>
+           <Link className='links' to="/adminportal/allproducts?page=1">All Products Table</Link>
          </div>
       </div>
     </div>
