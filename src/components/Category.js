@@ -1,6 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { attemptGetTagList, setItemsPerPage } from '../store/productSlice';
+import {
+  attemptGetTagList,
+  setItemsPerPage,
+  setPriceOrder,
+} from '../store/productSlice';
 import { useParams } from 'react-router-dom';
 import PageNavigation from './PageNavigation';
 import '../styling/Category.css';
@@ -9,12 +13,22 @@ function Category() {
   const dispatch = useDispatch();
   const params = useParams();
   let itemsperpage = useSelector((state) => state.product.itemsPerPage);
+  let priceOrder = useSelector((state) => state.product.priceOrder);
   React.useEffect(() => {
-    dispatch(attemptGetTagList(params, itemsperpage));
-  }, [params, dispatch, itemsperpage]);
+    dispatch(setPriceOrder(''));
+  }, [dispatch]);
+  React.useEffect(() => {
+    dispatch(attemptGetTagList(params, itemsperpage, priceOrder));
+  }, [params, dispatch, itemsperpage, priceOrder]);
+
   const handleChangeView = (event) => {
     let newItemsPerPage = Number(event.target.value);
     dispatch(setItemsPerPage(newItemsPerPage));
+  };
+
+  const handlePriceChangeView = (event) => {
+    console.log('hi', event);
+    dispatch(setPriceOrder(event.target.value));
   };
   const products = useSelector((state) => state.product.productList);
 
@@ -24,14 +38,15 @@ function Category() {
         <div className="categoryHeaderLeft">
           <div className="sortby">
             <label className="sortbylabel">Sort by:</label>
-            <select className="sortbymenu">
-              <option value="SortByDefault" selected="selected">
+            <select
+              className="sortbymenu"
+              onChange={(e) => handlePriceChangeView(e)}
+            >
+              <option value="" selected="selected">
                 Choose one
               </option>
-              <option value="SortByPriceAscending">Price - Low to High </option>
-              <option value="SortByPriceDescending">
-                Price - High to Low{' '}
-              </option>
+              <option value="ASC">Price - Low to High </option>
+              <option value="DESC">Price - High to Low </option>
             </select>
           </div>
         </div>

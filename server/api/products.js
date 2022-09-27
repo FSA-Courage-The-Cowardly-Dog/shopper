@@ -28,6 +28,7 @@ router.get('/price/:price', (req, res, next) => {
 // get product by tag
 router.get('/:tag/:page', async (req, res, next) => {
   let itemsPerPage = req.query.items || 24;
+  let price = req.query.price;
   try {
     const { count, rows } = await Product.findAndCountAll({
       include: {
@@ -38,6 +39,7 @@ router.get('/:tag/:page', async (req, res, next) => {
       },
       offset: (req.params.page - 1) * itemsPerPage,
       limit: itemsPerPage,
+      order: price ? [['price', price]] : [],
     });
     // console.log(count);
     res.send({ rows, count });
@@ -75,7 +77,7 @@ router.post('/add-product', requireToken, isAdmin, async (req, res, next) => {
 router.get('/:id', (req, res, next) => {
   return Product.findByPk(req.params.id, { include: { model: Tag } })
     .then((product) => res.json(product))
-    .catch(error => next(error));
+    .catch(next);
 });
 
 // delete product

@@ -38,6 +38,10 @@ const productSlice = createSlice({
       state.itemsPerPage = action.payload;
       return state;
     },
+    setPriceOrder: (state, action) => {
+      state.priceOrder = action.payload;
+      return state;
+    },
   },
 });
 export default productSlice.reducer;
@@ -50,6 +54,7 @@ export const {
   setPageinfo,
   getTagsList,
   setItemsPerPage,
+  setPriceOrder,
 } = productSlice.actions;
 export const attemptGetProductList = () => async (dispatch) => {
   try {
@@ -165,11 +170,13 @@ export const attemptUnmountSingleProduct = () => (dispatch) => {
 };
 
 export const attemptGetTagList =
-  (params, itemsPerPage = 24) =>
+  (params, itemsPerPage = 24, priceOrder = false) =>
   async (dispatch) => {
     try {
       const { data: tagobj } = await axios.get(
-        `/api/products/${params.categories}/${params.page}?items=${itemsPerPage}`,
+        `/api/products/${params.categories}/${
+          params.page
+        }?items=${itemsPerPage}${priceOrder ? `&price=${priceOrder}` : ''}`,
         { hi: '12' }
       );
       dispatch(getProductList(tagobj.rows));
