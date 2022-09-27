@@ -8,7 +8,6 @@ const { users } = require('./seed/users.json');
 const { users2 } = require('./seed/users2.json');
 const { products } = require('./seed/products.json');
 const { tags } = require('./seed/tags.json');
-const { products2 } = require('./seed/products2.json');
 User.hasMany(Order);
 Order.belongsTo(User);
 
@@ -51,18 +50,18 @@ const syncAndSeed = async () => {
         }
       })
     );
-    await Promise.all(
-      products2.map(async (product) => {
-        const newprod = await Product.create(product);
-        if (product.tags) {
-          product.tags.forEach(async (tag) => {
-            let newtag = await Tag.findOne({ where: { name: tag.name } });
-            await newprod.addTag(newtag);
-          });
-        }
-      })
-    );
-    console.log(`Seeding successful!`);
+    // await Promise.all(
+    //   products.map(async (product) => {
+    //     const newprod = await Product.create(product);
+    //     if (product.tags) {
+    //       product.tags.forEach(async (tag) => {
+    //         let newtag = await Tag.findOne({ where: { name: tag.name } });
+    //         await newprod.addTag(newtag);
+    //       });
+    //     }
+    //   })
+    // );
+    // console.log(`Seeding successful!`);
   } catch (err) {
     console.error(err);
   }

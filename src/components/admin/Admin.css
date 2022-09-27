@@ -35,4 +35,41 @@
     pointer-events: none;
     color: lightgray;
 }
+.newProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    row-gap: 50px;
+}
 
+.newproductform {
+    width: 100%;
+    height: 44px;
+}
+
+.newproducttitle {
+    text-align: center;
+    font: 28px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 10%
+}
+
+.newproductbtn {
+    width: 150px;
+    height: 44px;
+    background-color: rgb(255, 131, 0) ;
+    color: black;
+    border: 1.5px solid black;
+    font: 16px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.newproductbtn:hover {
+    background-color: black;
+    color: rgb(255, 131, 0);
+}
+
+.adminportallink {
+    text-decoration: none;
+    color: rgb(255, 131, 0);
+    font: 14px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
