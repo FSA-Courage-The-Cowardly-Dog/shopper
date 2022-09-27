@@ -50,7 +50,7 @@
     },
     {
       "name": "Adult Hawkins Uniform Costume - Stranger Things",
-      "price": 899,
+      "price": 2899,
       "inventory": 5,
       "img": "https://spirit.scene7.com/is/image/Spirit/01596386-a?$Detail$",
       "description": "Look ready to shoot some hoops in this Stranger Things Hawkins Uniform costume. This sports outfit features a white sleeveless jersey with Hawkins on the front and the number 8 and colorful stripes down the sides, along with matching shorts and athletic socks that will look great on any Stranger Things fan.",
@@ -495,6 +495,166 @@
       "img": "https://spirit.scene7.com/is/image/Spirit/01468123-a?$Detail$",
       "description": "Let your favorite little person ride into the night with her favorite animal! This 3D flamingo ride-along costume features faux fur detail that will have your little one ready to fly away. The attached glitter leggings and adjustable straps will have your child feeling great all night long.",
       "tags": [{ "name": "toddler" }]
+    },
+    {
+      "name": "Adult Mancake Costume - Fortnite",
+      "price": 3599,
+      "inventory": 31,
+      "img": "https://spirit.scene7.com/is/image/Spirit/07651763-a?$Detail$",
+      "description": "Prepare for the ultimate battle this Halloween when you wear this officially licensed Mancake costume! This costume includes Mancake's signature jumpsuit, poncho, and butter sticks, as well as a pair of gloves, a bandana, a double holster, and an epic half mask. Bring this fan-favorite Fortnite Outfit to life!",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Hopper Costume - Stranger Things",
+      "price": 3899,
+      "inventory": 56,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01599273-a?$Detail$",
+      "description": "At the end of the third season of Stranger Things, Hopper's fate seemed to be up in the air. But in the fourth season of the series, we see that Hopper is alive (but certainly not well) holed up in a Russian prison. Suit up as your favorite Hawkins officer-turned-hero with this officially licensed costume! Featuring a fuzzy hat and a blue jacket that reads American on the chest, this winter-ready look will have you looking like Jim Hopper in no time.",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Akatsuki Robe - Naruto Shippuden",
+      "price": 3099,
+      "inventory": 84,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01365907-a?$Detail$",
+      "description": "Represent your favorite group from Naruto Shippuden when you wear this awesome and officially licensed Akatsuki robe. This robe is all-black with red interior, and features the Akatsuki red cloud symbol. Whether you're ready to change the world or simply just fight your enemies, this robe will make you look as though you've jumped straight out of the Naruto Shippuden series.",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "AFC Richmond Jersey - Ted Lasso",
+      "price": 2899,
+      "inventory": 44,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01601715-a?$Detail$",
+      "description": "Put your love for Ted Lasso on display this Halloween when you wear this officially licensed AFC Richmond Jersey. When you're rocking this incredible jersey, we bet you'll feel like a pro!",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Data Costume - Star Trek: The Next Generation",
+      "price": 3499,
+      "inventory": 94,
+      "img": "https://spirit.scene7.com/is/image/Spirit/07641343-a?$Detail$",
+      "description": "Learn what it means to be human when you suit up as the lovable android Data from Star Trek: The Next Generation! This officially licensed costume includes a shirt, pins, and a Starfleet badge. You'll have everything you need for your next venture on the USS Enterprise!",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Picard Costume - Star Trek: The Next Generation",
+      "price": 3499,
+      "inventory": 41,
+      "img": "https://spirit.scene7.com/is/image/Spirit/07641376-a?$Detail$",
+      "description": "Engage! Take charge of the USS Enterprise and lead your crew through the cosmos as Captain Picard with this officially licensed costume which features a shirt, pins, and a Starfleet badge. This fearless leader is known for his brilliant tactics and bold decision-making... Are you ready to take up the mantle?",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Department of Corrections Prisoner One Piece Costume",
+      "price": 3999,
+      "inventory": 75,
+      "img": "https://spirit.scene7.com/is/image/Spirit/00580803-a?$Detail$",
+      "description": "The bright orange jumpsuit might not stand out in prison, but people are sure to notice you outsmarted the guards and escaped when you show up in this Department of Corrections Prisoner Costume! This collared orange jumpsuit features a zipper front with DOC printed next to it and Department of Corrections on the back. Add handcuffs (sold separately) and avoid anyone dressed like a cop this Halloween!",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Flamin' Hot Cheetos Bag Costume",
+      "price": 4299,
+      "inventory": 93,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01554591-a?$Detail$",
+      "description": "You'll be bringing the heat this Halloween when you wear this officially licensed Adult Flamin' Hot Cheetos Costume! This epic costume is made of foam and is designed to look exactly like a bag of your favorite snack. Put on the included sunglasses and you'll have the hottest costume on the block!",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Victorian Vampire Costume - The Signature Collection",
+      "price": 5299,
+      "inventory": 95,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01458736-a?$Detail$",
+      "description": "Youll be haunting the whole neighborhood this year in this high-quality vampire costume. Step out of that dark and dusty old castle and get ready to hunt for fresh blood on Halloween night.",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Jason Voorhees Work Shirt - Friday the 13th",
+      "price": 3499,
+      "inventory": 87,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01484005-a?$Detail$",
+      "description": "Get to work on terrorizing the neighborhood in this officially licensed Jason Voorhees work shirt! This dark green, cotton button-down shirt features chest patches that will make you look just like the real J. Voorhees. Your Friday the 13th costume will look frighteningly authentic with this Jason Voorhees work shirt!",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Woody Jumpsuit Costume - Toy Story",
+      "price": 5499,
+      "inventory": 96,
+      "img": "https://spirit.scene7.com/is/image/Spirit/07006737-a?$Detail$",
+      "description": "There's a snake in my boot! Celebrate your favorite Toy Story character when you dress up in this officially licensed Woody costume. This awesome outfit includes a jumpsuit with an attached vest and boot covers, a bandana, a belt, a sheriff's badge, and of course a cowboy hat. Get ready to reach for the sky this Halloween!",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Zenitsu Costume - Demon Slayer",
+      "price": 4799,
+      "inventory": 56,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01597939-a?$Detail$",
+      "description": "Show off your fandom for Demon Slayer and send demons running with this Adult Zenitsu Costume! This officially licensed fit includes a black and white jumpsuit, an orange kimono, matching shin wraps, and a belt. Once you slip into this epic ensemble, everyone will know which anime is your absolute favorite!",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Scarecrow Costume - The Wizard of Oz",
+      "price": 5999,
+      "inventory": 50,
+      "img": "https://spirit.scene7.com/is/image/Spirit/07177181-a?$Detail$",
+      "description": "Celebrate one of the most legendary movies in film history when you dress as the Scarecrow from The Wizard of Oz this Halloween! This costume set is loaded with gear including a shirt, pants, hat, hood, belt, gloves, and a diploma from the University of Oz. Bring your favorite character to life this spooky season.",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Ted Lasso Track Suit Costume",
+      "price": 4999,
+      "inventory": 70,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01601269-a?$Detail$",
+      "description": "Look just like one of the best coaches in the game this Halloween when you dress up in this officially licensed Ted Lasso Track Suit Costume. This costume comes with everything you need to transform into your favorite character from the show. Featuring a Ted Lasso tracksuit, visor, and whistle accessory, just stick-on the included fake moustache and you'll have the ultimate disguise and look like a total winner!",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult The Riddler Jacket - The Batman",
+      "price": 5699,
+      "inventory": 28,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01601400-a?$Detail$",
+      "description": "Feeling villainous? Become one of the most infamous criminals in all of Gotham City when you wear this officially licensed The Riddler jacket. This iconic jacket looks straight out of The Batman movie, transforming you into one of The Dark Knight's greatest nemeses.",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Ghost Face ® Costume - Scream 4",
+      "price": 3699,
+      "inventory": 58,
+      "img": "https://spirit.scene7.com/is/image/Spirit/07071350-a?$Detail$",
+      "description": "Create the sounds of bloodcurdling screams when you live large in this officially licensed Scream 4 Ghost Face ® adult costume inspired by the latest issue in the Wes Craven slasher film series Scream - Scream 4. Conjure up some frightful fun in this terrifying yet comfortable costume - let the games begin anew in",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Skeleton Suit",
+      "price": 6399,
+      "inventory": 48,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01473677-a?$Detail$",
+      "description": "Suit up this Halloween like a stylish skeleton from the graveyard when you dress up in this Adult Skeleton Suit. This suit features a jacket, pants, and tie for you to rock a skeleton look at any costume party.",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Guard Costume - Squid Game",
+      "price": 5899,
+      "inventory": 84,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01601459-a?$Detail$",
+      "description": "Prepare to take part in the game of all games. Represent your favorite TV show when you wear this officially licensed Squid Game guard costume. Featuring the iconic Squid Game mask, a jumpsuit, a belt, and gloves, this outfit will let everyone know how much you love the legendary series.",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Beetlejuice Striped Suit",
+      "price": 6299,
+      "inventory": 44,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01484286-a?$Detail$",
+      "description": "Everyone will instantly recognize you're the infamous Beetlejuice when you decide to dress up in this officially licensed Adult Beetlejuice Striped Plus Size Suit. Once you slip into this suit you'll look like you've just come off of the screen! You'll love dressing up as your favorite character with this costume that features a striped suit, pants, and a tie.",
+      "tags": [{ "name": "men" }]
+    },
+    {
+      "name": "Adult Tinky Winky Costume - Teletubbies",
+      "price": 4999,
+      "inventory": 96,
+      "img": "https://spirit.scene7.com/is/image/Spirit/01505189-a?$Detail$",
+      "description": "Turn yourself into your favorite on-screen character with this officially licensed Tinky Winky costume. This one piece costume is comfortable and will have all of your onlookers laughing out loud!",
+      "tags": [{ "name": "men" }]
     }
-  ]
+   ]
 }

@@ -93,23 +93,26 @@ const Cart = () => {
             (
                 cart.lineItems.length ?
                     <div className='cart-display'>
-                        <h3>Items:</h3>
-                        <ul>
+                        <ul className="cartList">
                             {cart.lineItems.map((lineItem,idx) => {
                                 return(
-                                    <li key={idx}>
+                                    <li className="=cartItemList" key={idx}>
                                         <div className="cart-item-display">
                                             <img src={lineItem.product.img} height='150px' width='150px'/>
                                             <div className="cart-item-details">
                                                 <Link to={`/singleproduct/${lineItem.productId}`}>{lineItem.product.name}</Link>
-                                                <div>
+                                                <div className="cartProdInfo">
                                                     Unit Price: ${(lineItem.product.price/100).toFixed(2)}
                                                 </div>
-                                                <div>
+                                                <div className="cartProdInfo">
                                                     Size: {lineItem.size}
                                                 </div>
-                                                <div className={validatedLineItem(lineItem.productId) ? "" : "inventory-item-warning"}>
-                                                    Qty:  <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)} className={validatedLineItem(lineItem.productId) ? "" : "inventory-item-warning"}/>
+                                                <div className={validatedLineItem(lineItem.productId) ? "cartProdInfo" : "cartProdInfo inventory-item-warning"}>
+                                                <div className="cartinput">
+                                                            <p>Qty:</p>
+                                                            <input type='number' defaultValue={lineItem.quantity} onChange={updateQtyForUserCart(lineItem.id)} className={validatedLineItem(lineItem.productId) ? "qtyInput" : "inventory-item-warning"}/>
+                                                            <p className="clicktoedit">click to edit</p>
+                                                        </div>
                                                 </div>
                                                 <button 
                                                     className='delete-from-cart' 
@@ -124,7 +127,7 @@ const Cart = () => {
                             })}
                         </ul>
                         {/* <Link to="/cart/checkout" className="checkout-link">Checkout</Link> */}
-                        <button disabled={validateInventory()} onClick={()=> checkoutClickHandler()}>Go to Checkout</button>
+                        <button className="checkoutBtn" disabled={validateInventory()} onClick={()=> checkoutClickHandler()}>CHECKOUT NOW</button>
                         <p className="inventory-item-warning">{!validateInventory() ? '' : 'Some item(s) quantity in cart exceed total product inventory'}</p>
                     </div>
                     : <div className="emptyCart">
@@ -135,25 +138,28 @@ const Cart = () => {
             : (
                 Object.entries(cart).length ?
                     <div className='cart-display'>
-                        <h3>Items:</h3>
-                        <ul>
+                        <ul className="cartList">
                             {Object.entries(cart).map((pair,prodIdx) => {
                                 return(
                                     pair[1].map((item,idx) => 
                                     // <li key={idx}>
-                                    <li key={Number(prodIdx.toString()+idx.toString())}>
+                                    <li className="=cartItemList" key={Number(prodIdx.toString()+idx.toString())}>
                                         <div className="cart-item-display">
                                             <img src={item.img} height='150px' width='150px'/>
                                             <div className="cart-item-details">  
                                                 <Link to={`/singleproduct/${pair[0]}`}>{item.name}</Link>
-                                                <div>
+                                                <div className="cartProdInfo">
                                                     Unit Price: ${(item.price/100).toFixed(2)}
                                                 </div>
-                                                <div>
+                                                <div className="cartProdInfo">
                                                     Size: {item.size}
                                                 </div>
-                                                <div>
-                                                    Qty:  <input type='number' defaultValue={item.qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/>
+                                                <div className="cartProdInfo">
+                                                         <div className="cartinput">
+                                                            <p>Qty:</p>
+                                                            <input className="qtyInput" type='number' defaultValue={item.qty} min='1' onChange={updateQtyForLocalCart(pair[0])}/>
+                                                            <p className="clicktoedit">click to edit</p>
+                                                        </div>
                                                 </div>
                                                 <button 
                                                     className='delete-from-cart' 
@@ -168,7 +174,7 @@ const Cart = () => {
                                 )
                             })}
                         </ul>
-                        <div>Create account or sign in to existing account to checkout</div>
+                        <div className="cartProdInfo">Create account or sign in to existing account to checkout</div>
                     </div>
                     : <div className="emptyCart">
                         <h1 className="emptyCartTitle">Your cart is empty</h1>
