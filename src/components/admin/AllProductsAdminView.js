@@ -54,7 +54,7 @@ const AllProductsAdminView = () => {
       </div>
       <div>
         <label htmlFor='tag-filter'>Filter by Category: </label>
-        <select defaultValue='all' id='tag-selector'  onChange={handleTagFilterChange}>
+        <select defaultValue={filter.length ? filter : 'all'} id='tag-selector'  onChange={handleTagFilterChange}>
           <option>{'all'}</option>
           {tags ? tags.map((tag,idx)=> <option key={idx}>{tag.name}</option>) : <></>}
         </select>
