@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { attemptGetUserCart, attemptRemoveFromCart, attemptUpdateQtyInCart } from "../store/cartSlice";
+import '../styling/Mainpage.css'
 
 const Cart = () => {
     const user = useSelector(state => state.user)
@@ -126,7 +127,10 @@ const Cart = () => {
                         <button disabled={validateInventory()} onClick={()=> checkoutClickHandler()}>Go to Checkout</button>
                         <p className="inventory-item-warning">{!validateInventory() ? '' : 'Some item(s) quantity in cart exceed total product inventory'}</p>
                     </div>
-                    : <div>no items in cart</div>
+                    : <div className="emptyCart">
+                    <h1 className="emptyCartTitle">Your cart is empty</h1>
+                    <p>Looks like you have not added anything to your cart</p>
+                  </div>
             )
             : (
                 Object.entries(cart).length ?
@@ -166,7 +170,10 @@ const Cart = () => {
                         </ul>
                         <div>Create account or sign in to existing account to checkout</div>
                     </div>
-                    : <div>no items in cart</div>
+                    : <div className="emptyCart">
+                        <h1 className="emptyCartTitle">Your cart is empty</h1>
+                        <p>Looks like you have not added anything to your cart</p>
+                      </div>
             )
     )
 };

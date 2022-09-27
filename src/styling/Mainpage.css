@@ -34,7 +34,7 @@
 }
 
 .category:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .category-name {
@@ -135,6 +135,7 @@
     background-image: url('https://www.pixelstalk.net/wp-content/uploads/images4/Scary-Halloween-Background-1-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom: 40px solid black;
 }
 
 
@@ -173,4 +174,17 @@
     width: 270%;
     margin-left: 305%;
     border: none;
+}
+
+.emptyCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    margin-top: 5%;
+}
+
+.emptyCartTitle {
+    font: 32px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 450;
 }
