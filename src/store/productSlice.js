@@ -181,7 +181,7 @@ export const attemptUnmountSingleProduct = () => (dispatch) => {
 };
 
 export const attemptGetTagList =
-  (params, itemsPerPage = 24, priceOrder = false) =>
+  (params, itemsPerPage = 10, priceOrder = false) =>
   async (dispatch) => {
     try {
       const { data: tagobj } = await axios.get(

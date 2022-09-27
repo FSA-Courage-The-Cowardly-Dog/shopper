@@ -3,6 +3,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 export default function PageNavigation({ navTo }) {
   const [pageNumbers, setPageNumbers] = React.useState([]);
   const count = useSelector((state) => state.product.count);
@@ -40,11 +42,11 @@ export default function PageNavigation({ navTo }) {
           first
         </Link>
       )}
-      {pageNumbers[0] === currentPage || currentPage === 2 ? (
+      {pageNumbers[0] === currentPage ? (
         <></>
       ) : (
-        <Link className="pageNavA" to={`../${categories}/${currentPage - 1}`}>
-          previous
+        <Link className="pageNavB" to={`../${categories}/${currentPage - 1}`}>
+          <ArrowLeftIcon fontSize='inherit'/>
         </Link>
       )}
       {pageNumbers.length > 0 ? (
@@ -54,22 +56,25 @@ export default function PageNavigation({ navTo }) {
             to={`../${categories}/${num}`}
             className={({ isActive }) => (isActive ? 'activePage' : 'pageNavA')}
           >
-            {num}
+            <div className="pageLogo">
+            <span>Page</span>
+            <p>{num}</p>
+            </div>
           </NavLink>
         ))
       ) : (
         <></>
       )}
       {pageNumbers[pageNumbers.length - 1] === currentPage ? (
-        <></>
+        <div className='pageNavC'>next</div>
       ) : (
-        <Link to={`../${categories}/${currentPage + 1}`}>next</Link>
+        <Link className='pageNavB' to={`../${categories}/${currentPage + 1}`}><ArrowRightIcon fontSize='inherit'/></Link>
       )}
-      {pageNumbers[pageNumbers.length - 1] === numberOfPages ? (
+      {/* {pageNumbers[pageNumbers.length - 1] === numberOfPages ? (
         <></>
       ) : (
         <Link to={`../${categories}/${numberOfPages}`}>last</Link>
-      )}
+      )} */}
     </div>
   );
 }

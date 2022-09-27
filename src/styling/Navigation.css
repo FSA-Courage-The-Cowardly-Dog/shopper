@@ -5,12 +5,37 @@
   justify-content: flex-end;
   font-size: 1.2rem;
   align-items: center;
+  flex-direction: row;
+  column-gap: 1px;
 }
 .pageNav > a {
   padding-right: 0.2em;
   text-decoration: none;
 }
 .activePage {
-  font-size: 1.2em;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255, 131, 0);
+  font: 14px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.pageNavA {
+  display: none;
+}
+
+.pageNavC {
+  visibility: hidden;
+}
+
+.pageLogo {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+  margin-bottom: 10px;
+
+}
+
+.pageNavB {
+  color: rgb(255, 131, 0);
+  font-size: 44px;
 }

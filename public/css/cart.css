@@ -1,8 +1,4 @@
-.delete-from-cart {
-    margin: 10px;
-    color: red;
-    background-color: none;
-}
+
 .delete-from-cart:hover {
     cursor: pointer;
 }
@@ -12,7 +8,6 @@
     padding: 10px;
     display: flex;
     flex-direction: row;
-    width: max-content;
     margin: 10px;
 }
 .cart-item-details {
