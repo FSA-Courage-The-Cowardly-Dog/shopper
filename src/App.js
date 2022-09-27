@@ -23,6 +23,7 @@ import { attemptTokenLogin } from './store/userSlice';
 import './styling/Mainpage.css';
 import OrderConfirmationPage from './components/OrderConfirmationPage';
 import RerouteHome from './components/RerouteHome';
+import CheckoutProcessedPage from './components/CheckoutProcessedPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -49,6 +50,7 @@ function App() {
           path="/cart/orderconfirmation"
           element={<OrderConfirmationPage />}
         />
+        <Route path="/stripe/processed" element={<CheckoutProcessedPage/>}/>
         <Route path="/singleproduct/:id" element={<SingleProduct />} />
         <Route path="/createaccount" element={<CreateAccount />} />
         <Route path="/account" element={<AccountPage />} />

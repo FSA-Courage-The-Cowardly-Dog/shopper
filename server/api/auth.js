@@ -63,9 +63,6 @@ router.put('/usercart/checkout', async (req, res, next) => {
   }
 })
 
-// need to write an axios.post req to below url
-// need to include line_items in below format
-
 router.post('/usercart/create-checkout-session', async (req, res, next) => {
   try {
     const session = await stripe.checkout.sessions.create({
@@ -73,7 +70,7 @@ router.post('/usercart/create-checkout-session', async (req, res, next) => {
       mode: 'payment',
       line_items: JSON.parse(req.body.lineItems),
 
-      success_url: `${process.env.CLIENT_URL}/cart/orderconfirmation`,
+      success_url: `${process.env.CLIENT_URL}/stripe/processed`,
       cancel_url: `${process.env.CLIENT_URL}/cart/checkout`
     })
     res.send({url: session.url})
@@ -114,5 +111,7 @@ router.delete('/usercart/:lineItemId', async (req, res, next) => {
     next(err);
   }
 })
+
+
 
 module.exports = router;
