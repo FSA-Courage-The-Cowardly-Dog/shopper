@@ -19,6 +19,7 @@ import Userbar from './components/Userbar';
 import Header from './components/Header';
 import Welcome from './components/Welcome';
 import Category from './components/Category';
+import Search from './components/Search';
 import { attemptTokenLogin } from './store/userSlice';
 import './styling/Mainpage.css';
 import OrderConfirmationPage from './components/OrderConfirmationPage';
@@ -68,12 +69,13 @@ function App() {
           element={<ModifySingleProductAdminPage />}
         />
         {/* basic route error handling; adding more into individual components */}
-        <Route path='/adminportal/*' element={<RerouteHome/>}/>
-        <Route path='/account/*' element={<RerouteHome/>}/>
-        <Route path='/createaccount/*' element={<RerouteHome/>}/>
-        <Route path='/cart/*' element={<RerouteHome/>}/>
-        <Route path='/signin/*' element={<RerouteHome/>}/>
-        <Route path='*' element={<RerouteHome/>}/>
+        <Route path="/adminportal/*" element={<RerouteHome />} />
+        <Route path="/account/*" element={<RerouteHome />} />
+        <Route path="/createaccount/*" element={<RerouteHome />} />
+        <Route path="/cart/*" element={<RerouteHome />} />
+        <Route path="/signin/*" element={<RerouteHome />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="*" element={<RerouteHome />} />
       </Routes>
     </div>
   );

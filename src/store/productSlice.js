@@ -7,8 +7,8 @@ const productSlice = createSlice({
     getProductList: (state, action) => {
       state.productList = action.payload.productList;
       if (action.payload.count) {
-        state.count = action.payload.count
-      } 
+        state.count = action.payload.count;
+      }
       return state;
     },
     getSingleProduct: (state, action) => {
@@ -39,7 +39,7 @@ const productSlice = createSlice({
     },
     setProductsByPage: (state, action) => {
       state.productList = action.payload;
-      return state
+      return state;
     },
     setItemsPerPage: (state, action) => {
       state.itemsPerPage = action.payload;
@@ -64,17 +64,20 @@ export const {
   setItemsPerPage,
   setPriceOrder,
 } = productSlice.actions;
-export const attemptGetProductList = (tag = '') => async (dispatch) => {
-  try {
-    const { data: productList } = await axios.get('/api/products', {
-      headers: {
-        tagfilter: tag,
-      }});
-    dispatch(getProductList({productList, count: productList.length}));
-  } catch (error) {
-    throw error;
-  }
-};
+export const attemptGetProductList =
+  (tag = '') =>
+  async (dispatch) => {
+    try {
+      const { data: productList } = await axios.get('/api/products', {
+        headers: {
+          tagfilter: tag,
+        },
+      });
+      dispatch(getProductList({ productList, count: productList.length }));
+    } catch (error) {
+      throw error;
+    }
+  };
 export const attemptGetSingleProduct = (productId) => async (dispatch) => {
   try {
     const { data: singleProduct } = await axios.get(
@@ -190,7 +193,7 @@ export const attemptGetTagList =
         }?items=${itemsPerPage}${priceOrder ? `&price=${priceOrder}` : ''}`,
         { hi: '12' }
       );
-      dispatch(getProductList({productList: tagobj.rows}));
+      dispatch(getProductList({ productList: tagobj.rows }));
       dispatch(
         setPageinfo({
           count: tagobj.count,
@@ -212,17 +215,36 @@ export const attemptGetAllTags = () => async (dispatch) => {
   }
 };
 
-export const getProductsByPage = (page, sort=false, tag='') => async (dispatch) => {
-  try {
-    const token = window.localStorage.getItem('token');
-    const urlString = `/api/products?page=${page}` + (sort ? '&sort=true' : '&sort=false') + (tag.length ? `&tag=${tag}` : '')
-    const { data: products } = await axios.get(urlString, {
-      headers: {
-        authorization: token,
-      },
-    });
-    dispatch(setProductsByPage(products));
-  } catch (error) {
-    throw error;
-  }
-}
+export const getProductsByPage =
+  (page, sort = false, tag = '') =>
+  async (dispatch) => {
+    try {
+      const token = window.localStorage.getItem('token');
+      const urlString =
+        `/api/products?page=${page}` +
+        (sort ? '&sort=true' : '&sort=false') +
+        (tag.length ? `&tag=${tag}` : '');
+      const { data: products } = await axios.get(urlString, {
+        headers: {
+          authorization: token,
+        },
+      });
+      dispatch(setProductsByPage(products));
+    } catch (error) {
+      throw error;
+    }
+  };
+export const getProductsBySearch =
+  (page, sort = false, tag = '') =>
+  async (dispatch) => {
+    try {
+      const products = await axios.get(urlString, {
+        headers: {
+          authorization: token,
+        },
+      });
+      dispatch(setProductsByPage(products));
+    } catch (error) {
+      throw error;
+    }
+  };
