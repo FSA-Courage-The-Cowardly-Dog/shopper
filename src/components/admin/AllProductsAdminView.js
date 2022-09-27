@@ -33,10 +33,14 @@ const AllProductsAdminView = () => {
       await dispatch(getProductsByPage(page, sortByName, filter))
       setLoaded(true)
     }
+    async function loadAll () {
+      await dispatch(attemptGetProductList(filter));
+      setLoaded(true)
+    }
     if (page) {
       load();
     } else {
-      dispatch(attemptGetProductList());
+      loadAll()
     }
   }, [user.id, page, sortByName, filter]);
 
