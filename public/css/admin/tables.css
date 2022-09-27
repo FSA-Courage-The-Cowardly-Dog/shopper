@@ -2,6 +2,11 @@ table, th, td {
     border: 1px solid;
 }
 
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #all-products-table, #all-users-table {
     margin-top: 50px;
 }
@@ -13,4 +18,33 @@ td {
     height: 50px;
     white-space: nowrap;
     padding: 5px
+}
+.allusers-header {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.display-info {
+    flex-direction: row;
+    display: flex;
+
+}
+.display-text {
+    font-style: italic;
+    margin-right: 1em;
+}
+.prevNext {
+    margin: .5em
+}
+.footer-nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
 }

@@ -22,7 +22,6 @@ import Category from './components/Category';
 import { attemptTokenLogin } from './store/userSlice';
 import './styling/Mainpage.css';
 import OrderConfirmationPage from './components/OrderConfirmationPage';
-import { attemptGetAllTags } from './store/productSlice';
 import RerouteHome from './components/RerouteHome';
 
 function App() {
