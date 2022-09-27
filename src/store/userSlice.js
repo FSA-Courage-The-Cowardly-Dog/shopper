@@ -25,17 +25,22 @@ export const { login, logout, update } = userSlice.actions;
 export const attemptTokenLogin = () => async (dispatch) => {
   const token = window.localStorage.getItem('token');
   if (token) {
-    const { data: userInfo } = await axios.post(
-      '/api/auth',
-      {},
-      {
-        headers: {
-          authorization: token,
-        },
-      }
-    );
-    await _mergeLocalCartWithUserCart(userInfo.id, token)
-    dispatch(login(userInfo));
+    try {
+      const { data: userInfo } = await axios.post(
+        '/api/auth',
+        {},
+        {
+          headers: {
+            authorization: token,
+          },
+        }
+      );
+      await _mergeLocalCartWithUserCart(userInfo.id, token)
+      dispatch(login(userInfo));
+    } catch (err) {
+      window.localStorage.removeItem('token');
+      throw err;
+    }
   }
 };
 export const attemptPsswordLogin = (loginInfo) => async (dispatch) => {
