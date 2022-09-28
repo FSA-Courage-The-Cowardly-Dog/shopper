@@ -1,8 +1,6 @@
-const env = require('../.env.json');
 const algoliasearch = require('algoliasearch');
 const { Product, Tag } = require('./db/index');
-const ALGOLIA_WRITE_KEY =
-  process.env.ALGOLIA_WRITE_KEY || env.ALGOLIA_WRITE_KEY;
+const ALGOLIA_WRITE_KEY = process.env.ALGOLIA_WRITE_KEY;
 const requestOptions = {
   timeouts: { connect: 2, read: 20 },
 };
