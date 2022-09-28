@@ -1,13 +1,10 @@
 {
   "tags": [
-    { "name": "adult" },
-    { "name": "child" },
     { "name": "girl" },
     { "name": "boy" },
     { "name": "women" },
     { "name": "men" },
     { "name": "baby" },
-    { "name": "toddler" },
-    { "name": "toy story" }
+    { "name": "toddler" }
   ]
 }

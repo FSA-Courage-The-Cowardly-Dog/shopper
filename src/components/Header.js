@@ -19,42 +19,33 @@ function Header() {
     }
   }
   return (
-    <div className="header">
-      <div className="headerLeft">
-        <Link to="/" className="temp-link">
-          <img
-            className="headerLogo"
-            src="https://downtownjacksonville.org/wp-content/uploads/2020/10/jackolanding-06.png"
-            alt="PumpkinLogo"
-          />
-        </Link>
-        <div className="searchbar">
-          <input
-            className={user.id ? 'signedInSearch' : 'searchBar'}
-            placeholder="Search"
-            onChange={(e) => handleOnChange(e)}
+   <div className="header">
+      <div className='headerLeft'>
+          <Link  to="/" className='temp-link'>
+               <img className='headerLogo' src ='https://downtownjacksonville.org/wp-content/uploads/2020/10/jackolanding-06.png'/>
+         </Link>
+         <div className='searchbar-div'>
+            <div className="searchbar">
+               <input className={user.id ? 'signedInSearch' :'searchBar'} placeholder='Search' onChange={(e) => handleOnChange(e)}
             onKeyPress={(e) => handleSeachSubmit(e)}
-            value={search}
-          />
-        </div>
+            value={search}/>
+            </div>
+            <SearchIcon className='search' fontSize='large' />
+            </div>
+         </div>
 
-        {user.id ? (
-          <></>
-        ) : (
-          <Link className="signIn" to="/signin">
-            <AccountCircleIcon className="accounticon" fontSize="large" />
-            <p className="loginLink">Sign In</p>
-          </Link>
-        )}
+      <div className={user.id ? "headerRight" : 'headerright'}>
+         <Link to="/cart" className='temp'>
+            <ShoppingCartIcon className='carticon' fontSize='large' />
+         </Link>
+         {user.id ? <></> :
+               <Link className='signIn' to='/signin'>
+                  < AccountCircleIcon className='accounticon' fontSize='large'/>
+                  <p className='loginLink'>Sign In</p>
+               </Link>
+            }
+         </div>
       </div>
-
-      <div className={user.id ? 'headerRight' : 'headerright'}>
-        <SearchIcon className="search" fontSize="large" />
-        <Link to="/cart" className="temp">
-          <ShoppingCartIcon className="carticon" fontSize="large" />
-        </Link>
-      </div>
-    </div>
   );
 }
 

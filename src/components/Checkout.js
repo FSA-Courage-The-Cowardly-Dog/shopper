@@ -96,12 +96,13 @@ const Checkout = () => {
                         })}
                     </tbody>
                 </table>
-                <div>Total: ${(total/100).toFixed(2)}</div>
+                <div className='checkout-total'>Total: ${(total/100).toFixed(2)}</div>
                 <div className="order-address">
                     Shipping Address: <input id="order-address" name="address" type='text' value={address} onChange={handleChange}/>
                 </div>
+                <div className={address.length ? 'hidden-address-warning' : 'address-warning'}>Please enter your address</div>
                 <div className="cart-link-complete-purchase-line">
-                    <Link to="/cart">Back to cart</Link>
+                    <Link to="/cart" className="back-to-cart-link">Back to cart</Link>
                     {/* <button className="complete-purchase" onClick={()=>handlePurchase()} disabled={checkDisabled()}>Purchase</button> */}
                     <button onClick={() => dispatch(attemptStripeCheckout(cart.lineItems))} disabled={checkDisabled()}>Complete Purchase Through Stripe</button>
                 </div>

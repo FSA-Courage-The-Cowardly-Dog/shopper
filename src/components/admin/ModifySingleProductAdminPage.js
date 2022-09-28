@@ -114,6 +114,7 @@ const ModifySingleProductAdminPage = () => {
         <div className="form-line">
           <label htmlFor="name">Name: </label>
           <input
+            className='editInput'
             name="name"
             value={form.name}
             onChange={handleChange('name')}
@@ -122,6 +123,7 @@ const ModifySingleProductAdminPage = () => {
         <div className="form-line">
           <label htmlFor="price">Price: </label>
           <input
+            className='editInput'
             name="price"
             type="number"
             value={form.price}
@@ -131,6 +133,7 @@ const ModifySingleProductAdminPage = () => {
         <div className="form-line">
           <label htmlFor="inventory">Inventory: </label>
           <input
+            className='editInput'
             name="inventory"
             type="number"
             value={form.inventory}
@@ -140,6 +143,7 @@ const ModifySingleProductAdminPage = () => {
         <div className="form-line">
           <label htmlFor="img">Image Link: </label>
           <input
+            className='editInput'
             name="img"
             type="url"
             value={form.img}
@@ -149,6 +153,7 @@ const ModifySingleProductAdminPage = () => {
         <div className="form-line">
           <label htmlFor="description">Description: </label>
           <input
+            className='editInput'
             name="description"
             value={form.description}
             onChange={handleChange('description')}

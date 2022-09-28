@@ -54,7 +54,10 @@ const OrderHistory = () => {
           )
         })}
       </div>
-      : <div>No orders to display</div>
+      : <div>
+          <h2 id='order-history-header'>Past Orders</h2>
+          <div className='order-history-none'>No orders to display; start shopping!</div>
+        </div>
   )
 
 };

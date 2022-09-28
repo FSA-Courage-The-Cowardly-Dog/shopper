@@ -50,7 +50,7 @@ function Category() {
               className="sortbymenu"
               onChange={(e) => handlePriceChangeView(e)}
             >
-              <option value="" selected="selected">
+              <option value="">
                 Choose one
               </option>
               <option value="ASC">Price - Low to High </option>
@@ -77,8 +77,8 @@ function Category() {
         </div>
       </div>
       <section className="displayCostumes">
-        {products.map((product) => (
-          <Link to={`/singleproduct/${product.id}`} className="costume">
+        {products.map((product,idx) => (
+          <Link to={`/singleproduct/${product.id}`} className="costume" key={idx}>
             <img className="image" src={product.img} alt={product.name} />
             <p className="costumeName">{product.name}</p>
             <span className="costumePrice">${product.price / 100}</span>

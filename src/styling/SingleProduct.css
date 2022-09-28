@@ -28,19 +28,25 @@
  .prodInfoBlock{
     display: flex;
     flex-direction: column;
-    border-left: 500px solid transparent;
+    /* border-left: 500px solid transparent; */
     margin: auto;
     margin-top: 2%;
-    
+    width: 40%;
  }
 
  .imageContainer {
     margin-top: 5%;
+    /* width: 60% */
  }
 
  .prodImg {
-    margin-left: 45%;
+    /* margin-left: 45%; */
+    /* margin-left: 5em; */
+    margin-right: 5em;
+    max-height: fit-content;
+    max-width: 100%;
  }
+ /* style={{maxHeight: '500px',maxWidth: '500px'}} */
 
  .sizeSelector {
     margin-top: 3%
@@ -58,6 +64,7 @@
  .single-product-container {
    display: flex;
    flex-direction: row;
+   justify-content: space-between;
    font: 16px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
  }
