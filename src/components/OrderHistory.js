@@ -41,7 +41,7 @@ const OrderHistory = () => {
                   return(
                     <tr key={idx}>
                       {/* edge case to consider: if product deleted from db, then order history will break... */}
-                      <td className='order-product-name'><Link to={`/singleproduct/${lineItem.product.id}`}>{lineItem.product.name}</Link></td>
+                      <td className='order-product-name'>{lineItem.product ? <Link to={`/singleproduct/${lineItem.product.id}`}>{lineItem.product.name}</Link> : 'Costume deleted from our database'}</td>
                       <td className='order-size'>{lineItem.size}</td>
                       <td className='order-quantity'>{lineItem.quantity}</td>
                     </tr>

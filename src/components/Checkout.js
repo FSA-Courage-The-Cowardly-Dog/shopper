@@ -59,6 +59,13 @@ const Checkout = () => {
         setAddress(event.target.value)
     }
 
+    const checkoutHandler = () => {
+        if (address !== cart.address) {
+            dispatch(attemptUpdateOrderAddress(address))
+        }
+        dispatch(attemptStripeCheckout(cart.lineItems))
+    }
+
     return(
         cart.lineItems ?
             <div className="checkout-item-details">
@@ -92,7 +99,7 @@ const Checkout = () => {
                 <div className={address.length ? 'hidden-address-warning' : 'address-warning'}>Please enter your address</div>
                 <div className="cart-link-complete-purchase-line">
                     <Link to="/cart" className="back-to-cart-link">Back to cart</Link>
-                    <button className="complete-purchase" onClick={() => dispatch(attemptStripeCheckout(cart.lineItems))} disabled={checkDisabled()}>Complete Purchase Through Stripe</button>
+                    <button className="complete-purchase" onClick={checkoutHandler} disabled={checkDisabled()}>Complete Purchase Through Stripe</button>
                 </div>
 
                 <div className='inventory-item-warning'>
