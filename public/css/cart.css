@@ -42,3 +42,6 @@
 .back-to-cart-link {
     margin-right: 1em;
 }
+.checkoutBtn:hover {
+    cursor: pointer;
+}

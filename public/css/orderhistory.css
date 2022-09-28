@@ -20,7 +20,8 @@
     flex-direction: column;
     margin: 20px;
 }
-#order-history-header {
+#order-history-header, .order-history-none {
+    margin-top: .5em;
     text-align: center;
 }
 .order-invoice-date-line {
