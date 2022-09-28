@@ -1,5 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+const algoliasearch = require('algoliasearch');
+const ALGOLIA_WRITE_KEY = '7fb3d68d816c23dcfa25c6df36eff2b1';
+const requestOptions = {
+  timeouts: { connect: 2, read: 20 },
+};
+const client = algoliasearch('0STO802E4O', ALGOLIA_WRITE_KEY, requestOptions);
+const index = client.initIndex('test_index');
 const productSlice = createSlice({
   name: 'product',
   initialState: { productList: [], singleProduct: {} },
@@ -7,8 +14,8 @@ const productSlice = createSlice({
     getProductList: (state, action) => {
       state.productList = action.payload.productList;
       if (action.payload.count) {
-        state.count = action.payload.count
-      } 
+        state.count = action.payload.count;
+      }
       return state;
     },
     getSingleProduct: (state, action) => {
@@ -30,7 +37,7 @@ const productSlice = createSlice({
     setPageinfo: (state, action) => {
       state.count = action.payload.count;
       state.page = action.payload.page;
-      state.category = action.payload.categories;
+      state.category = action.payload.category;
       return state;
     },
     getTagsList: (state, action) => {
@@ -39,7 +46,7 @@ const productSlice = createSlice({
     },
     setProductsByPage: (state, action) => {
       state.productList = action.payload;
-      return state
+      return state;
     },
     setItemsPerPage: (state, action) => {
       state.itemsPerPage = action.payload;
@@ -64,17 +71,20 @@ export const {
   setItemsPerPage,
   setPriceOrder,
 } = productSlice.actions;
-export const attemptGetProductList = (tag = '') => async (dispatch) => {
-  try {
-    const { data: productList } = await axios.get('/api/products', {
-      headers: {
-        tagfilter: tag,
-      }});
-    dispatch(getProductList({productList, count: productList.length}));
-  } catch (error) {
-    throw error;
-  }
-};
+export const attemptGetProductList =
+  (tag = '') =>
+  async (dispatch) => {
+    try {
+      const { data: productList } = await axios.get('/api/products', {
+        headers: {
+          tagfilter: tag,
+        },
+      });
+      dispatch(getProductList({ productList, count: productList.length }));
+    } catch (error) {
+      throw error;
+    }
+  };
 export const attemptGetSingleProduct = (productId) => async (dispatch) => {
   try {
     const { data: singleProduct } = await axios.get(
@@ -181,23 +191,41 @@ export const attemptUnmountSingleProduct = () => (dispatch) => {
 };
 
 export const attemptGetTagList =
-  (params, itemsPerPage = 10, priceOrder = false) =>
+  (params, itemsPerPage = 10, priceOrder = false, query = null) =>
   async (dispatch) => {
     try {
-      const { data: tagobj } = await axios.get(
-        `/api/products/${params.categories}/${
-          params.page
-        }?items=${itemsPerPage}${priceOrder ? `&price=${priceOrder}` : ''}`,
-        { hi: '12' }
-      );
-      dispatch(getProductList({productList: tagobj.rows}));
-      dispatch(
-        setPageinfo({
-          count: tagobj.count,
-          page: params.page,
-          category: params.categories,
-        })
-      );
+      if (query) {
+        console.log(params);
+        const requestOptions = {
+          hitsPerPage: Number(itemsPerPage),
+          page: Number(params.page) - 1,
+        };
+        let products = await index.search(query, requestOptions);
+        console.log(products.hits);
+        dispatch(getProductList({ productList: products.hits }));
+        dispatch(
+          setPageinfo({
+            count: products.nbHits,
+            page: params.page,
+            category: 'search',
+          })
+        );
+      } else {
+        const { data: tagobj } = await axios.get(
+          `/api/products/${params.categories}/${
+            params.page
+          }?items=${itemsPerPage}${priceOrder ? `&price=${priceOrder}` : ''}`,
+          { hi: '12' }
+        );
+        dispatch(getProductList({ productList: tagobj.rows }));
+        dispatch(
+          setPageinfo({
+            count: tagobj.count,
+            page: params.page,
+            category: params.categories,
+          })
+        );
+      }
     } catch (error) {
       return error;
     }
@@ -212,17 +240,22 @@ export const attemptGetAllTags = () => async (dispatch) => {
   }
 };
 
-export const getProductsByPage = (page, sort=false, tag='') => async (dispatch) => {
-  try {
-    const token = window.localStorage.getItem('token');
-    const urlString = `/api/products?page=${page}` + (sort ? '&sort=true' : '&sort=false') + (tag.length ? `&tag=${tag}` : '')
-    const { data: products } = await axios.get(urlString, {
-      headers: {
-        authorization: token,
-      },
-    });
-    dispatch(setProductsByPage(products));
-  } catch (error) {
-    throw error;
-  }
-}
+export const getProductsByPage =
+  (page, sort = false, tag = '') =>
+  async (dispatch) => {
+    try {
+      const token = window.localStorage.getItem('token');
+      const urlString =
+        `/api/products?page=${page}` +
+        (sort ? '&sort=true' : '&sort=false') +
+        (tag.length ? `&tag=${tag}` : '');
+      const { data: products } = await axios.get(urlString, {
+        headers: {
+          authorization: token,
+        },
+      });
+      dispatch(setProductsByPage(products));
+    } catch (error) {
+      throw error;
+    }
+  };

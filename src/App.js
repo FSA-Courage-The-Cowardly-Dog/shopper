@@ -68,12 +68,13 @@ function App() {
           element={<ModifySingleProductAdminPage />}
         />
         {/* basic route error handling; adding more into individual components */}
-        <Route path='/adminportal/*' element={<RerouteHome/>}/>
-        <Route path='/account/*' element={<RerouteHome/>}/>
-        <Route path='/createaccount/*' element={<RerouteHome/>}/>
-        <Route path='/cart/*' element={<RerouteHome/>}/>
-        <Route path='/signin/*' element={<RerouteHome/>}/>
-        <Route path='*' element={<RerouteHome/>}/>
+        <Route path="/adminportal/*" element={<RerouteHome />} />
+        <Route path="/account/*" element={<RerouteHome />} />
+        <Route path="/createaccount/*" element={<RerouteHome />} />
+        <Route path="/cart/*" element={<RerouteHome />} />
+        <Route path="/signin/*" element={<RerouteHome />} />
+        <Route path="/search/:page" element={<Category />} />
+        <Route path="*" element={<RerouteHome />} />
       </Routes>
     </div>
   );
