@@ -112,3 +112,15 @@ export const attemptCheckout = (total) => async (dispatch) => {
     );
     dispatch(checkout(order))
 }
+
+export const attemptStripeCheckout = (lineItems) => async (dispatch) => {
+    try {
+        const stripeItems = lineItems.map(lineItem => ({price_data: {currency: 'usd', product_data: {name: lineItem.product.name}, unit_amount: lineItem.product.price}, quantity: lineItem.quantity}))
+        const { data } = await axios.post('/api/auth/usercart/create-checkout-session', {
+            lineItems: JSON.stringify(stripeItems)
+        })
+        window.location.assign(data.url)
+    } catch (err) {
+        throw (err)
+    }
+}

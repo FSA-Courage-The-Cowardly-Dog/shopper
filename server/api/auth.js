@@ -1,5 +1,8 @@
 const { User } = require('../db');
 const router = require('express').Router();
+const env = require('../../.env.json');
+const STRIPE_TEST_KEY = process.env.STRIPE_TEST_KEY || env.STRIPE_TEST_KEY
+const stripe = require('stripe')(STRIPE_TEST_KEY)
 
 router.post('/login', async (req, res, next) => {
   try {
@@ -61,6 +64,22 @@ router.put('/usercart/checkout', async (req, res, next) => {
   }
 })
 
+router.post('/usercart/create-checkout-session', async (req, res, next) => {
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      mode: 'payment',
+      line_items: JSON.parse(req.body.lineItems),
+
+      success_url: `${process.env.CLIENT_URL}/stripe/processed`,
+      cancel_url: `${process.env.CLIENT_URL}/cart/checkout`
+    })
+    res.send({url: session.url})
+  } catch (err) {
+    next(err)
+  }
+})
+
 router.post('/usercart', async (req, res, next) => {
   try {
     const user = await User.byToken(req.headers.authorization);
@@ -93,5 +112,7 @@ router.delete('/usercart/:lineItemId', async (req, res, next) => {
     next(err);
   }
 })
+
+
 
 module.exports = router;
