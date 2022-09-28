@@ -1,8 +1,8 @@
 const { User } = require('../db');
 const router = require('express').Router();
-// BAD PRACTICE; WOULD NOT DO THIS WITH LIVE SECRET KEY, SET AS ENV VARIABLE LATER
-const stripe = require('stripe')('sk_test_51LmjNEJX4F0kIK6BftbaAP3GhwySc2hKsY2WuIAzc6KEHET7P18zyzMGrjBcNyeXIDQrQ8h9APxgUf876j6zMa5r00PGA4w0L3')
-// const secret = secrets.STRIPE_TEST_KEY
+const env = require('../../.env.json');
+const STRIPE_TEST_KEY = process.env.STRIPE_TEST_KEY || env.STRIPE_TEST_KEY
+const stripe = require('stripe')(STRIPE_TEST_KEY)
 
 router.post('/login', async (req, res, next) => {
   try {
