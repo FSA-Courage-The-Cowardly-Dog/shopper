@@ -36,7 +36,7 @@ const ModifySingleProductAdminPage = () => {
         await dispatch(attemptGetSingleProduct(params.id));
         setIsLoaded(true);
       } catch (error) {
-        navigate('/adminportal?page=1');
+        navigate('/adminportal');
         Toastify({text: "Hmm... That product page doesn't exist.", duration:2000 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
       }  
     }
@@ -104,6 +104,7 @@ const ModifySingleProductAdminPage = () => {
   const handleDelete = () => {
     dispatch(attemptDeleteProduct(params.id));
     navigate('/adminportal/allproducts?page=1');
+    Toastify({text: `Product "${form.name}" deleted`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
   };
 
   return isLoaded ? (
