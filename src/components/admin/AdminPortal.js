@@ -21,13 +21,13 @@ const AdminPortal = () => {
       <h1 className='adminTitle'>Welcome back to the Admin Portal</h1>
 
       <div className="adminLinks">
-         <div id="all-users">
+         <div id="admin-link-div">
             <Link className='links' to="/adminportal/allusers?page=1">All Users Table</Link>
          </div>
-          <div id="add-item">
+          <div id="admin-link-div">
            <Link className='links' to="/adminportal/addproduct">Add Product</Link>
          </div>
-          <div id="modify-delete-item">
+          <div id="admin-link-div">
            <Link className='links' to="/adminportal/allproducts?page=1">All Products Table</Link>
          </div>
       </div>

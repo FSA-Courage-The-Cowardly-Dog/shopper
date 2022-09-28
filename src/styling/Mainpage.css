@@ -91,7 +91,7 @@
   display: flex;
   flex-direction: row;
   width: 33%;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .headerright {
@@ -126,15 +126,12 @@
   border-radius: 8px;
   height: 35px;
   min-width: 50px;
-  /* max-width: 300%; */
   width: 100%;
-  /* margin-left: 250%; */
   border: none;
 }
 
 .carticon {
   color: rgb(255, 131, 0);
-  /* margin-left: 90px; */
   margin-top: 30px;
 }
 
@@ -164,6 +161,7 @@
 
 .loginLink {
   margin-left: 5px;
+  margin-right: 1em;
   text-align: center;
   white-space: nowrap;
   margin-top: 40px;
@@ -184,7 +182,6 @@
     border-radius: 8px;
     height: 35px;
     width: 100%;
-    /* margin-left: 305%; */
     min-width: 50px;
     border: none;
 }

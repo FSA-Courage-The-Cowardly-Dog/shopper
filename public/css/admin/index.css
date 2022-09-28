@@ -4,3 +4,62 @@
 #admin-links > div {
     margin: 20px;
 }
+
+#update-product-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    row-gap: 50px;
+}
+
+#update-product-form {
+    flex-direction: column;
+    display: flex;
+}
+
+.update-product-title {
+    text-align: center;
+    font: 28px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%
+}
+
+.update-form-line {
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
+.button-form-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.category-form-line {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
+
+.admin-update-page-button {
+    width: 150px;
+    height: 44px;
+    background-color: rgb(255, 131, 0) ;
+    color: black;
+    border: 1.5px solid black;
+    font: 16px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.admin-update-page-button:hover {
+    background-color: black;
+    color: rgb(255, 131, 0);
+}
+
+.back-to-all-admin-link {
+    color:  rgb(255, 131, 0);
+}
