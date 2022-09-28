@@ -191,7 +191,7 @@ export const attemptUnmountSingleProduct = () => (dispatch) => {
 };
 
 export const attemptGetTagList =
-  (params, itemsPerPage = 24, priceOrder = false, query = null) =>
+  (params, itemsPerPage = 10, priceOrder = false, query = null) =>
   async (dispatch) => {
     try {
       if (query) {

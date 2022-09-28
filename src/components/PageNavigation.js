@@ -3,6 +3,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams, useLocation } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 export default function PageNavigation({ navTo }) {
   const [pageNumbers, setPageNumbers] = React.useState([]);
   const count = useSelector((state) => state.product.count);
@@ -40,14 +42,14 @@ export default function PageNavigation({ navTo }) {
           first
         </Link>
       )}
-      {pageNumbers[0] === currentPage || currentPage === 2 ? (
+      {pageNumbers[0] === currentPage ? (
         <></>
       ) : (
         <Link
-          className="pageNavA"
+          className="pageNavB"
           to={`../${category}/${currentPage - 1}${query}`}
         >
-          previous
+          <ArrowLeftIcon fontSize="inherit" />
         </Link>
       )}
       {pageNumbers.length > 0 ? (
@@ -57,22 +59,30 @@ export default function PageNavigation({ navTo }) {
             to={`../${category}/${num}${query}`}
             className={({ isActive }) => (isActive ? 'activePage' : 'pageNavA')}
           >
-            {num}
+            <div className="pageLogo">
+              <span>Page</span>
+              <p>{num}</p>
+            </div>
           </NavLink>
         ))
       ) : (
         <></>
       )}
       {pageNumbers[pageNumbers.length - 1] === currentPage ? (
+        <div className="pageNavC">next</div>
+      ) : (
+        <Link
+          className="pageNavB"
+          to={`../${category}/${currentPage + 1}${query}`}
+        >
+          <ArrowRightIcon fontSize="inherit" />
+        </Link>
+      )}
+      {/* {pageNumbers[pageNumbers.length - 1] === numberOfPages ? (
         <></>
       ) : (
-        <Link to={`../${category}/${currentPage + 1}${query}`}>next</Link>
-      )}
-      {pageNumbers[pageNumbers.length - 1] === numberOfPages ? (
-        <></>
-      ) : (
-        <Link to={`../${category}/${numberOfPages}${query}`}>last</Link>
-      )}
+        <Link to={`../${categories}/${numberOfPages}${query}`}>last</Link>
+      )} */}
     </div>
   );
 }
