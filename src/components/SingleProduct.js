@@ -69,7 +69,6 @@ function SingleProduct() {
   }
 
   const sizeChangeHandler = (event) => {
-    console.log(event.target.value)
     if (event.target.value === 'select') {
       setSize('')
     } else {
