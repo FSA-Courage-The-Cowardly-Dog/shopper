@@ -15,9 +15,9 @@ export default configureStore({
   },
   middleware: (getDefaultMiddleware) => {
     if (process.env.NODE_ENV === 'production') {
-      getDefaultMiddleware();
+      return getDefaultMiddleware();
     } else {
-      getDefaultMiddleware().concat(loggerMiddleware);
+      return getDefaultMiddleware().concat(loggerMiddleware);
     }
   },
 });
