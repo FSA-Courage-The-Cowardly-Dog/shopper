@@ -34,3 +34,12 @@
 .userDetails {
     font: 16px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+@media only screen and (max-width: 600px)  {
+    .profileLinks {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 200px
+    }
+}

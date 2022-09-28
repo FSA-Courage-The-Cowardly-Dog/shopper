@@ -38,6 +38,7 @@ const AddNewProduct = () => {
   }
 
   const handleSubmit = async (event) => {
+    console.log('clicking submit')
     event.preventDefault();
     let product = { ...form };
     product.price = Number(product.price);
@@ -115,7 +116,7 @@ const AddNewProduct = () => {
           </select>
         </div>
       </form>
-      <button className='newproductbtn' type="submit" disabled={checkDisabled()}>
+      <button className={checkDisabled() ? 'newproductbtn-disabled' :'newproductbtn'} type="submit" disabled={checkDisabled()} onClick={handleSubmit}>
           Create Product
         </button>
       <Link className='adminportallink' to="/adminportal">Back to portal</Link>

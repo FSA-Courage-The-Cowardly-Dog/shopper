@@ -94,15 +94,12 @@ router.get('/tags', async (req, res, next) => {
 router.post('/add-product', requireToken, isAdmin, async (req, res, next) => {
   try {
     const product = await Product.create(req.body.productDetails);
-    console.log('post', product);
     const tag = await Tag.findOne({ where: { name: req.body.tag } });
     await product.addTag(tag);
     const updated = await Product.findByPk(product.id, {
       include: { model: Tag },
     });
     if (updated) {
-      console.log('put', product.dataValues.id);
-      console.log('putend', updated.dataValues.id);
 
       await index
         .saveObject({
@@ -171,8 +168,6 @@ router.put('/:id', requireToken, isAdmin, async (req, res, next) => {
         include: { model: Tag },
       });
       if (updated) {
-        console.log('put', product.dataValues.id);
-        console.log('putend', updated.dataValues.id);
 
         await index
           .saveObject({

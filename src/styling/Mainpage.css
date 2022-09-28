@@ -21,8 +21,11 @@
   margin-top: 10%;
 }
 
-.login-form {
-  max-width: 100%;
+#login-form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .category {
   height: 250px;
@@ -101,6 +104,8 @@
 .searchbar-div {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: max-content;
 }
 
 .search {
@@ -120,15 +125,13 @@
   background-color: #d0d1d5;
   border-radius: 8px;
   height: 35px;
-  min-width: 75px;
-  max-width: 300%;
-  /* margin-left: 250%; */
+  min-width: 50px;
+  width: 100%;
   border: none;
 }
 
 .carticon {
   color: rgb(255, 131, 0);
-  /* margin-left: 90px; */
   margin-top: 30px;
 }
 
@@ -158,6 +161,7 @@
 
 .loginLink {
   margin-left: 5px;
+  margin-right: 1em;
   text-align: center;
   white-space: nowrap;
   margin-top: 40px;
@@ -177,8 +181,7 @@
     background-color: #d0d1d5;
     border-radius: 8px;
     height: 35px;
-    max-width: 300%;
-    /* margin-left: 305%; */
+    width: 100%;
     min-width: 50px;
     border: none;
 }
@@ -264,4 +267,15 @@
   border-width: 100%;
   padding-top: 5%;
   width: 450%;
+}
+@media only screen and (min-width: 600px) {
+  .searchbar-div {
+    width: 75%;
+    justify-content: flex-start;
+  }
+  .searchBar, .signedInSearch {
+    width: 200%;
+    max-width: 350px;
+    margin-right: .5em;
+  }
 }

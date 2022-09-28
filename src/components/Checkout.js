@@ -37,18 +37,6 @@ const Checkout = () => {
         }
     },[isLoaded])
 
-    const handlePurchase = () => {
-        if (address !== cart.address) {
-            dispatch(attemptUpdateOrderAddress(address))
-        }
-        async function checkout () {
-            await dispatch(attemptCheckout(total));
-            navigate('/cart/orderconfirmation')
-            Toastify({text: "Order processed!", duration:2000 ,gravity: "bottom", position: "right", backgroundColor: "#ff8300"}).showToast();
-        }
-        checkout();
-    }
-
     const validateInventory = () => {
         const boolArr = [];
         cart.lineItems.forEach(lineItem => {
@@ -74,6 +62,7 @@ const Checkout = () => {
     return(
         cart.lineItems ?
             <div className="checkout-item-details">
+                <h2 className="checkout-header">Order Details:</h2>
                 <table>
                     <thead>
                         <tr>
@@ -103,8 +92,7 @@ const Checkout = () => {
                 <div className={address.length ? 'hidden-address-warning' : 'address-warning'}>Please enter your address</div>
                 <div className="cart-link-complete-purchase-line">
                     <Link to="/cart" className="back-to-cart-link">Back to cart</Link>
-                    {/* <button className="complete-purchase" onClick={()=>handlePurchase()} disabled={checkDisabled()}>Purchase</button> */}
-                    <button onClick={() => dispatch(attemptStripeCheckout(cart.lineItems))} disabled={checkDisabled()}>Complete Purchase Through Stripe</button>
+                    <button className="complete-purchase" onClick={() => dispatch(attemptStripeCheckout(cart.lineItems))} disabled={checkDisabled()}>Complete Purchase Through Stripe</button>
                 </div>
 
                 <div className='inventory-item-warning'>

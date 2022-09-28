@@ -20,7 +20,7 @@
 .inventory-item-warning {
     color: red;
 }
-.checkout-total, .order-address, .hidden-address-warning, .address-warning {
+.checkout-total, .order-address, .hidden-address-warning, .address-warning, .checkout-header {
     margin-left: auto;
     margin-right: auto;
     margin-top: .5em;
