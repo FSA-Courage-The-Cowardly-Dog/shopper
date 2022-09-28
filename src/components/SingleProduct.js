@@ -69,7 +69,8 @@ function SingleProduct() {
   }
 
   const sizeChangeHandler = (event) => {
-    if (event.target.value === 'Select Size:') {
+    console.log(event.target.value)
+    if (event.target.value === 'select') {
       setSize('')
     } else {
       setSize(event.target.value)
@@ -118,6 +119,7 @@ function SingleProduct() {
     </div>
 
     <p className='product-quantity-warning'>{(Number(qty) > product.inventory) && product.inventory ? 'Not enough product in stock; reduce quantity to be able to add to cart' : ''}</p>
+    <p className={!size.length ? 'product-quantity-warning' : 'warning-hidden'}>Size required to add to cart</p>
     <div className="productInfo addToCart">
         <button className='addToCart' disabled={checkDisabled()} onClick={() => addToCartHandler(product.id)}>
           <div className="cart">Add To Cart</div>

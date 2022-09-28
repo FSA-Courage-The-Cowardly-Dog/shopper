@@ -104,6 +104,7 @@ const ModifySingleProductAdminPage = () => {
   const handleDelete = () => {
     dispatch(attemptDeleteProduct(params.id));
     navigate('/adminportal/allproducts?page=1');
+    Toastify({text: `Product "${form.name}" deleted`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
   };
 
   return isLoaded ? (

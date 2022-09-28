@@ -101,3 +101,6 @@
    margin-bottom:1%;
    font: 14px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
+ .warning-hidden {
+   color: white
+ }
