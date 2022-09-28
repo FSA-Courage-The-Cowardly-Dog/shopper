@@ -91,7 +91,7 @@
   display: flex;
   flex-direction: row;
   width: 33%;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .headerright {
@@ -104,6 +104,8 @@
 .searchbar-div {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: max-content;
 }
 
 .search {
@@ -123,8 +125,9 @@
   background-color: #d0d1d5;
   border-radius: 8px;
   height: 35px;
-  min-width: 75px;
-  max-width: 300%;
+  min-width: 50px;
+  /* max-width: 300%; */
+  width: 100%;
   /* margin-left: 250%; */
   border: none;
 }
@@ -180,7 +183,7 @@
     background-color: #d0d1d5;
     border-radius: 8px;
     height: 35px;
-    max-width: 300%;
+    width: 100%;
     /* margin-left: 305%; */
     min-width: 50px;
     border: none;
@@ -267,4 +270,14 @@
   border-width: 100%;
   padding-top: 5%;
   width: 450%;
+}
+@media only screen and (min-width: 600px) {
+  .searchbar-div {
+    width: 75%;
+    justify-content: flex-start;
+  }
+  .searchBar, .signedInSearch {
+    width: 200%;
+    margin-right: .5em;
+  }
 }

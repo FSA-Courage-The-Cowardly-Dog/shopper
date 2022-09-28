@@ -25,11 +25,9 @@ function Header() {
                <img className='headerLogo' src ='https://downtownjacksonville.org/wp-content/uploads/2020/10/jackolanding-06.png'/>
          </Link>
          <div className='searchbar-div'>
-            <div className="searchbar">
-               <input className={user.id ? 'signedInSearch' :'searchBar'} placeholder='Search' onChange={(e) => handleOnChange(e)}
-            onKeyPress={(e) => handleSeachSubmit(e)}
-            value={search}/>
-            </div>
+            <input className={user.id ? 'signedInSearch' :'searchBar'} placeholder='Search' onChange={(e) => handleOnChange(e)}
+              onKeyPress={(e) => handleSeachSubmit(e)}
+              value={search}/>
             <SearchIcon className='search' fontSize='large' />
             </div>
          </div>
