@@ -30,12 +30,8 @@ const Userbar = () => {
         </button>
       </div>
     </div>
-  ) : (
-    'hu'
-    // <Link className='signIn' to='/signin'>
-    //   <p className='loginLink'>Sign In</p>
-    //   </Link>
-  );
+  ) : 
+    <></>
 };
 
 export default Userbar;
