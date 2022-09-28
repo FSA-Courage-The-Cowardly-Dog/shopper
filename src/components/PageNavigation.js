@@ -10,8 +10,9 @@ export default function PageNavigation({ navTo }) {
   const count = useSelector((state) => state.product.count);
   const page = useSelector((state) => state.product.page);
   const category = useSelector((state) => state.product.category);
+  let itemsperpage = useSelector((state) => state.product.itemsPerPage) || 10;
   let currentPage = Number(useParams().page);
-  let numberOfPages = Math.ceil(count / 10);
+  let numberOfPages = Math.ceil(count / itemsperpage);
   let query = useLocation().search;
   React.useEffect(() => {
     let pagesToShow = 3;

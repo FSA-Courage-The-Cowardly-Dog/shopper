@@ -74,7 +74,6 @@ router.get('/:tag/:page', async (req, res, next) => {
       limit: itemsPerPage,
       order: price ? [['price', price]] : [],
     });
-    // console.log(count);
     res.send({ rows, count });
   } catch (error) {
     next(error);
