@@ -35,6 +35,7 @@ lerna-debug.log*
 .env.test.local
 .env.production.local
 .env.local
+.env.json
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
