@@ -14,8 +14,8 @@ function Header() {
   }
   function handleSeachSubmit(event) {
     if (event.key === 'Enter') {
-      navigate(`/search?for=${search}`);
-      console.log('enter press here! ');
+      navigate(`/search/1?for=${search}`);
+      setSearch('');
     }
   }
   return (
@@ -25,6 +25,7 @@ function Header() {
           <img
             className="headerLogo"
             src="https://downtownjacksonville.org/wp-content/uploads/2020/10/jackolanding-06.png"
+            alt="PumpkinLogo"
           />
         </Link>
         <div className="searchbar">
