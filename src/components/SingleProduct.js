@@ -82,8 +82,8 @@ function SingleProduct() {
   return ( product ?
     <div className='single-product-container'>
       <div className="imageContainer">
-      <img className='prodImg' src={product.img} style={{maxHeight: '500px',maxWidth: '500px'}}/>
-    </div>
+        <img className='prodImg' src={product.img}/>
+      </div>
       <div className='prodInfoBlock'>
     <div className='productInfo'>
         <h2>{product.name}</h2>
