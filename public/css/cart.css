@@ -20,3 +20,25 @@
 .inventory-item-warning {
     color: red;
 }
+.checkout-total, .order-address, .hidden-address-warning, .address-warning {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+.hidden-address-warning {
+    color: white;
+}
+.address-warning {
+    color: red;
+}
+.checkout-item-details {
+    display: flex;
+    flex-direction: column;
+}
+.cart-link-complete-purchase-line {
+    margin: auto
+}
+.back-to-cart-link {
+    margin-right: 1em;
+}
