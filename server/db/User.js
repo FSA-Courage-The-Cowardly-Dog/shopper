@@ -144,6 +144,14 @@ User.prototype.getCart = async function () {
   if (!cart.address) {
     await cart.update({ address: this.address });
   }
+  // check to see if any products have been deleted from db
+  if (cart.lineItems) {
+    for (const lineItem of cart.lineItems) {
+      if (!lineItem.productId) {
+        await lineItem.destroy();
+      }
+    }
+  }
   return cart;
 };
 

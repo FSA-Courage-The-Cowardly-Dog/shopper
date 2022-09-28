@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { attemptCheckout, attemptGetUserCart, attemptUpdateOrderAddress } from "../store/cartSlice";
+import { attemptCheckout, attemptGetUserCart, attemptStripeCheckout, attemptUpdateOrderAddress } from "../store/cartSlice";
 import Toastify from 'toastify-js'
 
 const Checkout = () => {
@@ -102,7 +102,8 @@ const Checkout = () => {
                 </div>
                 <div className="cart-link-complete-purchase-line">
                     <Link to="/cart">Back to cart</Link>
-                    <button className="complete-purchase" onClick={()=>handlePurchase()} disabled={checkDisabled()}>Purchase</button>
+                    {/* <button className="complete-purchase" onClick={()=>handlePurchase()} disabled={checkDisabled()}>Purchase</button> */}
+                    <button onClick={() => dispatch(attemptStripeCheckout(cart.lineItems))} disabled={checkDisabled()}>Complete Purchase Through Stripe</button>
                 </div>
 
                 <div className='inventory-item-warning'>
