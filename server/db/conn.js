@@ -4,7 +4,7 @@ const dbName = 'shopper';
 const config = {};
 
 if (process.env.DATABASE_URL) {
-  process.env.CLIENT_URL = 'https://courage-shopper.herokuapp.com'
+  process.env.CLIENT_URL = 'https://courage-grace-shopper.herokuapp.com'
   config.dialectOptions = { ssl: { require: true, rejectUnauthorized: false } };
 } else {
   process.env.CLIENT_URL = 'http://localhost:3000'
