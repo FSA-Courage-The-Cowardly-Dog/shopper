@@ -5,15 +5,23 @@ import {
   setItemsPerPage,
   setPriceOrder,
 } from '../store/productSlice';
-import { useParams, useSearchParams } from 'react-router-dom';
+import {
+  useParams,
+  useSearchParams,
+  useNavigate,
+  useLocation,
+} from 'react-router-dom';
 import PageNavigation from './PageNavigation';
 import '../styling/Category.css';
 import { Link } from 'react-router-dom';
 function Category() {
   const dispatch = useDispatch();
   const params = useParams();
+  const navigate = useNavigate();
+  let query = useLocation().search;
   let searchParams = useSearchParams()[0];
   let itemsperpage = useSelector((state) => state.product.itemsPerPage);
+  const category = useSelector((state) => state.product.category);
   let priceOrder = useSelector((state) => state.product.priceOrder);
   React.useEffect(() => {
     dispatch(setPriceOrder(''));
@@ -32,10 +40,10 @@ function Category() {
   const handleChangeView = (event) => {
     let newItemsPerPage = Number(event.target.value);
     dispatch(setItemsPerPage(newItemsPerPage));
+    navigate(`../${category}/1${query}`);
   };
 
   const handlePriceChangeView = (event) => {
-    console.log('hi', event);
     dispatch(setPriceOrder(event.target.value));
   };
   const products = useSelector((state) => state.product.productList);
@@ -50,9 +58,7 @@ function Category() {
               className="sortbymenu"
               onChange={(e) => handlePriceChangeView(e)}
             >
-              <option value="">
-                Choose one
-              </option>
+              <option value="">Choose one</option>
               <option value="ASC">Price - Low to High </option>
               <option value="DESC">Price - High to Low </option>
             </select>
@@ -77,8 +83,12 @@ function Category() {
         </div>
       </div>
       <section className="displayCostumes">
-        {products.map((product,idx) => (
-          <Link to={`/singleproduct/${product.id}`} className="costume" key={idx}>
+        {products.map((product, idx) => (
+          <Link
+            to={`/singleproduct/${product.id}`}
+            className="costume"
+            key={idx}
+          >
             <img className="image" src={product.img} alt={product.name} />
             <p className="costumeName">{product.name}</p>
             <span className="costumePrice">${product.price / 100}</span>
