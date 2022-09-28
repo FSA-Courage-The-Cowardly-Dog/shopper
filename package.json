@@ -13,6 +13,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "algoliasearch": "^4.14.2",
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "express": "^4.18.1",
@@ -39,8 +40,9 @@
     "startall": "npm run server & npm run react:start",
     "seed": "QUIET=true node server/seedsync.js",
     "seedmini": "QUIET=true node server/seedsyncmini.js",
+    "algolia": "node server/algoliaseed.js",
     "start:pro": "QUIET=true NODE_ENV=production npm run server",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run react:build && npm run seed"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run react:build && npm run seed && npm run algolia"
   },
   "proxy": "http://localhost:5000/",
   "engines": {
