@@ -93,6 +93,9 @@ const Cart = () => {
             (
                 cart.lineItems.length ?
                     <div className='cart-display'>
+                        <div className="cartHeader">
+                            <p className="cartTitle">YOUR SHOPPING CART</p>
+                        </div>
                         <ul className="cartList">
                             {cart.lineItems.map((lineItem,idx) => {
                                 return(
@@ -138,6 +141,9 @@ const Cart = () => {
             : (
                 Object.entries(cart).length ?
                     <div className='cart-display'>
+                        <div className="cartHeader">
+                            <p className="cartTitle">YOUR SHOPPING CART</p>
+                        </div>
                         <ul className="cartList">
                             {Object.entries(cart).map((pair,prodIdx) => {
                                 return(

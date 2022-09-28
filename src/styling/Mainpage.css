@@ -193,6 +193,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-left: 5%;
 }
 
 .cartList {
@@ -206,7 +207,7 @@
 }
 
 .delete-from-cart {
-  margin-top: 12%;
+  margin-top: 25%;
   font: 12px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color:  rgb(255, 131, 0) ;
   color: black;
@@ -245,4 +246,14 @@
 .cartItemList {
   height: 500px;
   width: 500px;
+}
+
+.cartTitle {
+  font: 28px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 250;
+  margin-top:5%;
+  border-top: 1px solid grey;
+  border-width: 100%;
+  padding-top: 5%;
+  width: 450%;
 }
