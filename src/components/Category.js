@@ -5,21 +5,29 @@ import {
   setItemsPerPage,
   setPriceOrder,
 } from '../store/productSlice';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import PageNavigation from './PageNavigation';
 import '../styling/Category.css';
 import { Link } from 'react-router-dom';
 function Category() {
   const dispatch = useDispatch();
   const params = useParams();
+  let searchParams = useSearchParams()[0];
   let itemsperpage = useSelector((state) => state.product.itemsPerPage);
   let priceOrder = useSelector((state) => state.product.priceOrder);
   React.useEffect(() => {
     dispatch(setPriceOrder(''));
   }, [dispatch]);
   React.useEffect(() => {
-    dispatch(attemptGetTagList(params, itemsperpage, priceOrder));
-  }, [params, dispatch, itemsperpage, priceOrder]);
+    dispatch(
+      attemptGetTagList(
+        params,
+        itemsperpage,
+        priceOrder,
+        searchParams.get('for')
+      )
+    );
+  }, [params, dispatch, itemsperpage, priceOrder, searchParams]);
 
   const handleChangeView = (event) => {
     let newItemsPerPage = Number(event.target.value);
@@ -32,7 +40,7 @@ function Category() {
   };
   const products = useSelector((state) => state.product.productList);
 
-  return ( products ?
+  return products ? (
     <div>
       <div className="categoryHeader">
         <div className="categoryHeaderLeft">
@@ -77,8 +85,9 @@ function Category() {
           </Link>
         ))}
       </section>
-    </div> 
-    : <div>Loading...</div>
+    </div>
+  ) : (
+    <div>Loading...</div>
   );
 }
 
