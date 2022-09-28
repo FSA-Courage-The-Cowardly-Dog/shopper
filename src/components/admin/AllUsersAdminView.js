@@ -16,15 +16,20 @@ const AllUsersAdminView = () => {
 
   React.useEffect(() => {
     const token = window.localStorage.getItem('token');
+    async function loadAllAndPage () {
+      await dispatch(fetchAllUsers);
+      await dispatch(fetchUsersByPage(page, sortByLastName))
+    }
     if ((user.id && !user.isAdmin) || !token) {
       navigate('/');
       Toastify({text: `Not authorized for admin portal`, duration:2500 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
     }
     if (page) {
       if (!totalUsers) {
-        dispatch(fetchAllUsers())
+        loadAllAndPage()
+      } else {
+        dispatch(fetchUsersByPage(page, sortByLastName))
       }
-      dispatch(fetchUsersByPage(page, sortByLastName))
     } else {
       dispatch(fetchAllUsers());
     }

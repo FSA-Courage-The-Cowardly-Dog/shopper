@@ -36,7 +36,7 @@ const ModifySingleProductAdminPage = () => {
         await dispatch(attemptGetSingleProduct(params.id));
         setIsLoaded(true);
       } catch (error) {
-        navigate('/adminportal');
+        navigate('/adminportal?page=1');
         Toastify({text: "Hmm... That product page doesn't exist.", duration:2000 ,gravity: "bottom", position: "right", backgroundColor: "red"}).showToast();
       }  
     }
@@ -103,7 +103,7 @@ const ModifySingleProductAdminPage = () => {
 
   const handleDelete = () => {
     dispatch(attemptDeleteProduct(params.id));
-    navigate('/adminportal/allproducts');
+    navigate('/adminportal/allproducts?page=1');
   };
 
   return isLoaded ? (
@@ -186,7 +186,7 @@ const ModifySingleProductAdminPage = () => {
           </button>
         </div>
       </form>
-      <Link to="/adminportal/allproducts">Back to all products</Link>
+      <Link to="/adminportal/allproducts?page=1">Back to all products</Link>
     </div>
   ) : (
     <div>Loading...</div>
