@@ -278,6 +278,7 @@
   }
   .searchBar, .signedInSearch {
     width: 200%;
+    max-width: 350px;
     margin-right: .5em;
   }
 }
