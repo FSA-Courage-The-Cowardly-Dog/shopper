@@ -54,14 +54,20 @@ header {
 }
 .login-line {
     height: 24px;
-    width: 270px;
-    padding: 30px;
-    margin-right: 270px;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .login-input {
    height: 44px;
-   width: 550px;
+   width: 100%;
    border: 1px solid black;
+   margin: 2px;
+   box-sizing: border-box;
+   margin-left: auto;
+   margin-right: auto;
 }
 .signinTitle {
    text-align: center;
@@ -86,6 +92,7 @@ header {
     background-color: rgb(255, 131, 0);
     font: 18px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
+    padding: 2px;
     border: none;
 }
 

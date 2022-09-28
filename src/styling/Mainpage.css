@@ -21,8 +21,11 @@
   margin-top: 10%;
 }
 
-.login-form {
-  max-width: 100%;
+#login-form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .category {
   height: 250px;
