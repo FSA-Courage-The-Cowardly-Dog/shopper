@@ -55,9 +55,9 @@ function Category() {
           <div className="pageview">
             <label className="viewlabel">View:</label>
             <select className="viewmenu" onChange={(e) => handleChangeView(e)}>
-              <option value={24}>24 per page</option>
-              <option value={48}>48 per page</option>
-              <option value={72}>72 per page</option>
+              <option value={10}>10 per page</option>
+              <option value={20}>20 per page</option>
+              <option value={30}>30 per page</option>
             </select>
           </div>
         </div>

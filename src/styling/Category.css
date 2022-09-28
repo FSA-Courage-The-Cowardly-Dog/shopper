@@ -72,7 +72,10 @@
 }
 
 .categoryHeaderRight {
-    padding:20px;
+    margin-left: 30%;
+    min-width: 162px;
+    max-width: 162px;
+    margin-top: 0.5%;
 }
 
 
