@@ -1,267 +1,300 @@
 .wrapper {
-  display: flex;
+	display: flex;
 }
 
 .App {
-  background-color: white;
+	background-color: white;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
+
 .categoryImg {
-  max-width: 28%;
+	max-width: 28%;
 }
 
 .categories {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  column-gap: 100px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	column-gap: 100px;
 }
 
 .container {
-  margin-top: 10%;
+	margin-top: 10%;
 }
 
 .login-form {
-  max-width: 100%;
+	max-width: 100%;
 }
 .category {
-  height: 250px;
-  width: 250px;
-  align-content: space-between;
-  padding: 20px;
-  text-decoration: none;
-  color: black;
+	height: 250px;
+	width: 250px;
+	align-content: space-between;
+	padding: 20px;
+	text-decoration: none;
+	color: black;
 }
 
 .category:hover {
-    transform: scale(1.04);
+	transform: scale(1.04);
 }
 
 .category-name {
-  margin: 0;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 40px;
-  height: 40px;
-  padding: 0 8px;
-  border-top: 1px solid #d0d1d5;
-  background: rgb(255, 131, 0);
-  box-sizing: border-box;
-  text-decoration: none;
-  border-radius: 0px 0px 64px 64px;
-  border: none;
-  text-align: center;
-  font: 18px 'Helvetica for Target', 'HelveticaNeue for Target',
-    'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+	margin: 0;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 40px;
+	height: 40px;
+	padding: 0 8px;
+	border-top: 1px solid #d0d1d5;
+	background: rgb(255, 131, 0);
+	box-sizing: border-box;
+	text-decoration: none;
+	border-radius: 0px 0px 64px 64px;
+	border: none;
+	text-align: center;
+	font: 18px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 400;
 }
 
 .image {
-  width: 100%;
-  height: 225px;
-  display: block;
-  margin: 0;
-  border-radius: 44px 44px 0px 0px;
+	width: 100%;
+	height: 225px;
+	display: block;
+	margin: 0;
+	border-radius: 44px 44px 0px 0px;
 }
 
 .headerLogo {
-  height: 100px;
-  width: 100px;
+	height: 100px;
+	width: 100px;
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
-  height: 150px;
-  width: 100%;
+	margin: 0 1em;
+	display: flex;
+	flex-direction: row;
+	/* min-height: 150px; */
+	width: 100%;
+	justify-content: space-between;
 }
 
 .headerLeft {
-  display: flex;
-  flex-direction: row;
-  height: 150px;
-  justify-content: flex-start;
-  width: 67%;
+	display: flex;
+	flex-direction: row;
+	/* height: 150px; */
+	justify-content: flex-start;
+	/* width: 67%; */
 }
 
-.headerRight {
-  display: flex;
-  flex-direction: row;
-  width: 33%;
-  justify-content: flex-end;
-}
-
+.headerRight,
 .headerright {
-  display: flex;
-  flex-direction: row;
-  width: 33%;
-  justify-content: flex-end;
+	display: flex;
+	flex-direction: row;
+	/* width: 33%; */
+	justify-content: flex-end;
 }
 
 .searchbar-div {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .search {
-  color: rgb(255, 131, 0);
-  margin-top: 32px;
-  margin-right: 40px;
+	color: rgb(255, 131, 0);
+	margin-top: 32px;
+	margin-right: 40px;
 }
 
 .temp-link {
-  display: flex;
-  justify-content: center;
-  max-height: 90px;
+	display: flex;
+	justify-content: center;
+	max-height: 90px;
 }
 
 .searchBar {
-  margin-top: 30px;
-  background-color: #d0d1d5;
-  border-radius: 8px;
-  height: 35px;
-  min-width: 75px;
-  max-width: 300%;
-  /* margin-left: 250%; */
-  border: none;
+	margin-top: 30px;
+	background-color: #d0d1d5;
+	border-radius: 8px;
+	height: 35px;
+	min-width: 75px;
+	max-width: 300%;
+	/* margin-left: 250%; */
+	border: none;
 }
 
 .carticon {
-  color: rgb(255, 131, 0);
-  /* margin-left: 90px; */
-  margin-top: 30px;
+	color: rgb(255, 131, 0);
+	/* margin-left: 90px; */
+	margin-top: 30px;
 }
 
 .maintitle {
-  padding: 15px;
-  font: 28px 'Helvetica for Target', 'HelveticaNeue for Target',
-    'Helvetica Neue', Helvetica, Arial, sans-serif;
-  letter-spacing: 0.03rem;
-  text-transform: uppercase;
-  color: rgb(212, 208, 208);
-  text-align: center;
+	padding: 15px;
+	font: 28px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	letter-spacing: 0.03rem;
+	text-transform: uppercase;
+	color: rgb(212, 208, 208);
+	text-align: center;
 }
 
 .categorySection {
-    background-image: url('https://www.pixelstalk.net/wp-content/uploads/images4/Scary-Halloween-Background-1-1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom: 40px solid black;
+	/* box-sizing: border-box; */
+	background-image: url('https://www.pixelstalk.net/wp-content/uploads/images4/Scary-Halloween-Background-1-1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* border-bottom: 40px solid black; */
+	flex-grow: 1;
 }
 
 .signIn {
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  color: rgb(255, 131, 0);
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	color: rgb(255, 131, 0);
 }
 
 .loginLink {
-  margin-left: 5px;
-  text-align: center;
-  white-space: nowrap;
-  margin-top: 40px;
-  font-weight: 200;
-  font: 16px 'Helvetica for Target', 'HelveticaNeue for Target',
-    'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin-left: 5px;
+	text-align: center;
+	white-space: nowrap;
+	margin-top: 40px;
+	font-weight: 200;
+	font: 16px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .accounticon {
-  margin-top: 30px;
-  margin-left: 25px;
-  color: rgb(255, 131, 0);
+	margin-top: 30px;
+	margin-left: 25px;
+	color: rgb(255, 131, 0);
 }
 
 .signedInSearch {
-    margin-top: 30px;
-    background-color: #d0d1d5;
-    border-radius: 8px;
-    height: 35px;
-    max-width: 300%;
-    /* margin-left: 305%; */
-    min-width: 50px;
-    border: none;
+	margin-top: 30px;
+	background-color: #d0d1d5;
+	border-radius: 8px;
+	height: 35px;
+	max-width: 300%;
+	/* margin-left: 305%; */
+	min-width: 50px;
+	border: none;
 }
 
 .emptyCart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 30px;
-    margin-top: 5%;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 30px;
+	margin-top: 5%;
+	justify-content: center;
 }
 
 .emptyCartTitle {
-    font: 32px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 450;
+	font: 32px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 450;
 }
 
 .cart-display {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 5%;
 }
 
 .cartList {
-  list-style-type: none;
-  list-style: none;
-  padding-inline-start: 0px;
+	list-style-type: none;
+	list-style: none;
+	padding-inline-start: 0px;
 }
 
 .cartProdInfo {
-  font: 16px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 16px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .delete-from-cart {
-  margin-top: 25%;
-  font: 12px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color:  rgb(255, 131, 0) ;
-  color: black;
-  border: 1px solid black;
+	margin-top: 25%;
+	font: 12px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: rgb(255, 131, 0);
+	color: black;
+	border: 1px solid black;
 }
 
 .qtyInput {
-  border:none;
-  width: 25px;
-  margin-top: 0.45%;
+	border: none;
+	width: 25px;
+	margin-top: 0.45%;
 }
 
 .cartinput {
-  display: flex;
-  flex-direction: row;
-  column-gap: 10px;
+	display: flex;
+	flex-direction: row;
+	column-gap: 10px;
 }
 
 .clicktoedit {
-  font: 12px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-top: 1%;
-  color: #d0d1d5;
+	font: 12px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin-top: 1%;
+	color: #d0d1d5;
 }
 
 .checkoutBtn {
-  margin-block: 5%;
-  font: 22px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color:  rgb(255, 131, 0) ;
-  color: black;
-  border: none;
-  padding: 1%;
-  width: 50%;
-  align-self: center;
+	margin-block: 5%;
+	font: 22px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: rgb(255, 131, 0);
+	color: black;
+	border: none;
+	padding: 1%;
+	width: 50%;
+	align-self: center;
 }
 
 .cartItemList {
-  height: 500px;
-  width: 500px;
+	height: 500px;
+	width: 500px;
 }
 
 .cartTitle {
-  font: 28px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 250;
-  margin-top:5%;
-  border-top: 1px solid grey;
-  border-width: 100%;
-  padding-top: 5%;
-  width: 450%;
+	font: 28px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 250;
+	margin-top: 5%;
+	border-top: 1px solid grey;
+	border-width: 100%;
+	padding-top: 5%;
+	width: 450%;
+}
+@media (max-width: 480px) {
+	.header {
+		flex-wrap: wrap;
+	}
+	.headerLeft {
+		order: 1;
+	}
+	.headerRight,
+	.headerright {
+		order: 2;
+	}
+	.searchbar-div {
+		order: 3;
+		margin: 1em auto;
+	}
+	.searchBar {
+		margin: 0;
+	}
+	.searchbar input {
+		width: 80vw;
+	}
+	.search {
+		margin: 0;
+	}
 }

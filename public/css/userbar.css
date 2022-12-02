@@ -1,107 +1,113 @@
 /* may later put inside a navbar component*/
 
 header {
-    background-color: black;
-    opacity: 0.85;
-    height: 90px;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+	background-color: black;
+	opacity: 0.85;
+	/* height: 90px; */
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
 }
 /* temp styling for nav bar links for now */
 
 .welcome-user {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    align-items: flex-end;
-    justify-content: center;
-    color: white;
-    font-weight: 200;
-    font: 14px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+	align-items: flex-end;
+	justify-content: center;
+	color: white;
+	font-weight: 200;
+	font: 14px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-align: center;
 }
 
-.username, .create-account-link {
-    color: rgb(255, 131, 0);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
+.username,
+.create-account-link {
+	color: rgb(255, 131, 0);
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
 }
 
-.signoutbtn{
-   margin-right: 25%;
+.signoutbtn {
+	margin-right: 25%;
 }
 
 .sign-out-button {
-    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 195;
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 195;
 }
 
-.username:hover,.create-account-link:hover {
-    color: white
+.username:hover,
+.create-account-link:hover {
+	color: white;
 }
 
 /* SignIn component */
 
 .signinContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 5%;
-  background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 5%;
+	background-color: white;
 }
 .login-line {
-    height: 24px;
-    width: 270px;
-    padding: 30px;
-    margin-right: 270px;
+	height: 24px;
+	width: 270px;
+	padding: 30px;
+	margin-right: 270px;
 }
 .login-input {
-   height: 44px;
-   width: 550px;
-   border: 1px solid black;
+	height: 44px;
+	width: 550px;
+	border: 1px solid black;
 }
 .signinTitle {
-   text-align: center;
-   font: 34px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
-   font-weight: 300;
+	text-align: center;
+	font: 34px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
 }
 
 .createAccount {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: 40px;
 }
 
 ::placeholder {
-    color: black;
+	color: black;
 }
 
 .signinBtn {
-    height: 50px;
-    width: 100%;
-    background-color: rgb(255, 131, 0);
-    font: 18px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    border: none;
+	height: 50px;
+	width: 100%;
+	background-color: rgb(255, 131, 0);
+	font: 18px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	border: none;
 }
 
 .signinBtn:hover {
-    border: 2px solid rgb(28, 27, 27);
+	border: 2px solid rgb(28, 27, 27);
 }
 
 .accountBtn {
-    height: 50px;
-    width: 100%;
-    margin-top: 8%;
-    background-color: rgb(255, 131, 0);
-    font: 18px "Helvetica for Target", "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    border: none;
+	height: 50px;
+	width: 100%;
+	margin-top: 8%;
+	background-color: rgb(255, 131, 0);
+	font: 18px 'Helvetica for Target', 'HelveticaNeue for Target',
+		'Helvetica Neue', Helvetica, Arial, sans-serif;
+	border: none;
 }
 
 .accountBtn:hover {
-    border: 2px solid rgb(28, 27, 27);
+	border: 2px solid rgb(28, 27, 27);
 }

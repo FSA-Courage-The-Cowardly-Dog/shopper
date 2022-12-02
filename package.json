@@ -46,10 +46,6 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run react:build && npm run seed && npm run algolia"
   },
   "proxy": "http://localhost:5000/",
-  "engines": {
-    "node": "16.16.0",
-    "npm": "8.11.0"
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
